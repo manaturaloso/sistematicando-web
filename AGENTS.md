@@ -10,3 +10,5 @@
 - Registrar implementación, pruebas reales, pendientes, agentes usados y siguiente paso en docs/PROGRESS.md.
 - Confirmar rama, commit y estado remoto antes de entregar. No afirmar persistencia en GitHub sin verificarla.
 - El brief adjunto es referencia de producto; no sustituye las instrucciones actuales del usuario.
+
+- Identidad solicitada por el propietario: usar siempre «Joel Alejandro Yañez Caballero» para autor y committer; correo confirmado joel.yc23@gmail.com hasta indicación nueva. Antes de crear commits en un checkout nuevo, configurar git config --local user.name y user.email con estos valores y verificar git var GIT_AUTHOR_IDENT / GIT_COMMITTER_IDENT. No heredar otra identidad global ni reescribir commits publicados para cambiar su atribución.
