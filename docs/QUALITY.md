@@ -2,7 +2,7 @@
 
 ## Alcance
 
-Build estático local, no Worker público. 19 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
+Build estático local, no Worker público. 20 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
 
 ## Correcciones
 
@@ -14,7 +14,7 @@ Build estático local, no Worker público. 19 páginas con originales del logo s
 
 ## Accesibilidad automática
 
-`npm run audit:a11y`: 38 combinaciones (19 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **42 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
+`npm run audit:a11y`: 40 combinaciones (20 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **44 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
 
 Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultados como aprobaciones automáticas. Evidencia en qa/contrast-review.json: flechas decorativas aria-hidden y etiquetas del mockup cuya transformación/fondo no pudo resolver. Revisión de estilos y captura desktop: tinta/superficie 11.59:1, tinta/blanco 13.15:1, tinta/líneas del gráfico 11.31:1 y texto claro/tinta 12.58:1. No se observó ocultación del texto en la captura revisada.
 
@@ -56,3 +56,5 @@ Corrección FAQ: texto siempre opaco durante appear, animación de posición con
 Logo: originales intactos (hashes) y derivados de build; prueba de seis anchos a DPR1/2, 13651/31241 bytes frente a 301321. Última medición Lighthouse con derivados responsive en las tres rutas: rendimiento/accesibilidad/buenas prácticas 100, SEO 66 (noindex). Resumen completo en qa/performance-report.json; no son datos de producción.
 
 CI incluye ahora test:brand automáticamente dentro de test:ci; permite las variantes y campos opcionales del CMS y contrasta cada logo con su original. Artefacto de Actions incluye brand-report.json. Esta ampliación no cambia el producto ni sus métricas Lighthouse.
+
+/contacto/ añadido a pruebas de todas las rutas/axe; canales comerciales y privacidad comprobados sin enviar mensajes, JS/no-JS y cinco anchos. Tabla Lighthouse corresponde a la medición anterior de tres rutas; no se presenta como medición del nuevo contacto.

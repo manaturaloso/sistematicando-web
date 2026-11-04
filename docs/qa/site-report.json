@@ -17,6 +17,11 @@
       "title": "Administración · Sistematicando"
     },
     {
+      "route": "/contacto/",
+      "status": 200,
+      "title": "Contacto · Sistematicando"
+    },
+    {
       "route": "/funcionalidades/",
       "status": 200,
       "title": "Funcionalidades: explora las áreas de gestión · Sistematicando"
@@ -97,5 +102,5 @@
       "title": "Restaurantes: enfoque de gestión · Sistematicando"
     }
   ],
-  "destinations": 66
+  "destinations": 68
 }

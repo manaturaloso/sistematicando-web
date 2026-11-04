@@ -2,18 +2,59 @@
   "skipLabel": "Saltar al contenido",
   "menuLabel": "Menú",
   "header": [
-    {"label":"Precios","href":"/precios/","cta":false},
-    {"label":"Soluciones","href":"/soluciones/","cta":false},
-    {"label":"Funcionalidades","href":"/funcionalidades/","cta":false},
-    {"label":"Preparar una demo","href":"/solicitar-demo/","cta":true}
+    {
+      "label": "Precios",
+      "href": "/precios/",
+      "cta": false
+    },
+    {
+      "label": "Soluciones",
+      "href": "/soluciones/",
+      "cta": false
+    },
+    {
+      "label": "Funcionalidades",
+      "href": "/funcionalidades/",
+      "cta": false
+    },
+    {
+      "label": "Preparar una demo",
+      "href": "/solicitar-demo/",
+      "cta": true
+    }
   ],
   "footer": [
-    {"label":"Precios","href":"/precios/"},
-    {"label":"Soluciones","href":"/soluciones/"},
-    {"label":"Funcionalidades","href":"/funcionalidades/"},
-    {"label":"Preparar demo","href":"/solicitar-demo/"},
-    {"label":"Recursos","href":"/recursos/"},
-    {"label":"Preguntas frecuentes","href":"/preguntas-frecuentes/"},
-    {"label":"Privacidad","href":"/legal/privacidad/"}
+    {
+      "label": "Precios",
+      "href": "/precios/"
+    },
+    {
+      "label": "Soluciones",
+      "href": "/soluciones/"
+    },
+    {
+      "label": "Funcionalidades",
+      "href": "/funcionalidades/"
+    },
+    {
+      "label": "Preparar demo",
+      "href": "/solicitar-demo/"
+    },
+    {
+      "label": "Recursos",
+      "href": "/recursos/"
+    },
+    {
+      "label": "Preguntas frecuentes",
+      "href": "/preguntas-frecuentes/"
+    },
+    {
+      "label": "Contacto",
+      "href": "/contacto/"
+    },
+    {
+      "label": "Privacidad",
+      "href": "/legal/privacidad/"
+    }
   ]
 }

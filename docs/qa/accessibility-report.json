@@ -29,6 +29,13 @@
       "violations": []
     },
     {
+      "route": "/contacto/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
       "route": "/funcionalidades/",
       "width": 390,
       "passes": 46,
@@ -163,6 +170,13 @@
       "route": "/admin/",
       "width": 1440,
       "passes": 29,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/contacto/",
+      "width": 1440,
+      "passes": 37,
       "incomplete": [],
       "violations": []
     },

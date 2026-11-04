@@ -30,3 +30,6 @@ El usuario desplegó una versión previa en un Worker. La rama de catálogo no s
 - [x] Workflow de validación de ediciones implementado y suite equivalente probada localmente.
 - [x] Confirmar edición real de CMS con logos.
 - [ ] Confirmar primera ejecución alojada de Actions.
+
+- [x] Página /contacto/ con canales autorizados y editor CMS; sin formulario ni promesas de recepción automática.
+- [ ] Revisar manualmente contenido/canales de contacto antes de integrar y publicar.

@@ -14,6 +14,7 @@
 - Matriz SaaS generada con `npm run docs:features` desde src/data/features.ts; estados, evidencia, dependencias y límites por módulo. Todos los módulos siguen sin verificación operativa.
 - `/precios/`: factores de alcance, condiciones por definir y FAQ comercial, sin tarifas ni planes inventados.
 - `/solicitar-demo/`: guía local con tres selecciones, validación, resumen, descarga TXT, invalidación al cambiar campos y reset; no recibe solicitudes. Alternativa informativa sin JS.
+- `/contacto/`: WhatsApp comercial y canales de privacidad; contactos centralizados, sin formularios propios.
 - `/legal/privacidad/`: versión para revisión con responsable/domicilio/correo/WhatsApp confirmados; enlace en el pie.
 - Contacto WhatsApp en demo: mensaje genérico, aviso de tercero y enlace a privacidad; sin adjuntar guía ni enviar mensajes. Datos centralizados en src/data/contact.ts para futuros cambios.
 - `/recursos/` y tres guías originales: revisión de caja, organización inicial de insumos y evaluación de software. `/preguntas-frecuentes/`: doce respuestas por tema, compartidas con home/precios.
@@ -52,10 +53,10 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. Revisar Actions del nuevo SHA de esta entrega. 296dc05 fue confirmado verde por el propietario; versiones posteriores no se dan por aprobadas sin observarlas.
-2. Abrir Pages CMS, rama feat/feature-catalog: Página: funcionalidades → Buscador y resultados, y Página: solicitar-demo → Documento y mensajes de la guía local. Revisar nuevos campos, conservar {count} y avisos de generación local. Instrucciones en ADMIN.md.
-3. Las mejoras siguen en desarrollo. Para actualizar Worker, revisar diff y autorizar integración concreta en feat/brand-foundation; publicado sigue 9a017af. No retirar noindex ni cambiar DNS.
-4. Continuar revisión manual/dispositivos/lector y definición comercial/legal. Fuentes y logos oficiales preservados; módulos SaaS todavía no verificados.
+1. Comprobar Actions del commit de contacto de esta entrega; revisar 20 rutas, marca/editorial y 44 comprobaciones axe. 296dc05 fue confirmado verde por el propietario; no asumir verde para versiones posteriores.
+2. Revisar /contacto/ y sus canales autorizados, textos de privacidad y datos del responsable. Página: contacto en Pages CMS, rama feat/feature-catalog; cambios de datos en Contactos y responsable.
+3. La nueva página y mejoras anteriores siguen en desarrollo. Para actualizar Worker revisar diff y autorizar integración concreta en feat/brand-foundation; publicado sigue 9a017af. Mantener noindex/DNS.
+4. Revisión manual/dispositivos/lector y definición comercial/legal: módulos sin verificar, tarifas no aprobadas y privacidad en revisión. No inventar disponibilidad.
 5. Consultar git log -1 y git ls-remote para SHA final. Autor Joel Alejandro Yañez Caballero; solo Codex principal. Sin PR creada; existentes sin verificar por API.
 
 ## Datos comerciales aplicados
@@ -135,3 +136,15 @@ Estado remoto conocido: el propietario confirmó Actions verde para 296dc05; ese
 Siguiente paso exacto: revisar Actions del commit de esta entrega; después abrir los dos editores citados en Pages CMS de feat/feature-catalog y revisar sus campos nuevos. La configuración del CMS llega con el commit, no requiere crear otra cuenta. Para ver estas mejoras en el Worker se necesita una integración autorizada de la versión concreta. Quedan revisión manual con dispositivos/lector y definición comercial/legal; no inventar tarifas ni marcar módulos disponibles sin evidencia.
 
 Prueba editorial personalizada aprobada: ejemplo con comillas/< /&, recuentos alternativos y guía con encabezado/preguntas/avisos propios llegan al render y al TXT. Texto parecido a HTML conservado literalmente. Contenido original de entrega y build restaurados al terminar. No quedan fixtures ni mensajes temporales.
+
+## 2026-11-04 · Página de contacto y acceso editorial
+
+Implementado /contacto/: WhatsApp comercial confirmado reutilizando el componente existente; bloque distinto de privacidad con mailto y WhatsApp sin mensaje comercial, responsable/RUC/domicilio/canales leídos de content/contact.json. No se añade formulario, backend ni promesa de atención inmediata/presencial. Se explica que abrir un canal no envía solicitud ni reserva y que correo/WhatsApp son externos; política sigue en revisión. Enlaces a guía local y FAQ. No se enviaron mensajes reales.
+
+Textos de la nueva página en content/pages.json, editor Página: contacto, .pages.yml regenerado (24 editores). Footer incluye Contacto; /admin tiene accesos directos a contacto, textos del catálogo y guía de demo. CSS propio reutiliza la identidad existente y mantiene proporción de logos. Empaquetador exige contacto/index.html y deriva resto de rutas.
+
+Pruebas: check 42 archivos, cero errores/advertencias; content:check 14 módulos/3 guías/24 editores; build 20 páginas. Test editorial comprueba destinos exactos de WhatsApp comercial/privacidad y correo, sin navegar a terceros, tanto con JS como sin JS; cero formularios y responsable correcto. Comprueba overflow en cinco anchos y genera capturas móvil/escritorio. Suite completa y paquete registrados al finalizar. No se repite Lighthouse histórico de tres páginas ni se atribuyen sus métricas a esta página nueva.
+
+Agente Codex principal, sin subagentes. Autor Joel Alejandro Yañez Caballero. Rama feat/feature-catalog; publicado sigue 9a017af, sin deploy/DNS/indexación nuevos ni PR creada. PR existentes y Actions nuevo sin verificar por API Forbidden; propietario confirmó verde 296dc05, no los SHA posteriores. Siguiente paso exacto: comprobar Actions del commit de esta entrega y revisar contacto/privacidad/canales; luego revisión manual con dispositivos/lector y definición comercial/legal. Cualquier integración al Worker requiere autorización de una versión concreta.
+
+Validación final contacto: test:ci aprobado (20 rutas/68 destinos internos, navegación, marca y prueba editorial/canales con JS/no-JS); axe 44 comprobaciones, cero infracciones automáticas. Se conservan incomplete aparte. Captura móvil revisada. Paquete estático /tmp/sistematicando-contact-review.zip verificado: 20 páginas, sin fuentes internas ni docs; no desplegado.

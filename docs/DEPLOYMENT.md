@@ -19,7 +19,7 @@ El usuario autorizó integrar `feat/feature-catalog` en `feat/brand-foundation` 
 - Build previo: `node scripts/build-worker.mjs`, que ejecuta npm run build con ASTRO_TELEMETRY_DISABLED=1 y propaga el código de salida. Incluye content:check. Así Wrangler no depende de un dist antiguo ni de un build manual olvidado.
 - Watch local de src/content/public; outputs .wrangler y archivos .dev.vars ignorados por Git.
 
-El build de Astro publica 19 páginas actualmente. El CMS puede añadir guías/soluciones y el empaquetado deriva las rutas esperadas desde sus slugs.
+El build de Astro genera 20 páginas actualmente, incluida /contacto/. El CMS puede añadir guías/soluciones y el empaquetado deriva las rutas esperadas desde sus slugs.
 
 ## Instalar y validar sin publicar
 

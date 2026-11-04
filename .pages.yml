@@ -2900,6 +2900,184 @@
           ]
         }
       ]
+    },
+    {
+      "name": "pages-contacto-index",
+      "label": "Página: contacto",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-contacto-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Contacto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Conversemos sobre tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "El siguiente paso,",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "con claridad.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Cuéntanos qué tipo de negocio tienes y qué necesitas ordenar. Podemos conve…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Una conversación, sin compromisos automáticos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Abrir un canal de contacto no envía una solicitud ni reserva una demostraci…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Privacidad y datos personales",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Consultas sobre tus datos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Para consultas sobre privacidad o el ejercicio de tus derechos, puedes escr…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Escribir por correo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "WhatsApp de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Responsable",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "RUC",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Domicilio del responsable",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Correo de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Canal de WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Leer la política de privacidad en revisión",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "El correo abre tu aplicación de correo y WhatsApp es un servicio externo. T…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Prepara la conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "Llega con tus prioridades claras.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "Puedes generar una guía local sobre tu operación, guardarla como TXT y usar…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "Preparar mi guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "Consultar preguntas frecuentes",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
     }
   ],
   "settings": {

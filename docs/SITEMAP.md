@@ -5,6 +5,7 @@
 - `/`: home.
 - `/soluciones/`: índice de sectores.
 - `/funcionalidades/`: catálogo conceptual con búsqueda y enlaces por área.
+- `/contacto/`: WhatsApp comercial y canales de privacidad, sin receptor propio.
 - `/precios/`: información sobre alcance y condiciones pendientes, sin tarifas oficiales.
 - `/solicitar-demo/`: guía local y enlace voluntario a WhatsApp.
 - `/legal/privacidad/`: versión para revisión, con contactos del responsable.
@@ -28,4 +29,4 @@
 
 ## Siguiente
 
-Auditoría de navegación, accesibilidad y rendimiento; completar datos de lanzamiento cuando se aprueben. Contacto externo por WhatsApp disponible en la rama; recepción propia de datos no implementada. Páginas individuales de módulos condicionadas a evidencia. Contacto, recursos, legales y páginas de módulos siguen pendientes. No existen enlaces a rutas vacías ni sitemap público hasta contar con dominio y aprobación de indexación. Las páginas de soluciones presentan enfoques de evaluación y no disponibilidad verificada del SaaS.
+Desarrollo: 20 páginas, incluido contacto; CMS con 24 editores. Auditoría automática local y pruebas de navegación implementadas. Quedan revisión manual/dispositivos/lector, aprobación comercial/privacidad y lanzamiento con dominio/indexación autorizados. Contacto externo por WhatsApp y correo de privacidad disponible; recepción propia de datos no implementada. Las páginas de módulos requieren evidencia del SaaS antes de afirmar disponibilidad. Recursos y FAQ iniciales ya están implementados. Sin sitemap público hasta contar con dominio y aprobación de indexación.

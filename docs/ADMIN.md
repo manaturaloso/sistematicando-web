@@ -3,7 +3,7 @@
 ## Qué está implementado
 
 - `/admin/`: panel de acceso y enlaces por sección. **La edición y autenticación ocurren en Pages CMS, fuera del sitio.** No es un editor embebido ni una API de escritura anónima.
-- `.pages.yml`: configuración de 23 editores, con biblioteca de imágenes. El archivo usa JSON, válido como YAML 1.2.
+- `.pages.yml`: configuración de 24 editores, con biblioteca de imágenes. El archivo usa JSON, válido como YAML 1.2.
 - Contenido en `content/*.json`, consumido por Astro: marca/SEO, menús, contactos, home, factores comerciales, soluciones, módulos, FAQ, guías y textos por página/componente.
 - Los cambios guardados por el CMS son commits en la rama seleccionada. La web estática necesita un nuevo build desde esa rama para reflejarlos. Guardar no implica integrar ni publicar producción.
 
@@ -78,3 +78,5 @@ En **Página: funcionalidades → Buscador y resultados** puedes editar ejemplo 
 En **Página: solicitar-demo → Documento y mensajes de la guía local** puedes editar título, etiquetas, preguntas, aviso final y avisos de generación/descarga. Son texto plano; no se interpreta HTML. Mantén los avisos de generación local: no hay receptor de solicitudes ni reserva de demo. La opción «Otra operación» se edita en los textos de esa misma página y su valor se refleja en la guía.
 
 La nueva prueba editorial se ejecuta dentro de test:ci y comprueba también el TXT descargado. No necesitas regenerar .pages.yml al cambiar estos valores; solo cuando se desarrolla un esquema nuevo. Guardar en el CMS crea un commit en feat/feature-catalog; no publica por sí solo en el Worker actual.
+
+Página: contacto permite cambiar los textos de /contacto/. Los datos del responsable y canales se editan en Contactos y responsable; los del bloque comercial compartido con demo en Componente: WhatsAppContact. /admin incluye acceso directo al nuevo editor y a los textos de catálogo/demo. Son 24 editores actualmente.

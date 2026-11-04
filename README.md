@@ -83,3 +83,5 @@ worker:check es un dry-run, no un despliegue. /admin y el resto de la rama de tr
 Workflow Site and CMS quality para la rama de edición y PR, sin despliegue ni secretos. Instala, revisa tipos, hace dry-run, comprueba todas las rutas/enlaces y ejecuta navegación/axe. Artefactos de revisión con siete días de retención. Ver docs/CI.md.
 
 Para repetir la suite sobre un build local: `CHROMIUM_PATH=/usr/bin/chromium npm run test:ci`. O `npm run test:site` para rutas y enlaces. La ejecución alojada y la conexión real del CMS todavía deben verificarse; no se deducen de las pruebas locales.
+
+Contacto: /contacto/ reúne WhatsApp comercial y canales de privacidad, sin receptor propio. Textos editables en Página: contacto y datos en content/contact.json; 20 páginas y 24 editores CMS en la rama de desarrollo. Publicado sigue 9a017af hasta una nueva integración autorizada.
