@@ -38,20 +38,31 @@ try{
   assert.equal(await page.locator('#search-count').innerText(),(count===1?search.singularCount:search.pluralCount).replace('{count}',String(count)));
   assert.equal(await page.locator('.search-empty').isVisible(),count===0);
  }
+ await field.fill('zz-no-result');
+ const areaLink=page.locator('.feature-jumps a').first(),areaHash=await areaLink.getAttribute('href');
+ await areaLink.focus();await page.keyboard.press('Enter');
+ assert.equal(await page.locator('.feature-card:not([hidden])').count(),await cards.count());
+ assert.equal(new URL(page.url()).hash,areaHash);
  await page.goto(server.url+'/solicitar-demo/');
  assert.equal(await page.locator('#demo-guide').getAttribute('aria-label'),guide.formLabel);
  for(const key of ['text_017','text_020','text_026'])assert(await page.getByLabel(demoCopy[key],{exact:true}).isVisible());
  assert.equal(await page.getByRole('button',{name:demoCopy.text_035,exact:true}).count(),1);
  assert.equal(await page.getByRole('button',{name:demoCopy.text_036,exact:true}).count(),1);
+ await page.locator('#demo-guide button[type=submit]').focus();await page.keyboard.press('Enter');
+ assert.equal(await page.evaluate(()=>document.activeElement.id),'business');
+ assert(!await page.locator('#guide-result').isVisible());
  for(const id of ['business','locations','priority'])await page.locator('#'+id).selectOption({index:1});
  const values=await Promise.all(['business','locations','priority'].map(id=>page.locator('#'+id).inputValue()));
  await page.locator('#demo-guide button[type=submit]').click();
  const expected=[guide.heading,'',`${guide.businessLabel}: ${values[0]}`,`${guide.locationsLabel}: ${values[1]}`,`${guide.priorityLabel}: ${values[2]}`,'',guide.questionsHeading,...guide.questions.map(question=>`- ${question}`),'',guide.disclaimer].join('\n');
  assert.equal(await page.locator('#guide-text').textContent(),expected);
+ assert.equal(await page.evaluate(()=>document.activeElement.id),'result-title');
  assert.equal(await page.locator('#guide-status').textContent(),guide.generatedStatus);
  const downloadPromise=page.waitForEvent('download');await page.locator('#download-guide').click();const download=await downloadPromise;
  assert.equal(download.suggestedFilename(),'sistematicando-guia-demo.txt');assert.equal(await fs.readFile(await download.path(),'utf8'),expected);
  assert.equal(await page.locator('#guide-status').textContent(),guide.downloadStatus);
  await page.locator('#priority').selectOption({index:2});assert(!await page.locator('#guide-result').isVisible());assert.equal(await page.locator('#guide-text').textContent(),'');
- console.log('PASS contact channels (JS/no-JS), five contact widths and CMS editorial copy: placeholder, dynamic counts, accessible labels, guide text/download/status and invalidation.');
+ await page.locator('#demo-guide button[type=reset]').focus();await page.keyboard.press('Enter');
+ assert.equal(await page.evaluate(()=>document.activeElement.id),'business');assert.equal(await page.locator('#business').inputValue(),'');
+ console.log('PASS keyboard validation/result/reset/area jumps, contact channels (JS/no-JS), five contact widths and CMS editorial copy: placeholder, dynamic counts, accessible labels, guide text/download/status and invalidation.');
 }finally{await browser?.close();await server.close();}

@@ -8,7 +8,7 @@ Build estático local, no Worker público. 20 páginas con originales del logo s
 
 - Menú móvil sin JavaScript: ahora los enlaces permanecen visibles y el botón solo aparece cuando su comportamiento está inicializado.
 - Salto al contenido: el destino main acepta foco programático; probado con teclado.
-- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en las cinco rutas representativas probadas.
+- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en seis rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
 - Enlace de marca: usa el nombre visible o alt del logo como nombre accesible, evitando un aria-label que omitía la leyenda visible.
 - Favicon: si aún no se ha cargado uno, referencia vacía explícita para evitar una petición automática fallida a /favicon.ico. No se inventó un isotipo.
 
@@ -27,7 +27,7 @@ Una ejecución final por ruta en Chromium local. Valores de laboratorio, variabl
 | Ruta | Rendimiento | Accesibilidad automática | Buenas prácticas | SEO | LCP | TBT | CLS |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | / | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
-| /funcionalidades/ | 100 | 100 | 100 | 66 | 0.90 s | 4 ms | 0.0000 |
+| /funcionalidades/ | 100 | 100 | 100 | 66 | 0.90 s | 0 ms | 0.0000 |
 | /solicitar-demo/ | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
 
 SEO se penaliza por bloqueo de indexación deliberado. Se conservan noindex y robots; no se retiran para aumentar una puntuación. No se ha medido INP de usuarios. CSS compartido y dependencias de carga aparecen como oportunidades informativas; se precargan las dos fuentes locales para evitar descubrimiento tardío y variación de la composición.
@@ -58,3 +58,5 @@ Logo: originales intactos (hashes) y derivados de build; prueba de seis anchos a
 CI incluye ahora test:brand automáticamente dentro de test:ci; permite las variantes y campos opcionales del CMS y contrasta cada logo con su original. Artefacto de Actions incluye brand-report.json. Esta ampliación no cambia el producto ni sus métricas Lighthouse.
 
 /contacto/ añadido a pruebas de todas las rutas/axe; canales comerciales y privacidad comprobados sin enviar mensajes, JS/no-JS y cinco anchos. Tabla Lighthouse corresponde a la medición anterior de tres rutas; no se presenta como medición del nuevo contacto.
+
+Revisión asistida actual: capturas y teclado en los cuatro flujos; datos antes/después en qa/reflow-review.json. Se corrigió reflujo a 200% en móvil y se añadieron regresiones para foco de validación/generación/reset y salto desde búsqueda vacía. Dispositivos físicos y lectores de pantalla siguen pendientes. Lighthouse de la tabla repetido tras la corrección; no métricas de campo.

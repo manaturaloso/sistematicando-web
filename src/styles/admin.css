@@ -14,3 +14,6 @@
 @media(max-width:599px){.admin-grid{grid-template-columns:1fr;}}
 
 .admin-version code,.admin-version time {overflow-wrap:anywhere;}
+
+.admin-page {overflow-wrap:anywhere;}
+.admin-card {min-width:0;}

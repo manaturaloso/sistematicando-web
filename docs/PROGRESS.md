@@ -5,8 +5,8 @@ Estado consolidado: 4 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio: manaturaloso/sistematicando-web. Desarrollo y CMS: `feat/feature-catalog`.
-- Último cambio funcional de la web: `1be0fc0`; integración autorizada enviada a la rama de Cloudflare `feat/brand-foundation`: `af35674`.
-- Última mejora de pruebas: `5c92a27`, solo en desarrollo. Esta entrega posterior consolida documentación; consultar `git log -1` para su SHA final.
+- Base funcional publicada: `1be0fc0`, integrada y confirmada como `af35674`. Esta entrega añade corrección de reflujo con texto ampliado, solo en desarrollo.
+- Pruebas posteriores a `5c92a27` ahora cubren texto 200% en móvil/escritorio y foco de teclado en demo/catálogo. Consultar `git log -1` para SHA final de esta entrega.
 - Fetch de ambas ramas sin cambios concurrentes antes de consolidar. El push y referencias se verifican al entregar; repetir fetch en la próxima sesión.
 - Worker: https://sistematicando-web.manaturaloso.workers.dev. La versión servida `af35674` quedó confirmada por el JSON de /version.json aportado por el propietario; sourceModified false y fecha coincidente con Git. Evidencia en qa/deployed-version-af35674.json. El agente no hizo una consulta directa exitosa ni un recorrido funcional remoto.
 - API GitHub y acceso al hostname estuvieron bloqueados por Forbidden/CONNECT 403. No confundir con un fallo del sitio. El propietario confirmó Actions verde para `296dc05`, no para todos los SHA posteriores.
@@ -30,13 +30,13 @@ Astro 7.4.5, TypeScript 6.0.3, Node 24.22.1 y Wrangler 4.157.0 fijados. Sitio es
 
 ## Pruebas y evidencia
 
-Resultados ejecutados antes de esta consolidación, no repetidos para cambios solo documentales:
+Resultados vigentes, incluyendo la suite repetida tras corregir el reflujo:
 
 | Comprobación | Resultado observado |
 | --- | --- |
 | Check/build/content | Sin errores; 20 páginas HTML más JSON de versión, 24 editores. |
 | Sitio | 20 rutas y 69 destinos internos. |
-| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% y scripts externos bloqueados. |
+| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en seis rutas a 390/1280 px y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
 | Editorial/contacto | Canales JS/no-JS sin mensajes reales; copia CMS, descarga TXT e invalidación. |
 | Versión | Git limpio/modificado/ausente; JSON/admin coincidentes; Worker no-store/noindex. |
@@ -46,7 +46,7 @@ Resultados ejecutados antes de esta consolidación, no repetidos para cambios so
 
 Informes en `docs/qa`. Lighthouse histórico de tres rutas llegó a rendimiento/accesibilidad/buenas prácticas 100 y CLS 0; SEO 66 por noindex. No son métricas de producción ni una auditoría de todas las páginas.
 
-Esta entrega: revisión de informes JSON, referencias Git, enlaces de los documentos nuevos y `git diff --check`. No modifica código ni publica.
+Esta entrega: revisión asistida de capturas/teclado y corrección CSS de desbordamientos con texto 200%; check/build, suite completa y Lighthouse aprobados. Evidencia antes/después en qa/reflow-review.json. No se publica.
 
 ## Fases y pendientes
 
@@ -56,10 +56,10 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 
 ## Siguiente paso exacto
 
-1. Identidad de la versión pública af35674 confirmada; no volver a pedir el mismo JSON salvo otro despliegue. Revisar Actions del HEAD de desarrollo; verde histórico de 296dc05 no acredita los nuevos SHA.
-2. Recorrer contacto/demo/catálogo/privacidad/admin y una ruta inexistente en dispositivos/lector. Confirmar logo, navegación y canales sin enviar mensajes reales. Identificar cualquier defecto concreto antes de añadir trabajo nuevo.
+1. Revisar Actions del SHA de esta corrección de reflujo. Para verla en el Worker, revisar diff y obtener autorización de integración concreta a feat/brand-foundation; no publicar por continuar desarrollo. Versión pública af35674 ya confirmada, no volver a pedir ese JSON salvo otro despliegue.
+2. Revisión asistida local de contacto/demo/catálogo/admin realizada; faltan dispositivos físicos y lector de pantalla. Corregidos desbordamientos a texto 200%, sin horizontal en las 12 combinaciones de regresión. QA.md y qa/reflow-review.json contienen alcance y evidencia.
 3. Resolver evidencia SaaS, tarifas y revisión/adopción legal/operativa con el propietario. Mantener noindex y DNS mientras no se autorice lanzamiento oficial.
-4. Las mejoras de pruebas 5c92a27 y documentación están solo en desarrollo; no hace falta otra publicación para registrar esta evidencia. Continuidad en HANDOFF.md, identidad local obligatoria y fetch antes de editar. Recompilar tras cambiar HEAD.
+4. Continuidad en HANDOFF.md, identidad local obligatoria y fetch antes de editar. Recompilar tras cambiar HEAD para actualizar version.json. No se creó PR, existentes sin verificar por API.
 
 Agente usado: Codex principal, sin subagentes. Identidad obligatoria: Joel Alejandro Yañez Caballero, joel.yc23@gmail.com. No reescribir commits publicados ni desplegar/cambiar DNS sin autorización. Las autorizaciones previas son entregas concretas.
 

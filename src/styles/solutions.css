@@ -34,3 +34,5 @@
 .related-grid {margin-bottom:1rem;}
 @media(max-width:899px) {.solutions-grid {grid-template-columns:repeat(2,minmax(0,1fr));}.related-grid {grid-template-columns:1fr;}.solution-card {padding:1.5rem;}.solution-callout,.solution-evaluation {gap:2rem;}.needs-grid {gap:1.5rem;}.solution-intro {font-size:1rem;}}
 @media(max-width:599px) {.solutions-grid,.needs-grid,.solution-callout,.solution-evaluation {grid-template-columns:1fr;}.solution-callout {padding:1.5rem;gap:1rem;}.solution-hero {padding-bottom:3rem;}.breadcrumbs {margin-bottom:2rem;}.solution-hero h1 {font-size:clamp(2.4rem,10vw,3.5rem);}.solution-evaluation {padding-block:3rem;gap:1rem;}.sector-priorities {padding-block:3rem;}.solution-card-icon {margin-bottom:1rem;}.solutions-section {padding-bottom:3rem;}}
+
+.solution-callout>div {min-width:0;overflow-wrap:anywhere;}

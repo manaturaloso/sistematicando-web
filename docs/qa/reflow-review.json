@@ -1,0 +1,134 @@
+{
+  "scope": "Local automated browser checks and screenshot inspection; no physical-device or screen-reader certification",
+  "before": [
+    {
+      "route": "/contacto/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 408
+    },
+    {
+      "route": "/contacto/",
+      "width": 1440,
+      "textPercent": 200,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 408
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 1440,
+      "textPercent": 200,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 498
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 1440,
+      "textPercent": 200,
+      "scrollWidth": 1440
+    },
+    {
+      "route": "/admin/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 563
+    },
+    {
+      "route": "/admin/",
+      "width": 1440,
+      "textPercent": 200,
+      "scrollWidth": 1440
+    }
+  ],
+  "after": [
+    {
+      "route": "/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/contacto/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/admin/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/recursos/",
+      "width": 390,
+      "textPercent": 200,
+      "scrollWidth": 390
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    },
+    {
+      "route": "/contacto/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    },
+    {
+      "route": "/admin/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    },
+    {
+      "route": "/recursos/",
+      "width": 1280,
+      "textPercent": 200,
+      "scrollWidth": 1280
+    }
+  ],
+  "keyboardBaseline": {
+    "emptySubmitFocus": "business",
+    "generatedFocus": "result-title",
+    "staleGuideHidden": true,
+    "areaJumpRestoresCards": 14,
+    "areaHash": "#area-operacion"
+  }
+}

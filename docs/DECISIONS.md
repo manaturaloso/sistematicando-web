@@ -40,3 +40,15 @@ PROGRESS y README contenían estados superados (19 páginas, 23 editores y conex
 Evidencia: JSON pegado por el usuario desde /version.json, guardado íntegro en qa/deployed-version-af35674.json. SHA af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00 y sourceModified false. Contrastados con ref remota feat/brand-foundation y fecha Git; coincidencia exacta/instante equivalente. Confirma identidad de la copia servida; no implica que el agente accediera directamente, CI actual verde ni revisión funcional de todas las páginas.
 
 Se actualizan resúmenes/continuidad para no repetir el bloqueo de verificación ya resuelto por el usuario. Cambios solo documentales, sin despliegue. Agente Codex principal, identidad Joel Alejandro Yañez Caballero; sin PR creada, existentes no verificadas por API. Siguiente paso: revisión funcional manual y CI del HEAD, luego pendientes comerciales/legales.
+
+## 4 de noviembre de 2026 · Revisión asistida y reflujo al ampliar texto
+
+Se revisaron capturas de contacto/privacidad, resultado de demo, búsqueda vacía y versión de admin; interacción de teclado en validación vacía, generación, invalidación y salto de área. Código base equivalente al publicado af35674 antes del ajuste; revisión local, no acceso directo al Worker ni pruebas en dispositivos físicos/lector de pantalla.
+
+Defecto reproducido: a 390 px con texto 200%, scroll horizontal en contacto/demo (408 px), catálogo (498 px) y admin (563 px). También se detectó portada al ampliar su mockup. Corrección: límites de ancho en logo/botones/énfasis de titulares; división de palabras largas; mínimos de grid/flex a cero, mockup con columnas adaptables y etiquetas del gráfico envolventes; botón de limpiar permite varias líneas. Sin recortar contenido, reducir el porcentaje de texto, cambiar fuentes/logos originales ni usar overflow:hidden para ocultar el problema.
+
+Prueba de regresión de navegación ampliada: seis rutas, anchos 390/1280, texto 200%, sin overflow. Evidencia antes/después en qa/reflow-review.json. Nuevas comprobaciones de teclado: formulario vacío lleva foco a business, generación a result-title, reset a business y salto de área tras cero resultados restaura 14 tarjetas. Capturas de estados revisadas; a texto ampliado los títulos ocupan más líneas.
+
+Pruebas: check 45 archivos sin errores/advertencias; build 20 páginas/24 editores; test:ci (20 rutas/69 destinos, navegación, marca, editorial, versión y axe 44 comprobaciones sin infracciones) aprobado. Lighthouse local final en home/catálogo/demo: rendimiento/accesibilidad/buenas prácticas 100 y SEO 66 por noindex. Informes regenerados, no datos de producción ni certificación WCAG.
+
+Agente Codex principal, sin subagentes; autor Joel Alejandro Yañez Caballero. Rama feat/feature-catalog, sin nueva publicación ni PR creada; existentes/Actions remoto sin verificar por API. Publicado confirmado af35674. Siguiente paso: revisar Actions del nuevo SHA y autorizar la integración concreta si se quiere reflejar esta corrección en el Worker. Siguen pendientes dispositivos/lector, evidencia SaaS, tarifas y revisión/adopción legal.

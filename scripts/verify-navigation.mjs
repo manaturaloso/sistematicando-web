@@ -24,9 +24,9 @@ try{
  assert(await page.locator('#main-nav a').first().evaluate(el=>el===document.activeElement));
  await page.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
  assert(await toggle.evaluate(el=>el===document.activeElement));
- for(const route of ['/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/']){
-  await page.setViewportSize({width:1280,height:1000});await page.goto(server.url+route);await page.evaluate(()=>document.documentElement.style.fontSize='200%');
-  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Text resize overflow: ${route}`);
+ for(const width of [390,1280])for(const route of ['/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/','/contacto/']){
+  await page.setViewportSize({width,height:1000});await page.goto(server.url+route);await page.evaluate(()=>document.documentElement.style.fontSize='200%');
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Text resize overflow: ${route} @${width}`);
  }
  // A slow or failed application bundle must not change the header's mobile state.
  const isolated=await browser.newContext({viewport:{width:390,height:1000}});
@@ -38,5 +38,5 @@ try{
  await isolatedToggle.click();assert(await isolatedPage.locator('#main-nav').isVisible());
  await isolatedPage.keyboard.press('Escape');assert(!await isolatedPage.locator('#main-nav').isVisible());
  await isolated.close();
- console.log('PASS mobile navigation without JS, skip focus, keyboard menu/Escape 200% text resize on five routes and menu with external scripts blocked.');
+ console.log('PASS mobile navigation without JS, skip focus, keyboard menu/Escape 200% text resize on six routes at mobile/desktop and menu with external scripts blocked.');
 }finally{await browser?.close();await server.close();}

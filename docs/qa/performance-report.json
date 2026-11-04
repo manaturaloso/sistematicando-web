@@ -11,11 +11,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 905.2705000000001,
+          "value": 905.3572999999999,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 905.2705000000001,
+          "value": 905.3572999999999,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -27,7 +27,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 905.2705000000001,
+          "value": 905.3572999999999,
           "unit": "millisecond"
         }
       },
@@ -82,15 +82,15 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 904.2602999999999,
+          "value": 904.9128000000001,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 904.2602999999999,
+          "value": 904.9128000000001,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 4,
+          "value": 0,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -98,7 +98,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 904.2602999999999,
+          "value": 904.9128000000001,
           "unit": "millisecond"
         }
       },
@@ -107,7 +107,7 @@
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0.5,
-          "displayValue": "Est savings of 11 KiB"
+          "displayValue": "Est savings of 12 KiB"
         },
         {
           "id": "is-crawlable",
@@ -141,7 +141,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 50 ms"
+          "displayValue": "Est savings of 60 ms"
         }
       ],
       "warnings": [],
@@ -159,11 +159,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 905.9735000000001,
+          "value": 905.0804,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 905.9735000000001,
+          "value": 905.0804,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -175,7 +175,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 905.9735000000001,
+          "value": 905.0804,
           "unit": "millisecond"
         }
       },
@@ -201,7 +201,7 @@
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "displayValue": "Est savings of 11 KiB"
+          "displayValue": "Est savings of 12 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -218,7 +218,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 100 ms"
+          "displayValue": "Est savings of 90 ms"
         }
       ],
       "warnings": [],

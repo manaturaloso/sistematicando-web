@@ -324,7 +324,7 @@ font-size:.5rem
 }
 .concept-stats {
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(min(100%,7rem),1fr));
 gap:.7rem;
 margin-bottom:.8rem
 }
@@ -1100,3 +1100,14 @@ transform:none
 /* Preserve navigation and decorative bounds when users enlarge text. */
 .header-inner, .site-header nav {flex-wrap:wrap;}
 .visual-orbit {right:1.5rem;}
+
+/* Preserve reflow when text is enlarged on a narrow viewport. */
+.brand-logo {max-width:100%;}
+.button {max-width:100%;overflow-wrap:anywhere;}
+h1,h2,h3 {overflow-wrap:anywhere;hyphens:auto;}
+h1 em {max-width:100%;}
+.hero-copy,.hero-visual {min-width:0;max-width:100%;}
+
+.concept-stats>div,.ecosystem-grid>* {min-width:0;}
+.ecosystem-grid {overflow-wrap:anywhere;}
+.chart-foot,.chart-heading {flex-wrap:wrap;gap:.5rem;}
