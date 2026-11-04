@@ -41,3 +41,12 @@
 - Se conserva noindex/robots. No se aprueba producción oficial, dominio personalizado, DNS ni indexación.
 - Carga directa en proyecto exclusivo de revisión como alternativa manual; distinguir ese proyecto de un deployment Preview estricto y del sitio comercial oficial. No se inventa hostname.
 - Solo agente principal. Script de empaquetado reproducible versionado; binario generado fuera del checkout.
+
+## 2026-11-04 · Catálogo de funcionalidades
+
+- Registro tipado de 14 módulos con cinco grupos. Estado predeterminado no verificada; conservar evidencia, dependencias y límites. FEATURE_STATUS.md se genera con npm run docs:features para evitar divergencias con la web.
+- Búsqueda progresiva en cliente, sin servicio externo ni envío de datos: tildes, mayúsculas, varias palabras, contador aria-live, vacío y reset. Sin JS todo el catálogo permanece disponible.
+- No se generan 14 páginas vacías ni se afirman integraciones SUNAT, pagos, PMS o seguridad operativa. Cada módulo incluye límites y soluciones relacionadas.
+- Se conserva CSS/identidad, noindex y bloqueo de rastreo. Menú y pie enlazan catálogo; home incorpora acceso contextual.
+- El usuario reportó despliegue en Worker conectado a feat/brand-foundation. Se abre feat/feature-catalog para guardar sin actualizar esa rama ni ejecutar un nuevo despliegue. Revisar automatización antes de integrar.
+- No se usa cuenta Cloudflare, DNS ni repositorio SaaS. Solo Codex principal; no subagentes.

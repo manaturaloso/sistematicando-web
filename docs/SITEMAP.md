@@ -4,6 +4,7 @@
 
 - `/`: home.
 - `/soluciones/`: índice de sectores.
+- `/funcionalidades/`: catálogo conceptual con búsqueda y enlaces por área.
 - `/soluciones/restaurantes/`
 - `/soluciones/bares/`
 - `/soluciones/cafeterias/`
@@ -15,4 +16,4 @@
 
 ## Siguiente
 
-`/funcionalidades/`: catálogo por grupos y estado verificable. Precios, contacto, recursos, legales y páginas de módulos siguen pendientes. No existen enlaces a rutas vacías ni sitemap público hasta contar con dominio y aprobación de indexación. Las páginas de soluciones presentan enfoques de evaluación y no disponibilidad verificada del SaaS.
+`/precios/` y `/solicitar-demo/`: pendientes, sin tarifas ni recepción inventadas. Páginas individuales de módulos condicionadas a evidencia. Precios, contacto, recursos, legales y páginas de módulos siguen pendientes. No existen enlaces a rutas vacías ni sitemap público hasta contar con dominio y aprobación de indexación. Las páginas de soluciones presentan enfoques de evaluación y no disponibilidad verificada del SaaS.

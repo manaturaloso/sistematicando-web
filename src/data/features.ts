@@ -1,0 +1,49 @@
+import type { solutions } from './solutions';
+
+type Sector = (typeof solutions)[number]['slug'];
+export type FeatureStatus = 'unverified' | 'proposed' | 'planned' | 'in-development' | 'partial' | 'available';
+export type FeatureGroup = 'operacion' | 'administracion' | 'clientes' | 'gestion' | 'eventos';
+export interface Feature {
+  id: string;
+  name: string;
+  group: FeatureGroup;
+  description: string;
+  question: string;
+  sectors: Sector[];
+  status: FeatureStatus;
+  evidence: string;
+  dependencies: string;
+  limits: string;
+}
+export const statusLabels: Record<FeatureStatus, string> = {
+  unverified: 'No verificada', proposed: 'Propuesta', planned: 'Planificada',
+  'in-development': 'En desarrollo', partial: 'Parcialmente implementada', available: 'Verificada y disponible',
+};
+export const featureGroups: { id: FeatureGroup; name: string; description: string; icon: string }[] = [
+  { id: 'operacion', name: 'Ventas y operación', description: 'Desde la atención hasta el cierre de una jornada.', icon: 'grid' },
+  { id: 'administracion', name: 'Administración', description: 'Los recursos y procesos que sostienen tu negocio.', icon: 'bars' },
+  { id: 'clientes', name: 'Clientes y reservas', description: 'Contexto para preparar y acompañar cada visita.', icon: 'circle' },
+  { id: 'gestion', name: 'Equipo y gestión', description: 'Responsabilidades e información para entender el conjunto.', icon: 'grid' },
+  { id: 'eventos', name: 'Eventos y accesos', description: 'Preguntas clave desde la entrada hasta el ingreso.', icon: 'sparkle' },
+];
+// El brief describe intención, no disponibilidad. Cada alta parte de no verificada.
+// Para cambiar estado se exige documentar evidencia real y revisar el copy público.
+const defineFeature = (feature: Omit<Feature, 'status' | 'evidence'>): Feature => ({
+  ...feature, status: 'unverified', evidence: 'docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.',
+});
+export const features: Feature[] = [
+  defineFeature({ id: 'punto-de-venta', name: 'Punto de venta', group: 'operacion', description: 'Evaluar cómo registrar productos, pedidos y pagos en tu atención diaria.', question: '¿Cómo atiendes en mostrador, salón y otros canales?', sectors: ['restaurantes', 'bares', 'cafeterias'], dependencies: 'Verificar flujo de ventas, dispositivos y métodos de pago.', limits: 'Sin confirmación de compatibilidad con equipos o pasarelas de pago.' }),
+  defineFeature({ id: 'caja', name: 'Caja', group: 'operacion', description: 'Dar contexto a aperturas, movimientos y cierres por turno.', question: '¿Qué necesitas revisar al terminar cada jornada?', sectors: ['restaurantes', 'bares', 'cafeterias'], dependencies: 'Verificar movimientos, cierres y atribución por usuario.', limits: 'No se garantiza conciliación automática ni integración bancaria.' }),
+  defineFeature({ id: 'mesas-y-comandas', name: 'Mesas y comandas', group: 'operacion', description: 'Revisar cómo se conectan la atención, los pedidos y su preparación.', question: '¿Cómo comunicas cambios entre salón, cocina y barra?', sectors: ['restaurantes', 'bares'], dependencies: 'Verificar estados de pedidos, equipos y flujo cocina/barra.', limits: 'No se confirma impresión, pantalla de cocina ni operación offline.' }),
+  defineFeature({ id: 'inventarios', name: 'Inventarios', group: 'administracion', description: 'Entender existencias, movimientos y reposición de productos e insumos.', question: '¿Cómo sabes qué tienes y qué hace falta reponer?', sectors: ['restaurantes', 'bares', 'cafeterias'], dependencies: 'Verificar existencias por almacén, movimientos y alertas.', limits: 'No se garantiza descuento de insumos en tiempo real.' }),
+  defineFeature({ id: 'recetas-y-costos', name: 'Recetas y costos', group: 'administracion', description: 'Relacionar preparaciones, cantidades e ingredientes para evaluar costos.', question: '¿Qué información usas para revisar el costo de una preparación?', sectors: ['restaurantes', 'cafeterias', 'bares'], dependencies: 'Verificar recetas, rendimientos y relación con compras e inventario.', limits: 'Sin evidencia de cálculo automático de márgenes o rentabilidad.' }),
+  defineFeature({ id: 'compras-y-proveedores', name: 'Compras y proveedores', group: 'administracion', description: 'Examinar cómo registras compras y mantienes el contexto de tus proveedores.', question: '¿Cómo relacionas lo comprado con lo que recibes?', sectors: ['restaurantes', 'cafeterias'], dependencies: 'Verificar proveedores, recepción y relación con existencias.', limits: 'No se confirma integración contable ni emisión de órdenes automáticas.' }),
+  defineFeature({ id: 'facturacion-electronica', name: 'Facturación electrónica', group: 'administracion', description: 'Definir necesidades de comprobantes y su relación con la venta en Perú.', question: '¿Qué comprobantes y procesos tributarios necesita tu operación?', sectors: ['restaurantes', 'bares', 'cafeterias', 'hoteles'], dependencies: 'Validar integración, proveedor, alcance tributario y estados de comprobantes.', limits: 'No se afirma integración SUNAT operativa, certificación ni cumplimiento completo.' }),
+  defineFeature({ id: 'reservas', name: 'Reservas', group: 'clientes', description: 'Revisar disponibilidad, horarios y preparación de la atención.', question: '¿Cómo organizas solicitudes y cambios de reserva?', sectors: ['restaurantes', 'hoteles'], dependencies: 'Verificar calendario, disponibilidad, confirmaciones y alcance por sector.', limits: 'No se confirma PMS, reservas hoteleras ni conexión con OTAs.' }),
+  defineFeature({ id: 'clientes', name: 'Clientes', group: 'clientes', description: 'Definir qué información es útil para acompañar una relación comercial.', question: '¿Qué contexto necesita tu equipo para atender mejor?', sectors: ['restaurantes', 'cafeterias', 'hoteles'], dependencies: 'Confirmar campos, permisos y obligaciones de privacidad.', limits: 'No se garantiza CRM completo, campañas ni automatización de marketing.' }),
+  defineFeature({ id: 'reportes', name: 'Reportes', group: 'gestion', description: 'Identificar qué información necesitas para revisar tu operación.', question: '¿Qué decisiones quieres tomar con una visión más clara?', sectors: ['restaurantes', 'cafeterias', 'multisede'], dependencies: 'Verificar fuentes, indicadores, periodos y permisos.', limits: 'No se afirman indicadores o actualizaciones en tiempo real disponibles.' }),
+  defineFeature({ id: 'personal-y-permisos', name: 'Personal y permisos', group: 'gestion', description: 'Separar responsabilidades y accesos según el trabajo de cada persona.', question: '¿Quién necesita ver y gestionar cada área?', sectors: ['restaurantes', 'bares', 'multisede'], dependencies: 'Verificar permisos granulares, alcance por sede, PIN y auditoría.', limits: 'No se confirma seguridad operativa de dispositivos compartidos ni políticas de sesión.' }),
+  defineFeature({ id: 'multisede', name: 'Multisede', group: 'gestion', description: 'Evaluar la relación entre la gestión central y cada establecimiento.', question: '¿Qué información debe compartirse entre tus locales?', sectors: ['multisede', 'hoteles'], dependencies: 'Verificar separación de datos, consolidación y límites comerciales.', limits: 'Sin garantía de reportes consolidados o módulos incluidos por local.' }),
+  defineFeature({ id: 'eventos-y-entradas', name: 'Eventos y entradas', group: 'eventos', description: 'Definir tipos de entrada y atención a compradores de un evento.', question: '¿Cómo organizas la venta y el seguimiento de tus entradas?', sectors: ['eventos'], dependencies: 'Verificar emisión, compradores, pagos y alcance de códigos QR.', limits: 'No se confirma venta online, pasarela ni emisión operativa de QR.' }),
+  defineFeature({ id: 'control-de-accesos', name: 'Control de accesos', group: 'eventos', description: 'Revisar qué necesita el equipo en puerta para gestionar el ingreso.', question: '¿Qué condiciones de aforo y conectividad tiene tu evento?', sectors: ['eventos'], dependencies: 'Validar lectores, estados de entrada y condiciones de conectividad.', limits: 'No se afirma validación offline, antifraude ni compatibilidad con lectores.' }),
+];

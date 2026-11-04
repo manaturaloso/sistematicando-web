@@ -7,3 +7,5 @@ La referencia de marca contiene texto editorial interno, no copy comercial final
 Home implementada con copy original, áreas propuestas y FAQ que declara el alcance pendiente de verificar. La demo tiene preparación informativa y canal pendiente, sin datos de contacto inventados. Copy pendiente de aprobación comercial antes del lanzamiento.
 
 Soluciones: seis enfoques originales por sector con prioridades, preguntas de evaluación y límites específicos. Fuente editorial mantenible en src/data/solutions.ts. Nada de este contenido acredita implementación del producto; conservar esa distinción al editar.
+
+Catálogo /funcionalidades/: 14 áreas conceptuales con descripción, pregunta de diagnóstico, límites y sectores. Fuente editorial en features.ts; estados y evidencia compartidos con matriz generada. No interpretar «No verificada» como función disponible.

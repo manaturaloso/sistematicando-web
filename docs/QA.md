@@ -56,3 +56,13 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 - `python3 scripts/package-preview.py`: ZIP de 315086 bytes, nueve páginas, noindex/robots e integridad comprobados; sin docs/src/Git. SHA256 e81bcbd1e0a7e4fff2306986b197d63a746fee1ace6d4a77953e6b903322eaba para el archivo generado en esta sesión (puede variar al reconstruir).
 - `git diff --check`: aprobado.
 - Sin despliegue ni URL pública. Validación remota pendiente tras la carga en Cloudflare; no se repitió el smoke de navegador porque las páginas no cambiaron.
+
+# 2026-11-04 · Catálogo de funcionalidades
+
+- Check (15 archivos) sin errores, advertencias ni hints; build de diez páginas.
+- scripts/verify-features.py aprobado a 320/390/768/900/1024/1440: overflow, IDs únicos, 14 módulos no verificados, cinco grupos, búsqueda sin tildes, varias palabras/espacios, resultados vacíos, limpiar/foco, enlaces de área después de búsqueda vacía, detalles por Enter, menú/Escape y noindex. Enlaces a soluciones y catálogo sin JS comprobados. Sin errores JS o recursos fallidos.
+- Regresión scripts/verify-home.py: cuatro anchos; scripts/verify-solutions.py: 28 combinaciones aprobadas.
+- Revisión visual de capturas del catálogo a 1440/390. Capturas temporales en /tmp/sistematicando-qa.
+- npm run docs:features genera matriz de 14 módulos y comprueba IDs/grupos y consistencia mínima estado/evidencia.
+- Empaquetado scripts/package-preview.py adaptado a diez páginas; ZIP íntegro fuera del checkout, con noindex/robots y sin documentación interna.
+- No se hicieron nuevas pruebas remotas del Worker ni auditoría axe/Lighthouse. Ver PROGRESS para el bloqueo de acceso remoto.

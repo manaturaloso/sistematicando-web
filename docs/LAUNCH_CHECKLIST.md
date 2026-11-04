@@ -4,7 +4,8 @@
 - [ ] Integrar logos oficiales originales (licencias de fuentes ya incluidas).
 - [x] Primera home y 404 implementadas y probadas localmente.
 - [x] Índice y seis páginas sectoriales implementados y probados localmente.
-- [ ] Implementar catálogo de funcionalidades y otras páginas pendientes; aprobar contenido comercial.
+- [x] Catálogo conceptual de funcionalidades implementado y probado.
+- [ ] Verificar módulos, aprobar copy y desarrollar páginas comerciales restantes.
 - [ ] Verificar capacidades del SaaS y aprobar precios y copy.
 - [ ] Configurar recepción real de formularios y privacidad.
 - [ ] Aprobar textos legales y datos empresariales.
@@ -12,3 +13,5 @@
 - [ ] Auditoría de accesibilidad y rendimiento antes de lanzamiento.
 - [ ] Confirmar dominio, canonicals, sitemap y política de indexación.
 - [ ] Autorizar explícitamente despliegue en producción.
+
+El usuario desplegó una versión previa en un Worker. La rama de catálogo no se integra automáticamente a la rama seguida; revisar y autorizar actualización por separado.

@@ -31,3 +31,9 @@ Después del build ejecutar `python3 scripts/package-preview.py`. Genera `/works
 5. Compartir la URL asignada para verificar home, soluciones, 404, fuentes y noindex. No retirar robots/noindex ni configurar DNS.
 
 El acceso a la cuenta se realiza en Cloudflare. No compartir contraseñas ni tokens por chat. La carga directa y la integración con Git son modalidades distintas; confirmar la elegida antes de preparar automatización futura.
+
+## Estado real posterior comunicado por el usuario
+
+El usuario eligió Workers con GitHub, no Pages. Desplegó feat/brand-foundation y compartió https://sistematicando-web.manaturaloso.workers.dev; confirmó que aparece la web. En la captura: build command None y deploy npx wrangler deploy, resultado verde. No se ha inferido de eso una configuración reproducible de assets. No hay wrangler config en este checkout ni se ha consultado la configuración de la cuenta. El proxy del entorno bloquea workers.dev, por lo que falta validación remota independiente.
+
+La entrega del catálogo queda en feat/feature-catalog. No se modifica feat/brand-foundation ni se invoca deploy. Antes de integrar, comprobar ramas y triggers de Cloudflare; autorizar la actualización de la versión visible. Las instrucciones Pages de arriba son una alternativa histórica, no la configuración activa del Worker.
