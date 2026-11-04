@@ -39,4 +39,4 @@ Solo Codex principal; sin subagentes. Habilidad digital-design-excellence para l
 
 ## Git y producción
 
-Rama prevista: feat/brand-foundation. El SHA final se consulta con `git log -1 --format='%H %s'` (no se escribe aquí para evitar autorreferencia del commit). Consultar QA para resultado del envío remoto. No se ha creado PR ni publicado en producción. Las PR remotas existentes no pueden confirmarse sin acceso.
+Rama: feat/brand-foundation. Primer commit de implementación: d72c452. Push a origin/feat/brand-foundation completado correctamente. El SHA final se consulta con `git log -1 --format='%H %s'` (no se escribe aquí para evitar autorreferencia del commit). La verificación final del SHA remoto se realiza después del commit de documentación y se informa en la entrega. No se ha creado PR ni publicado en producción. Las PR remotas existentes no pueden confirmarse sin acceso.

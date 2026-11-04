@@ -9,7 +9,7 @@
 - Teclado: Tab al enlace de salto y Enter a #contenido. Sin errores JavaScript.
 - Revisión visual de captura de escritorio: fuentes, jerarquía y tarjetas renderizadas.
 - Contraste WCAG calculado con luminancia sRGB: tinta/coral 4.52:1; tinta/blanco 13.15:1. Blanco/coral 2.91:1, por eso no se utiliza como texto en botones coral.
-- `git diff --check`: sin errores antes del commit.
+- Revisión de whitespace del primer commit: el chequeo completo detecta espacios finales existentes en el brief original y en las licencias oficiales, conservados intencionalmente. `git diff-tree --root --no-commit-id --check HEAD -- . ':!docs/PROJECT_BRIEF.md' ':!public/fonts/*-OFL.txt'` pasó para los archivos creados.
 - `git ls-remote origin HEAD refs/heads/main` fuera del sandbox: éxito y salida vacía, sin referencias remotas en esa consulta.
 - Licencias OFL obtenidas por HTTPS con verificación TLS activa.
 
@@ -19,7 +19,7 @@ No se ejecutaron Lighthouse, axe, build Astro ni typecheck; no existe aplicació
 
 ## GitHub
 
-`gh pr list --repo manaturaloso/sistematicando-web --state open`: Forbidden en API GraphQL. No se pudo confirmar PR pendientes. El resultado del push y la verificación SHA se registra en PROGRESS después del intento.
+`gh pr list --repo manaturaloso/sistematicando-web --state open`: Forbidden en API GraphQL. No se pudo confirmar PR pendientes. Push de feat/brand-foundation completado correctamente; primer commit d72c452. Se verifica el SHA final contra el remoto después del commit de continuidad.
 
 ## Repetir
 
