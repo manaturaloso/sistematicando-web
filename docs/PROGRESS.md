@@ -53,11 +53,11 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. Comprobar Actions del commit de contacto de esta entrega; revisar 20 rutas, marca/editorial y 44 comprobaciones axe. 296dc05 fue confirmado verde por el propietario; no asumir verde para versiones posteriores.
-2. Revisar /contacto/ y sus canales autorizados, textos de privacidad y datos del responsable. Página: contacto en Pages CMS, rama feat/feature-catalog; cambios de datos en Contactos y responsable.
-3. La nueva página y mejoras anteriores siguen en desarrollo. Para actualizar Worker revisar diff y autorizar integración concreta en feat/brand-foundation; publicado sigue 9a017af. Mantener noindex/DNS.
-4. Revisión manual/dispositivos/lector y definición comercial/legal: módulos sin verificar, tarifas no aprobadas y privacidad en revisión. No inventar disponibilidad.
-5. Consultar git log -1 y git ls-remote para SHA final. Autor Joel Alejandro Yañez Caballero; solo Codex principal. Sin PR creada; existentes sin verificar por API.
+1. Revisar RELEASE_REVIEW.md (aplicación cfad1a7 más documentación de entrega). Solicitar autorización explícita para integrar feat/feature-catalog en feat/brand-foundation y actualizar Worker. No publicar por un «sigamos» de desarrollo.
+2. Después de autorización: fetch/revisar cambios concurrentes, integrar sin reescritura (fast-forward si las puntas no cambian), push y comprobar referencias. Objetivo observado 9a017af; integración simulada limpia y dry-run aprobado.
+3. Comprobar Cloudflare Build/SHA/Ready y recorrer contacto, admin, catálogo, demo, privacidad, home y 404. API local bloquea consulta remota; usar evidencia del dashboard si sigue igual. CI actual no confirmado; verde histórico de 296dc05 confirmado por propietario.
+4. Seguir con revisión manual/dispositivos/lector y definición comercial/legal; mantener noindex/DNS. Módulos sin verificar y tarifas sin aprobar.
+5. Consultar git log -1 y git ls-remote para SHA de entrega documental. Autor Joel Alejandro Yañez Caballero; solo Codex principal. Sin PR creada, existentes no verificadas por API.
 
 ## Datos comerciales aplicados
 
@@ -148,3 +148,11 @@ Pruebas: check 42 archivos, cero errores/advertencias; content:check 14 módulos
 Agente Codex principal, sin subagentes. Autor Joel Alejandro Yañez Caballero. Rama feat/feature-catalog; publicado sigue 9a017af, sin deploy/DNS/indexación nuevos ni PR creada. PR existentes y Actions nuevo sin verificar por API Forbidden; propietario confirmó verde 296dc05, no los SHA posteriores. Siguiente paso exacto: comprobar Actions del commit de esta entrega y revisar contacto/privacidad/canales; luego revisión manual con dispositivos/lector y definición comercial/legal. Cualquier integración al Worker requiere autorización de una versión concreta.
 
 Validación final contacto: test:ci aprobado (20 rutas/68 destinos internos, navegación, marca y prueba editorial/canales con JS/no-JS); axe 44 comprobaciones, cero infracciones automáticas. Se conservan incomplete aparte. Captura móvil revisada. Paquete estático /tmp/sistematicando-contact-review.zip verificado: 20 páginas, sin fuentes internas ni docs; no desplegado.
+
+## 2026-11-04 · Entrega preparada para integración, sin publicación
+
+Revisión concreta en RELEASE_REVIEW.md: aplicación cfad1a7 contra Worker 9a017af, contacto/CMS/marca/estabilidad/accesibilidad acumulados. Fetch sin cambios nuevos; destino antecesor e integración simulada sin conflictos. Worker dry-run repetido y aprobado (20 páginas, 59 archivos, sin carga); wrangler.jsonc idéntico. Se mantienen los resultados locales previos del mismo código: 20 rutas/68 destinos y axe 44 comprobaciones. No se repite toda la suite para una entrega solo documental.
+
+Consulta Actions del candidato cfad1a7 bloqueada por Forbidden; verde de 296dc05 confirmado por el propietario no prueba este último. Candidato de entrega añade solo este registro y revisión sobre cfad1a7. Rama feat/feature-catalog; objetivo feat/brand-foundation sigue 9a017af, sin merge/push/deploy a esa rama. Sin PR creada, existentes sin verificar. Autor Joel Alejandro Yañez Caballero; agente Codex principal, sin subagentes.
+
+Siguiente paso exacto: autorización explícita para integrar la entrega descrita y actualizar el Worker público; después fetch, integración segura, push y verificación de build/SHA/versión activa y rutas. Esta confirmación se necesita por la instrucción del propietario de no publicar sin autorización; la aprobación anterior correspondía a 9a017af. Mantener DNS/noindex y pendientes comerciales/legales/dispositivos.
