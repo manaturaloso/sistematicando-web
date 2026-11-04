@@ -26,11 +26,11 @@ Una ejecución final por ruta en Chromium local. Valores de laboratorio, variabl
 
 | Ruta | Rendimiento | Accesibilidad automática | Buenas prácticas | SEO | LCP | TBT | CLS |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| / | 100 | 100 | 100 | 66 | 0.94 s | 3 ms | 0.0014 |
-| /funcionalidades/ | 96 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.1193 |
-| /solicitar-demo/ | 100 | 100 | 100 | 66 | 0.90 s | 4.5 ms | 0.0073 |
+| / | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
+| /funcionalidades/ | 100 | 100 | 100 | 66 | 0.90 s | 0 ms | 0.0000 |
+| /solicitar-demo/ | 100 | 100 | 100 | 66 | 0.90 s | 22 ms | 0.0000 |
 
-SEO se penaliza por bloqueo de indexación deliberado. Se conservan noindex y robots; no se retiran para aumentar una puntuación. No se ha medido INP de usuarios. CSS compartido y dependencias de carga aparecen como oportunidades informativas; no se agregaron optimizaciones de fuentes sin necesidad al pasar el objetivo local.
+SEO se penaliza por bloqueo de indexación deliberado. Se conservan noindex y robots; no se retiran para aumentar una puntuación. No se ha medido INP de usuarios. CSS compartido y dependencias de carga aparecen como oportunidades informativas; se precargan las dos fuentes locales para evitar descubrimiento tardío y variación de la composición.
 
 ## Repetir
 
@@ -47,4 +47,6 @@ Requiere Chromium en /usr/bin/chromium (o adaptar la ruta al entorno). Herramien
 
 Resúmenes versionados en docs/qa; los JSON completos de Lighthouse se generan temporalmente en /tmp. La ejecución sobrescribe los resúmenes; revisar el diff antes de guardar. La revisión manual de contraste está separada del reporte automático y debe repetirse si cambia el contenido o estilo.
 
-Última medición con logos originales: CLS del catálogo 0.119, pendiente de mejorar; Lighthouse también señala peso de PNG. Originales preservados. test:brand verifica seis anchos e integridad.
+Última medición con logos originales, menú inicializado durante parsing y fuentes precargadas: CLS 0 en las tres rutas de laboratorio (catálogo anterior 0.119). Lighthouse sigue señalando peso de PNG. Originales preservados. test:brand verifica seis anchos e integridad.
+
+El menú se inicializa con un script inline pequeño, encapsulado y colocado tras la cabecera. Evita que el nav móvil completo aparezca antes de ocultarse al cargar un módulo. Sin JS siguen visibles los enlaces; con scripts externos bloqueados el menú y Escape funcionan. No depende de una clase global que pueda ocultar enlaces sin instalar sus eventos. La web actual permite scripts inline; cualquier futura CSP deberá incluir hash/nonce apropiado.

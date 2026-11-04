@@ -14,9 +14,10 @@ const currentPath = Astro.url.pathname;
     </nav>
   </div>
 </header>
-<script>
-  const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
-  const nav = document.querySelector<HTMLElement>('#main-nav');
+<script is:inline>
+(() => {
+  const button = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#main-nav');
   if (button) { button.hidden = false; button.dataset.ready = 'true'; }
   function closeMenu() { button?.setAttribute('aria-expanded', 'false'); }
   button?.addEventListener('click', () => button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true')));
@@ -25,4 +26,5 @@ const currentPath = Astro.url.pathname;
     if (event.key === 'Escape' && button?.getAttribute('aria-expanded') === 'true') { closeMenu(); button.focus(); }
   });
   matchMedia('(min-width: 900px)').addEventListener('change', closeMenu);
+})();
 </script>

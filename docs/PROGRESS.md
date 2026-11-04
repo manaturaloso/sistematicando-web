@@ -48,15 +48,15 @@
 
 ## Problemas y decisiones pendientes
 
-Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión operativa de privacidad; dominio definitivo y revisión legal. Revisión manual con dispositivos/lector de pantalla, CLS del catálogo y peso de PNG. Se mantiene noindex/robots; no hay backend ni envíos simulados. CMS conectado y logos cargados ya no son pendientes.
+Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión operativa de privacidad; dominio definitivo y revisión legal. Revisión manual con dispositivos/lector de pantalla, peso de PNG. Se mantiene noindex/robots; no hay backend ni envíos simulados. CMS conectado y logos cargados ya no son pendientes.
 
 ## Siguiente paso exacto
 
-1. En Cloudflare → Workers & Pages → sistematicando-web → Deployments, comprobar que el build de la rama feat/brand-foundation corresponde al commit de integración de esta entrega (git log -1 en esa rama). Si no se inicia automáticamente, usar Retry build/Deploy desde esa rama ya autorizada; no cambiar DNS.
-2. Abrir https://sistematicando-web.manaturaloso.workers.dev y revisar logo, /admin/, /funcionalidades/, /solicitar-demo/, /legal/privacidad/ y una ruta inexistente (404). Se conservan noindex/robots. El agente no pudo verificar el sitio por bloqueo CONNECT 403, ni Actions/PR por API Forbidden.
-3. Para continuar desarrollo, volver a feat/feature-catalog e incorporar por fast-forward la integración/documentación de feat/brand-foundation; mantener el CMS editando feat/feature-catalog. No publicar futuras ediciones sin autorización correspondiente.
-4. Resolver CLS del catálogo (0.119), revisión manual con dispositivos/lector y pendientes comerciales/legales. Contactos ya confirmados en content/contact.json. Solo Codex principal, sin subagentes.
-5. Git: consultar git log -1 y git ls-remote origin refs/heads/feat/brand-foundation; entrega integrada desde ec19bb7, padre desplegado previo ed7227d. No se creó PR, integración directa autorizada; PR existentes sin verificar por API Forbidden.
+1. La captura del propietario ya confirmó despliegue de 9a017af. Esta nueva corrección está solo en feat/feature-catalog; no integrar automáticamente en la rama seguida por Cloudflare.
+2. Revisar el cambio de menú/fuentes y el informe docs/qa/performance-report.json. Si se decide publicarlo, obtener autorización explícita para integrar el commit de esta entrega en feat/brand-foundation; antes fetch y revisar cambios CMS concurrentes.
+3. Recorrer en dispositivos y lector de pantalla las páginas terminadas; revisión comercial de los módulos no verificados, precios y adopción de privacidad siguen pendientes. Mantener noindex y DNS actuales.
+4. CMS permanece en feat/feature-catalog. Próximo trabajo técnico: revisar entrega de imágenes de marca para reducir transferencia preservando los originales; no sustituir ni transformar los archivos fuente oficiales sin explicitar la estrategia.
+5. Rama activa feat/feature-catalog. Consultar git log -1 para el SHA final y git ls-remote para verificar persistencia. Rama publicada permanece en 9a017af. Sin PR creada; PR existentes/Actions alojado sin verificar por API Forbidden. Agente: Codex principal, sin subagentes.
 
 ## Datos comerciales aplicados
 
@@ -75,3 +75,11 @@ El propietario solicita usar siempre Joel Alejandro Yañez Caballero. Configurac
 La captura aportada por el propietario muestra build Cloudflare #7b8076e1 exitoso, rama feat/brand-foundation, commit 9a017af, mensaje de integración y todas las etapas verdes. Confirma el build/despliegue en el dashboard, sin afirmar recorrido funcional remoto por el agente. ID de versión de la captura anterior: f53f452e; diferente del SHA Git.
 
 Entrega solo de configuración/documentación en feat/feature-catalog, sin nueva publicación. Verificación: identidad efectiva y git diff --check; no se repiten pruebas de aplicación porque su código no cambia. Agente: Codex principal, sin subagentes. Siguiente paso exacto: recorrer el Worker publicado (logo, /admin, catálogo, demo, privacidad y 404); luego resolver CLS del catálogo y revisión comercial/legal. Consultar git log -1 para el commit documental y git ls-remote para persistencia. No se creó PR; PR existentes sin verificar por limitación API ya documentada.
+
+## 2026-11-04 · Estabilidad de cabecera y carga de fuentes
+
+Implementado: menú móvil inicializado durante el parsing con script inline encapsulado tras la cabecera; evita que el nav expandido aparezca y desplace todo main antes de cargar el módulo externo. Conserva enlaces sin JS y eventos de teclado/Escape. Precarga explícita de Manrope y Gluten originales locales, sin cambiar fuentes ni logos. Prueba de navegación extendida para bloquear scripts externos y verificar que el menú siga operativo. Una futura CSP debe autorizar el script mediante hash/nonce.
+
+Pruebas: check 40 archivos sin errores/advertencias, build 19 páginas y content:check aprobados. Suite test:ci después de adelantar menú: 19 rutas/66 destinos, navegación y 41 comprobaciones axe sin infracciones automáticas; incomplete de contraste separado, no certificación completa. Después de precargar fuentes: check/build y Lighthouse final tres rutas aprobados; rendimiento/accesibilidad/buenas prácticas 100, SEO 66 por noindex. CLS home/catálogo/demo 0 en laboratorio; catálogo previo 0.119. LCP final aproximadamente 0.90 s; sin afirmar métricas de producción. test:navigation final incluye scripts externos bloqueados.
+
+Persistencia solo en feat/feature-catalog, con identidad Joel Alejandro Yañez Caballero. Sin push a rama del Worker ni despliegue nuevo; publicado sigue 9a017af. Agente: Codex principal. Quedan peso de PNG, revisión manual/dispositivos y pendientes comerciales/legales. Siguiente paso: revisión de esta corrección y optimización de entrega de imágenes preservando originales; publicación posterior requiere autorización explícita. Sin PR creada; las existentes no se pueden verificar con la API disponible.

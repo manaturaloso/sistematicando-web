@@ -11,33 +11,27 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 936.54765,
+          "value": 905.607,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 936.54765,
+          "value": 905.607,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 3,
+          "value": 0,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
-          "value": 0.001440013889078613,
+          "value": 0,
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 936.54765,
+          "value": 905.607,
           "unit": "millisecond"
         }
       },
       "findings": [
-        {
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.78,
-          "displayValue": "170 ms"
-        },
         {
           "id": "is-crawlable",
           "title": "Page is blocked from indexing",
@@ -69,7 +63,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 50 ms"
         }
       ],
       "warnings": [],
@@ -80,18 +75,18 @@
     {
       "route": "/funcionalidades/",
       "scores": {
-        "performance": 96,
+        "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 66
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 909.06585,
+          "value": 904.4132999999999,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 909.06585,
+          "value": 904.4132999999999,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -99,27 +94,15 @@
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
-          "value": 0.1192521282231848,
+          "value": 0,
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 909.06585,
+          "value": 904.4132999999999,
           "unit": "millisecond"
         }
       },
       "findings": [
-        {
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.84,
-          "displayValue": "0.119"
-        },
-        {
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "displayValue": "1 layout shift found"
-        },
         {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
@@ -136,11 +119,6 @@
           "title": "Page prevented back/forward cache restoration",
           "score": 0,
           "displayValue": "2 failure reasons"
-        },
-        {
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0
         },
         {
           "id": "document-latency-insight",
@@ -162,7 +140,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0,
+          "displayValue": "Est savings of 60 ms"
         }
       ],
       "warnings": [],
@@ -180,27 +159,33 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 903.1829,
+          "value": 903.2482,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 903.1829,
+          "value": 903.2482,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 4.5,
+          "value": 22,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
-          "value": 0.007334336935140453,
+          "value": 0,
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 903.1829,
+          "value": 903.2482,
           "unit": "millisecond"
         }
       },
       "findings": [
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.97,
+          "displayValue": "90 ms"
+        },
         {
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
@@ -238,8 +223,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5,
-          "displayValue": "Est savings of 10 ms"
+          "score": 0,
+          "displayValue": "Est savings of 100 ms"
         }
       ],
       "warnings": [],
