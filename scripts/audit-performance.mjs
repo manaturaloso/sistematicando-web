@@ -9,7 +9,7 @@ const results=[];
 try{
  for(const route of ['/','/funcionalidades/','/solicitar-demo/']){
   const report=path.join(os.tmpdir(),`sistematicando-lighthouse-${route.replaceAll('/','')||'home'}.json`);
-  await run(process.execPath,['node_modules/lighthouse/cli/index.js',server.url+route,'--quiet','--output=json',`--output-path=${report}`,'--only-categories=performance,accessibility,best-practices,seo','--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage'],{env:{...process.env,CHROME_PATH:'/usr/bin/chromium'},maxBuffer:5*1024*1024,timeout:120000});
+  await run(process.execPath,['node_modules/lighthouse/cli/index.js',server.url+route,'--quiet','--output=json',`--output-path=${report}`,'--only-categories=performance,accessibility,best-practices,seo','--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage'],{env:{...process.env,CHROME_PATH:process.env.CHROMIUM_PATH||process.env.CHROME_PATH||'/usr/bin/chromium'},maxBuffer:5*1024*1024,timeout:120000});
   const lhr=JSON.parse(await fs.readFile(report,'utf8'));
   if(lhr.runtimeError)throw new Error(JSON.stringify(lhr.runtimeError));
   const metrics=Object.fromEntries(['first-contentful-paint','largest-contentful-paint','total-blocking-time','cumulative-layout-shift','speed-index'].map(key=>[key,{value:lhr.audits[key].numericValue,unit:lhr.audits[key].numericUnit}]));

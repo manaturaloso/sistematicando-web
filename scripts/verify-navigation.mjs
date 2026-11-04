@@ -4,7 +4,7 @@ import {previewServer} from './lib/preview-server.mjs';
 const server=await previewServer();
 let browser;
 try{
- browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+ browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  const plain=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:1000}});
  for(const route of ['/','/solicitar-demo/','/recursos/guias/preparar-cierre-de-caja/']){
   const page=await plain.newPage();await page.goto(server.url+route);

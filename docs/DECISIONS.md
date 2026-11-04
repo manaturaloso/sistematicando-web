@@ -111,3 +111,12 @@
 - Runtime local verificado con estado HTTP, fuentes por hash, rutas internas excluidas y navegador móvil. Warning de Request.cf predeterminado documentado, sin relevancia funcional para assets estáticos; no equivale a validación de producción.
 - DEPLOYMENT.md se reescribe para priorizar el Worker real y separar Pages histórico, configuración preparada y publicación no realizada.
 - Solo Codex principal; rama desplegada sin cambios.
+
+## 2026-11-04 · Control automático para ediciones editoriales
+
+- Ante confirmación de CMS aún sin conectar, se completa trabajo independiente: workflow de validación en GitHub, sin integración ni publicación.
+- Instala desde lockfile y ejecuta check/dry-run y pruebas de todo el sitio, navegación y axe. Permisos de lectura, sin credenciales de despliegue; artefactos solo para revisión.
+- Informes viejos se eliminan antes de validar para no atribuir evidencia pasada a un job que falló antes de generar resultados.
+- Navegador configurable mediante CHROMIUM_PATH: sistema local o distribución Playwright en CI. No se depende de una ruta de Chromium exclusiva del entorno actual.
+- No se cambian contenido comercial, estilos ni rama del Worker. No se afirma una ejecución alojada exitosa ni conexión CMS por pasar localmente.
+- Solo Codex principal; el siguiente paso externo sigue siendo autorización de la GitHub App por el propietario.

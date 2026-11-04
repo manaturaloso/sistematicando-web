@@ -6,7 +6,7 @@ const server=await previewServer();
 let browser;
 const results=[];
 try{
- browser=await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+ browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  for(const width of [390,1440]){
   const context=await browser.newContext({viewport:{width,height:1000}});
   for(const route of await builtRoutes()){

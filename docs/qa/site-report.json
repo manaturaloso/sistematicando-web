@@ -1,0 +1,101 @@
+{
+  "scope": "Local build: all generated routes and internal link/anchor targets; no external services contacted.",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Sistematicando · Todo tu negocio, bajo control."
+    },
+    {
+      "route": "/404.html",
+      "status": 200,
+      "title": "Página no encontrada · Sistematicando"
+    },
+    {
+      "route": "/admin/",
+      "status": 200,
+      "title": "Administración · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/",
+      "status": 200,
+      "title": "Funcionalidades: explora las áreas de gestión · Sistematicando"
+    },
+    {
+      "route": "/legal/privacidad/",
+      "status": 200,
+      "title": "Política de privacidad · Sistematicando"
+    },
+    {
+      "route": "/precios/",
+      "status": 200,
+      "title": "Precios y alcance de la propuesta · Sistematicando"
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "title": "Preguntas frecuentes · Sistematicando"
+    },
+    {
+      "route": "/recursos/",
+      "status": 200,
+      "title": "Recursos para organizar tu negocio · Sistematicando"
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "status": 200,
+      "title": "Qué preguntar antes de elegir un software de gestión · Sistematicando"
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "status": 200,
+      "title": "Por dónde empezar a ordenar tus insumos · Sistematicando"
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "status": 200,
+      "title": "Cómo preparar una revisión de caja por turno · Sistematicando"
+    },
+    {
+      "route": "/solicitar-demo/",
+      "status": 200,
+      "title": "Prepara tu futura demo · Sistematicando"
+    },
+    {
+      "route": "/soluciones/",
+      "status": 200,
+      "title": "Soluciones por tipo de negocio · Sistematicando"
+    },
+    {
+      "route": "/soluciones/bares/",
+      "status": 200,
+      "title": "Bares: enfoque de gestión · Sistematicando"
+    },
+    {
+      "route": "/soluciones/cafeterias/",
+      "status": 200,
+      "title": "Cafeterías: enfoque de gestión · Sistematicando"
+    },
+    {
+      "route": "/soluciones/eventos/",
+      "status": 200,
+      "title": "Eventos: enfoque de gestión · Sistematicando"
+    },
+    {
+      "route": "/soluciones/hoteles/",
+      "status": 200,
+      "title": "Hoteles y hospedajes: enfoque de gestión · Sistematicando"
+    },
+    {
+      "route": "/soluciones/multisede/",
+      "status": 200,
+      "title": "Múltiples locales: enfoque de gestión · Sistematicando"
+    },
+    {
+      "route": "/soluciones/restaurantes/",
+      "status": 200,
+      "title": "Restaurantes: enfoque de gestión · Sistematicando"
+    }
+  ],
+  "destinations": 66
+}

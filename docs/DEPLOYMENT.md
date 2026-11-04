@@ -74,3 +74,7 @@ El ZIP generado por `python3 scripts/package-preview.py` contiene solo assets p�
 ## Indexación
 
 Se mantienen noindex y robots Disallow: /. Para un lanzamiento oficial se necesitan dominio aprobado, canonicals/sitemap adecuados y aprobación del contenido y privacidad. Noindex no hace privado el sitio.
+
+## Validación continua
+
+.github/workflows/quality.yml valida pushes de la rama de edición y PR sin ejecutar deploy. Los artefactos no son publicación. Ver CI.md; antes de actualizar el Worker, comprobar el resultado del SHA que se vaya a integrar. No se ha confirmado aún la primera ejecución alojada.

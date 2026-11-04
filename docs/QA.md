@@ -121,3 +121,12 @@ Resultados finales y reproducción en QUALITY.md, evidencia en docs/qa.
 - Wrangler --local inició correctamente. Request.cf usó valores de desarrollo tras consulta no disponible; no se utiliza en esta web puramente estática.
 - npm run test:worker: 30 comprobaciones de rutas, fuentes comparadas por SHA256, query de redirección conservada, robots/noindex, POST 405 y cuatro páginas en navegador móvil sin errores/overflow. Resultado versionado en docs/qa/worker-report.json.
 - No se accedió a la cuenta de Cloudflare ni se validó Worker remoto, autenticación, DNS o caché de producción. No se repitió Lighthouse/axe porque no se modificaron páginas/estilos.
+
+# 2026-11-04 · Control automático de CMS
+
+- Revisión remota por fetch con refspec explícito: branch de trabajo igual al HEAD local. El primer fetch solo escribió FETCH_HEAD porque no existían refs de seguimiento; se crearon refs explícitas y se comparó el SHA completo. Sin resets ni merges.
+- npm ci --include=dev aprobado desde lockfile. Check (39 archivos) sin errores/advertencias; Worker dry-run aprobado después de reinstalar, con build de 19 páginas.
+- CHROMIUM_PATH=/usr/bin/chromium npm run test:ci aprobado: 19 rutas, 66 destinos/anclas internas, títulos/semántica/overflow, navegación sin JS/teclado/200% y 41 comprobaciones axe sin infracciones automáticas. Incomplete de contraste siguen registrados.
+- Workflow YAML parseado con loader que conserva la clave on; comprobados eventos, permisos read-only, referencias a acciones oficiales v7 y uso exclusivo de dry-run. No equivale a validación de ejecución en GitHub.
+- Se mejoró el chequeo de imágenes para cargar también logos con loading=lazy antes de juzgar sus bytes renderizables. No se hizo una nueva carga de logo oficial.
+- Pipeline alojado, instalación de browser en runner y estado de Actions pendientes de verificar con el SHA remoto. No se ejecutó login del CMS, deploy o Lighthouse nuevo; no cambió la web.

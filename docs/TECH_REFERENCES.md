@@ -17,3 +17,5 @@ Astro 7.4.5 (MIT), @astrojs/check 0.9.12 y TypeScript 6.0.3 (Apache-2.0). Herram
 - Hosting externo elegido para autenticación GitHub, historial y carga de medios sin una implementación propia de usuarios. No se afirma conexión alojada validada; requiere autorización GitHub del propietario.
 
 Wrangler 4.157.0: Node >=22 según registry npm; probado en Node 24.22.1. Configuración validada mediante CLI/schema instalados y runtime --local; sin servicio remoto ni dependencia runtime de servidor para el sitio.
+
+GitHub Actions oficiales: README de actions/checkout, actions/setup-node y actions/upload-artifact en raw.githubusercontent.com consultados el 2026-11-04; uso documentado v7. Workflow con permisos contents:read, sin despliegue ni secretos. No se ha validado una ejecución alojada.

@@ -77,3 +77,9 @@ npm run test:worker
 ```
 
 worker:check es un dry-run, no un despliegue. /admin y el resto de la rama de trabajo siguen sin integrarse al Worker público. No ejecutar deploy sin autorización; no hay script npm ni workflow automático que lo haga.
+
+## Validación en GitHub
+
+Workflow Site and CMS quality para la rama de edición y PR, sin despliegue ni secretos. Instala, revisa tipos, hace dry-run, comprueba todas las rutas/enlaces y ejecuta navegación/axe. Artefactos de revisión con siete días de retención. Ver docs/CI.md.
+
+Para repetir la suite sobre un build local: `CHROMIUM_PATH=/usr/bin/chromium npm run test:ci`. O `npm run test:site` para rutas y enlaces. La ejecución alojada y la conexión real del CMS todavía deben verificarse; no se deducen de las pruebas locales.

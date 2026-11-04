@@ -21,6 +21,7 @@
 - Contenido editorial migrado a content/*.json: marca/logos/SEO, menús, contactos, textos por página, home, precios, sectores, módulos, FAQ y guías. Validación automática antes del build.
 - Render de logos/favicón y variante de pie oscuro configurables. Logo oficial aún pendiente de subir: no hay binarios originales en el workspace y no se han recreado.
 - Wrangler fijado, wrangler.jsonc de assets estáticos, build previo obligatorio y pruebas del runtime local. Sin APIs/bindings nuevos ni despliegue.
+- Workflow Site and CMS quality para push a la rama de trabajo y PR: instalación, check, dry-run, páginas/enlaces/navegación/axe y artefactos; sin deploy. Primera ejecución alojada pendiente de comprobar.
 - Empaquetado verifica rutas esperadas dinámicamente (19 actuales). No hay páginas individuales de módulos ni receptor propio de leads. Otros legales pendientes.
 
 ## Fases
@@ -29,13 +30,12 @@
 
 ## Validación de esta entrega
 
-- Astro check/build y content:check aprobados (19 páginas).
-- worker:check con Wrangler 4.157.0: custom build ejecutado, assets preparados y salida --dry-run sin carga ni publicación.
-- Runtime Wrangler --local iniciado; 30 comprobaciones de rutas aprobadas: 19 páginas, siete 404 de rutas inexistentes/internas, cuatro redirecciones 307. Query preservada, fuentes idénticas por SHA256, robots/noindex, POST 405.
-- Chromium móvil sobre Worker local: home, catálogo, admin y demo sin overflow/errores de recursos; menú/Escape aprobado.
-- Resumen docs/qa/worker-report.json. Request.cf local usó metadatos predeterminados al fallar su consulta; este Worker estático no los utiliza.
-- Auditorías locales de la entrega anterior conservadas en QUALITY.md. No se repitieron por no cambiar HTML/estilos de la web.
-- Sin validación remota, permisos de cuenta, carga de logo o sesión de CMS. No se afirma producción lista.
+- Fetch remoto confirmó HEAD igual a la rama de trabajo, sin commits nuevos del CMS. El usuario confirmó que todavía no lo ha conectado; no inferir autenticación ni subida de logo.
+- npm ci --include=dev y check aprobados; Worker dry-run reconstruyó 19 páginas y terminó sin publicar.
+- Suite local equivalente a CI: 19 rutas y 66 destinos internos aprobados, navegación sin JS/teclado/200%, axe 41 comprobaciones sin infracciones automáticas. Se preservan incomplete y su revisión aparte.
+- YAML del workflow parseado, triggers/permisos/acciones contrastados; sin ejecución alojada confirmada. No se afirma CI verde en GitHub ni CMS conectado.
+- scripts soportan CHROMIUM_PATH para usar el navegador instalado en CI. No cambió el contenido ni el Worker público.
+- Evidencia site-report y accessibility-report regenerada para esta ejecución. No se reutilizan informes viejos si falla un job. Ver CI.md y QA.md.
 
 ## Git, despliegue y agentes
 
@@ -56,8 +56,10 @@ Conectar Pages CMS con GitHub y subir los logos originales; evidencia del SaaS; 
 3. Revisar diff y build. Para ver estos cambios en el Worker debe autorizarse la integración o cambio de rama seguida; no hacerlo por continuar programando.
 4. Revisar contenido y prácticas pendientes de privacidad, alcance SaaS y precios. Datos de contacto confirmados en content/contact.json; no volver a pedirlos. Los archivos src/data son adaptadores, no la fuente editable.
 5. Configuración Worker y dry-run ya implementados y probados. Confirmar configuración real de Workers Builds y permisos antes de integrar. Repetir test:worker con contenido/logo final. La siguiente validación pendiente es un guardado real del CMS y revisión del logo por el propietario; después revisión manual final. No retirar noindex ni inventar dominio definitivo.
-6. Mantener docs y GitHub actualizados. docs:features para matriz, cms:config para cambios de esquema, content:check antes de build.
+6. Revisar Actions → Site and CMS quality para este SHA después de guardar y confirmar resultado; el workflow todavía no está validado en GitHub. Mantener docs y GitHub actualizados. docs:features para matriz, cms:config para esquema, content:check antes de build.
 
 ## Datos comerciales aplicados
 
 Responsable JOEL ALEJANDRO YAÑEZ CABALLERO, RUC 10477365928; domicilio Calle Enrique Barrón 586, Barranco; correo joel.yc23@gmail.com; WhatsApp Perú +51 956 832 336 también autorizado para consultas y derechos de privacidad. El usuario prevé cambiar los canales después; están centralizados. Estado completo en PRIVACY_REVIEW.md. Solo Codex principal, sin subagentes.
+
+Confirmación del usuario en esta entrega: **todavía no ha conectado el CMS**. Paso externo pendiente: autorizar Pages CMS con su cuenta y probar un guardado. No sustituir esa prueba por otra implementación ni declararla hecha.

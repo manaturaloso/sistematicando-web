@@ -26,3 +26,6 @@ El usuario desplegó una versión previa en un Worker. La rama de catálogo no s
 - [x] Wrangler/configuración de assets versionados y dry-run aprobado.
 - [x] Runtime local: rutas, redirecciones, 404, fuentes y navegador móvil probados.
 - [ ] Confirmar Workers Builds real, rama/triggers y permisos antes de autorizar actualización remota.
+
+- [x] Workflow de validación de ediciones implementado y suite equivalente probada localmente.
+- [ ] Confirmar primera ejecución de Actions y edición real de CMS con logos.

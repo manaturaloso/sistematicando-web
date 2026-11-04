@@ -26,7 +26,7 @@ for(const file of ['fonts/Manrope-Variable.ttf','fonts/Gluten-Variable.ttf']){
 }
 const robots=await fetch(base+'/robots.txt');assert((await robots.text()).includes('Disallow: /'));
 const post=await fetch(base+'/solicitar-demo/',{method:'POST',body:'local-routing-test'});assert.equal(post.status,405,'Static assets must not pretend to accept a request');
-const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
+const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 try{
  const context=await browser.newContext({viewport:{width:390,height:1000}}),page=await context.newPage();
  const failures=[];page.on('pageerror',e=>failures.push(String(e)));page.on('response',r=>{if(r.status()>=400)failures.push(`${r.status()} ${r.url()}`)});

@@ -56,3 +56,9 @@ Los permisos de edición los controla GitHub/Pages CMS. /admin es una página p�
 - Revisar branch y diff antes de guardar. Cambiar IDs/slugs requiere revisar enlaces y referencias; no renombrarlos a ciegas.
 
 La autenticación alojada, autorización GitHub, carga desde el navegador y commit real del CMS están pendientes de prueba con la cuenta del propietario. No afirmar que esa conexión esté lista solo por pasar un build local.
+
+## Comprobación automática tras guardar
+
+El workflow Site and CMS quality valida los pushes a feat/feature-catalog y las PR; no publica. Revisar resultado en Actions antes de integrar. Si hay errores de enlaces, contenido o accesibilidad, corregirlos y guardar otro commit. El artefacto con dist no es un preview desplegado. Estado y reproducción en CI.md. La primera ejecución en GitHub aún debe confirmarse.
+
+El usuario confirmó que todavía no había conectado Pages CMS en la última actualización: autorización y primer guardado siguen pendientes, no son pasos realizados por el agente.
