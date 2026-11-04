@@ -91,3 +91,13 @@
 
 - Tres guías editoriales originales sin promesas ni métricas ficticias. No son manual del producto; contenidos se adaptan a la operación y distinguen capacidades no verificadas.
 - Fuente FAQ común para home, precios y directorio, con componentes nativos accesibles sin JS. Sin marcado FAQPage promocional ni sitemap indexable mientras el sitio esté en revisión.
+
+## 2026-11-04 · Auditoría local de calidad
+
+- Añadidas dependencias de desarrollo fijadas para Playwright, axe y Lighthouse; no se incorporan al JS de la web estática.
+- Se auditan todas las rutas y tres estados interactivos, incluyendo WCAG 2.1 A para detectar discrepancias entre etiqueta visible y nombre accesible.
+- El menú móvil es mejora progresiva: enlaces disponibles sin JS; botón oculto hasta inicialización. main tiene tabindex=-1 para el salto accesible.
+- Navegación envuelve líneas al ampliar texto; se acota adorno del hero. Marca usa texto/alt visible como nombre y favicon vacío evita pedir un recurso inexistente mientras se carga el original.
+- Se conservan resultados incomplete de contraste y evaluación manual, sin declarar conformidad completa. Noindex/robots no se retiran para maquillar puntuaciones SEO.
+- Resultados Lighthouse son laboratorio local con simulación móvil, no usuarios reales ni producción. Se guardan resúmenes y comandos reproducibles.
+- Solo Codex principal. Sin cambios de contenido comercial, CMS alojado, DNS o rama del Worker.

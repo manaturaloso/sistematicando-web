@@ -1,0 +1,203 @@
+{
+  "environment": "Local static server; Lighthouse simulated mobile; no field/Core Web Vitals claim. noindex is deliberate.",
+  "results": [
+    {
+      "route": "/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 915.2560999999998,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 915.2560999999998,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 1.5,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.001440013889078613,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 915.2560999999998,
+          "unit": "millisecond"
+        }
+      },
+      "findings": [
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.84,
+          "displayValue": "150 ms"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate"
+    },
+    {
+      "route": "/funcionalidades/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 944.4362999999998,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 944.4362999999998,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.0310988463293863,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 944.4362999999998,
+          "unit": "millisecond"
+        }
+      },
+      "findings": [
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.87,
+          "displayValue": "140 ms"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 18 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate"
+    },
+    {
+      "route": "/solicitar-demo/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 937.6227,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 937.6227,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.007334336935140453,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 937.6227,
+          "unit": "millisecond"
+        }
+      },
+      "findings": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0.5
+        }
+      ],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate"
+    }
+  ]
+}

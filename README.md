@@ -60,3 +60,7 @@ Fuente de contenido: content/*.json. Los archivos src/data/*.ts son adaptadores;
 - python3 scripts/verify-resources.py: guías y FAQ compartidas.
 
 Recursos nuevos: /recursos/, tres guías y /preguntas-frecuentes/. La rama desplegada anterior sigue intacta; /admin aún no está en el Worker por esta entrega.
+
+## Auditoría de calidad
+
+Con dist generado, ejecutar `npm run test:navigation`, `npm run audit:a11y` y `npm run audit:performance`. Usan un servidor local efímero y Chromium en /usr/bin/chromium, sin desplegar. Resúmenes versionados en docs/qa y alcance en docs/QUALITY.md. No confundir puntuaciones de laboratorio con rendimiento real ni auditoría WCAG completa.

@@ -24,16 +24,16 @@
 
 ## Fases
 
-0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 recursos y FAQ iniciales implementados, SEO/indexación parciales; 8 QA parcial; 9 preparación parcial; 10 lanzamiento oficial pendiente.
+0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 recursos y FAQ iniciales implementados, SEO/indexación parciales; 8 auditoría automática local y correcciones completadas; revisión manual final pendiente; 9 preparación parcial; 10 lanzamiento oficial pendiente.
 
 ## Validación de esta entrega
 
-- Check: 31 archivos sin errores/advertencias/hints. Build: 19 páginas, precedido por content:check.
-- Configuración CMS contrastada con esquema oficial público: aprobada. Configuración de medios y merge por campo contrastada con código del proveedor; no se validó login remoto.
-- Prueba CMS: editar texto, FAQ e imagen temporal se refleja tras build; logo cargado en cabecera/pie, variante oscura/favicon. Restauración byte a byte de contenido y rebuild final, sin logo ficticio retenido. /admin a seis anchos.
-- Recursos: cinco rutas a seis anchos; enlaces/anclas, metadatos únicos, overflow, FAQ por teclado y respuestas compartidas entre tres páginas. Regresiones privacidad/comercial/catálogo/home/soluciones aprobadas.
-- Matriz regenerada y paquete de rutas dinámicas validado. No se comprobó autenticación GitHub/Pages CMS, escritura alojada ni subida de originales por el usuario. No se afirma CMS conectado ni logo oficial integrado.
-- Sin auditoría legal, axe/Lighthouse o validación remota del Worker. Detalles en QA.md.
+- Check sin errores/advertencias; build de 19 páginas y content:check aprobado.
+- Axe: 41 comprobaciones (19 páginas en móvil/escritorio más tres estados interactivos), cero infracciones automáticas. Conservada evidencia de contraste incompleto de home y evaluación separada de colores/captura.
+- Navegación sin JS en móvil, foco de salto/main, menú/Escape y texto al 200% en cinco rutas: aprobado. Regresión home y recursos/FAQ aprobada.
+- Lighthouse final, simulación móvil local en home/catálogo/demo: 100 rendimiento, 100 accesibilidad automática, 100 buenas prácticas; SEO 63 por bloqueo de indexación deliberado. Métricas y límites en QUALITY.md; no son mediciones de producción.
+- Corregidos menú oculto sin JS, overflow con texto ampliado, nombre accesible de marca y petición fallida de favicon ausente.
+- Pendientes acceso real CMS, logos, auditoría manual exhaustiva/lectores de pantalla y validación Worker. No se afirma conformidad completa o producción lista.
 
 ## Git, despliegue y agentes
 
@@ -53,7 +53,7 @@ Conectar Pages CMS con GitHub y subir los logos originales; evidencia del SaaS; 
 2. Cargar originales del logo en Medios y seleccionarlos en Marca. Hacer una edición pequeña y verificar el commit real en GitHub. Requiere cuenta del usuario; no se ha probado todavía.
 3. Revisar diff y build. Para ver estos cambios en el Worker debe autorizarse la integración o cambio de rama seguida; no hacerlo por continuar programando.
 4. Revisar contenido y prácticas pendientes de privacidad, alcance SaaS y precios. Datos de contacto confirmados en content/contact.json; no volver a pedirlos. Los archivos src/data son adaptadores, no la fuente editable.
-5. Tras conectar CMS, continuar fase 8: auditoría accesibilidad/rendimiento y navegación. No inventar métricas, dominio definitivo ni retirar noindex sin aprobación.
+5. Continuar fase 9 sin publicar: preparar configuración reproducible del Worker estático y comprobaciones de build/dry-run. Confirmar configuración real de Cloudflare antes de integrar la rama. La revisión manual final debe repetirse con logos/contenido aprobados. No retirar noindex ni inventar dominio definitivo.
 6. Mantener docs y GitHub actualizados. docs:features para matriz, cms:config para cambios de esquema, content:check antes de build.
 
 ## Datos comerciales aplicados

@@ -1,0 +1,169 @@
+{
+  "scope": "Home mockup: axe color-contrast incomplete evidence, manual review required",
+  "results": [
+    {
+      "width": 390,
+      "target": "a[href$=\"#sectores\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element content contains only non-text characters",
+          "data": {
+            "messageKey": "nonBmp"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(42, 49, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "text": "↓"
+      }
+    },
+    {
+      "width": 390,
+      "target": ".text-link[href$=\"solicitar-demo/\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element content contains only non-text characters",
+          "data": {
+            "messageKey": "nonBmp"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(250, 250, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "text": "↑"
+      }
+    },
+    {
+      "width": 1440,
+      "target": "a[href$=\"#sectores\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element content contains only non-text characters",
+          "data": {
+            "messageKey": "nonBmp"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(42, 49, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "text": "↓"
+      }
+    },
+    {
+      "width": 1440,
+      "target": ".concept-stats > div:nth-child(1) > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "6.0pt (8px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(42, 49, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgb(240, 241, 237)",
+        "text": "Ventas"
+      }
+    },
+    {
+      "width": 1440,
+      "target": ".concept-stats > div:nth-child(2) > span",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "6.0pt (8px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(42, 49, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgb(240, 241, 237)",
+        "text": "Operación"
+      }
+    },
+    {
+      "width": 1440,
+      "target": ".chart-foot > span:nth-child(2)",
+      "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined due to a background gradient",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "4.8pt (6.4px)",
+            "fontWeight": "normal",
+            "messageKey": "bgGradient",
+            "expectedContrastRatio": "4.5:1"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(42, 49, 57)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "text": "Una visión compartida"
+      }
+    },
+    {
+      "width": 1440,
+      "target": ".text-link[href$=\"solicitar-demo/\"] > span[aria-hidden=\"true\"]",
+      "summary": "Fix any of the following:\n  Element content contains only non-text characters",
+      "checks": [
+        {
+          "id": "color-contrast",
+          "message": "Element content contains only non-text characters",
+          "data": {
+            "messageKey": "nonBmp"
+          }
+        }
+      ],
+      "styles": {
+        "color": "rgb(250, 250, 247)",
+        "background": "rgba(0, 0, 0, 0)",
+        "parentBackground": "rgba(0, 0, 0, 0)",
+        "text": "↑"
+      }
+    }
+  ],
+  "manualAssessment": {
+    "method": "DOM computed colors and local screenshot review; ratios calculated from sRGB luminance. Not a full manual accessibility audit.",
+    "decorativeArrows": "aria-hidden=true, redundant to visible link text; no unique information depends on their glyphs.",
+    "mockupLabels": "Ventas/Operación use ink over soft background; chart footer uses ink over white. Parent transforms and chart grid trigger automatic uncertainty. No critical text was visually obscured in reviewed desktop screenshot.",
+    "ratios": {
+      "inkOnSoft": 11.59,
+      "inkOnWhite": 13.15,
+      "inkOnGrid": 11.31,
+      "lightOnInk": 12.58
+    },
+    "remaining": "Manual screen-reader/device testing and reassessment with real logos/content remain outstanding; retain axe incomplete evidence."
+  }
+}

@@ -15,7 +15,7 @@ const { title = site.defaultTitle, description = site.defaultDescription } = Ast
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
-    {site.favicon && <link rel="icon" href={site.favicon} />}
+    <link rel="icon" href={site.favicon || 'data:,'} />
     <title>{title}</title>
   </head>
   <body style={`--coral:${site.coral};--ink:${site.ink}`}><slot /></body>

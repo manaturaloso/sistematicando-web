@@ -8,7 +8,7 @@ const currentPath = Astro.url.pathname;
 <header class="site-header">
   <div class="wrap header-inner">
     <Brand />
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">{navigation.menuLabel} <span aria-hidden="true">＋</span></button>
+    <button class="menu-toggle" type="button" hidden aria-expanded="false" aria-controls="main-nav">{navigation.menuLabel} <span aria-hidden="true">＋</span></button>
     <nav id="main-nav" aria-label="Principal">
       {navigation.header.map(link => <a href={link.href} class:list={[{ 'button small': link.cta }]} aria-current={currentPath === link.href ? 'page' : link.href !== '/' && currentPath.startsWith(link.href) ? 'location' : undefined}>{link.label}{link.cta && <Icon />}</a>)}
     </nav>
@@ -17,6 +17,7 @@ const currentPath = Astro.url.pathname;
 <script>
   const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const nav = document.querySelector<HTMLElement>('#main-nav');
+  if (button) { button.hidden = false; button.dataset.ready = 'true'; }
   function closeMenu() { button?.setAttribute('aria-expanded', 'false'); }
   button?.addEventListener('click', () => button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true')));
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));

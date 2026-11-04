@@ -12,7 +12,8 @@
 - [ ] Adoptar la política tras revisar prácticas reales; receptor propio de formularios solo si se decide añadirlo.
 - [ ] Aprobar textos legales y datos empresariales.
 - [x] Build, tipos y smoke de navegación/teclado a cuatro anchos.
-- [ ] Auditoría de accesibilidad y rendimiento antes de lanzamiento.
+- [x] Auditoría automática local de accesibilidad y Lighthouse ejecutada, con correcciones.
+- [ ] Revisión manual exhaustiva, dispositivos/lector de pantalla y repetición con contenido/logo final antes de lanzamiento.
 - [ ] Confirmar dominio, canonicals, sitemap y política de indexación.
 - [ ] Autorizar explícitamente despliegue en producción.
 

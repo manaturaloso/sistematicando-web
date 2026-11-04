@@ -29,3 +29,5 @@ Manrope para contenido y navegación; Gluten en énfasis del eslogan y nota edit
 ## Administración de logos
 
 content/site.json controla logoLight/logoDark, dimensiones, alt, favicon y pie oscuro. La marca se renderiza con Brand.astro: original sin recortes ni reconstrucción. Los archivos se suben a public/media desde el CMS. Campos actuales vacíos; no hay logo oficial cargado. La imagen temporal de QA se eliminó y no está versionada. Instrucciones en ADMIN.md.
+
+Calidad: enlace de marca toma nombre accesible del texto o alt, sin omitir texto visible. Mientras no exista favicon original configurado se usa una referencia vacía, sin inventar un isotipo.

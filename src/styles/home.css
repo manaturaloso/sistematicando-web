@@ -812,7 +812,7 @@ min-height:44px;
 display:flex;
 align-items:center
 }
-.site-header:has(.menu-toggle[aria-expanded="false"]) nav {
+.site-header:has(.menu-toggle[data-ready="true"][aria-expanded="false"]) nav {
 display:none
 }
 .hero {
@@ -1097,3 +1097,8 @@ transform:none
 .dark-footer {background:var(--ink);color:var(--paper);}
 .dark-footer .footer-top p:not(.footer-name),.dark-footer .footer-bottom {color:#d5d8d9;}
 .dark-footer :focus-visible {outline-color:var(--coral);}
+
+.menu-toggle[hidden] {display:none!important;}
+/* Preserve navigation and decorative bounds when users enlarge text. */
+.header-inner, .site-header nav {flex-wrap:wrap;}
+.visual-orbit {right:0;}

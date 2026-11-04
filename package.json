@@ -14,11 +14,19 @@
     "docs:features": "node scripts/sync-feature-status.mjs",
     "cms:config": "node scripts/generate-cms-config.mjs",
     "content:check": "node scripts/validate-content.mjs",
-    "prebuild": "npm run content:check"
+    "prebuild": "npm run content:check",
+    "audit:a11y": "node scripts/audit-accessibility.mjs",
+    "audit:performance": "node scripts/audit-performance.mjs",
+    "test:navigation": "node scripts/verify-navigation.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",
     "astro": "7.4.5",
     "typescript": "6.0.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "lighthouse": "13.6.0"
   }
 }

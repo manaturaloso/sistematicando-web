@@ -100,3 +100,16 @@ Se revisaron los campos tratados por la guía y el código de almacenamiento/env
 - verify-resources.py: índice, tres guías y FAQ a seis anchos, enlaces, anclas, títulos únicos, IDs únicos, respuestas compartidas y FAQ sin JS. Capturas de índice/guía y admin generadas.
 - Regresiones verify-privacy, commercial, home, features y solutions: aprobadas tras migrar contenido y menús.
 - Pendiente: login en Pages CMS, permiso GitHub del propietario, subida real de logo y commit alojado. No se accedió a cuentas ni se publicaron cambios. No hay prueba de edición completa alojada aún.
+
+# 2026-11-04 · Auditoría de calidad
+
+Resultados finales y reproducción en QUALITY.md, evidencia en docs/qa.
+
+- Primera prueba sin JS falló: menú oculto. Corregido y test final aprobado.
+- Texto al 200% detectó overflow en navegación/adorno de home. Se identificaron elementos por geometría, se corrigieron y pasó la prueba en cinco rutas.
+- Lighthouse inicial detectó nombre accesible de marca que no incluía leyenda visible y 404 de favicon. Corregidos; última ejecución sin esos fallos.
+- Axe final: 41 comprobaciones, cero infracciones automáticas, con color-contrast incompleto en home preservado. Diagnóstico dirigido de contraste requirió crear contexto explícito de Playwright (primer intento sin él fue rechazado por axe); diagnóstico corregido completado, evidencia y evaluación de colores separadas.
+- Lighthouse final home/catálogo/demo: rendimiento/accesibilidad automática/buenas prácticas 100 en cada ruta, SEO 63 por noindex. Datos de laboratorio, no certificación o CWV de producción.
+- npm run test:navigation: navegación móvil sin JS, salto con foco a main, menú por teclado/Escape, foco y ampliación de texto al 200% aprobados.
+- Regresión de scripts/verify-home.py y verify-resources.py aprobada tras cambios. Check/build y content:check aprobados.
+- No se repitió la prueba mutante del CMS: no se modificaron datos/esquema. Tampoco autenticación real, mensajes, Worker remoto, lector de pantalla o dispositivos físicos.
