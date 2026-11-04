@@ -1574,6 +1574,46 @@
               "label": "Descripción SEO",
               "type": "text",
               "required": true
+            },
+            {
+              "name": "search",
+              "label": "Buscador y resultados",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "placeholder",
+                  "label": "Ejemplo del campo de búsqueda",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "initialCount",
+                  "label": "Recuento inicial",
+                  "type": "string",
+                  "required": true,
+                  "description": "Conserva exactamente un {count}; se sustituye por el número real de resultados."
+                },
+                {
+                  "name": "singularCount",
+                  "label": "Resultado singular",
+                  "type": "string",
+                  "required": true,
+                  "description": "Conserva exactamente un {count}; se sustituye por el número real de resultados."
+                },
+                {
+                  "name": "pluralCount",
+                  "label": "Resultados plurales",
+                  "type": "string",
+                  "required": true,
+                  "description": "Conserva exactamente un {count}; se sustituye por el número real de resultados."
+                },
+                {
+                  "name": "areasLabel",
+                  "label": "Nombre accesible de las áreas",
+                  "type": "string",
+                  "required": true
+                }
+              ]
             }
           ]
         }
@@ -2500,6 +2540,76 @@
               "label": "Descripción SEO",
               "type": "text",
               "required": true
+            },
+            {
+              "name": "guide",
+              "label": "Documento y mensajes de la guía local",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "formLabel",
+                  "label": "Nombre accesible del formulario",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "heading",
+                  "label": "Encabezado del documento",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "businessLabel",
+                  "label": "Etiqueta de negocio en el documento",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "locationsLabel",
+                  "label": "Etiqueta de locales en el documento",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "priorityLabel",
+                  "label": "Etiqueta de prioridad en el documento",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "questionsHeading",
+                  "label": "Encabezado de preguntas",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "questions",
+                  "label": "Preguntas de diagnóstico",
+                  "type": "string",
+                  "list": true
+                },
+                {
+                  "name": "disclaimer",
+                  "label": "Aviso de alcance del documento",
+                  "type": "text",
+                  "required": true,
+                  "description": "La guía se genera en el navegador. No afirmar que se ha enviado una solicitud ni recibido una reserva."
+                },
+                {
+                  "name": "generatedStatus",
+                  "label": "Aviso al generar",
+                  "type": "string",
+                  "required": true,
+                  "description": "La guía se genera en el navegador. No afirmar que se ha enviado una solicitud ni recibido una reserva."
+                },
+                {
+                  "name": "downloadStatus",
+                  "label": "Aviso al descargar",
+                  "type": "string",
+                  "required": true,
+                  "description": "La guía se genera en el navegador. No afirmar que se ha enviado una solicitud ni recibido una reserva."
+                }
+              ]
             }
           ]
         }

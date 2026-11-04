@@ -22,12 +22,12 @@ import '../../styles/features.css';
     </section>
     <section class="wrap feature-catalog" aria-labelledby="catalog-title">
       <div class="catalog-header"><div><p class="eyebrow">{copy.text_009}</p><h2 id="catalog-title">{copy.text_010}</h2></div><p>{copy.text_011}</p></div>
-      <form class="feature-search" role="search" hidden>
+      <form class="feature-search" role="search" data-messages={JSON.stringify(copy.search)} hidden>
         <label for="feature-search">{copy.text_012}</label>
-        <div class="search-controls"><input id="feature-search" type="search" placeholder="Por ejemplo: caja, recetas o entradas" autocomplete="off" /><button type="reset">{copy.text_013}</button></div>
-        <p id="search-count" role="status" aria-live="polite" aria-atomic="true">{features.length} módulos en el catálogo.</p>
+        <div class="search-controls"><input id="feature-search" type="search" placeholder={copy.search.placeholder} autocomplete="off" /><button type="reset">{copy.text_013}</button></div>
+        <p id="search-count" role="status" aria-live="polite" aria-atomic="true">{copy.search.initialCount.replace('{count}', String(features.length))}</p>
       </form>
-      <nav class="feature-jumps" aria-label="Áreas del catálogo">{featureGroups.map(group => <a href={`#area-${group.id}`}>{group.name}</a>)}</nav>
+      <nav class="feature-jumps" aria-label={copy.search.areasLabel}>{featureGroups.map(group => <a href={`#area-${group.id}`}>{group.name}</a>)}</nav>
       <div class="search-empty" hidden><h3>{copy.text_014}</h3><p>{copy.text_015}</p></div>
       {featureGroups.map(group => <section class="feature-group" id={`area-${group.id}`} aria-labelledby={`${group.id}-title`}>
         <div class="feature-group-heading"><Icon name={group.icon} /><div><h2 id={`${group.id}-title`}>{group.name}</h2><p>{group.description}</p></div></div>
@@ -46,6 +46,7 @@ import '../../styles/features.css';
 </Layout>
 <script>
   const form = document.querySelector<HTMLFormElement>('.feature-search');
+  const messages = form ? JSON.parse(form.dataset.messages!) as { singularCount: string; pluralCount: string } : null;
   const input = document.querySelector<HTMLInputElement>('#feature-search');
   const count = document.querySelector<HTMLElement>('#search-count');
   const empty = document.querySelector<HTMLElement>('.search-empty');
@@ -60,7 +61,7 @@ import '../../styles/features.css';
       if (!card.hidden) visible++;
     });
     groups.forEach(group => { group.hidden = ![...group.querySelectorAll<HTMLElement>('.feature-card')].some(card => !card.hidden); });
-    if (count) count.textContent = `${visible} ${visible === 1 ? 'módulo encontrado' : 'módulos encontrados'}.`;
+    if (count && messages) count.textContent = (visible === 1 ? messages.singularCount : messages.pluralCount).replace('{count}', String(visible));
     if (empty) empty.hidden = visible !== 0;
   }
   if (form && input) {

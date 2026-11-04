@@ -133,7 +133,14 @@
     "text_023": "Puedes preparar una guía local y contactar por WhatsApp en",
     "text_024": "Preparar una demo",
     "seo_title": "Funcionalidades: explora las áreas de gestión · Sistematicando",
-    "seo_description": "Explora el alcance conceptual de ventas, administración, clientes, gestión y eventos. Cada módulo indica su estado pendiente de verificación."
+    "seo_description": "Explora el alcance conceptual de ventas, administración, clientes, gestión y eventos. Cada módulo indica su estado pendiente de verificación.",
+    "search": {
+      "placeholder": "Por ejemplo: caja, recetas o entradas",
+      "initialCount": "{count} módulos en el catálogo.",
+      "singularCount": "{count} módulo encontrado.",
+      "pluralCount": "{count} módulos encontrados.",
+      "areasLabel": "Áreas del catálogo"
+    }
   },
   "pages-preguntas-frecuentes-index": {
     "text_001": "Inicio",
@@ -284,7 +291,24 @@
     "text_043": "Ver funcionalidades",
     "text_044": "Entender la propuesta",
     "seo_title": "Prepara tu futura demo · Sistematicando",
-    "seo_description": "Organiza las prioridades de tu negocio y descarga una guía local. Contacta voluntariamente por WhatsApp para consultar por una demostración."
+    "seo_description": "Organiza las prioridades de tu negocio y descarga una guía local. Contacta voluntariamente por WhatsApp para consultar por una demostración.",
+    "guide": {
+      "formLabel": "Guía local para una futura demo",
+      "heading": "SISTEMATICANDO — Guía para una futura conversación",
+      "businessLabel": "Tipo de negocio",
+      "locationsLabel": "Locales",
+      "priorityLabel": "Prioridad",
+      "questionsHeading": "Preguntas para revisar:",
+      "questions": [
+        "¿Qué funciones están verificadas y cuáles quedan fuera del alcance?",
+        "¿Qué módulos y servicios se incluirían, y con qué límites?",
+        "¿Cuáles serían los costos, impuestos y condiciones comerciales?",
+        "¿Qué acompañamiento e implementación necesitaría mi equipo?"
+      ],
+      "disclaimer": "Documento preparado localmente. No es cotización, solicitud enviada ni reserva de demo.",
+      "generatedStatus": "Guía generada localmente. No se ha enviado información.",
+      "downloadStatus": "Descarga de la guía iniciada. No se ha enviado una solicitud."
+    }
   },
   "pages-recursos-guias-slug": {
     "text_001": "Inicio",

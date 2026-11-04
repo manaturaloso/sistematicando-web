@@ -38,6 +38,17 @@ for(const item of features.items){
 }
 for(const guide of guides){ensure(guide.sections.length>0,`Guía sin secciones: ${guide.slug}`);ensure(modules.has(guide.feature),`Módulo desconocido en guía: ${guide.feature}`);for(const slug of guide.related)ensure(sectors.has(slug),`Sector desconocido en guía: ${slug}`);}
 for(const item of faqs)ensure(['producto','comercial','privacidad'].includes(item.category),`Categoría FAQ inválida: ${item.category}`);
+const pages=read('pages'),search=pages['pages-funcionalidades-index'].search,guide=pages['pages-solicitar-demo-index'].guide;
+for(const key of ['initialCount','singularCount','pluralCount']){
+ ensure(typeof search[key]==='string'&&search[key].split('{count}').length===2,`Buscador: ${key} necesita exactamente un {count}`);
+ ensure(!/[{}]/.test(search[key].replace('{count}','')),`Buscador: marcador no reconocido en ${key}`);
+}
+for(const key of ['placeholder','areasLabel'])ensure(typeof search[key]==='string'&&search[key].trim(),`Buscador: falta ${key}`);
+for(const key of ['formLabel','heading','businessLabel','locationsLabel','priorityLabel','questionsHeading','questions','disclaimer','generatedStatus','downloadStatus']){
+ const value=guide[key];
+ if(key==='questions')ensure(Array.isArray(value)&&value.length>0&&value.every(item=>typeof item==='string'&&item.trim()),'Guía: preguntas vacías o inválidas');
+ else ensure(typeof value==='string'&&value.trim(),`Guía: falta ${key}`);
+}
 // The editor schemas must preserve every existing field in list objects (e.g. home/pricing flags).
 const config=JSON.parse(fs.readFileSync('.pages.yml','utf8'));
 function walk(value,fields,location){

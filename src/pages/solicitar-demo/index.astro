@@ -22,9 +22,9 @@ import '../../styles/commercial.css';
     <div class="wrap"><WhatsAppContact /></div>
     <section class="wrap demo-workspace" aria-labelledby="guide-title">
       <div><p class="eyebrow">{copy.text_009}</p><h2 id="guide-title">{copy.text_010}</h2><p>{copy.text_011}</p><div class="demo-steps"><h3>{copy.text_012}</h3><ol><li>{copy.text_013}</li><li>{copy.text_014}</li><li>{copy.text_015}</li></ol></div><noscript><p class="scope-note">{copy.text_016}</p></noscript></div>
-      <div class="demo-builder" hidden>
-        <form id="demo-guide" aria-label="Guía local para una futura demo">
-          <div class="field"><label for="business">{copy.text_017}</label><select id="business" required><option value="">{copy.text_018}</option>{solutions.map(solution => <option value={solution.name}>{solution.name}</option>)}<option value="Otra operación">{copy.text_019}</option></select></div>
+      <div class="demo-builder" data-guide-copy={JSON.stringify(copy.guide)} hidden>
+        <form id="demo-guide" aria-label={copy.guide.formLabel}>
+          <div class="field"><label for="business">{copy.text_017}</label><select id="business" required><option value="">{copy.text_018}</option>{solutions.map(solution => <option value={solution.name}>{solution.name}</option>)}<option>{copy.text_019}</option></select></div>
           <div class="field"><label for="locations">{copy.text_020}</label><select id="locations" required><option value="">{copy.text_021}</option><option>{copy.text_022}</option><option>{copy.text_023}</option><option>{copy.text_024}</option><option>{copy.text_025}</option></select></div>
           <div class="field"><label for="priority">{copy.text_026}</label><select id="priority" required><option value="">{copy.text_027}</option><option>{copy.text_028}</option><option>{copy.text_029}</option><option>{copy.text_030}</option><option>{copy.text_031}</option><option>{copy.text_032}</option><option>{copy.text_033}</option></select></div>
           <p class="local-note">{copy.text_034}</p>
@@ -39,6 +39,8 @@ import '../../styles/commercial.css';
 </Layout>
 <script>
   const builder = document.querySelector<HTMLElement>('.demo-builder');
+  type GuideCopy = { heading: string; businessLabel: string; locationsLabel: string; priorityLabel: string; questionsHeading: string; questions: string[]; disclaimer: string; generatedStatus: string; downloadStatus: string };
+  const guideCopy = builder ? JSON.parse(builder.dataset.guideCopy!) as GuideCopy : null;
   const form = document.querySelector<HTMLFormElement>('#demo-guide');
   const business = document.querySelector<HTMLSelectElement>('#business');
   const locations = document.querySelector<HTMLSelectElement>('#locations');
@@ -51,23 +53,20 @@ import '../../styles/commercial.css';
     if (text) text.textContent = '';
     if (status) status.textContent = '';
   }
-  if (builder && form && business && locations && priority && result && text && status) {
+  if (guideCopy && builder && form && business && locations && priority && result && text && status) {
     builder.hidden = false;
     form.addEventListener('submit', event => {
       event.preventDefault();
       if (!form.reportValidity()) return;
       text.textContent = [
-        'SISTEMATICANDO — Guía para una futura conversación', '',
-        `Tipo de negocio: ${business.value}`, `Locales: ${locations.value}`, `Prioridad: ${priority.value}`, '',
-        'Preguntas para revisar:',
-        '- ¿Qué funciones están verificadas y cuáles quedan fuera del alcance?',
-        '- ¿Qué módulos y servicios se incluirían, y con qué límites?',
-        '- ¿Cuáles serían los costos, impuestos y condiciones comerciales?',
-        '- ¿Qué acompañamiento e implementación necesitaría mi equipo?', '',
-        'Documento preparado localmente. No es cotización, solicitud enviada ni reserva de demo.',
+        guideCopy.heading, '',
+        `${guideCopy.businessLabel}: ${business.value}`, `${guideCopy.locationsLabel}: ${locations.value}`, `${guideCopy.priorityLabel}: ${priority.value}`, '',
+        guideCopy.questionsHeading,
+        ...guideCopy.questions.map(question => `- ${question}`), '',
+        guideCopy.disclaimer,
       ].join('\n');
       result.hidden = false;
-      status.textContent = 'Guía generada localmente. No se ha enviado información.';
+      status.textContent = guideCopy.generatedStatus;
       document.querySelector<HTMLElement>('#result-title')?.focus();
     });
     form.addEventListener('change', clearResult);
@@ -79,7 +78,7 @@ import '../../styles/commercial.css';
       link.href = url; link.download = 'sistematicando-guia-demo.txt';
       document.body.append(link); link.click(); link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
-      status.textContent = 'Descarga de la guía iniciada. No se ha enviado una solicitud.';
+      status.textContent = guideCopy.downloadStatus;
     });
   }
 </script>

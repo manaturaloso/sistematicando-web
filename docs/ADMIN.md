@@ -70,3 +70,11 @@ El CMS conserva los originales en public/media. Brand.astro genera PNGs de prese
 Prueba actual: npm run test:brand con las selecciones PNG oficiales actuales; hashes originales, seis anchos y DPR1/2. Resumen qa/brand-report.json.
 
 El flujo de calidad también comprueba automáticamente la marca configurada después de guardar en feat/feature-catalog. En Actions → artefacto site-quality-<SHA>, brand-report.json registra hashes originales y entrega por ancho/DPR; los informes de ejecuciones previas se eliminan antes de validar. Usar el informe del commit actual. El flujo no publica.
+
+## Buscador y documento de demo
+
+En **Página: funcionalidades → Buscador y resultados** puedes editar ejemplo y mensajes inicial/singular/plural; conserva exactamente un `{count}` en cada recuento. El build sustituye ese marcador por resultados reales. La validación bloquea una plantilla incorrecta.
+
+En **Página: solicitar-demo → Documento y mensajes de la guía local** puedes editar título, etiquetas, preguntas, aviso final y avisos de generación/descarga. Son texto plano; no se interpreta HTML. Mantén los avisos de generación local: no hay receptor de solicitudes ni reserva de demo. La opción «Otra operación» se edita en los textos de esa misma página y su valor se refleja en la guía.
+
+La nueva prueba editorial se ejecuta dentro de test:ci y comprueba también el TXT descargado. No necesitas regenerar .pages.yml al cambiar estos valores; solo cuando se desarrolla un esquema nuevo. Guardar en el CMS crea un commit en feat/feature-catalog; no publica por sí solo en el Worker actual.

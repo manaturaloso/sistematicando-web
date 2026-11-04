@@ -52,11 +52,11 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. Revisar Actions → Site and CMS quality para el nuevo commit de corrección FAQ en feat/feature-catalog. Esperado: 42 comprobaciones, cero infracciones. Fallo remoto dd113be confirmado por captura; no se afirma verde del nuevo run sin observarlo.
-2. Si falla, abrir validate y consultar las líneas AXE (regla, selector y causa) o descargar qa/accessibility-report.json del artefacto. Mantener reglas y no añadir exclusiones para pasar CI.
-3. Publicado permanece 9a017af. Nueva corrección y mejora de CLS solo en rama de desarrollo; futuras integraciones en feat/brand-foundation requieren autorización explícita. Antes fetch/revisar CMS concurrente.
-4. Tras CI alojado aprobado, revisión manual/dispositivos/lector; entrega responsive de logos ya implementada con originales preservados. Quedan evidencia SaaS, tarifas y revisión/adopción de privacidad.
-5. Autor Joel Alejandro Yañez Caballero; consultar git log -1 y git ls-remote para SHA final. Sin PR creada, existentes sin verificar por API. Solo Codex principal.
+1. Revisar Actions del nuevo SHA de esta entrega. 296dc05 fue confirmado verde por el propietario; versiones posteriores no se dan por aprobadas sin observarlas.
+2. Abrir Pages CMS, rama feat/feature-catalog: Página: funcionalidades → Buscador y resultados, y Página: solicitar-demo → Documento y mensajes de la guía local. Revisar nuevos campos, conservar {count} y avisos de generación local. Instrucciones en ADMIN.md.
+3. Las mejoras siguen en desarrollo. Para actualizar Worker, revisar diff y autorizar integración concreta en feat/brand-foundation; publicado sigue 9a017af. No retirar noindex ni cambiar DNS.
+4. Continuar revisión manual/dispositivos/lector y definición comercial/legal. Fuentes y logos oficiales preservados; módulos SaaS todavía no verificados.
+5. Consultar git log -1 y git ls-remote para SHA final. Autor Joel Alejandro Yañez Caballero; solo Codex principal. Sin PR creada; existentes sin verificar por API.
 
 ## Datos comerciales aplicados
 
@@ -121,3 +121,17 @@ Reproducción: CHROMIUM_PATH=/usr/bin/chromium npm run test:ci. Sitio 19 página
 Agente Codex principal, sin subagentes; autor Joel Alejandro Yañez Caballero. Rama feat/feature-catalog; no se crea PR ni despliega Worker. Publicado sigue 9a017af. PR existentes y Actions remoto sin verificar por API Forbidden; se solicitó al propietario el resultado observado de 296dc05. Siguiente paso exacto: revisar Actions del nuevo SHA de entrega y descargar brand-report.json si falla marca, accessibility-report.json/líneas AXE si falla accesibilidad; tras verde revisar manualmente y autorizar cualquier integración concreta al Worker. Quedan verificación comercial, tarifas, privacidad y revisión con dispositivos/lector de pantalla.
 
 Resultado final: test:ci ampliado aprobado (sitio 19 rutas/66 destinos, navegación, marca 12 combinaciones y axe 42 comprobaciones sin infracciones). node --check de ambos scripts y parseo YAML/triggers/permisos/artefacto aprobados; informe de marca regenerado. Resultado alojado del nuevo SHA pendiente de observar.
+
+## 2026-11-04 · Textos dinámicos editables desde el CMS
+
+Implementado: en Página: funcionalidades → Buscador y resultados se editan ejemplo de búsqueda, recuento inicial/singular/plural y etiqueta accesible de áreas. En Página: solicitar-demo → Documento y mensajes de la guía local se editan encabezado, etiquetas del documento, lista de preguntas, aviso de alcance, nombre accesible y mensajes de generación/descarga. Fuente content/pages.json; .pages.yml regenerado, conserva 23 editores y los contenidos existentes. Opción «Otra operación» usa ahora el texto editorial como valor en el documento.
+
+Los recuentos exigen exactamente un {count}; content:check rechaza marcador ausente/duplicado/desconocido y guía con campos/preguntas vacíos. Texto compartido con el navegador en atributos escapados por Astro y mostrado con textContent, sin ejecutar HTML ni enviar solicitudes. La guía continúa siendo local, descargable como TXT y se invalida al cambiar opciones. Los avisos editoriales deben conservar esa realidad; las descripciones del CMS lo explican.
+
+Pruebas: check/build aprobados (19 páginas, 14 módulos, 3 guías y 23 editores). test:ci ampliado incluye verify-editorial.mjs: ejemplo/recuentos/etiquetas, documento generado, descarga real con bytes coincidentes y mensajes/invalidación; también sitio 19 rutas/66 destinos, navegación, marca y axe 42 comprobaciones sin infracciones. Prueba negativa rechazó marcadores ausentes, duplicados y ajenos, restaurando contenido. Prueba con copia editorial temporal se documenta al completar y restaura contenido/build. Sin nuevas páginas ni capacidades SaaS.
+
+Estado remoto conocido: el propietario confirmó Actions verde para 296dc05; ese dato no confirma 7537903 ni este nuevo SHA. API del entorno no permite consultar Actions/PR. Publicado sigue 9a017af; esta entrega solo feat/feature-catalog. Autor Joel Alejandro Yañez Caballero. Agente Codex principal, sin subagentes. Sin PR creada; existentes sin verificar. No se publica ni cambia DNS/indexación.
+
+Siguiente paso exacto: revisar Actions del commit de esta entrega; después abrir los dos editores citados en Pages CMS de feat/feature-catalog y revisar sus campos nuevos. La configuración del CMS llega con el commit, no requiere crear otra cuenta. Para ver estas mejoras en el Worker se necesita una integración autorizada de la versión concreta. Quedan revisión manual con dispositivos/lector y definición comercial/legal; no inventar tarifas ni marcar módulos disponibles sin evidencia.
+
+Prueba editorial personalizada aprobada: ejemplo con comillas/< /&, recuentos alternativos y guía con encabezado/preguntas/avisos propios llegan al render y al TXT. Texto parecido a HTML conservado literalmente. Contenido original de entrega y build restaurados al terminar. No quedan fixtures ni mensajes temporales.
