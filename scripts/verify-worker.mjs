@@ -26,6 +26,11 @@ for(const file of new Set(['fonts/Manrope-Variable.ttf','fonts/Gluten-Variable.t
  const expected=await fs.readFile('dist/'+file),actual=Buffer.from(await r.arrayBuffer());
  assert.equal(createHash('sha256').update(actual).digest('hex'),createHash('sha256').update(expected).digest('hex'),file);
 }
+const versionResponse=await fetch(base+'/version.json');assert.equal(versionResponse.status,200);
+assert(versionResponse.headers.get('content-type').includes('application/json'));
+assert.equal(versionResponse.headers.get('cache-control'),'no-store');
+assert.equal(versionResponse.headers.get('x-robots-tag'),'noindex, nofollow');
+assert.deepEqual(await versionResponse.json(),JSON.parse(await fs.readFile('dist/version.json','utf8')));
 const robots=await fetch(base+'/robots.txt');assert((await robots.text()).includes('Disallow: /'));
 const post=await fetch(base+'/solicitar-demo/',{method:'POST',body:'local-routing-test'});assert.equal(post.status,405,'Static assets must not pretend to accept a request');
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
@@ -41,5 +46,5 @@ try{
  assert.equal(failures.length,0,JSON.stringify(failures));
 }finally{await browser.close();}
 await fs.mkdir('docs/qa',{recursive:true});
-await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font and selected brand asset integrity','robots/noindex','POST 405','four mobile browser routes and menu']},null,2)+'\n');
+await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font and selected brand asset integrity','build provenance JSON and no-store/noindex headers','robots/noindex','POST 405','four mobile browser routes and menu']},null,2)+'\n');
 console.log(`PASS Worker local: ${results.length} route checks, fonts/brand assets, query, POST 405 and mobile browser.`);

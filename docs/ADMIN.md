@@ -80,3 +80,9 @@ En **Página: solicitar-demo → Documento y mensajes de la guía local** puedes
 La nueva prueba editorial se ejecuta dentro de test:ci y comprueba también el TXT descargado. No necesitas regenerar .pages.yml al cambiar estos valores; solo cuando se desarrolla un esquema nuevo. Guardar en el CMS crea un commit en feat/feature-catalog; no publica por sí solo en el Worker actual.
 
 Página: contacto permite cambiar los textos de /contacto/. Los datos del responsable y canales se editan en Contactos y responsable; los del bloque comercial compartido con demo en Componente: WhatsAppContact. /admin incluye acceso directo al nuevo editor y a los textos de catálogo/demo. Son 24 editores actualmente.
+
+## Identificar qué versión estás viendo
+
+/admin incluye una sección de versión de solo lectura y enlace a /version.json. Compara el commit con el SHA de Build en Cloudflare; el ID de versión de Cloudflare es otro identificador. Si aparecen cambios locales, el SHA es la base de esa compilación. Si no hubo Git al compilar, se indica desconocido. La fecha es la del commit, no la de publicación.
+
+El JSON se genera durante build y contiene únicamente schemaVersion, commit, commitDate y sourceModified. No se edita en CMS. Cambiar HEAD exige recompilar para actualizarlo. No demuestra por sí solo si Cloudflare terminó el último despliegue; describe la copia servida. Esta mejora requiere integración/publicación autorizada para aparecer en la URL pública.

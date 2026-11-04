@@ -17,6 +17,11 @@
       "finalPath": "/admin/"
     },
     {
+      "route": "/contacto/",
+      "status": 200,
+      "finalPath": "/contacto/"
+    },
+    {
       "route": "/funcionalidades/",
       "status": 200,
       "finalPath": "/funcionalidades/"
@@ -158,6 +163,7 @@
     "307 trailing slash/index normalization",
     "query preservation",
     "font and selected brand asset integrity",
+    "build provenance JSON and no-store/noindex headers",
     "robots/noindex",
     "POST 405",
     "four mobile browser routes and menu"

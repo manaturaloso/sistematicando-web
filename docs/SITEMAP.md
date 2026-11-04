@@ -30,3 +30,5 @@
 ## Siguiente
 
 Desarrollo: 20 páginas, incluido contacto; CMS con 24 editores. Auditoría automática local y pruebas de navegación implementadas. Quedan revisión manual/dispositivos/lector, aprobación comercial/privacidad y lanzamiento con dominio/indexación autorizados. Contacto externo por WhatsApp y correo de privacidad disponible; recepción propia de datos no implementada. Las páginas de módulos requieren evidencia del SaaS antes de afirmar disponibilidad. Recursos y FAQ iniciales ya están implementados. Sin sitemap público hasta contar con dominio y aprobación de indexación.
+
+- /version.json: metadatos de compilación estáticos, enlazados desde /admin; no es una página comercial ni una API con backend.

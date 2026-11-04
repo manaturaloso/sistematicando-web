@@ -53,11 +53,11 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. Autorización explícita recibida para 0041ff9 más registro documental de autorización, aplicación cfad1a7. Integración por fast-forward en feat/brand-foundation y envío Git; consultar SHA final con git log -1 y git ls-remote en ambas ramas.
-2. Comprobar Cloudflare → sistematicando-web → Deployments → Build: SHA final de esta entrega, estado Ready y versión activa. El resultado remoto no se da por aprobado por el éxito del push. Si el entorno mantiene bloqueo CONNECT 403/API Forbidden, usar evidencia del dashboard del propietario.
-3. Recorrer /, /contacto/, /admin/, /funcionalidades/, /solicitar-demo/, /legal/privacidad/ y ruta inexistente. Comprobar canales y menú sin enviar mensajes reales.
-4. Continuar desarrollo en feat/feature-catalog sincronizada; ediciones CMS siguen allí. Mantener DNS/noindex. Revisar prácticas de privacidad, evidencia SaaS, tarifas y dispositivos/lector. La autorización actual no se extiende a publicaciones futuras.
-5. Autor Joel Alejandro Yañez Caballero; agente Codex principal. Sin PR creada, existentes no verificadas por API. Información completa de la entrega en RELEASE_REVIEW.md.
+1. Comprobar Actions del nuevo SHA de identificación de versión. La última integración autorizada enviada a Cloudflare fue 96bd165; su resultado real sigue pendiente de observar en dashboard.
+2. Nueva mejora en feat/feature-catalog: /version.json y sección /admin de solo lectura; para publicarla requiere autorización concreta de integración en feat/brand-foundation. La aprobación de 96bd165 no se extiende a esta mejora.
+3. Tras integrar/publicar con autorización, comparar /version.json con el commit del Build; sourceModified debe ser false si el código está guardado. Null significa Git no disponible, no éxito ni fallo del despliegue.
+4. Continuar revisión manual/dispositivos/lector y comercial/legal, conservar DNS/noindex. Consultar git log -1 y git ls-remote para SHA de entrega; ambas fuentes de verdad se verifican al entregar.
+5. Autor Joel Alejandro Yañez Caballero; agente Codex principal, sin subagentes. Sin PR creada; existentes sin verificar por API. Documentación técnica en DEPLOYMENT.md y ADMIN.md.
 
 ## Datos comerciales aplicados
 
@@ -164,3 +164,17 @@ El propietario respondió «Sí, autorizo.» a integrar la entrega 0041ff9 de fe
 Validaciones vigentes del código aprobado: check/build y dry-run (20 páginas, 59 assets); suite 20 rutas/68 destinos, marca/editorial/contactos y axe 44 comprobaciones sin infracciones. No se repiten pruebas para registrar la autorización. Identidad efectiva autor/committer Joel Alejandro Yañez Caballero. Solo Codex principal, sin subagentes. No se cambian DNS/noindex ni se añaden bindings/secretos.
 
 El push de feat/brand-foundation permite activar Workers Builds. Resultado de despliegue/versión activa pendiente de verificar; no equivale a éxito por guardar Git. Revisar el SHA final con git log -1 en ambas ramas y git ls-remote. No se creó PR; existentes y Actions remoto no verificables por API Forbidden. Siguiente paso: comprobar en Cloudflare el build de ese SHA, Ready y versión activa; recorrer home/contacto/admin/catálogo/demo/privacidad/404. Mantener las ediciones futuras en feat/feature-catalog; esta autorización es para esta entrega concreta.
+
+## 2026-11-04 · Identificación de versión servida
+
+Implementado endpoint estático /version.json y sección de solo lectura en /admin: commit base, fecha del commit y sourceModified. Metadatos obtenidos de Git durante build; no hay consulta dinámica ni datos de entorno/autor/correo/credenciales. sourceModified comprueba código/contenido/configuración relevantes y distingue una compilación local con cambios sin commit; documentación e informes de QA no alteran ese indicador. Sin Git se devuelven null y el panel declara desconocido, sin inventar SHA.
+
+public/_headers aplica no-store y X-Robots-Tag noindex, nofollow a /version.json; Worker local confirmó ambas cabeceras y MIME JSON. El dato permite comparar archivos servidos con el commit del Build en Cloudflare, sin confundir ID de versión de Cloudflare ni confirmar éxito de despliegue por sí solo. Rebuild después de cambiar HEAD para actualizarlo. Son 20 páginas HTML más el JSON; 24 editores CMS sin cambios. El identificador generado no es editable desde CMS.
+
+Pruebas: check 44 archivos sin errores/advertencias, build y content:check aprobados. verify-version (añadido a CI) valida fixture Git limpio, modificado y sin Git, campos permitidos y coincidencia JSON/admin con checkout. Worker local: 31 comprobaciones de rutas, fuentes/marca, JSON y cabeceras, query, 405 y navegador móvil aprobados; servidor detenido. Suite del sitio y axe registrados al terminar.
+
+Última integración Git autorizada fue 96bd165 en ambas ramas; su despliegue real todavía no está confirmado desde el entorno. Esta mejora solo feat/feature-catalog, sin nueva publicación, PR creada ni cambio DNS. PR existentes y CI remoto no verificables por API. Autor Joel Alejandro Yañez Caballero; agente Codex principal, sin subagentes.
+
+Siguiente paso exacto: comprobar Actions del SHA de esta entrega. Si se autoriza integrar esta mejora en feat/brand-foundation, comprobar después /version.json y /admin frente al SHA del build. La URL pública actual todavía puede responder 404 a /version.json porque no incluye esta mejora; no interpretarlo como fallo de la versión anterior. No se retira noindex. Quedan dispositivos/lector y validación comercial/legal.
+
+Resultado final local: test:ci aprobado (20 rutas/69 destinos, navegación, marca/editorial/contactos, identificación de versión y axe 44 comprobaciones sin infracciones). Worker local 31 rutas más JSON/cabeceras aprobado y detenido; no se publicó. Identificación de versión cubre también los escenarios limpio/modificado/sin Git. Se recompila después de guardar el commit para reflejar su identificador.

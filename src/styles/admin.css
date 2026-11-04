@@ -12,3 +12,5 @@
 .admin-card p {font-size:.9rem;color:#505860;}
 .admin-card span {font-size:.8rem;font-weight:700;}
 @media(max-width:599px){.admin-grid{grid-template-columns:1fr;}}
+
+.admin-version code,.admin-version time {overflow-wrap:anywhere;}

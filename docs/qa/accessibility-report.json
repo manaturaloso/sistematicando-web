@@ -24,7 +24,7 @@
     {
       "route": "/admin/",
       "width": 390,
-      "passes": 29,
+      "passes": 30,
       "incomplete": [],
       "violations": []
     },
@@ -169,7 +169,7 @@
     {
       "route": "/admin/",
       "width": 1440,
-      "passes": 29,
+      "passes": 30,
       "incomplete": [],
       "violations": []
     },
