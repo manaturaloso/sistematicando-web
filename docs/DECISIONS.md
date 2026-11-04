@@ -34,3 +34,10 @@
 - Las páginas describen enfoques por evaluar, no capacidades contratables confirmadas. Hoteles declara explícitamente que no hay evidencia de PMS ni conectividad OTA; eventos no promete QR, pagos u operación offline.
 - Cada página conserva noindex, metadatos propios, breadcrumbs y contexto sobre el canal comercial pendiente. No se crean precios, datos legales ni dominios ficticios.
 - Se conserva feat/brand-foundation para continuidad; no se publica producción ni se fuerza historial. Solo trabaja Codex principal.
+
+## 2026-11-04 · Paquete para revisión en Cloudflare
+
+- El usuario autorizó una vista compartible en Cloudflare Pages. Se prepara un ZIP de dist, sin desplegar por falta de acceso a la cuenta.
+- Se conserva noindex/robots. No se aprueba producción oficial, dominio personalizado, DNS ni indexación.
+- Carga directa en proyecto exclusivo de revisión como alternativa manual; distinguir ese proyecto de un deployment Preview estricto y del sitio comercial oficial. No se inventa hostname.
+- Solo agente principal. Script de empaquetado reproducible versionado; binario generado fuera del checkout.

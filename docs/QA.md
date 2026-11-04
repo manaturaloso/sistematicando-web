@@ -49,3 +49,10 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 - Revisión visual de capturas del índice a 1440 y restaurantes a 390: jerarquía, tarjetas, contenidos y disposición responsive. Los focos visibles en las capturas proceden de las pruebas de teclado.
 - Capturas temporales en /tmp/sistematicando-qa; los scripts quedan versionados para repetirlas.
 - No ejecutados axe, Lighthouse ni dispositivos físicos; no se afirma accesibilidad completa o resultados de rendimiento. No hay pruebas de recepción de datos porque no se implementó recepción.
+
+# 2026-11-04 · Paquete Cloudflare de revisión
+
+- Check repetido: 13 archivos, cero errores/advertencias/hints. Build repetido: nueve páginas.
+- `python3 scripts/package-preview.py`: ZIP de 315086 bytes, nueve páginas, noindex/robots e integridad comprobados; sin docs/src/Git. SHA256 e81bcbd1e0a7e4fff2306986b197d63a746fee1ace6d4a77953e6b903322eaba para el archivo generado en esta sesión (puede variar al reconstruir).
+- `git diff --check`: aprobado.
+- Sin despliegue ni URL pública. Validación remota pendiente tras la carga en Cloudflare; no se repitió el smoke de navegador porque las páginas no cambiaron.

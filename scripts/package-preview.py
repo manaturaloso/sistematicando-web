@@ -1,0 +1,40 @@
+"""Package the verified static build only. Output stays outside the checkout."""
+from pathlib import Path
+from zipfile import ZipFile, ZIP_DEFLATED
+import hashlib
+import sys
+
+root = Path(__file__).resolve().parents[1]
+build = root / 'dist'
+output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root.parent / 'sistematicando-preview.zip'
+if build == output or build in output.parents or root == output or root in output.parents:
+    raise SystemExit('Save the archive outside the checkout and dist.')
+required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html']
+for name in required:
+    if not (build / name).is_file():
+        raise SystemExit(f'Missing build output: {name}; run npm run build first.')
+html = list(build.rglob('*.html'))
+if len(html) != 9:
+    raise SystemExit(f'Expected 9 built pages, found {len(html)}; review the package check before changing it.')
+for file in html:
+    text = file.read_text()
+    if 'name="robots" content="noindex, nofollow"' not in text:
+        raise SystemExit(f'Missing noindex: {file.relative_to(build)}')
+if 'Disallow: /' not in (build / 'robots.txt').read_text():
+    raise SystemExit('Missing crawler block in robots.txt')
+with ZipFile(output, 'w', ZIP_DEFLATED) as archive:
+    for file in sorted(build.rglob('*')):
+        if file.is_symlink():
+            raise SystemExit(f'Symlink is not allowed in the build: {file}')
+        if file.is_file():
+            relative = file.relative_to(build)
+            if any(part.startswith('.') for part in relative.parts):
+                raise SystemExit(f'Hidden file in build: {relative}')
+            archive.write(file, relative.as_posix())
+with ZipFile(output) as archive:
+    assert archive.testzip() is None
+    assert 'index.html' in archive.namelist()
+    assert not any(name.startswith(('docs/', 'src/', '.git/')) for name in archive.namelist())
+print(f'Archive: {output}')
+print(f'Pages: {len(html)}; bytes: {output.stat().st_size}')
+print(f'SHA256: {hashlib.sha256(output.read_bytes()).hexdigest()}')

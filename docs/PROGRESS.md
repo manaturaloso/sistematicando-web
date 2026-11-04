@@ -49,3 +49,9 @@ Solo Codex principal, sin subagentes. Se mantuvieron los criterios de digital-de
 ## Git y producción
 
 Rama: `feat/brand-foundation`, conservada para continuar el trabajo inicial. La base anterior a soluciones está en 7b0755a. Consultar el último SHA con `git log -1 --format='%H %s'`; su valor se informa después de enviar y verificar el remoto para evitar autorreferencia. No se creó PR ni se publicó en producción.
+
+## 2026-11-04 · Preparación de vista compartible
+
+Usuario autorizó Cloudflare Pages para revisión. Añadidos script de empaquetado y guía de carga directa en proyecto separado. No hay credenciales/conexión Cloudflare disponibles; no se ha desplegado ni existe enlace público confirmado. No cambia la implementación de páginas ni los pendientes del producto. Solo Codex principal.
+
+**Siguiente paso inmediato:** generar el ZIP con scripts/package-preview.py y subirlo desde la cuenta del usuario a un proyecto exclusivo de revisión en Pages siguiendo DEPLOYMENT.md. Tras recibir el hostname real, verificarlo antes de continuar con /funcionalidades/. No conectar dominio oficial ni retirar noindex.

@@ -37,3 +37,7 @@ La referencia anterior `docs/brand-preview.html` permanece independiente. Para v
 Tras compilar, iniciar `python3 -m http.server 4322 --bind 127.0.0.1 --directory dist`. En otra terminal ejecutar `python3 scripts/verify-home.py` y `python3 scripts/verify-solutions.py`. Requiere Playwright Python y Chromium en /usr/bin/chromium, disponibles en el entorno usado; no son dependencias de ejecución del sitio. Resultados y límites en docs/QA.md.
 
 Producción: subir únicamente dist después de autorización. No desplegar aún: faltan logos, validación comercial, contacto real y revisión legal. Ver docs/DEPLOYMENT.md.
+
+## ZIP para revisión compartible
+
+Tras el build: `python3 scripts/package-preview.py`. El archivo queda fuera del checkout en `/workspace/sistematicando-preview.zip`. La guía de carga directa en un proyecto de revisión de Cloudflare Pages está en docs/DEPLOYMENT.md. Preparar el ZIP no publica el sitio.
