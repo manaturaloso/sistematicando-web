@@ -50,3 +50,12 @@
 - Se conserva CSS/identidad, noindex y bloqueo de rastreo. Menú y pie enlazan catálogo; home incorpora acceso contextual.
 - El usuario reportó despliegue en Worker conectado a feat/brand-foundation. Se abre feat/feature-catalog para guardar sin actualizar esa rama ni ejecutar un nuevo despliegue. Revisar automatización antes de integrar.
 - No se usa cuenta Cloudflare, DNS ni repositorio SaaS. Solo Codex principal; no subagentes.
+
+## 2026-11-04 · Precios y preparación de demo
+
+- Página /precios/ sin importes, planes o condiciones ficticias: explica factores de alcance, qué confirmar y preguntas comerciales.
+- /solicitar-demo/ contiene una herramienta explícitamente local, no un formulario de captación: tres selectores sin datos de contacto, validación nativa, resumen en textContent y descarga TXT con Blob. Sin API, almacenamiento persistente ni envíos. La vista sin JS conserva instrucciones útiles.
+- Al cambiar una selección se invalida el resumen para evitar descargar un contexto desactualizado. Reset limpia resultado y devuelve foco. El resultado recibe foco al generarse.
+- No se redactan términos legales ni consentimiento como si existiera recepción. Canal y privacidad se preguntaron al usuario; no se asumen ante ausencia de respuesta.
+- CTA de navegación, home y soluciones enlazan páginas reales. Se actualizan pruebas de home para comprobar navegación a precios y volver a home antes de sus FAQ.
+- Se conserva feat/feature-catalog y la rama del Worker sin modificar. Solo Codex principal, sin subagentes ni despliegue.

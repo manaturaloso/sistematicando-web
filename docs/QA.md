@@ -66,3 +66,13 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 - npm run docs:features genera matriz de 14 módulos y comprueba IDs/grupos y consistencia mínima estado/evidencia.
 - Empaquetado scripts/package-preview.py adaptado a diez páginas; ZIP íntegro fuera del checkout, con noindex/robots y sin documentación interna.
 - No se hicieron nuevas pruebas remotas del Worker ni auditoría axe/Lighthouse. Ver PROGRESS para el bloqueo de acceso remoto.
+
+# 2026-11-04 · Precios y guía local
+
+- `ASTRO_TELEMETRY_DISABLED=1 npm run check`: 18 archivos, sin errores, warnings ni hints. Build: doce páginas estáticas.
+- `python3 scripts/verify-commercial.py`: ambas rutas a 320/390/768/900/1024/1440; HTTP, H1/noindex, enlaces/anclas, ausencia de overflow y FAQ por teclado.
+- Demo: envío de formulario incompleto bloqueado por validación; selección de negocio/locales/prioridad, foco al resultado, descarga TXT real comprobada con contenido esperado, invalidación al cambiar selección, regeneración, reset/foco y recarga sin selección. localStorage/sessionStorage vacíos y sin solicitudes HTTP no GET durante el recorrido. Esto valida el flujo probado, no afirma ausencia de logs normales del hosting.
+- Alternativa sin JS visible y herramienta interactiva oculta. No hay backend ni recepción a probar.
+- Regresión home (4 anchos), catálogo (6) y soluciones (28 combinaciones) aprobadas. Capturas precios a 1440 y demo a 390 revisadas.
+- Prueba de home ajustada para navegar a precios desde menú y regresar antes de revisar las FAQ de home.
+- Empaquetado adaptado a doce páginas; comprobación de noindex/robots y ZIP. No se invocó despliegue ni se verificó Worker remoto. Axe/Lighthouse siguen pendientes.

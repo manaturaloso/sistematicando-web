@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { solutions } from '../../data/solutions';
+import '../../styles/solutions.css';
+import '../../styles/commercial.css';
+---
+<Layout title="Prepara tu futura demo · Sistematicando" description="Organiza las prioridades de tu negocio y descarga una guía local. El canal de solicitud de demostraciones aún no está habilitado.">
+  <Header />
+  <main id="contenido">
+    <section class="wrap solution-hero">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Preparar demo</span></nav>
+      <p class="eyebrow">Una buena conversación empieza con contexto</p>
+      <h1>Tu negocio tiene<br /><em>mucho que contar.</em></h1>
+      <p class="solution-intro">Identifica qué quieres ordenar primero. Esta guía te ayuda a preparar una futura demostración, sin pedirte nombre, correo ni teléfono.</p>
+      <aside class="scope-note"><strong>Solicitudes aún no habilitadas</strong><p>No estamos recibiendo ni agendando demos desde esta versión. La guía se genera en tu navegador: no se envía a Sistematicando ni se guarda entre visitas.</p></aside>
+    </section>
+    <section class="wrap demo-workspace" aria-labelledby="guide-title">
+      <div><p class="eyebrow">Tu punto de partida</p><h2 id="guide-title">Prepara tu guía.</h2><p>Elige tu contexto y descarga un resumen para conservarlo. No incluye una cotización ni confirma disponibilidad de módulos.</p><div class="demo-steps"><h3>Qué conviene tener claro</h3><ol><li>El tipo de operación y la cantidad de locales.</li><li>El proceso que te gustaría ordenar primero.</li><li>Las preguntas sobre alcance, condiciones y acompañamiento.</li></ol></div><noscript><p class="scope-note">La guía interactiva requiere JavaScript. Puedes usar la lista anterior para preparar tu conversación sin enviarnos información.</p></noscript></div>
+      <div class="demo-builder" hidden>
+        <form id="demo-guide" aria-label="Guía local para una futura demo">
+          <div class="field"><label for="business">Tipo de negocio</label><select id="business" required><option value="">Selecciona una opción</option>{solutions.map(solution => <option value={solution.name}>{solution.name}</option>)}<option value="Otra operación">Otra operación</option></select></div>
+          <div class="field"><label for="locations">Cantidad de locales</label><select id="locations" required><option value="">Selecciona una opción</option><option>1 local</option><option>2 a 5 locales</option><option>6 o más locales</option><option>Por definir</option></select></div>
+          <div class="field"><label for="priority">Tu prioridad</label><select id="priority" required><option value="">Selecciona una opción</option><option>Atención y ventas</option><option>Inventario y costos</option><option>Reservas y clientes</option><option>Equipo y reportes</option><option>Eventos y accesos</option><option>Definir mis necesidades</option></select></div>
+          <p class="local-note">Estas selecciones solo se usan para preparar el documento en este navegador. Ningún botón de esta guía envía una solicitud.</p>
+          <div class="guide-actions"><button class="button" type="submit">Generar mi guía local</button><button class="guide-reset" type="reset">Empezar de nuevo</button></div>
+        </form>
+        <section id="guide-result" class="guide-result" aria-labelledby="result-title" hidden><h3 id="result-title" tabindex="-1">Tu guía está preparada</h3><p>No se ha enviado una solicitud ni reservado una demo.</p><pre id="guide-text"></pre><button id="download-guide" class="button" type="button">Descargar guía (.txt)</button></section>
+        <p id="guide-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+    </section>
+    <section class="wrap solution-callout"><div><p class="eyebrow">Mientras habilitamos el canal</p><h2>Explora a tu ritmo.</h2></div><div><p>Revisa las áreas conceptuales y el enfoque de tu sector. Disponibilidad y condiciones comerciales pendientes de confirmación.</p><div class="commercial-links"><a class="text-link" href="/funcionalidades/">Ver funcionalidades</a><a class="text-link" href="/precios/">Entender la propuesta</a></div></div></section>
+  </main><Footer />
+</Layout>
+<script>
+  const builder = document.querySelector<HTMLElement>('.demo-builder');
+  const form = document.querySelector<HTMLFormElement>('#demo-guide');
+  const business = document.querySelector<HTMLSelectElement>('#business');
+  const locations = document.querySelector<HTMLSelectElement>('#locations');
+  const priority = document.querySelector<HTMLSelectElement>('#priority');
+  const result = document.querySelector<HTMLElement>('#guide-result');
+  const text = document.querySelector<HTMLElement>('#guide-text');
+  const status = document.querySelector<HTMLElement>('#guide-status');
+  function clearResult() {
+    if (result) result.hidden = true;
+    if (text) text.textContent = '';
+    if (status) status.textContent = '';
+  }
+  if (builder && form && business && locations && priority && result && text && status) {
+    builder.hidden = false;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      text.textContent = [
+        'SISTEMATICANDO — Guía para una futura conversación', '',
+        `Tipo de negocio: ${business.value}`, `Locales: ${locations.value}`, `Prioridad: ${priority.value}`, '',
+        'Preguntas para revisar:',
+        '- ¿Qué funciones están verificadas y cuáles quedan fuera del alcance?',
+        '- ¿Qué módulos y servicios se incluirían, y con qué límites?',
+        '- ¿Cuáles serían los costos, impuestos y condiciones comerciales?',
+        '- ¿Qué acompañamiento e implementación necesitaría mi equipo?', '',
+        'Documento preparado localmente. No es cotización, solicitud enviada ni reserva de demo.',
+      ].join('\n');
+      result.hidden = false;
+      status.textContent = 'Guía generada localmente. No se ha enviado información.';
+      document.querySelector<HTMLElement>('#result-title')?.focus();
+    });
+    form.addEventListener('change', clearResult);
+    form.addEventListener('reset', () => { clearResult(); business.focus(); });
+    document.querySelector('#download-guide')?.addEventListener('click', () => {
+      if (!text.textContent) return;
+      const url = URL.createObjectURL(new Blob([text.textContent], { type: 'text/plain;charset=utf-8' }));
+      const link = document.createElement('a');
+      link.href = url; link.download = 'sistematicando-guia-demo.txt';
+      document.body.append(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      status.textContent = 'Descarga de la guía iniciada. No se ha enviado una solicitud.';
+    });
+  }
+</script>

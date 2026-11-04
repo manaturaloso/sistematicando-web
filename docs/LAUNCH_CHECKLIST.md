@@ -5,7 +5,8 @@
 - [x] Primera home y 404 implementadas y probadas localmente.
 - [x] Índice y seis páginas sectoriales implementados y probados localmente.
 - [x] Catálogo conceptual de funcionalidades implementado y probado.
-- [ ] Verificar módulos, aprobar copy y desarrollar páginas comerciales restantes.
+- [x] Precios informativos y guía local de demo implementados y probados.
+- [ ] Aprobar tarifas, verificar módulos y copy; desarrollar páginas restantes.
 - [ ] Verificar capacidades del SaaS y aprobar precios y copy.
 - [ ] Configurar recepción real de formularios y privacidad.
 - [ ] Aprobar textos legales y datos empresariales.

@@ -9,7 +9,7 @@ const isSolutions = currentPath.startsWith('/soluciones');
     <a class="project-name" href="/" aria-label="Sistematicando, inicio">Sistematicando<span class="project-caption">Proyecto web · Vista de desarrollo</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú <span aria-hidden="true">＋</span></button>
     <nav id="main-nav" aria-label="Principal">
-      <a href="/#propuesta">La propuesta</a><a href="/soluciones/" aria-current={isSolutions ? (currentPath === '/soluciones/' ? 'page' : 'location') : undefined}>Soluciones</a><a href="/funcionalidades/" aria-current={currentPath.startsWith('/funcionalidades') ? 'page' : undefined}>Funcionalidades</a><a class="button small" href="/#conversemos">Preparar una demo <Icon /></a>
+      <a href="/precios/" aria-current={currentPath.startsWith('/precios') ? 'page' : undefined}>Precios</a><a href="/soluciones/" aria-current={isSolutions ? (currentPath === '/soluciones/' ? 'page' : 'location') : undefined}>Soluciones</a><a href="/funcionalidades/" aria-current={currentPath.startsWith('/funcionalidades') ? 'page' : undefined}>Funcionalidades</a><a class="button small" href="/solicitar-demo/" aria-current={currentPath.startsWith('/solicitar-demo') ? 'page' : undefined}>Preparar una demo <Icon /></a>
     </nav>
   </div>
 </header>

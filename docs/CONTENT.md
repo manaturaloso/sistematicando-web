@@ -9,3 +9,5 @@ Home implementada con copy original, áreas propuestas y FAQ que declara el alca
 Soluciones: seis enfoques originales por sector con prioridades, preguntas de evaluación y límites específicos. Fuente editorial mantenible en src/data/solutions.ts. Nada de este contenido acredita implementación del producto; conservar esa distinción al editar.
 
 Catálogo /funcionalidades/: 14 áreas conceptuales con descripción, pregunta de diagnóstico, límites y sectores. Fuente editorial en features.ts; estados y evidencia compartidos con matriz generada. No interpretar «No verificada» como función disponible.
+
+Precios: información de alcance sin montos. Demo: guía preparada localmente; toda la comunicación distingue generar/descargar de enviar o reservar. No se pide contacto personal ni se declara recepción inexistente.

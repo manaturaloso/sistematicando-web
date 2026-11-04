@@ -12,19 +12,20 @@
 - `/404.html`: interfaz; comportamiento HTTP final depende del hosting.
 - Referencia de marca interna en docs/brand-preview.html, fuera de dist.
 - Matriz SaaS generada con `npm run docs:features` desde src/data/features.ts; estados, evidencia, dependencias y límites por módulo. Todos los módulos siguen sin verificación operativa.
-- Empaquetador actualizado para diez páginas. No se han implementado páginas individuales de módulos, precios, recursos, contacto, legales ni receptor de demo.
+- `/precios/`: factores de alcance, condiciones por definir y FAQ comercial, sin tarifas ni planes inventados.
+- `/solicitar-demo/`: guía local con tres selecciones, validación, resumen, descarga TXT, invalidación al cambiar campos y reset; no recibe solicitudes. Alternativa informativa sin JS.
+- Navegación y CTA de home/soluciones conectan el flujo comercial. Empaquetador actualizado para doce páginas. Pendientes páginas individuales de módulos, recursos, contacto, legales y receptor de demo.
 
 ## Fases
 
-0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/conversión siguiente; 7 SEO parcial; 8 QA parcial; 9 preparación parcial; 10 lanzamiento oficial pendiente.
+0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía implementados, recepción y planes bloqueados por configuración/aprobación; 7 SEO parcial; 8 QA parcial; 9 preparación parcial; 10 lanzamiento oficial pendiente.
 
 ## Validación de esta entrega
 
-- Astro check: cero errores/advertencias/hints (15 archivos). Build: diez páginas.
-- Catálogo a 320/390/768/900/1024/1440: búsqueda, tildes, varias palabras, vacío/reset, foco, detalles por teclado, menú, anclas únicas, noindex y ausencia de overflow. Catálogo sin JS y enlaces comprobados.
-- Regresión home: cuatro anchos. Soluciones: 28 combinaciones de ruta/ancho.
-- Capturas de catálogo desktop/móvil revisadas. Matriz generada y ZIP de diez páginas verificado.
-- No se ejecutaron Lighthouse/axe ni dispositivos físicos; no se afirma conformidad completa o rendimiento medido. Detalles en QA.md.
+- Astro check: cero errores/advertencias/hints (18 archivos). Build: doce páginas.
+- Precios y demo a 320/390/768/900/1024/1440: rutas, noindex, enlaces, FAQ por teclado, ausencia de overflow, validación de selecciones, generación, descarga y contenido TXT, invalidación del resumen, reset/foco y ausencia de storage/envíos. Alternativa sin JavaScript comprobada.
+- Regresión home: cuatro anchos; catálogo: seis; soluciones: 28 combinaciones. Capturas de precios desktop/demo móvil revisadas.
+- Matriz regenerada y ZIP de doce páginas verificado. No se ejecutaron axe/Lighthouse ni validación de recepción de leads, que no existe aún. Ver QA.md.
 
 ## Git, despliegue y agentes
 
@@ -40,8 +41,8 @@ Logos originales descargables; evidencia del SaaS; precios y condiciones; recept
 
 ## Siguiente paso exacto
 
-1. Recuperar `feat/feature-catalog`, leer AGENTS/DECISIONS, ejecutar npm ci, check y build según README. Ejecutar npm run docs:features después de cualquier cambio del registro de módulos.
-2. Revisar e integrar el catálogo solo cuando se autorice actualizar la rama desplegada. Confirmar antes cómo dispara Cloudflare los builds. La integración no forma parte de esta entrega.
-3. Avanzar fase 6 con `/precios/` sin tarifas inventadas y `/solicitar-demo/` con alcance y estado del canal claros. Para recepción real se requieren destinatario/integración y privacidad autorizados; no sustituirlos por envío ficticio. Mientras falten, avanzar contenido/arquitectura independientes.
-4. Si llega evidencia del producto, actualizar features.ts, regenerar FEATURE_STATUS y revisar copy antes de publicar módulos individuales como disponibles.
-5. Mantener documentación, pruebas y commits en GitHub. No desplegar ni conectar dominio oficial sin autorización.
+1. Recuperar `feat/feature-catalog`, leer AGENTS/DECISIONS, ejecutar npm ci, check y build según README. Usar docs:features después de cambiar el registro de módulos.
+2. Se consultó al usuario por canal comercial autorizado y privacidad; siguen sin definir al cerrar esta implementación. Para recepción real, confirmar destinatario/servicio y privacidad aprobada; después implementar integración, estados de error/éxito, validación y antispam. No convertir la guía local en solicitud enviada ficticia ni pedir secretos en chat.
+3. Avanzar fase 7 de forma independiente: `/recursos/` y preguntas frecuentes compartidas, con contenido original y útil; mantener noindex. No inventar métricas SEO, dominio definitivo ni sitemap indexable.
+4. Si llegan precios aprobados o evidencia del SaaS, actualizar primero los registros correspondientes y revisar el copy. Las páginas individuales de módulos siguen condicionadas a evidencia.
+5. Revisar e integrar esta rama solo cuando se autorice actualizar la rama del Worker; comprobar triggers de Cloudflare. No desplegar ni conectar dominio oficial por continuar programando.

@@ -4,7 +4,7 @@ Generado con `npm run docs:features` desde src/data/features.ts. No editar esta 
 
 ## Web comercial
 
-Home, índice de soluciones y seis páginas sectoriales, catálogo /funcionalidades/, navegación móvil, búsqueda local de módulos y 404 implementados. La demo sigue siendo informativa y no recibe solicitudes. Los estados de los módulos SaaS no cambian por implementar estas páginas.
+Home, índice de soluciones y seis páginas sectoriales, catálogo /funcionalidades/, navegación móvil, búsqueda local de módulos y 404 implementados. Precios sin tarifas oficiales y guía local de demo descargable implementados; no se reciben solicitudes ni se envían datos. Los estados de los módulos SaaS no cambian por implementar estas páginas.
 
 ## Matriz SaaS
 
