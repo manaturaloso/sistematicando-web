@@ -280,6 +280,19 @@
     },
     {
       "route": "/",
+      "state": "expanded-faq-animation-quarter",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "violations": []
+    },
+    {
+      "route": "/",
       "state": "expanded-menu-and-faq",
       "width": 390,
       "passes": 39,

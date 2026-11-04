@@ -52,11 +52,11 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. La captura del propietario ya confirmó despliegue de 9a017af. Esta nueva corrección está solo en feat/feature-catalog; no integrar automáticamente en la rama seguida por Cloudflare.
-2. Revisar el cambio de menú/fuentes y el informe docs/qa/performance-report.json. Si se decide publicarlo, obtener autorización explícita para integrar el commit de esta entrega en feat/brand-foundation; antes fetch y revisar cambios CMS concurrentes.
-3. Recorrer en dispositivos y lector de pantalla las páginas terminadas; revisión comercial de los módulos no verificados, precios y adopción de privacidad siguen pendientes. Mantener noindex y DNS actuales.
-4. CMS permanece en feat/feature-catalog. Próximo trabajo técnico: revisar entrega de imágenes de marca para reducir transferencia preservando los originales; no sustituir ni transformar los archivos fuente oficiales sin explicitar la estrategia.
-5. Rama activa feat/feature-catalog. Consultar git log -1 para el SHA final y git ls-remote para verificar persistencia. Rama publicada permanece en 9a017af. Sin PR creada; PR existentes/Actions alojado sin verificar por API Forbidden. Agente: Codex principal, sin subagentes.
+1. Revisar Actions → Site and CMS quality para el nuevo commit de corrección FAQ en feat/feature-catalog. Esperado: 42 comprobaciones, cero infracciones. Fallo remoto dd113be confirmado por captura; no se afirma verde del nuevo run sin observarlo.
+2. Si falla, abrir validate y consultar las líneas AXE (regla, selector y causa) o descargar qa/accessibility-report.json del artefacto. Mantener reglas y no añadir exclusiones para pasar CI.
+3. Publicado permanece 9a017af. Nueva corrección y mejora de CLS solo en rama de desarrollo; futuras integraciones en feat/brand-foundation requieren autorización explícita. Antes fetch/revisar CMS concurrente.
+4. Tras CI alojado aprobado, revisión manual/dispositivos/lector y entrega de imágenes preservando originales. Quedan evidencia SaaS, tarifas y revisión/adopción de privacidad.
+5. Autor Joel Alejandro Yañez Caballero; consultar git log -1 y git ls-remote para SHA final. Sin PR creada, existentes sin verificar por API. Solo Codex principal.
 
 ## Datos comerciales aplicados
 
@@ -83,3 +83,17 @@ Implementado: menú móvil inicializado durante el parsing con script inline enc
 Pruebas: check 40 archivos sin errores/advertencias, build 19 páginas y content:check aprobados. Suite test:ci después de adelantar menú: 19 rutas/66 destinos, navegación y 41 comprobaciones axe sin infracciones automáticas; incomplete de contraste separado, no certificación completa. Después de precargar fuentes: check/build y Lighthouse final tres rutas aprobados; rendimiento/accesibilidad/buenas prácticas 100, SEO 66 por noindex. CLS home/catálogo/demo 0 en laboratorio; catálogo previo 0.119. LCP final aproximadamente 0.90 s; sin afirmar métricas de producción. test:navigation final incluye scripts externos bloqueados.
 
 Persistencia solo en feat/feature-catalog, con identidad Joel Alejandro Yañez Caballero. Sin push a rama del Worker ni despliegue nuevo; publicado sigue 9a017af. Agente: Codex principal. Quedan peso de PNG, revisión manual/dispositivos y pendientes comerciales/legales. Siguiente paso: revisión de esta corrección y optimización de entrega de imágenes preservando originales; publicación posterior requiere autorización explícita. Sin PR creada; las existentes no se pueden verificar con la API disponible.
+
+## 2026-11-04 · Fallo de Actions en FAQ abiertas: contraste transitorio
+
+Evidencia remota aportada por el propietario: workflow Site and CMS quality #9, commit dd113be, falló en Check pages, navigation and accessibility. Resumen 41 comprobaciones y una infracción en expanded-menu-and-faq; no se recibió el detalle de regla del artefacto. La captura confirma fallo alojado, no fallo del despliegue Cloudflare.
+
+Reproducción local: la animación appear aplicaba opacity 0→1 a los párrafos de details. Detenida al 25% mediante Web Animations, axe detecta color-contrast en cinco respuestas FAQ (1.9:1 frente al mínimo 4.5:1); al terminar la animación el mismo estado pasa. Es una causa reproducida compatible con el fallo dependiente del momento de medición; no se atribuye una regla al log remoto que no la muestra.
+
+Corrección: retirar solo la interpolación de opacidad y conservar el desplazamiento suave de 3px y prefers-reduced-motion. Texto siempre opaco; sin desactivar color-contrast, exclusiones ni esperas para esconder el problema. Control negativo: reintroducir CSS anterior solo en página de prueba vuelve a detectar la infracción; CSS corregido pasa con las mismas cinco animaciones pausadas.
+
+Auditoría ampliada a 42 estados/rutas con expanded-faq-animation-quarter en no-preference; conserva estado abierto normal y resto de pruebas. Logs ahora imprimen regla, selector, ayuda y causa, además del informe JSON del artefacto. Build 19 páginas/content:check y prueba de reproducción aprobados; resultado final de test:ci registrado al completar esta entrega. No repetir Lighthouse: no se cambia geometría ni carga de recursos.
+
+Agente: Codex principal, sin subagentes. Identidad Git: Joel Alejandro Yañez Caballero. Solo rama feat/feature-catalog; sin despliegue ni push a feat/brand-foundation (publicado 9a017af). Siguiente paso exacto: revisar nueva ejecución de Actions del commit de esta entrega; debe mostrar 42 comprobaciones y cero infracciones. Si falla, abrir validate y copiar AXE + selector + causa o descargar accessibility-report.json del artefacto. API GitHub del entorno sigue sin acceso; no afirmar CI alojado verde hasta observarlo. Sin PR creada; PR existentes sin verificar.
+
+Resultado final local: test:ci aprobado (19 páginas, 66 destinos, navegación sin JS/teclado/200% y menú con scripts externos bloqueados); axe 42 comprobaciones, cero infracciones. Informe accessibility-report.json regenerado. Incomplete conservados, no equivalen a aprobación WCAG completa.

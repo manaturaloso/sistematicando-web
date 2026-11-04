@@ -14,7 +14,7 @@ Build estático local, no Worker público. 19 páginas con originales del logo s
 
 ## Accesibilidad automática
 
-`npm run audit:a11y`: 38 combinaciones (19 páginas × móvil/escritorio) y tres estados interactivos: menú/FAQ abiertos, guía generada y búsqueda sin resultados. **41 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
+`npm run audit:a11y`: 38 combinaciones (19 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **42 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
 
 Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultados como aprobaciones automáticas. Evidencia en qa/contrast-review.json: flechas decorativas aria-hidden y etiquetas del mockup cuya transformación/fondo no pudo resolver. Revisión de estilos y captura desktop: tinta/superficie 11.59:1, tinta/blanco 13.15:1, tinta/líneas del gráfico 11.31:1 y texto claro/tinta 12.58:1. No se observó ocultación del texto en la captura revisada.
 
@@ -50,3 +50,5 @@ Resúmenes versionados en docs/qa; los JSON completos de Lighthouse se generan t
 Última medición con logos originales, menú inicializado durante parsing y fuentes precargadas: CLS 0 en las tres rutas de laboratorio (catálogo anterior 0.119). Lighthouse sigue señalando peso de PNG. Originales preservados. test:brand verifica seis anchos e integridad.
 
 El menú se inicializa con un script inline pequeño, encapsulado y colocado tras la cabecera. Evita que el nav móvil completo aparezca antes de ocultarse al cargar un módulo. Sin JS siguen visibles los enlaces; con scripts externos bloqueados el menú y Escape funcionan. No depende de una clase global que pueda ocultar enlaces sin instalar sus eventos. La web actual permite scripts inline; cualquier futura CSP deberá incluir hash/nonce apropiado.
+
+Corrección FAQ: texto siempre opaco durante appear, animación de posición conservada. Caso congelado al 25% detecta el bajo contraste de la versión anterior y pasa con la corregida. Detalles y evidencia del fallo alojado en CI.md y QA.md. Resultado alojado del nuevo commit pendiente de observar.
