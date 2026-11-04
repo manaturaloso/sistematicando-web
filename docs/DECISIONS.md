@@ -59,3 +59,10 @@
 - No se redactan términos legales ni consentimiento como si existiera recepción. Canal y privacidad se preguntaron al usuario; no se asumen ante ausencia de respuesta.
 - CTA de navegación, home y soluciones enlazan páginas reales. Se actualizan pruebas de home para comprobar navegación a precios y volver a home antes de sus FAQ.
 - Se conserva feat/feature-catalog y la rama del Worker sin modificar. Solo Codex principal, sin subagentes ni despliegue.
+
+## 2026-11-04 · Borrador de privacidad solicitado
+
+- El usuario autorizó redactar una política y señaló WhatsApp como canal. Se prepara documento completo interno con campos pendientes visibles; no se presume identidad jurídica a partir de cuentas del proyecto.
+- El teléfono recibido no incluye código de país inequívoco. Se pide confirmación antes de construir wa.me para evitar dirigir consultas a un destinatario distinto.
+- El borrador separa web, hosting técnico, guía local y contacto voluntario por WhatsApp. No afirma que el hosting carezca de logs ni autoriza marketing por contactar.
+- Sin enlace externo activo, política pública definitiva o mensajes enviados hasta resolver datos esenciales. El borrador se guarda junto a la continuidad en GitHub.

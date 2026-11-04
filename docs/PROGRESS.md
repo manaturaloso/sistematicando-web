@@ -46,3 +46,7 @@ Logos originales descargables; evidencia del SaaS; precios y condiciones; recept
 3. Avanzar fase 7 de forma independiente: `/recursos/` y preguntas frecuentes compartidas, con contenido original y útil; mantener noindex. No inventar métricas SEO, dominio definitivo ni sitemap indexable.
 4. Si llegan precios aprobados o evidencia del SaaS, actualizar primero los registros correspondientes y revisar el copy. Las páginas individuales de módulos siguen condicionadas a evidencia.
 5. Revisar e integrar esta rama solo cuando se autorice actualizar la rama del Worker; comprobar triggers de Cloudflare. No desplegar ni conectar dominio oficial por continuar programando.
+
+## Respuesta comercial recibida durante esta entrega
+
+El usuario indicó WhatsApp +956832336 y pidió generar una política de privacidad. Se redactó docs/PRIVACY_DRAFT.md para web comercial y contacto voluntario por WhatsApp; pendientes de confirmar código de país, identidad/domicilio del responsable, correo y decisiones de conservación/proveedores. Se preguntó si el número corresponde a Perú +51 956 832 336. No se crea enlace hasta confirmarlo. Ver PRIVACY_REVIEW.md para finalizar; este paso tiene prioridad sobre la recepción real de demos. La guía local sigue sin enviar solicitudes.

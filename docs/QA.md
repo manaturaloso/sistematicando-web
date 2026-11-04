@@ -76,3 +76,7 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 - Regresión home (4 anchos), catálogo (6) y soluciones (28 combinaciones) aprobadas. Capturas precios a 1440 y demo a 390 revisadas.
 - Prueba de home ajustada para navegar a precios desde menú y regresar antes de revisar las FAQ de home.
 - Empaquetado adaptado a doce páginas; comprobación de noindex/robots y ZIP. No se invocó despliegue ni se verificó Worker remoto. Axe/Lighthouse siguen pendientes.
+
+## Borrador de privacidad
+
+Se revisaron los campos tratados por la guía y el código de almacenamiento/envío antes de redactar PRIVACY_DRAFT.md. Se conserva la distinción con registros técnicos de Cloudflare y el tratamiento de WhatsApp. Sin cambios de aplicación después del smoke; no hay enlace activo ni mensajes a probar. No se ha realizado validación legal externa ni se afirma cumplimiento normativo integral.
