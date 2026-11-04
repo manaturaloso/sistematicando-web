@@ -27,7 +27,7 @@ Trabajar en feat/feature-catalog. Cloudflare sigue feat/brand-foundation: no env
 
 CMS conectado y logos subidos/seleccionados por el propietario. Datos comerciales/privacidad confirmados en content/contact.json; los avisos legales aún requieren revisión operativa. No solicitar tokens ni contraseñas. No sustituir originales ni marcar SaaS disponible sin evidencia.
 
-Última integración enviada al Worker: af35674; build/versión activa no confirmados desde este entorno. Mejoras de pruebas posteriores en 5c92a27 y esta entrega documental están en desarrollo. Consultar HEAD para SHA exacto, no asumir que esta lista es la punta remota actual.
+Última integración enviada al Worker: af35674. Versión servida confirmada por el propietario mediante /version.json (sourceModified false); evidencia en qa/deployed-version-af35674.json. No fue una consulta directa exitosa del agente ni auditoría funcional completa. Mejoras de pruebas posteriores en 5c92a27 y esta entrega documental están en desarrollo. Consultar HEAD para SHA exacto, no asumir que esta lista es la punta remota actual.
 
 ## Ejecutar y validar
 
@@ -49,9 +49,9 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Confirmar que Cloudflare Build de af35674 está Ready y abrir https://sistematicando-web.manaturaloso.workers.dev/version.json. Esperado commit af35674 y sourceModified false. /admin ofrece la misma identificación. Si el agente recibe CONNECT 403/Forbidden, pedir evidencia del dashboard/JSON sin afirmar fallo del sitio. La API también puede impedir consultar Actions/PR.
+Identidad pública af35674 confirmada por JSON del propietario: no repetir esa solicitud salvo un despliegue nuevo. Revisar Actions del HEAD y recorrer home/contacto/demo/catálogo/privacidad/admin/404 en dispositivos/lector. Si se detecta un fallo, obtener evidencia concreta y corregirlo antes de ampliar alcance.
 
-Después, revisar Actions del HEAD actual y revisión manual/dispositivos/lector, evidencia SaaS, precios y privacidad. No crear funciones/afirmaciones para rellenar esos datos ausentes. Cualquier actualización pública exige autorización correspondiente.
+Quedan evidencia SaaS, precios y privacidad. No crear afirmaciones para rellenar información ausente. Cualquier actualización pública exige autorización correspondiente. Las mejoras de pruebas/documentación posteriores a af35674 no necesitan desplegarse para documentar este estado.
 
 ## Mensaje para iniciar otra sesión
 

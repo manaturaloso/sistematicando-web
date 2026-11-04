@@ -34,3 +34,9 @@ Consolidación: 4 de noviembre de 2026 (America/Lima). El registro anterior ínt
 ## Consolidación de esta entrega
 
 PROGRESS y README contenían estados superados (19 páginas, 23 editores y conexión CMS pendiente). Se conservan las fuentes históricas y se crea guía breve entre cuentas. No hay cambios de producto ni nuevo despliegue. Validación documental y de evidencia/Git; no repetición de tests de aplicación sin cambio funcional.
+
+## 4 de noviembre de 2026 · Versión pública identificada por el propietario
+
+Evidencia: JSON pegado por el usuario desde /version.json, guardado íntegro en qa/deployed-version-af35674.json. SHA af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00 y sourceModified false. Contrastados con ref remota feat/brand-foundation y fecha Git; coincidencia exacta/instante equivalente. Confirma identidad de la copia servida; no implica que el agente accediera directamente, CI actual verde ni revisión funcional de todas las páginas.
+
+Se actualizan resúmenes/continuidad para no repetir el bloqueo de verificación ya resuelto por el usuario. Cambios solo documentales, sin despliegue. Agente Codex principal, identidad Joel Alejandro Yañez Caballero; sin PR creada, existentes no verificadas por API. Siguiente paso: revisión funcional manual y CI del HEAD, luego pendientes comerciales/legales.

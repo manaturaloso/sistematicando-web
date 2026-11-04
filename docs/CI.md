@@ -1,6 +1,6 @@
 # Validación automática de ediciones del CMS
 
-> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Versión servida af35674 confirmada por JSON del propietario; el estado de CI de los nuevos SHA sigue sin verificar. Este documento conserva también registros anteriores.
 
 ## Implementado
 

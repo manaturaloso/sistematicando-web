@@ -1,6 +1,6 @@
 # Validación · 2026-11-03
 
-> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Versión servida af35674 confirmada por el JSON aportado por el propietario; revisión funcional y CI actual pendientes. Este documento conserva también registros anteriores.
 
 ## Ejecutado y aprobado
 
@@ -244,3 +244,9 @@ Validación: build/content:check y test:ci aprobados (20 rutas/69 destinos, marc
 Durante la ejecución el usuario notificó «stream disconnected before completion»: es un aviso de interrupción del canal de respuesta, no una evidencia de fallo del sitio. Se comprobó el checkout: seis archivos de pruebas/documentación conservados, sin pérdida ni cambios de contenido. Se termina y guarda esta entrega en feat/feature-catalog. No hay nuevo despliegue; rama seguida por Worker sigue af35674, estado remoto del despliegue aún no confirmado por el entorno.
 
 Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. Sin PR creada; existentes y Actions actual no verificables por API. Siguiente paso exacto: revisar Actions del SHA de esta entrega; usar CMS para editar etiquetas sin que las pruebas exijan la copia anterior. Continuar revisión manual con dispositivos/lector y validación comercial/legal. No integrar ni publicar otra versión sin autorización correspondiente. Recompilar tras cambiar HEAD para actualizar version.json.
+
+## 4 de noviembre de 2026 · Versión pública identificada por el propietario
+
+Evidencia: JSON pegado por el usuario desde /version.json, guardado íntegro en qa/deployed-version-af35674.json. SHA af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00 y sourceModified false. Contrastados con ref remota feat/brand-foundation y fecha Git; coincidencia exacta/instante equivalente. Confirma identidad de la copia servida; no implica que el agente accediera directamente, CI actual verde ni revisión funcional de todas las páginas.
+
+Se actualizan resúmenes/continuidad para no repetir el bloqueo de verificación ya resuelto por el usuario. Cambios solo documentales, sin despliegue. Agente Codex principal, identidad Joel Alejandro Yañez Caballero; sin PR creada, existentes no verificadas por API. Siguiente paso: revisión funcional manual y CI del HEAD, luego pendientes comerciales/legales.

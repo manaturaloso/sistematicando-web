@@ -8,7 +8,7 @@ Estado consolidado: 4 de noviembre de 2026 (America/Lima). Este archivo sustituy
 - Último cambio funcional de la web: `1be0fc0`; integración autorizada enviada a la rama de Cloudflare `feat/brand-foundation`: `af35674`.
 - Última mejora de pruebas: `5c92a27`, solo en desarrollo. Esta entrega posterior consolida documentación; consultar `git log -1` para su SHA final.
 - Fetch de ambas ramas sin cambios concurrentes antes de consolidar. El push y referencias se verifican al entregar; repetir fetch en la próxima sesión.
-- Worker: https://sistematicando-web.manaturaloso.workers.dev. El envío de `af35674` está confirmado en Git; su build/versión activa sigue sin confirmación remota desde este entorno.
+- Worker: https://sistematicando-web.manaturaloso.workers.dev. La versión servida `af35674` quedó confirmada por el JSON de /version.json aportado por el propietario; sourceModified false y fecha coincidente con Git. Evidencia en qa/deployed-version-af35674.json. El agente no hizo una consulta directa exitosa ni un recorrido funcional remoto.
 - API GitHub y acceso al hostname estuvieron bloqueados por Forbidden/CONNECT 403. No confundir con un fallo del sitio. El propietario confirmó Actions verde para `296dc05`, no para todos los SHA posteriores.
 - No se crearon PR; las existentes no pudieron consultarse. No afirmar que no existan.
 
@@ -52,13 +52,17 @@ Esta entrega: revisión de informes JSON, referencias Git, enlaces de los docume
 
 El plan original numera 0–10: inicialización y base visual completadas; home/soluciones/catálogo/contacto/precios informativos/recursos/CMS implementados. Cierre de QA y verificación del Worker en curso (fases 8–9). Lanzamiento oficial (10) pendiente.
 
-Pendientes reales: confirmar build/versión activa de `af35674`; CI de los SHA actuales; revisión manual con dispositivos/lector de pantalla; evidencia del SaaS y tarifas; revisión/adopción de privacidad y otros textos legales; dominio/canonicals/sitemap/indexación autorizados. No hay páginas individuales de módulos con disponibilidad acreditada ni backend de leads.
+Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lector de pantalla; evidencia del SaaS y tarifas; revisión/adopción de privacidad y otros textos legales; dominio/canonicals/sitemap/indexación autorizados. No hay páginas individuales de módulos con disponibilidad acreditada ni backend de leads.
 
 ## Siguiente paso exacto
 
-1. Comprobar Cloudflare Build de `af35674` y abrir `/version.json` y `/admin/`: commit esperado empieza por `af35674`, sourceModified false. Si falta Git al compilar, null requiere diagnóstico, no supone por sí solo caída del sitio. Registrar la evidencia del propietario si la red del agente sigue bloqueada.
-2. Revisar Actions del nuevo SHA de esta entrega. `5c92a27` mejora las pruebas ante ediciones CMS y no está integrado en la rama seguida; no actualizarla sin autorización correspondiente.
-3. Recorrer contacto/demo/catálogo/privacidad en dispositivos y lector de pantalla; revisar los pendientes comerciales/legales. No inventar capacidades, precios ni datos.
-4. Para continuar desde otra cuenta, seguir [HANDOFF.md](HANDOFF.md). Antes de editar: AGENTS, estado Git, fetch y configuración local de identidad. Tras cambiar HEAD, reconstruir para actualizar version.json.
+1. Identidad de la versión pública af35674 confirmada; no volver a pedir el mismo JSON salvo otro despliegue. Revisar Actions del HEAD de desarrollo; verde histórico de 296dc05 no acredita los nuevos SHA.
+2. Recorrer contacto/demo/catálogo/privacidad/admin y una ruta inexistente en dispositivos/lector. Confirmar logo, navegación y canales sin enviar mensajes reales. Identificar cualquier defecto concreto antes de añadir trabajo nuevo.
+3. Resolver evidencia SaaS, tarifas y revisión/adopción legal/operativa con el propietario. Mantener noindex y DNS mientras no se autorice lanzamiento oficial.
+4. Las mejoras de pruebas 5c92a27 y documentación están solo en desarrollo; no hace falta otra publicación para registrar esta evidencia. Continuidad en HANDOFF.md, identidad local obligatoria y fetch antes de editar. Recompilar tras cambiar HEAD.
 
 Agente usado: Codex principal, sin subagentes. Identidad obligatoria: Joel Alejandro Yañez Caballero, joel.yc23@gmail.com. No reescribir commits publicados ni desplegar/cambiar DNS sin autorización. Las autorizaciones previas son entregas concretas.
+
+## Confirmación de versión pública · 4 de noviembre de 2026
+
+El propietario pegó el JSON de /version.json: af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00, sourceModified false. Coincide con la referencia remota de feat/brand-foundation y fecha de commit en Git. Validación documental/schema/SHA/fecha y diff; sin repetir pruebas de aplicación ni nuevo despliegue. No equivale a auditoría de todas las rutas ni CI remoto aprobado. Solo Codex principal; sin PR creada, existentes sin verificar por API.

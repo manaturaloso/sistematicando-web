@@ -1,6 +1,6 @@
 # Worker estático: preparación y despliegue
 
-> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Versión servida af35674 confirmada por el JSON aportado por el propietario; revisión funcional y CI actual pendientes. Este documento conserva también registros anteriores.
 
 ## Estado real
 
@@ -138,3 +138,9 @@ El usuario respondió «Sigamos» inmediatamente a la pregunta concreta «¿Auto
 Fetch sin novedades concurrentes: origen 1be0fc0, destino 96bd165. Destino antecesor, simulación sin conflictos. Se agrega solo registro documental y se integra por fast-forward. Pruebas previas del código: 20 rutas/69 destinos, axe 44 comprobaciones, identificación limpio/modificado/sin Git y Worker local 31 rutas más JSON/cabeceras. Se recompila/dry-run antes del envío para reflejar el SHA final en version.json y comprobar sourceModified false. No se repite la suite sin cambios funcionales.
 
 Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. Sin PR creada ni reescritura de historial, sin DNS/indexación nuevos. El push a la rama seguida permite activar Workers Builds; resultado remoto pendiente de observar. API/hostname del entorno siguen con restricciones. Siguiente paso exacto: comprobar Build de Cloudflare para el SHA final, Ready y versión activa; abrir /version.json y /admin, comparar commit y sourceModified. Si no hay Git al compilar, null es una limitación de identificación, no confirmación de fallo del sitio. Conservar ediciones CMS en feat/feature-catalog y registrar resultado real.
+
+## 4 de noviembre de 2026 · Versión pública identificada por el propietario
+
+Evidencia: JSON pegado por el usuario desde /version.json, guardado íntegro en qa/deployed-version-af35674.json. SHA af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00 y sourceModified false. Contrastados con ref remota feat/brand-foundation y fecha Git; coincidencia exacta/instante equivalente. Confirma identidad de la copia servida; no implica que el agente accediera directamente, CI actual verde ni revisión funcional de todas las páginas.
+
+Se actualizan resúmenes/continuidad para no repetir el bloqueo de verificación ya resuelto por el usuario. Cambios solo documentales, sin despliegue. Agente Codex principal, identidad Joel Alejandro Yañez Caballero; sin PR creada, existentes no verificadas por API. Siguiente paso: revisión funcional manual y CI del HEAD, luego pendientes comerciales/legales.

@@ -6,7 +6,7 @@ Web comercial estática con Astro + TypeScript y CSS nativo. 20 páginas HTML, c
 
 Leer [AGENTS.md](AGENTS.md), [HANDOFF.md](docs/HANDOFF.md), [PROGRESS.md](docs/PROGRESS.md) y [DECISIONS.md](docs/DECISIONS.md). El brief en docs/PROJECT_BRIEF.md es referencia, no autorización de despliegue. Historial íntegro en docs/PROGRESS_HISTORY.md y docs/DECISIONS_HISTORY.md.
 
-Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/brand-foundation, último envío autorizado af35674. El resultado activo del despliegue sigue por confirmar; no asumir éxito por el push. Consultar Git y /version.json, no confundir SHA con ID de Cloudflare.
+Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/brand-foundation, último envío autorizado af35674. El propietario confirmó la versión servida af35674 mediante /version.json con sourceModified false; evidencia guardada en docs/qa/deployed-version-af35674.json. Esto no sustituye el recorrido funcional ni la comprobación de CI. Consultar Git y /version.json, no confundir SHA con ID de Cloudflare.
 
 ## Desarrollo y pruebas
 
@@ -40,4 +40,4 @@ Cloudflare puede desplegar al recibir commits en feat/brand-foundation. No integ
 
 ## Pendientes
 
-Confirmar versión activa/CI remoto; revisión manual con dispositivos/lector; evidencia real de módulos SaaS, tarifas y revisión/adopción de privacidad; dominio/SEO/indexación aprobados. Contactos confirmados en content/contact.json. No inventar precios, capacidades, testimonios ni envíos.
+Versión activa identificada; quedan CI remoto, revisión manual con dispositivos/lector; evidencia real de módulos SaaS, tarifas y revisión/adopción de privacidad; dominio/SEO/indexación aprobados. Contactos confirmados en content/contact.json. No inventar precios, capacidades, testimonios ni envíos.
