@@ -89,3 +89,14 @@ Se revisaron los campos tratados por la guía y el código de almacenamiento/env
 - Regresiones home (4), catálogo (6) y soluciones (28) aprobadas. Revisión visual de privacidad a 390px.
 - Empaquetador actualizado para trece páginas, conserva noindex y exclusión de archivos internos.
 - No se comprobaron bandejas de correo, identidad/titularidad externa, entrega de mensajes o cumplimiento legal. Revisión operativa antes de adoptar política vigente documentada en PRIVACY_REVIEW.md.
+
+# 2026-11-04 · Recursos, contenido editable y /admin
+
+- Check: 31 archivos, cero errores/advertencias/hints. Build: 19 páginas.
+- .pages.yml validado contra lib/config-schema.ts del repositorio público de Pages CMS consultado por HTTPS (el esquema oficial se ejecutó temporalmente con Zod v3 y lista de tipos del registro oficial; no se copió al proyecto). Config de merge y rutas de file/media revisadas en fuente del proveedor.
+- content:check comprueba referencias/IDs, estados con evidencia, contactos, rutas internas, colores, logos dentro de public/media y cobertura de campos por editores. Forma parte de prebuild.
+- scripts/verify-cms.py aprobado: edición de copia en home y FAQ compartida, imagen de prueba en cabecera/pie, pie oscuro/favicon. Administrador a 320/390/768/900/1024/1440 con links de rama correctos y sin credenciales locales. Restaura originales y reconstruye al terminar.
+- Primer ensayo de FAQ falló por usar innerText sobre respuesta cerrada; corregido a textContent para verificar contenido oculto. Segundo ensayo y ensayo final completo aprobados. Los tests de consistencia ya no comparan textos vacíos.
+- verify-resources.py: índice, tres guías y FAQ a seis anchos, enlaces, anclas, títulos únicos, IDs únicos, respuestas compartidas y FAQ sin JS. Capturas de índice/guía y admin generadas.
+- Regresiones verify-privacy, commercial, home, features y solutions: aprobadas tras migrar contenido y menús.
+- Pendiente: login en Pages CMS, permiso GitHub del propietario, subida real de logo y commit alojado. No se accedió a cuentas ni se publicaron cambios. No hay prueba de edición completa alojada aún.

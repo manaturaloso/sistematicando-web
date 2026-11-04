@@ -76,3 +76,18 @@
 - WhatsApp solo se abre por acción del visitante, con mensaje genérico y aviso de tercero. La guía no se inserta en el enlace. No se llama a la API ni se envían mensajes desde herramientas o código.
 - Se actualizan copys que decían canal pendiente y enlace de privacidad del pie. Correo y WhatsApp son alternativas para consultas, no automatizaciones.
 - No se realizan cambios en Worker, DNS, producción o rama desplegada. Solo Codex principal.
+
+## 2026-11-04 · CMS GitHub y acceso /admin
+
+- El usuario aclaró que necesita administración completa y eligió CMS conectado a GitHub con interfaz en /admin. Se usa Pages CMS alojado para no implementar usuarios/contraseñas ni guardar tokens en frontend. /admin es panel de acceso; el editor autenticado se abre fuera del sitio, sin iframe ni simulación de login.
+- 23 editores en .pages.yml (JSON válido como YAML), medios en public/media y merge por campo para que editores por página compartan pages.json sin eliminar otros apartados.
+- Fuente editorial en content/*.json. Adaptadores TS mantienen las plantillas; copia y metadatos de páginas también son editables. Navegación y medios/configuración de marca son explícitos.
+- El CMS no convierte el sitio en un constructor visual arbitrario. Diseño estructural, nuevas integraciones/tipos y lógica requieren desarrollo; el alcance de edición está explicado en ADMIN.md.
+- Originales del logo no disponibles como archivos; se implementa selección/render preservando proporciones en lugar de reconstruir imágenes del chat. Campos vacíos hasta carga real. Favicon/pie oscuro opcionales.
+- Verificación local de ediciones con imagen temporal y restauración; no se confunde con una carga del logo oficial ni con una escritura remota autenticada.
+- Requiere autorización de la GitHub App por el propietario. Configuración y prueba local no prueban autenticación alojada. Ediciones van a feat/feature-catalog; rama de Worker sin cambios.
+
+## 2026-11-04 · Recursos y FAQ compartidas
+
+- Tres guías editoriales originales sin promesas ni métricas ficticias. No son manual del producto; contenidos se adaptan a la operación y distinguen capacidades no verificadas.
+- Fuente FAQ común para home, precios y directorio, con componentes nativos accesibles sin JS. Sin marcado FAQPage promocional ni sitemap indexable mientras el sitio esté en revisión.

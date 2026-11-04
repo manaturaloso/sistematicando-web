@@ -1,0 +1,99 @@
+{
+  "items": [
+    {
+      "id": "que-es",
+      "category": "producto",
+      "home": true,
+      "question": "¿Qué es Sistematicando?",
+      "answer": "Es una propuesta de plataforma de gestión empresarial para conectar distintas áreas de negocios de gastronomía, hospitalidad y eventos. Esta web está en desarrollo y el alcance comercial de sus módulos todavía debe verificarse."
+    },
+    {
+      "id": "disponibilidad",
+      "category": "producto",
+      "home": true,
+      "question": "¿Todas las funciones están disponibles?",
+      "answer": "No se ha confirmado la disponibilidad de los módulos en esta versión del sitio. Las áreas y visuales presentados explican la propuesta de producto; no son una garantía de funciones contratables."
+    },
+    {
+      "id": "varios-locales",
+      "category": "producto",
+      "home": true,
+      "question": "¿Puedo usarlo si tengo más de un local?",
+      "answer": "La gestión de varias sedes forma parte de la propuesta. Antes de recomendar una solución, hace falta revisar la estructura del negocio y confirmar el alcance real del producto."
+    },
+    {
+      "id": "hoteles",
+      "category": "producto",
+      "question": "¿Es un sistema hotelero completo?",
+      "answer": "No se ha verificado un PMS completo ni integraciones con OTAs o channel managers. El enfoque para hoteles sirve para entender necesidades, sin afirmar que sustituya un sistema hotelero especializado."
+    },
+    {
+      "id": "cuanto-cuesta",
+      "category": "comercial",
+      "home": true,
+      "pricing": true,
+      "question": "¿Cuánto cuesta?",
+      "answer": "Aún no hay una tabla de precios aprobada para publicar. No presentamos tarifas ni condiciones contractuales provisionales como oficiales. La página de precios explica qué información conviene reunir para definir una propuesta."
+    },
+    {
+      "id": "modulos-plan",
+      "category": "comercial",
+      "pricing": true,
+      "question": "¿Todos los módulos estarán incluidos?",
+      "answer": "No hay una composición de planes aprobada. La disponibilidad y las inclusiones deben confirmarse expresamente, sin asumir que todo el catálogo forma parte de una oferta."
+    },
+    {
+      "id": "unidad-cobro",
+      "category": "comercial",
+      "pricing": true,
+      "question": "¿El costo será por usuario o por local?",
+      "answer": "La unidad de cobro sigue pendiente de definición. Antes de contratar deberá quedar clara, junto con los límites, servicios e impuestos aplicables."
+    },
+    {
+      "id": "prueba-gratuita",
+      "category": "comercial",
+      "pricing": true,
+      "question": "¿Existe una prueba gratuita?",
+      "answer": "No se ha aprobado una prueba gratuita ni condiciones de contratación. No presentamos promociones, plazos ni beneficios provisionales como compromisos oficiales."
+    },
+    {
+      "id": "demostracion",
+      "category": "comercial",
+      "home": true,
+      "question": "¿Cómo solicito una demostración?",
+      "answer": "En Preparar una demo encontrarás una guía local y el enlace al WhatsApp comercial. Abrirlo no envía un mensaje: tú decides qué compartir después de revisar la información de privacidad. La coordinación se realiza en la conversación, sin reserva automática."
+    },
+    {
+      "id": "guia-local",
+      "category": "privacidad",
+      "question": "¿Generar una guía envía mis datos?",
+      "answer": "No. Las selecciones se usan en tu navegador para generar un archivo descargable. No se guardan en el servidor ni se adjuntan al enlace de WhatsApp. El proveedor de hosting puede procesar datos técnicos de la navegación, como se explica en la política de privacidad."
+    },
+    {
+      "id": "contacto-privacidad",
+      "category": "privacidad",
+      "question": "¿Dónde puedo consultar sobre mis datos?",
+      "answer": "En la política de privacidad figuran el responsable, el domicilio y los canales de correo y WhatsApp autorizados para consultas y ejercicio de derechos. No necesitas contratar para usar esos canales."
+    },
+    {
+      "id": "guias-producto",
+      "category": "producto",
+      "question": "¿Las guías explican funciones del software?",
+      "answer": "Las guías son material editorial sobre organización de negocios. No sustituyen un manual del producto, no acreditan módulos disponibles ni prometen resultados. Puedes usarlas para preparar preguntas sobre tu operación."
+    }
+  ],
+  "groups": [
+    {
+      "id": "producto",
+      "title": "Producto y alcance"
+    },
+    {
+      "id": "comercial",
+      "title": "Precios y demostración"
+    },
+    {
+      "id": "privacidad",
+      "title": "Datos y contacto"
+    }
+  ]
+}

@@ -37,3 +37,9 @@ El acceso a la cuenta se realiza en Cloudflare. No compartir contraseñas ni tok
 El usuario eligió Workers con GitHub, no Pages. Desplegó feat/brand-foundation y compartió https://sistematicando-web.manaturaloso.workers.dev; confirmó que aparece la web. En la captura: build command None y deploy npx wrangler deploy, resultado verde. No se ha inferido de eso una configuración reproducible de assets. No hay wrangler config en este checkout ni se ha consultado la configuración de la cuenta. El proxy del entorno bloquea workers.dev, por lo que falta validación remota independiente.
 
 La entrega del catálogo queda en feat/feature-catalog. No se modifica feat/brand-foundation ni se invoca deploy. Antes de integrar, comprobar ramas y triggers de Cloudflare; autorizar la actualización de la versión visible. Las instrucciones Pages de arriba son una alternativa histórica, no la configuración activa del Worker.
+
+## CMS y nuevas rutas
+
+/admin es un acceso estático al CMS alojado en app.pagescms.org. La autenticación no ocurre en Cloudflare ni requiere secretos en este build. El propietario debe autorizar la GitHub App; guardar en la rama de trabajo no actualiza la rama del Worker.
+
+Los contenidos se compilan desde content/*.json. Publicar una edición requiere build e integración/despliegue de la rama elegida. Evitar habilitar automatización sobre la rama productiva sin revisar cómo Pages CMS guarda commits. El paquete ya calcula las páginas esperadas desde los slugs de soluciones/guías, en lugar de exigir un número fijo.

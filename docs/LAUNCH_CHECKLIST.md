@@ -17,3 +17,7 @@
 - [ ] Autorizar explícitamente despliegue en producción.
 
 El usuario desplegó una versión previa en un Worker. La rama de catálogo no se integra automáticamente a la rama seguida; revisar y autorizar actualización por separado.
+
+- [x] Configuración CMS y /admin implementados, contenido migrado y validado localmente.
+- [ ] Autorizar GitHub App, probar guardado real y subir logos oficiales.
+- [x] Recursos iniciales y FAQ compartida implementados y probados.

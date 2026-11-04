@@ -1,13 +1,3 @@
-// Datos confirmados por el usuario. Los canales pueden cambiar: editar aquí.
-export const contact = {
-  responsible: 'JOEL ALEJANDRO YAÑEZ CABALLERO',
-  ruc: '10477365928',
-  address: 'Calle Enrique Barrón 586, Barranco',
-  email: 'joel.yc23@gmail.com',
-  whatsapp: '51956832336',
-  phoneLabel: '+51 956 832 336',
-  privacyPath: '/legal/privacidad/',
-  policyDate: '4 de noviembre de 2026',
-};
-// Solo texto genérico. La guía y las selecciones del visitante no se adjuntan.
-export const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent('Hola, quisiera conocer Sistematicando y consultar por una demostración.')}`;
+import data from '../../content/contact.json';
+export const contact = data;
+export const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(contact.whatsappMessage)}`;

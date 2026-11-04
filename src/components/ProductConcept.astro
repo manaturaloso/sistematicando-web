@@ -1,16 +1,18 @@
 ---
+import pageContent from '../../content/pages.json';
+const copy = pageContent['components-ProductConcept'];
 import Icon from './Icon.astro';
 ---
 <figure class="concept" aria-labelledby="concept-caption">
-  <div class="concept-top"><span class="tiny-dot"></span><span>Una mirada a tu operación</span><span class="concept-chip">Ejemplo visual</span></div>
+  <div class="concept-top"><span class="tiny-dot"></span><span>{copy.text_001}</span><span class="concept-chip">{copy.text_002}</span></div>
   <div class="concept-body">
     <div class="concept-sidebar" aria-hidden="true"><span class="sidebar-mark"><Icon name="grid" /></span><span class="active"><Icon name="grid" /></span><span><Icon name="bars" /></span><span><Icon name="grid" /></span><span><Icon name="circle" /></span></div>
     <div class="concept-main">
-      <div class="concept-heading"><div><span class="eyebrow">TU NEGOCIO</span><h2>Todo empieza con orden.</h2></div><span class="concept-avatar" aria-hidden="true">SN</span></div>
-      <div class="concept-stats"><div><span>Ventas</span><strong>En perspectiva</strong><small>Una visión más clara</small></div><div><span>Operación</span><strong>En sintonía</strong><small>Un equipo conectado</small></div></div>
-      <div class="concept-chart"><div class="chart-heading"><strong>El pulso de tu negocio</strong><span>Vista ilustrativa</span></div><div class="bars" aria-hidden="true">{[35, 49, 41, 63, 54, 76, 67, 87, 74, 93, 85, 100].map(height => <span style={`--height:${height}%`}></span>)}</div><div class="chart-foot"><span>Información dispersa</span><span>Una visión compartida</span></div></div>
-      <div class="concept-row"><span class="status-dot"></span><span>Ventas · Equipo · Inventario</span><Icon /></div>
+      <div class="concept-heading"><div><span class="eyebrow">{copy.text_003}</span><h2>{copy.text_004}</h2></div><span class="concept-avatar" aria-hidden="true">{copy.text_005}</span></div>
+      <div class="concept-stats"><div><span>{copy.text_006}</span><strong>{copy.text_007}</strong><small>{copy.text_008}</small></div><div><span>{copy.text_009}</span><strong>{copy.text_010}</strong><small>{copy.text_011}</small></div></div>
+      <div class="concept-chart"><div class="chart-heading"><strong>{copy.text_012}</strong><span>{copy.text_013}</span></div><div class="bars" aria-hidden="true">{[35, 49, 41, 63, 54, 76, 67, 87, 74, 93, 85, 100].map(height => <span style={`--height:${height}%`}></span>)}</div><div class="chart-foot"><span>{copy.text_014}</span><span>{copy.text_015}</span></div></div>
+      <div class="concept-row"><span class="status-dot"></span><span>{copy.text_016}</span><Icon /></div>
     </div>
   </div>
-  <figcaption id="concept-caption">Diseño conceptual. No es una captura del software ni confirma funciones disponibles.</figcaption>
+  <figcaption id="concept-caption">{copy.text_017}</figcaption>
 </figure>

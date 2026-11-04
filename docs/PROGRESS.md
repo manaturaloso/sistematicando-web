@@ -16,18 +16,24 @@
 - `/solicitar-demo/`: guía local con tres selecciones, validación, resumen, descarga TXT, invalidación al cambiar campos y reset; no recibe solicitudes. Alternativa informativa sin JS.
 - `/legal/privacidad/`: versión para revisión con responsable/domicilio/correo/WhatsApp confirmados; enlace en el pie.
 - Contacto WhatsApp en demo: mensaje genérico, aviso de tercero y enlace a privacidad; sin adjuntar guía ni enviar mensajes. Datos centralizados en src/data/contact.ts para futuros cambios.
-- Navegación/CTA y textos de canal actualizados. Empaquetador para trece páginas. Pendientes páginas individuales de módulos, recursos, otros legales y receptor propio de leads (no necesario para el enlace externo).
+- `/recursos/` y tres guías originales: revisión de caja, organización inicial de insumos y evaluación de software. `/preguntas-frecuentes/`: doce respuestas por tema, compartidas con home/precios.
+- `/admin/`: panel de entrada a Pages CMS; autenticación y edición en servicio externo. Configuración .pages.yml con 23 editores y medios.
+- Contenido editorial migrado a content/*.json: marca/logos/SEO, menús, contactos, textos por página, home, precios, sectores, módulos, FAQ y guías. Validación automática antes del build.
+- Render de logos/favicón y variante de pie oscuro configurables. Logo oficial aún pendiente de subir: no hay binarios originales en el workspace y no se han recreado.
+- Empaquetado verifica rutas esperadas dinámicamente (19 actuales). No hay páginas individuales de módulos ni receptor propio de leads. Otros legales pendientes.
 
 ## Fases
 
-0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 SEO parcial; 8 QA parcial; 9 preparación parcial; 10 lanzamiento oficial pendiente.
+0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 recursos y FAQ iniciales implementados, SEO/indexación parciales; 8 QA parcial; 9 preparación parcial; 10 lanzamiento oficial pendiente.
 
 ## Validación de esta entrega
 
-- Astro check: cero errores/advertencias/hints (21 archivos). Build: trece páginas.
-- Privacidad/WhatsApp a 320/390/768/900/1024/1440: número, mensaje codificado genérico, datos del responsable, enlaces de privacidad/correo, rel/target, ausencia de transmisión de guía y activación por teclado interceptada sin contactar al tercero. Sin solicitudes externas automáticas. Enlaces visibles sin JS.
-- Regresiones de comercial/guía (6 anchos), home (4), catálogo (6) y soluciones (28 combinaciones) aprobadas. Captura móvil de privacidad revisada.
-- Empaquetado de trece páginas validado. Sin envío de mensajes, verificación de bandejas, auditoría legal o comprobación de titularidad externa. No se afirma cumplimiento integral. Ver QA.md.
+- Check: 31 archivos sin errores/advertencias/hints. Build: 19 páginas, precedido por content:check.
+- Configuración CMS contrastada con esquema oficial público: aprobada. Configuración de medios y merge por campo contrastada con código del proveedor; no se validó login remoto.
+- Prueba CMS: editar texto, FAQ e imagen temporal se refleja tras build; logo cargado en cabecera/pie, variante oscura/favicon. Restauración byte a byte de contenido y rebuild final, sin logo ficticio retenido. /admin a seis anchos.
+- Recursos: cinco rutas a seis anchos; enlaces/anclas, metadatos únicos, overflow, FAQ por teclado y respuestas compartidas entre tres páginas. Regresiones privacidad/comercial/catálogo/home/soluciones aprobadas.
+- Matriz regenerada y paquete de rutas dinámicas validado. No se comprobó autenticación GitHub/Pages CMS, escritura alojada ni subida de originales por el usuario. No se afirma CMS conectado ni logo oficial integrado.
+- Sin auditoría legal, axe/Lighthouse o validación remota del Worker. Detalles en QA.md.
 
 ## Git, despliegue y agentes
 
@@ -39,15 +45,16 @@
 
 ## Problemas y decisiones pendientes
 
-Logos originales descargables; evidencia del SaaS; precios y condiciones; adopción final y revisión operativa de privacidad; dominio definitivo y revisión legal. Se mantiene noindex/robots. No hay backend ni envíos simulados.
+Conectar Pages CMS con GitHub y subir los logos originales; evidencia del SaaS; precios y condiciones; adopción final y revisión operativa de privacidad; dominio definitivo y revisión legal. Se mantiene noindex/robots. No hay backend ni envíos simulados.
 
 ## Siguiente paso exacto
 
-1. Recuperar `feat/feature-catalog`, leer AGENTS/DECISIONS, ejecutar npm ci, check y build según README. Usar docs:features después de cambiar el registro de módulos.
-2. Datos de responsable, domicilio, correo y WhatsApp ya confirmados e implementados: no volver a pedirlos. Revisar PRIVACY_REVIEW.md para conservación, accesos y proveedores antes de adoptar la versión legal definitiva. Si cambian correo o WhatsApp, editar contact.ts y repetir verify-privacy.py.
-3. Avanzar fase 7 de forma independiente: `/recursos/` y preguntas frecuentes compartidas, con contenido original y útil; mantener noindex. No inventar métricas SEO, dominio definitivo ni sitemap indexable.
-4. Si llegan precios aprobados o evidencia del SaaS, actualizar primero los registros correspondientes y revisar el copy. Las páginas individuales de módulos siguen condicionadas a evidencia.
-5. Revisar e integrar esta rama solo cuando se autorice actualizar la rama del Worker; comprobar triggers de Cloudflare. No desplegar ni conectar dominio oficial por continuar programando.
+1. Leer ADMIN.md. El propietario debe iniciar sesión en app.pagescms.org y autorizar su GitHub App únicamente para este repositorio; seleccionar feat/feature-catalog. La web no almacena credenciales.
+2. Cargar originales del logo en Medios y seleccionarlos en Marca. Hacer una edición pequeña y verificar el commit real en GitHub. Requiere cuenta del usuario; no se ha probado todavía.
+3. Revisar diff y build. Para ver estos cambios en el Worker debe autorizarse la integración o cambio de rama seguida; no hacerlo por continuar programando.
+4. Revisar contenido y prácticas pendientes de privacidad, alcance SaaS y precios. Datos de contacto confirmados en content/contact.json; no volver a pedirlos. Los archivos src/data son adaptadores, no la fuente editable.
+5. Tras conectar CMS, continuar fase 8: auditoría accesibilidad/rendimiento y navegación. No inventar métricas, dominio definitivo ni retirar noindex sin aprobación.
+6. Mantener docs y GitHub actualizados. docs:features para matriz, cms:config para cambios de esquema, content:check antes de build.
 
 ## Datos comerciales aplicados
 

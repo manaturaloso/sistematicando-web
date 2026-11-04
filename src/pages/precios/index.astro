@@ -1,37 +1,32 @@
 ---
+import structuredContent from '../../../content/pricing.json';
+import pageContent from '../../../content/pages.json';
+const copy = pageContent['pages-precios-index'];
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Icon from '../../components/Icon.astro';
+import FAQList from '../../components/FAQList.astro';
+import { faqs } from '../../data/faqs';
 import '../../styles/solutions.css';
 import '../../styles/commercial.css';
-const factors = [
-  ['Tu operación', 'El tipo de negocio y los procesos que quieres ordenar.', 'Qué áreas necesitas evaluar primero.'],
-  ['Tus locales', 'La cantidad de establecimientos y cómo se organizan.', 'Qué debe gestionar cada sede y qué necesita la administración.'],
-  ['Tu equipo', 'Las responsabilidades de quienes usarían la herramienta.', 'Qué accesos y acompañamiento podrían necesitar.'],
-  ['El alcance', 'Los módulos, integraciones y condiciones que se verifiquen.', 'Qué está disponible, qué incluye y qué queda fuera.'],
-];
-const questions = [
-  ['¿Hay precios publicados?', 'Todavía no hay tarifas oficiales aprobadas para mostrar. Esta página explica qué información conviene reunir para definir una propuesta; no constituye una cotización.'],
-  ['¿Todos los módulos estarán incluidos?', 'No hay una composición de planes aprobada. La disponibilidad y las inclusiones deben confirmarse expresamente, sin asumir que todo el catálogo forma parte de una oferta.'],
-  ['¿El costo será por usuario o por local?', 'La unidad de cobro sigue pendiente de definición. Antes de contratar deberá quedar clara, junto con los límites, servicios e impuestos aplicables.'],
-  ['¿Existe una prueba gratuita?', 'No se ha aprobado una prueba gratuita ni condiciones de contratación. No presentamos promociones, plazos ni beneficios provisionales como compromisos oficiales.'],
-];
+const factors = structuredContent.factors;
+
 ---
-<Layout title="Precios y alcance de la propuesta · Sistematicando" description="Conoce qué información hace falta para definir una propuesta de Sistematicando. Sin tarifas oficiales publicadas ni planes aprobados todavía.">
+<Layout title={copy.seo_title} description={copy.seo_description}>
   <Header />
   <main id="contenido">
     <section class="wrap solution-hero">
-      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Precios</span></nav>
-      <p class="eyebrow">Un alcance claro, desde el inicio</p>
-      <h1>Primero tu negocio.<br /><em>Después, la propuesta.</em></h1>
-      <p class="solution-intro">Una propuesta útil empieza por entender cómo trabajas. Antes de hablar de un plan, hace falta identificar tus prioridades y confirmar qué puede cubrir el producto.</p>
-      <aside class="scope-note"><strong>Tarifas y planes pendientes de aprobación</strong><p>No hay precios oficiales publicados. Tampoco se han definido inclusiones, límites o condiciones comerciales. El catálogo muestra áreas por evaluar, no módulos garantizados en un plan.</p></aside>
-      <a class="button commercial-hero-action" href="/solicitar-demo/">Preparar mi conversación <Icon /></a>
+      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><span aria-current="page">{copy.text_002}</span></nav>
+      <p class="eyebrow">{copy.text_003}</p>
+      <h1>{copy.text_004}<br /><em>{copy.text_005}</em></h1>
+      <p class="solution-intro">{copy.text_006}</p>
+      <aside class="scope-note"><strong>{copy.text_007}</strong><p>{copy.text_008}</p></aside>
+      <a class="button commercial-hero-action" href="/solicitar-demo/">{copy.text_009} <Icon /></a>
     </section>
-    <section class="commercial-band"><div class="wrap"><p class="eyebrow">Lo que conviene poner sobre la mesa</p><h2>Cuatro puntos para<br />definir un buen alcance.</h2><div class="commercial-factors">{factors.map(([title,description,detail],index) => <article><span class="eyebrow">0{index+1}</span><h3>{title}</h3><p>{description}</p><p class="factor-detail">{detail}</p></article>)}</div></div></section>
-    <section class="wrap commercial-review"><div><p class="eyebrow">Antes de elegir</p><h2>Que cada condición<br />quede por escrito.</h2><p>Una futura propuesta debe permitirte saber qué contratas y con qué alcance.</p></div><ul><li>Módulos y funciones disponibles, con sus límites.</li><li>Unidad de cobro, impuestos y periodicidad.</li><li>Costos de implementación, integraciones y servicios adicionales, si corresponden.</li><li>Soporte, acompañamiento, permanencia y cancelación.</li></ul></section>
-    <section class="wrap faq-section section"><div><p class="eyebrow">Preguntas comerciales</p><h2>Sin letra pequeña<br />inventada.</h2></div><div class="faq-list">{questions.map(([q,a]) => <details><summary>{q}<span aria-hidden="true">＋</span></summary><p>{a}</p></details>)}</div></section>
-    <section class="wrap solution-callout"><div><p class="eyebrow">El siguiente paso</p><h2>Ordena tus prioridades.</h2></div><div><p>Prepara una guía de tu operación para una futura conversación comercial. Si lo deseas, puedes consultar por WhatsApp desde la página de demo.</p><a class="text-link" href="/solicitar-demo/">Preparar mi guía <Icon /></a></div></section>
+    <section class="commercial-band"><div class="wrap"><p class="eyebrow">{copy.text_010}</p><h2>{copy.text_011}<br />{copy.text_012}</h2><div class="commercial-factors">{factors.map(({title,description,detail},index) => <article><span class="eyebrow">0{index+1}</span><h3>{title}</h3><p>{description}</p><p class="factor-detail">{detail}</p></article>)}</div></div></section>
+    <section class="wrap commercial-review"><div><p class="eyebrow">{copy.text_013}</p><h2>{copy.text_014}<br />{copy.text_015}</h2><p>{copy.text_016}</p></div><ul><li>{copy.text_017}</li><li>{copy.text_018}</li><li>{copy.text_019}</li><li>{copy.text_020}</li></ul></section>
+    <section class="wrap faq-section section"><div><p class="eyebrow">{copy.text_021}</p><h2>{copy.text_022}<br />{copy.text_023}</h2></div><FAQList items={faqs.filter(item => item.pricing)} /></section>
+    <section class="wrap solution-callout"><div><p class="eyebrow">{copy.text_024}</p><h2>{copy.text_025}</h2></div><div><p>{copy.text_026}</p><a class="text-link" href="/solicitar-demo/">{copy.text_027} <Icon /></a></div></section>
   </main><Footer />
 </Layout>

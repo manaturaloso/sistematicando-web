@@ -1,10 +1,10 @@
 # Estado funcional
 
-Generado con `npm run docs:features` desde src/data/features.ts. No editar esta matriz manualmente: actualizar la fuente y regenerar. El inventario describe el SaaS, no el estado de implementación del sitio.
+Generado con `npm run docs:features` desde content/features.json a través de src/data/features.ts. No editar esta matriz manualmente: actualizar la fuente y regenerar. El inventario describe el SaaS, no el estado de implementación del sitio.
 
 ## Web comercial
 
-Home, índice de soluciones y seis páginas sectoriales, catálogo /funcionalidades/, navegación móvil, búsqueda local de módulos y 404 implementados. Precios sin tarifas oficiales y guía local de demo descargable implementados; sin receptor propio; contacto voluntario externo por WhatsApp y política de privacidad en revisión. La guía no transmite datos. Los estados de los módulos SaaS no cambian por implementar estas páginas.
+Home, soluciones, catálogo, recursos/FAQ y /admin de acceso CMS implementados; CMS aún pendiente de autorizar con GitHub. Precios sin tarifas oficiales y guía local de demo descargable implementados; sin receptor propio; contacto voluntario externo por WhatsApp y política de privacidad en revisión. La guía no transmite datos. Los estados de los módulos SaaS no cambian por implementar estas páginas.
 
 ## Matriz SaaS
 

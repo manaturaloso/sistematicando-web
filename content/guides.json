@@ -1,0 +1,193 @@
+{
+  "items": [
+    {
+      "slug": "preparar-cierre-de-caja",
+      "title": "Cómo preparar una revisión de caja por turno",
+      "category": "Operación",
+      "intro": "Una revisión útil empieza antes de contar el efectivo: define el periodo, reúne los registros y deja espacio para explicar las diferencias.",
+      "takeaway": "Un registro de revisión con periodo, fuentes y responsables, sin ocultar las diferencias.",
+      "sections": [
+        {
+          "title": "1. Define qué vas a revisar",
+          "paragraphs": [
+            "Elige un turno o periodo concreto. Indica el local, la caja y las personas que participaron. Si mezclas varios turnos, será más difícil reconstruir qué ocurrió.",
+            "Separa el fondo inicial de las ventas y de los movimientos de caja. Antes de comparar importes, acuerda qué incluye cada registro y qué comprobante respalda cada movimiento."
+          ],
+          "checklist": [
+            "Anota la fecha y los límites del turno.",
+            "Identifica la caja y quién entrega y recibe.",
+            "Reúne el registro de fondo, ingresos y salidas."
+          ]
+        },
+        {
+          "title": "2. Reúne fuentes comparables",
+          "paragraphs": [
+            "Cuenta el efectivo y separa las operaciones realizadas con otros medios de pago. Un comprobante de tarjeta o transferencia no es efectivo dentro del cajón.",
+            "Por ejemplo, si una compra de insumos se pagó desde caja, hace falta distinguirla de una venta y conservar su sustento. Sin ese contexto, una salida legítima puede confundirse con un faltante."
+          ],
+          "checklist": [
+            "Organiza ventas por medio de pago.",
+            "Identifica devoluciones, anulaciones y retiros.",
+            "Revisa que los registros correspondan al mismo periodo."
+          ]
+        },
+        {
+          "title": "3. Explica las diferencias",
+          "paragraphs": [
+            "Compara lo registrado con lo contado y con los respaldos disponibles. Si aparece una diferencia, documenta lo observado sin cambiar cifras solo para hacerlas coincidir.",
+            "Registra qué falta comprobar y quién lo revisará. Una diferencia no permite atribuir responsabilidad por sí sola: primero reconstruye el movimiento y sus fuentes."
+          ],
+          "checklist": [
+            "Anota el importe y la fuente de cada diferencia.",
+            "Distingue una observación de una causa confirmada.",
+            "Asigna una persona y un siguiente paso de revisión."
+          ]
+        },
+        {
+          "title": "4. Conserva un resumen útil",
+          "paragraphs": [
+            "Deja un resumen que otra persona pueda entender sin repetir todo el trabajo: periodo, fuentes consultadas, movimientos pendientes y conclusiones confirmadas.",
+            "Adapta la frecuencia y el procedimiento a tu operación. Esta guía organiza una conversación interna; no constituye asesoría contable, tributaria ni una garantía sobre funciones de Sistematicando."
+          ],
+          "checklist": [
+            "Identifica quién revisó el cierre.",
+            "Conserva respaldos con acceso adecuado.",
+            "Lleva los puntos abiertos a la siguiente revisión."
+          ]
+        }
+      ],
+      "related": [
+        "restaurantes",
+        "bares",
+        "cafeterias"
+      ],
+      "feature": "caja"
+    },
+    {
+      "slug": "ordenar-inventario-inicial",
+      "title": "Por dónde empezar a ordenar tus insumos",
+      "category": "Administración",
+      "intro": "Antes de hablar de alertas o automatizaciones, conviene acordar qué estás contando, dónde está y en qué unidad lo registras.",
+      "takeaway": "Un primer listado consistente de insumos, unidades y ubicaciones para comparar movimientos.",
+      "sections": [
+        {
+          "title": "1. Empieza con una lista manejable",
+          "paragraphs": [
+            "Elige un almacén o un grupo de insumos para hacer el primer registro. No necesitas resolver toda la operación en un solo conteo; necesitas un punto de partida que pueda repetirse.",
+            "Usa nombres claros y distingue presentaciones que realmente cambian la forma de almacenar o consumir el producto. Un mismo insumo con varios nombres termina repartido entre registros difíciles de comparar."
+          ],
+          "checklist": [
+            "Define el alcance y fecha del conteo.",
+            "Evita nombres duplicados o ambiguos.",
+            "Identifica las ubicaciones físicas."
+          ]
+        },
+        {
+          "title": "2. Acuerda las unidades",
+          "paragraphs": [
+            "Decide cómo vas a contar cada insumo: unidades, kilogramos, litros u otra medida pertinente. Aclara cómo se relaciona la presentación comprada con la unidad de consumo.",
+            "Por ejemplo, una caja de botellas y una botella abierta no representan la misma cantidad. Si mezclas ambas sin una regla de conversión, los números pueden parecer consistentes y describir existencias distintas."
+          ],
+          "checklist": [
+            "Define una unidad de referencia por insumo.",
+            "Documenta conversiones que utilices.",
+            "Separa cantidad y presentación comercial."
+          ]
+        },
+        {
+          "title": "3. Registra movimientos con contexto",
+          "paragraphs": [
+            "Un conteo deja de servir como referencia si no distingues entradas, salidas, devoluciones, traslados y mermas. Registra cuándo ocurrió el movimiento y qué documento o motivo lo explica.",
+            "La explicación importa tanto como la cantidad. Una diferencia puede venir de una unidad equivocada, un traslado sin registrar o una pérdida física; no presupongas la causa."
+          ],
+          "checklist": [
+            "Identifica fecha, ubicación y tipo de movimiento.",
+            "Registra el motivo sin mezclarlo con la cantidad.",
+            "Define quién revisa ajustes y observaciones."
+          ]
+        },
+        {
+          "title": "4. Repite y compara",
+          "paragraphs": [
+            "Realiza un nuevo conteo con el mismo criterio y revisa los movimientos entre ambas fechas. Prioriza las diferencias que requieren explicación antes de añadir más detalle al registro.",
+            "No se trata de prometer un inventario perfecto, sino de construir una práctica que tu equipo pueda mantener. La disponibilidad de módulos de inventario o recetas debe verificarse por separado."
+          ],
+          "checklist": [
+            "Mantén nombres, unidades y alcance comparables.",
+            "Documenta las diferencias y lo comprobado.",
+            "Ajusta el procedimiento con el equipo que lo utiliza."
+          ]
+        }
+      ],
+      "related": [
+        "cafeterias",
+        "restaurantes",
+        "bares"
+      ],
+      "feature": "inventarios"
+    },
+    {
+      "slug": "evaluar-software-para-tu-negocio",
+      "title": "Qué preguntar antes de elegir un software de gestión",
+      "category": "Decisiones",
+      "intro": "Una demostración sirve más cuando puedes contrastar un caso de tu negocio con el alcance real de la herramienta.",
+      "takeaway": "Un conjunto de preguntas sobre operación, disponibilidad, costos y acompañamiento para comparar propuestas.",
+      "sections": [
+        {
+          "title": "1. Lleva un proceso real",
+          "paragraphs": [
+            "Elige una tarea concreta que quieras mejorar y describe cómo se hace hoy. Identifica quién participa, qué información necesita y dónde aparecen las dificultades.",
+            "Por ejemplo, puedes recorrer un pedido con una modificación o revisar cómo cierras un turno. Un caso concreto ayuda a distinguir una función mostrada de una promesa general."
+          ],
+          "checklist": [
+            "Define el proceso y la prioridad.",
+            "Explica qué sucede cuando hay una excepción.",
+            "Evita compartir datos personales de clientes o trabajadores."
+          ]
+        },
+        {
+          "title": "2. Confirma lo que existe hoy",
+          "paragraphs": [
+            "Pregunta qué funciones están disponibles, cuáles son parciales y cuáles solo están planificadas. Pide que se aclare si lo mostrado corresponde al producto real o a una vista conceptual.",
+            "Si necesitas un equipo, una pasarela o una integración específica, comprueba su compatibilidad y sus condiciones. Que una categoría aparezca en una web no confirma esa integración."
+          ],
+          "checklist": [
+            "Solicita alcance y límites por escrito.",
+            "Revisa requisitos de equipos y conectividad.",
+            "Separa compromisos actuales de planes futuros."
+          ]
+        },
+        {
+          "title": "3. Compara condiciones completas",
+          "paragraphs": [
+            "Revisa la unidad de cobro, los módulos incluidos, los límites y los servicios adicionales. Una cifra aislada no explica cuánto costará operar bajo tus condiciones.",
+            "Pregunta también por implementación, acompañamiento, acceso a tus datos y condiciones de cancelación. No presupongas que todas las propuestas incluyen lo mismo."
+          ],
+          "checklist": [
+            "Confirma periodicidad e impuestos aplicables.",
+            "Identifica costos adicionales y sus supuestos.",
+            "Asegura que tu equipo entienda lo contratado."
+          ]
+        },
+        {
+          "title": "4. Planifica la adopción",
+          "paragraphs": [
+            "Define quién coordinará la puesta en marcha y qué necesita aprender cada persona. Revisa cómo se prepararán los datos iniciales y cómo se resolverán dudas durante el cambio.",
+            "En Sistematicando, el catálogo actual es conceptual y las tarifas siguen pendientes de aprobación. Puedes preparar tu guía local y consultar por WhatsApp sin asumir una contratación ni una reserva automática."
+          ],
+          "checklist": [
+            "Designa responsables de implementación.",
+            "Pregunta cómo recuperar o exportar información.",
+            "Anota las dudas que aún impiden una decisión."
+          ]
+        }
+      ],
+      "related": [
+        "multisede",
+        "restaurantes",
+        "eventos"
+      ],
+      "feature": "reportes"
+    }
+  ]
+}

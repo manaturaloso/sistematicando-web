@@ -1,0 +1,34 @@
+.resources-section {padding-block:1rem 4rem;}
+.guide-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-top:2rem;}
+.guide-card {display:flex;flex-direction:column;padding:2rem;border:1px solid var(--line);border-radius:10px;background:white;}
+.guide-card h3 {font-size:1.4rem;}
+.guide-card h3 a {text-decoration:none;}
+.guide-card h3 a:hover {text-decoration:underline;}
+.guide-card>p:not(.eyebrow) {font-size:.9rem;color:#505860;}
+.guide-card>.text-link {margin-top:auto;align-self:start;}
+.resource-note {font-size:.8rem;color:#505860;max-width:72ch;margin-top:1.5rem;}
+.guide-article {padding-block:2rem 4rem;}
+.guide-heading {max-width:58rem;padding-bottom:2rem;}
+.guide-heading h1 {font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.1;max-width:22ch;}
+.guide-content {display:grid;grid-template-columns:16rem minmax(0,1fr);gap:4rem;align-items:start;}
+.guide-toc {position:sticky;top:8rem;border-top:1px solid var(--line);padding-top:1.5rem;}
+.guide-toc h2 {font-size:1rem;}
+.guide-toc ol {padding-left:1.2rem;}
+.guide-toc li {padding-bottom:.8rem;}
+.guide-toc a {font-size:.8rem;display:inline-block;padding-block:.3rem;}
+.guide-body {max-width:46rem;min-width:0;}
+.guide-body section {padding-block:1.5rem 2rem;scroll-margin-top:7rem;}
+.guide-body h2 {font-size:clamp(1.6rem,3vw,2.2rem);}
+.guide-body p {font-size:1rem;}
+.guide-checklist {border-left:3px solid var(--coral);padding:1rem 1rem 1rem 2rem;background:var(--soft);}
+.guide-checklist li {padding:.3rem 0;font-size:.9rem;}
+.guide-takeaway {border-top:1px solid var(--line);}
+.related-topics {display:flex;flex-wrap:wrap;gap:.8rem;margin-block:1.5rem;}
+.related-topics a {padding:.6rem 1rem;border:1px solid var(--line);border-radius:999px;min-height:44px;font-size:.85rem;display:flex;align-items:center;}
+.faq-directory {padding-bottom:3rem;}
+.faq-category {display:grid;grid-template-columns:1fr 1.5fr;gap:3rem;padding-block:2rem 3rem;border-top:1px solid var(--line);scroll-margin-top:8rem;}
+.faq-category h2 {font-size:clamp(1.6rem,3vw,2.2rem);}
+.commercial-links {display:flex;flex-wrap:wrap;gap:1.5rem;}
+.footer-top nav {flex-wrap:wrap;max-width:65%;justify-content:flex-end;}
+@media(max-width:899px) {.guide-grid {grid-template-columns:1fr;}.guide-content {grid-template-columns:1fr;gap:1rem;}.guide-toc {position:static;}.faq-category {gap:2rem;}.footer-top nav {max-width:none;justify-content:start;}}
+@media(max-width:599px) {.guide-card {padding:1.5rem;}.faq-category {grid-template-columns:1fr;gap:.5rem;}.guide-heading h1 {font-size:clamp(2.3rem,9vw,3rem);}}

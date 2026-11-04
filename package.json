@@ -11,7 +11,10 @@
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
     "check": "astro check",
-    "docs:features": "node scripts/sync-feature-status.mjs"
+    "docs:features": "node scripts/sync-feature-status.mjs",
+    "cms:config": "node scripts/generate-cms-config.mjs",
+    "content:check": "node scripts/validate-content.mjs",
+    "prebuild": "npm run content:check"
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",

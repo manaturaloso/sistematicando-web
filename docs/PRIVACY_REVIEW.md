@@ -7,7 +7,7 @@
 - Correo de privacidad: joel.yc23@gmail.com (el usuario prevé cambiarlo).
 - WhatsApp comercial y de derechos de privacidad: +51 956 832 336 (Perú; también prevé cambiarlo).
 
-Fuente central editable: src/data/contact.ts. No volver a preguntar estos datos. No se ha enviado ningún mensaje ni se ha comprobado titularidad por un contacto externo.
+Fuente central editable: content/contact.json (src/data/contact.ts es adaptador). No volver a preguntar estos datos. No se ha enviado ningún mensaje ni se ha comprobado titularidad por un contacto externo.
 
 ## Implementado
 

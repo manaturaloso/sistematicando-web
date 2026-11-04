@@ -13,3 +13,5 @@ Catálogo /funcionalidades/: 14 áreas conceptuales con descripción, pregunta d
 Precios: información de alcance sin montos. Demo: guía preparada localmente; toda la comunicación distingue generar/descargar de enviar o reservar. No se pide contacto personal ni se declara recepción inexistente.
 
 Contacto confirmado: WhatsApp externo desde demo y correo/WhatsApp de privacidad. Conservar distinción entre abrir un servicio, enviar voluntariamente un mensaje y generar una guía local. Política en revisión con contactos centralizados; no afirmar versión definitiva aprobada ni ausencia de logs de hosting.
+
+Contenido ahora editable en content/*.json mediante Pages CMS. FAQ común y guías originales con secciones/listas; textos por página en pages.json. Editar desde CMS conserva historial Git, pero necesita un nuevo build. ADMIN.md describe alcance y límites.

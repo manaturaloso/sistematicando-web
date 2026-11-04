@@ -26,7 +26,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm run preview -- --port 4321
 - `src/pages/soluciones/`: índice y plantilla sectorial; contenido tipado en `src/data/solutions.ts`.
 - `src/pages/precios/` y `src/pages/solicitar-demo/`: alcance sin tarifas y guía local descargable, sin receptor propio.
 - `src/pages/funcionalidades/`: catálogo y búsqueda; fuente de módulos en `src/data/features.ts`. Regenerar la matriz con `npm run docs:features` al editarla.
-- `src/pages/legal/privacidad.astro`: política en revisión. Datos confirmados en `src/data/contact.ts`; actualizar ahí el correo o WhatsApp si cambian.
+- `src/pages/legal/privacidad.astro`: política en revisión. Datos editables en `content/contact.json`; actualizar ahí o desde el CMS.
 - `src/components/`: cabecera, pie, mockup conceptual e iconos SVG.
 - `src/layouts/Layout.astro`: documento, metadatos y noindex.
 - `src/styles/home.css`: estilos responsive y fuentes en /fonts.
@@ -46,3 +46,17 @@ Producción: subir únicamente dist después de autorización. No desplegar aún
 Tras el build: `python3 scripts/package-preview.py`. El archivo queda fuera del checkout en `/workspace/sistematicando-preview.zip`. La guía de carga directa en un proyecto de revisión de Cloudflare Pages está en docs/DEPLOYMENT.md. Preparar el ZIP no publica el sitio.
 
 Rama actual de trabajo: feat/feature-catalog. Cloudflare sigue la rama anterior feat/brand-foundation según la configuración compartida; revisar sus triggers antes de integrar. No actualizar la rama desplegada sin autorización.
+
+## Administración (/admin)
+
+Ver **docs/ADMIN.md**. /admin es el panel de acceso a Pages CMS; la autenticación/edición ocurre en el servicio externo con GitHub. Hay 23 editores configurados en .pages.yml y biblioteca de medios. El propietario aún debe autorizar la GitHub App para el repositorio y probar un guardado real.
+
+Fuente de contenido: content/*.json. Los archivos src/data/*.ts son adaptadores; para cambiar correo/WhatsApp editar content/contact.json y para logos/SEO content/site.json o usar el CMS. Todos los logos originales están pendientes de carga, sin reconstrucciones.
+
+- npm run content:check: validación editorial y referencias (automática antes del build).
+- npm run cms:config: regenerar la configuración al cambiar el esquema editorial.
+- npm run docs:features: actualizar matriz de módulos tras cambios.
+- python3 scripts/verify-cms.py: prueba local que modifica/restaura contenidos e imagen temporal; no ejecutar durante otras ediciones.
+- python3 scripts/verify-resources.py: guías y FAQ compartidas.
+
+Recursos nuevos: /recursos/, tres guías y /preguntas-frecuentes/. La rama desplegada anterior sigue intacta; /admin aún no está en el Worker por esta entrega.

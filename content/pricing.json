@@ -1,0 +1,24 @@
+{
+  "factors": [
+    {
+      "title": "Tu operación",
+      "description": "El tipo de negocio y los procesos que quieres ordenar.",
+      "detail": "Qué áreas necesitas evaluar primero."
+    },
+    {
+      "title": "Tus locales",
+      "description": "La cantidad de establecimientos y cómo se organizan.",
+      "detail": "Qué debe gestionar cada sede y qué necesita la administración."
+    },
+    {
+      "title": "Tu equipo",
+      "description": "Las responsabilidades de quienes usarían la herramienta.",
+      "detail": "Qué accesos y acompañamiento podrían necesitar."
+    },
+    {
+      "title": "El alcance",
+      "description": "Los módulos, integraciones y condiciones que se verifiquen.",
+      "detail": "Qué está disponible, qué incluye y qué queda fuera."
+    }
+  ]
+}
