@@ -1,7 +1,15 @@
 # Despliegue
 
-No hay despliegue ni configuración Cloudflare creada. La referencia interna no debe publicarse como sitio comercial ni se debe servir todo el repositorio en producción.
+No se ha desplegado. Producción requiere autorización explícita.
 
-Destino preferente: Cloudflare, pendiente elegir Pages o Workers según implementación real. No hay hostname ni dominio confirmado. No modificar DNS ni publicar sin autorización explícita.
+## Build real
 
-Tras implementar Astro: verificar build reproducible, decidir salida estática, configurar solo assets públicos y documentar comando de build y directorio de salida reales. No inventar URLs de producción.
+Node 24.22.1; `npm ci`; `ASTRO_TELEMETRY_DISABLED=1 npm run check`; `ASTRO_TELEMETRY_DISABLED=1 npm run build`. Salida estática: dist. Probar con `ASTRO_TELEMETRY_DISABLED=1 npm run preview`. Publicar solo dist, nunca el checkout completo.
+
+## Cloudflare pendiente
+
+Cloudflare Pages con build npm run build, variable ASTRO_TELEMETRY_DISABLED=1 y salida dist es una opción para evaluar cuando se autorice. No se creó proyecto, pipeline, Worker ni DNS. No hay hostname confirmado; pages.dev y workers.dev no son intercambiables. Configurar comportamiento 404 y comprobar rutas en el hosting elegido.
+
+## Antes de indexar o publicar
+
+Resolver identidad y contenido comercial, canal de contacto y privacidad. Aprobar dominio real; entonces añadir canonical/sitemap/metadatos absolutos y retirar noindex/Disallow únicamente con autorización. El build actual bloquea indexación deliberadamente y no contiene formulario ni rastreadores.

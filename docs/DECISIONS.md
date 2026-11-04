@@ -14,3 +14,15 @@
 - Rama de entrega: feat/brand-foundation. Se comprobó con éxito que el remoto no devolvía referencias HEAD/main. La API de PR devuelve Forbidden; no se fuerza ningún push.
 
 - Diagnóstico corregido: los fallos de conexión iniciales ocurrían dentro del sandbox. La ejecución con permiso de red sí permite Git y descargar licencias oficiales con TLS verificado.
+
+## 2026-11-03 · Home Astro
+
+- Astro 7.4.5 compatible con Node 24.22.1; salida estática, TypeScript estricto y lockfile. CSS nativo evita añadir herramientas sin necesidad; Tailwind queda sin adoptar.
+- Se conserva la rama de la primera entrega para dar continuidad. No se cambia main ni se fuerza historial.
+- Página orientada a presentar la propuesta; textos distinguen áreas conceptuales de funciones disponibles. Mockup propio sin cifras de rendimiento ni datos comerciales ficticios, etiquetado como conceptual.
+- La sección de demo explica cómo preparar una conversación y el estado real del canal. No existe botón de envío ni formulario ficticio.
+- Nombre del proyecto en texto con etiqueta de desarrollo; no constituye logo alternativo. Los originales siguen pendientes.
+- Estilos de home separados de la referencia de marca anterior para conservar su servidor independiente. En Astro las fuentes se resuelven en /fonts.
+- Noindex y bloqueo de rastreo hasta aprobación. No se inventa hostname para canonicals, sitemap o metadatos absolutos.
+- Desactivar telemetría de Astro con variable de comando resuelve el intento de escritura fuera del workspace, sin ampliar permisos de archivos.
+- Se corrigió una forma decorativa rotada que provocaba desbordamiento a 320px. Iconos SVG propios evitan glifos ausentes o emojis dependientes del dispositivo.

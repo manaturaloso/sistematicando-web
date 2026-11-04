@@ -1,0 +1,20 @@
+---
+import '../styles/home.css';
+interface Props { title?: string; description?: string; }
+const { title = 'Sistematicando · Todo tu negocio, bajo control.', description = 'Conoce la propuesta de Sistematicando para organizar la gestión de restaurantes, cafeterías, bares y negocios de hospitalidad.' } = Astro.props;
+---
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_PE" />
+    <title>{title}</title>
+  </head>
+  <body><slot /></body>
+</html>

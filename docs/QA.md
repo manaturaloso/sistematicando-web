@@ -24,3 +24,18 @@ No se ejecutaron Lighthouse, axe, build Astro ni typecheck; no existe aplicació
 ## Repetir
 
 Instalar Playwright en un entorno de QA si no está disponible, disponer de Chromium en /usr/bin/chromium, iniciar el servidor desde la raíz y ejecutar scripts/verify-brand.py. No hay paquetes de aplicación instalados ni lockfile que reproducir aún.
+
+# Segunda entrega · Home Astro
+
+- Entorno: Node 24.22.1, npm 11.9.0, Astro 7.4.5, TypeScript 6.0.3.
+- Primer check/build falló por intento de telemetría de crear /home/agent/.config/astro. Repetidos con ASTRO_TELEMETRY_DISABLED=1: check sin errores/advertencias/hints y build correcto (home + 404).
+- Primera prueba a 320px detectó overflow en visual-orbit. Se anuló la rotación móvil; se recompiló y pasó el smoke a 320/390/768/1440.
+- `python3 scripts/verify-home.py` contra dist servido en 4322: fuentes reales, H1, idioma, noindex, enlaces, menú móvil abierto/cerrado, Escape con retorno de foco, selección de navegación, FAQ por Enter, salto al contenido, robots, 404.html y ausencia de errores JS/recursos. Documentación privada excluida de dist.
+- Se generaron capturas y revisaron manualmente escritorio y móvil. Se reemplazaron símbolos decorativos por SVG para evitar iconos ausentes y emojis de color variable.
+- Reducción de movimiento: se verificó el modo emulado y los estilos limitan animaciones a no-preference. No equivale a una auditoría completa de accesibilidad.
+- No ejecutados: axe, Lighthouse, dispositivos físicos, envío comercial y pruebas del SaaS. No hay receptor de datos ni despliegue.
+
+Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor de dist y scripts/verify-home.py según README. La prueba anterior scripts/verify-brand.py sigue siendo solo para la referencia HTML independiente en puerto 4321.
+
+- Instalación reproducible: `npm ci --ignore-scripts` completado desde el lockfile; check y build repetidos después para validar las dependencias reinstaladas. Se omitieron scripts de instalación en esta comprobación; el npm install inicial sí se ejecutó con su comportamiento predeterminado.
+- `git diff --check` sin errores para esta entrega.

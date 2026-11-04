@@ -12,3 +12,7 @@
 | Eventos, entradas QR, accesos | No verificada | Solo brief conceptual |
 
 Todas las afirmaciones comerciales requieren validación del propietario con evidencia del producto. El inventario detallado permanece en PROJECT_BRIEF.md.
+
+## Web comercial (no SaaS)
+
+Home, menú móvil, FAQ por teclado y página 404 implementados. Preparación de demo solo informativa. Sin integración de leads ni páginas internas de producto. Build estático y pruebas descritos en QA.md.

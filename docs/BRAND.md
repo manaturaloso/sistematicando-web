@@ -20,4 +20,8 @@ Usar tinta sobre coral: blanco sobre coral no alcanza 4.5:1. No aplicar coral a 
 
 ## Pendiente
 
-Incorporar originales de logotipos; confirmar uso tipográfico; confirmar uso final de tipografías. Los textos completos SIL OFL 1.1 se incluyen junto a cada TTF; los avisos de copyright de los archivos originales se conservan también en NOTICE.md.
+Incorporar originales de logotipos y confirmar uso final de tipografías. Los textos completos SIL OFL 1.1 se incluyen junto a cada TTF; los avisos de copyright de los archivos originales se conservan también en NOTICE.md.
+
+## Aplicación en la home
+
+Manrope para contenido y navegación; Gluten en énfasis del eslogan y nota editorial. Colores primarios exactos; superficies crema y coral suave como propuestas secundarias. SVG de interfaz propios, sin alterar la marca. Ver src/styles/home.css.

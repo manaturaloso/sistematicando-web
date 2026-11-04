@@ -1,5 +1,11 @@
 # Arquitectura
 
-Única ruta implementada: `/docs/brand-preview.html`, interna, noindex.
+## Implementado
 
-Arquitectura comercial propuesta en PROJECT_BRIEF.md, secciones 10 y 11. No se han creado rutas comerciales vacías ni sitemap indexable. Prioridad siguiente: home; luego soluciones y conversión con información verificada.
+- `/`: home estática de desarrollo, noindex.
+- `/404.html`: página de error para configurar en hosting estático.
+- Referencia interna `docs/brand-preview.html`: fuera de dist, solo servidor independiente.
+
+## Siguiente
+
+`/soluciones` y páginas sectoriales. Otras rutas del brief son propuestas, no implementadas. No existen enlaces a rutas vacías ni sitemap público mientras falten dominio y aprobación de indexación. Navegación actual usa anclas reales de la home.

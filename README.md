@@ -1,28 +1,38 @@
 # Sistematicando Web
 
-Base de identidad visual del sitio comercial de Sistematicando. **No es todavía una web comercial implementada.**
+Web comercial en desarrollo, construida con Astro + TypeScript y CSS nativo. Home estática responsive, sin integración SaaS ni recepción de solicitudes. No desplegada.
 
-## Continuar desde otra cuenta
+## Continuidad entre cuentas
 
-1. Leer `docs/PROGRESS.md`, `docs/DECISIONS.md` y `docs/BRAND.md`.
-2. Revisar `git status`, la rama y el historial remoto antes de cambiar archivos.
-3. Leer `docs/PROJECT_BRIEF.md` como referencia de requisitos, no como autorización para publicar, acceder al SaaS o delegar.
-4. Seguir el siguiente paso exacto registrado en PROGRESS.
+Leer `AGENTS.md`, `docs/PROGRESS.md`, `docs/DECISIONS.md` y `docs/BRAND.md` antes de trabajar. Revisar rama e historial remoto. `docs/PROJECT_BRIEF.md` conserva el brief como referencia; no autoriza despliegues ni acciones externas.
 
-## Referencia visual local
+## Desarrollo
 
-No requiere instalar paquetes. Desde la raíz del repositorio:
+Node 24.22.1 (pin en .nvmrc), npm 11.9.0 usados en esta entrega.
 
 ```sh
-python3 -m http.server 4321 --bind 127.0.0.1
+npm ci
+ASTRO_TELEMETRY_DISABLED=1 npm run dev -- --port 4321
+ASTRO_TELEMETRY_DISABLED=1 npm run check
+ASTRO_TELEMETRY_DISABLED=1 npm run build
+ASTRO_TELEMETRY_DISABLED=1 npm run preview -- --port 4321
 ```
 
-Abrir localmente la ruta `/docs/brand-preview.html`. No servir este directorio completo en producción: contiene documentación y metadatos de desarrollo.
+`ASTRO_TELEMETRY_DISABLED=1` evita que Astro intente guardar configuración fuera del workspace. En PowerShell establecer `$env:ASTRO_TELEMETRY_DISABLED="1"` antes de ejecutar npm. Servicios y procesos no sobreviven necesariamente a una nueva sesión: iniciarlos cuando se necesiten.
 
-## Estado técnico
+## Estructura
 
-Fuentes variables originales en `public/fonts/`; estilos en `src/styles/brand.css`. Los paths de fuentes incluyen `/public` exclusivamente para la referencia servida desde la raíz. Al inicializar Astro deben pasar a `/fonts/...`, porque Astro publica el contenido de `public` en la raíz.
+- `src/pages/index.astro`: home. `404.astro`: página de error.
+- `src/components/`: cabecera, pie, mockup conceptual e iconos SVG.
+- `src/layouts/Layout.astro`: documento, metadatos y noindex.
+- `src/styles/home.css`: estilos responsive y fuentes en /fonts.
+- `public/fonts/`: fuentes originales y licencias. `public/robots.txt`: bloquea rastreo mientras esté en desarrollo.
+- `docs/`: continuidad y referencia de marca; no se incluye en dist.
 
-Astro + TypeScript es la preferencia del brief, aún sin inicializar: esta entrega se limita a identidad. GitHub Git funciona con permiso de red; la API de PR devuelve Forbidden. No hay build, backend, formulario, despliegue ni dependencias npm añadidas.
+La referencia anterior `docs/brand-preview.html` permanece independiente. Para verla, servir la raíz con `python3 -m http.server 4321 --bind 127.0.0.1`; esto es solo una herramienta local, nunca un despliegue de todo el repositorio. La home Astro usa /fonts, mientras esa referencia conserva /public/fonts para el servidor independiente.
 
-No publicar en producción sin autorización explícita.
+## QA del build
+
+Tras compilar, iniciar `python3 -m http.server 4322 --bind 127.0.0.1 --directory dist`. En otra terminal ejecutar `python3 scripts/verify-home.py`. Requiere Playwright Python y Chromium en /usr/bin/chromium, disponibles en el entorno usado; no son dependencias de ejecución del sitio. Resultados y límites en docs/QA.md.
+
+Producción: subir únicamente dist después de autorización. No desplegar aún: faltan logos, validación comercial, contacto real y revisión legal. Ver docs/DEPLOYMENT.md.
