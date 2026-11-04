@@ -1,9 +1,14 @@
 ---
 import site from '../../content/site.json';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+// Keep CMS originals in public/media; Astro emits display-sized PNGs under /_astro.
+const originals = import.meta.glob<{ default: ImageMetadata }>('/public/media/**/*.{png,jpg,jpeg,webp}', { eager: true });
 interface Props { footer?: boolean; }
 const { footer = false } = Astro.props;
 const logo = footer && site.darkFooter ? site.logoDark : site.logoLight;
+const source = logo ? originals['/public' + logo]?.default : undefined;
 ---
 <a class:list={['brand-link', { 'project-name': !footer }]} href="/">
-  {logo ? <img class="brand-logo" src={logo} alt={site.logoAlt} width={site.logoWidth} height={site.logoHeight} loading={footer ? 'lazy' : 'eager'} /> : <span>{site.name}<span class="project-caption">Proyecto web · Logo original por incorporar</span></span>}
+  {source ? <Image class="brand-logo" src={source} alt={site.logoAlt} width={Math.min(256, source.width)} widths={[256, 512, 768].filter(width => width <= source.width)} sizes="clamp(11rem, 18vw, 16rem)" format="png" loading={footer ? 'lazy' : 'eager'} /> : logo ? <img class="brand-logo" src={logo} alt={site.logoAlt} width={site.logoWidth} height={site.logoHeight} loading={footer ? 'lazy' : 'eager'} /> : <span>{site.name}<span class="project-caption">Proyecto web · Logo original por incorporar</span></span>}
 </a>

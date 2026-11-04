@@ -55,7 +55,7 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 1. Revisar Actions → Site and CMS quality para el nuevo commit de corrección FAQ en feat/feature-catalog. Esperado: 42 comprobaciones, cero infracciones. Fallo remoto dd113be confirmado por captura; no se afirma verde del nuevo run sin observarlo.
 2. Si falla, abrir validate y consultar las líneas AXE (regla, selector y causa) o descargar qa/accessibility-report.json del artefacto. Mantener reglas y no añadir exclusiones para pasar CI.
 3. Publicado permanece 9a017af. Nueva corrección y mejora de CLS solo en rama de desarrollo; futuras integraciones en feat/brand-foundation requieren autorización explícita. Antes fetch/revisar CMS concurrente.
-4. Tras CI alojado aprobado, revisión manual/dispositivos/lector y entrega de imágenes preservando originales. Quedan evidencia SaaS, tarifas y revisión/adopción de privacidad.
+4. Tras CI alojado aprobado, revisión manual/dispositivos/lector; entrega responsive de logos ya implementada con originales preservados. Quedan evidencia SaaS, tarifas y revisión/adopción de privacidad.
 5. Autor Joel Alejandro Yañez Caballero; consultar git log -1 y git ls-remote para SHA final. Sin PR creada, existentes sin verificar por API. Solo Codex principal.
 
 ## Datos comerciales aplicados
@@ -82,7 +82,7 @@ Implementado: menú móvil inicializado durante el parsing con script inline enc
 
 Pruebas: check 40 archivos sin errores/advertencias, build 19 páginas y content:check aprobados. Suite test:ci después de adelantar menú: 19 rutas/66 destinos, navegación y 41 comprobaciones axe sin infracciones automáticas; incomplete de contraste separado, no certificación completa. Después de precargar fuentes: check/build y Lighthouse final tres rutas aprobados; rendimiento/accesibilidad/buenas prácticas 100, SEO 66 por noindex. CLS home/catálogo/demo 0 en laboratorio; catálogo previo 0.119. LCP final aproximadamente 0.90 s; sin afirmar métricas de producción. test:navigation final incluye scripts externos bloqueados.
 
-Persistencia solo en feat/feature-catalog, con identidad Joel Alejandro Yañez Caballero. Sin push a rama del Worker ni despliegue nuevo; publicado sigue 9a017af. Agente: Codex principal. Quedan peso de PNG, revisión manual/dispositivos y pendientes comerciales/legales. Siguiente paso: revisión de esta corrección y optimización de entrega de imágenes preservando originales; publicación posterior requiere autorización explícita. Sin PR creada; las existentes no se pueden verificar con la API disponible.
+Persistencia solo en feat/feature-catalog, con identidad Joel Alejandro Yañez Caballero. Sin push a rama del Worker ni despliegue nuevo; publicado sigue 9a017af. Agente: Codex principal. La entrega responsive reduce el peso descargado del logo; quedan revisión manual/dispositivos y pendientes comerciales/legales. Siguiente paso: revisión de esta corrección y optimización de entrega de imágenes preservando originales; publicación posterior requiere autorización explícita. Sin PR creada; las existentes no se pueden verificar con la API disponible.
 
 ## 2026-11-04 · Fallo de Actions en FAQ abiertas: contraste transitorio
 
@@ -97,3 +97,15 @@ Auditoría ampliada a 42 estados/rutas con expanded-faq-animation-quarter en no-
 Agente: Codex principal, sin subagentes. Identidad Git: Joel Alejandro Yañez Caballero. Solo rama feat/feature-catalog; sin despliegue ni push a feat/brand-foundation (publicado 9a017af). Siguiente paso exacto: revisar nueva ejecución de Actions del commit de esta entrega; debe mostrar 42 comprobaciones y cero infracciones. Si falla, abrir validate y copiar AXE + selector + causa o descargar accessibility-report.json del artefacto. API GitHub del entorno sigue sin acceso; no afirmar CI alojado verde hasta observarlo. Sin PR creada; PR existentes sin verificar.
 
 Resultado final local: test:ci aprobado (19 páginas, 66 destinos, navegación sin JS/teclado/200% y menú con scripts externos bloqueados); axe 42 comprobaciones, cero infracciones. Informe accessibility-report.json regenerado. Incomplete conservados, no equivalen a aprobación WCAG completa.
+
+## 2026-11-04 · Entrega responsive del logo, originales preservados
+
+Brand.astro usa Image de Astro para generar PNGs de presentación a 256/512/768 px durante el build, con srcset y sizes acordes al clamp del CSS. Selección de logo y variante oscura siguen en content/site.json/Pages CMS; el raster activo se detecta con import.meta.glob de public/media. No se sobrescriben, recortan, reconstruyen ni cambian los originales; favicon y SVG conservan entrega directa. Metadatos reales del raster determinan proporción y reserva de espacio; dimensiones CMS siguen para fallback directo. Derivados estáticos bajo /_astro, sin endpoint de transformación en producción ni nueva dependencia.
+
+Test:brand comprueba hashes de los tres originales, render/proporción/object-fit y selección de derivados con menor transferencia en seis anchos (320–1440), DPR 1 y 2, cabecera/pie y favicon. Datos en qa/brand-report.json: original claro 301321 bytes; navegador usa 13651 bytes en DPR1 y 31241 en DPR2, reducción 95.5%/89.6% en los casos medidos. Candidato 768 también generado para densidades mayores, no se afirma prueba de DPR3. Captura móvil revisada: marca sin recorte ni distorsión visible.
+
+Check (40 archivos) y build (19 páginas) aprobados. Suite de sitio/accesibilidad y Lighthouse se registran al terminar esta entrega. La consulta de Actions de 8f6f44a sigue bloqueada por Forbidden; no afirmar CI remoto aprobado. Solo Codex principal, sin subagentes. Autor Joel Alejandro Yañez Caballero. Sin publicación ni push a rama seguida; Worker permanece en 9a017af. Sin PR creada; PR existentes no verificadas por API.
+
+Siguiente paso exacto: comprobar Actions del commit de esta entrega; si falla revisar líneas AXE y artefacto, sin desactivar reglas. Después revisión manual de catálogo/demo/privacidad/admin en móvil y lector de pantalla y definición comercial/legal. Para reflejar correcciones en el Worker debe autorizarse una integración concreta; mantener DNS/noindex.
+
+Validación final de entrega responsive: test:brand aprobado (12 combinaciones ancho/DPR, cabecera y pie); test:ci aprobado (19 rutas/66 destinos, navegación y 42 comprobaciones axe sin infracciones). Lighthouse final tres rutas: rendimiento/accesibilidad/buenas prácticas 100 y SEO 66 por noindex. Informes regenerados; originales sin cambios. Próxima revisión de CI remoto corresponde al SHA final de esta entrega, no solo a 8f6f44a.

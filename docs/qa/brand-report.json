@@ -1,5 +1,5 @@
 {
-  "source": "CMS-selected original assets; local static build",
+  "source": "Original hashes preserved; build-generated responsive PNG delivery; local static build",
   "assets": [
     {
       "key": "logoLight",
@@ -23,33 +23,293 @@
   "viewports": [
     {
       "width": 320,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
     },
     {
       "width": 390,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
     },
     {
       "width": 768,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
     },
     {
       "width": 900,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
     },
     {
       "width": 1024,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
     },
     {
       "width": 1440,
+      "dpr": 1,
       "headerAndFooterLoaded": true,
       "placeholderRemoved": true
+    },
+    {
+      "width": 320,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 390,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 768,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 900,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 1024,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 1440,
+      "dpr": 2,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    }
+  ],
+  "deliveries": [
+    {
+      "width": 320,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 320,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 390,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 390,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 768,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 768,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 900,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 900,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 176,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1024,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 184,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1024,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 184,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1440,
+      "dpr": 1,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 256,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1440,
+      "dpr": 1,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_1TQi9h.png",
+      "naturalWidth": 256,
+      "bytes": 13651,
+      "originalBytes": 301321
+    },
+    {
+      "width": 320,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 320,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 390,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 390,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 768,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 768,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 900,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 900,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 176,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1024,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 184,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1024,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 184,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1440,
+      "dpr": 2,
+      "location": "header",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 256,
+      "bytes": 31241,
+      "originalBytes": 301321
+    },
+    {
+      "width": 1440,
+      "dpr": 2,
+      "location": "footer",
+      "path": "/_astro/logofullclear.BuK5Wp_i_HLgmA.png",
+      "naturalWidth": 256,
+      "bytes": 31241,
+      "originalBytes": 301321
     }
   ]
 }

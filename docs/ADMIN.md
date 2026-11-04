@@ -62,3 +62,9 @@ El guardado real por el propietario está confirmado por commits de Pages CMS. E
 El workflow Site and CMS quality valida los pushes a feat/feature-catalog y las PR; no publica. Revisar resultado en Actions antes de integrar. Si hay errores de enlaces, contenido o accesibilidad, corregirlos y guardar otro commit. El artefacto con dist no es un preview desplegado. Estado y reproducción en CI.md. La primera ejecución en GitHub aún debe confirmarse.
 
 El usuario confirmó la conexión y los commits reales la corroboran. La integración a la rama seguida por Cloudflare requiere autorización aparte.
+
+## Entrega de imágenes en el sitio
+
+El CMS conserva los originales en public/media. Brand.astro genera PNGs de presentación (256/512/768 px) al compilar y sirve srcset/sizes para reducir descarga según pantalla; nunca reemplaza el archivo fuente. SVG conserva ruta directa y favicon no cambia. Con un nuevo raster o selección de variante oscura, el siguiente build actualiza los derivados automáticamente. Se usa la proporción real del raster importado; los campos de dimensiones siguen aplicándose al fallback directo. No editar ni subir derivados /_astro al CMS: son salida de build.
+
+Prueba actual: npm run test:brand con las selecciones PNG oficiales actuales; hashes originales, seis anchos y DPR1/2. Resumen qa/brand-report.json.

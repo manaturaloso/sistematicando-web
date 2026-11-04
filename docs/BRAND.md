@@ -31,3 +31,9 @@ Manrope para contenido y navegación; Gluten en énfasis del eslogan y nota edit
 content/site.json controla logoLight/logoDark, dimensiones, alt, favicon y pie oscuro. La marca se renderiza con Brand.astro: original sin recortes ni reconstrucción. Los archivos se suben a public/media desde el CMS. Campos actuales seleccionan logofullclear.png, logofulldark.png y logominiclear.png; dimensiones horizontales 7958 × 2005. Pie claro conservado según selección del propietario. Integridad SHA-256 y render en seis anchos: qa/brand-report.json. Instrucciones en ADMIN.md.
 
 Calidad: enlace de marca toma nombre accesible del texto o alt, sin omitir texto visible. Mientras no exista favicon original configurado se usa una referencia vacía, sin inventar un isotipo.
+
+## Entrega de imágenes en el sitio
+
+El CMS conserva los originales en public/media. Brand.astro genera PNGs de presentación (256/512/768 px) al compilar y sirve srcset/sizes para reducir descarga según pantalla; nunca reemplaza el archivo fuente. SVG conserva ruta directa y favicon no cambia. Con un nuevo raster o selección de variante oscura, el siguiente build actualiza los derivados automáticamente. Se usa la proporción real del raster importado; los campos de dimensiones siguen aplicándose al fallback directo. No editar ni subir derivados /_astro al CMS: son salida de build.
+
+Prueba actual: npm run test:brand con las selecciones PNG oficiales actuales; hashes originales, seis anchos y DPR1/2. Resumen qa/brand-report.json.
