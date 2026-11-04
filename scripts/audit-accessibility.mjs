@@ -12,7 +12,7 @@ function logViolations(analysis) {
  }
 }
 async function expandedFaq(page, freezeAnimation=false) {
- await page.getByRole('button',{name:'Menú'}).click();
+ await page.locator('.menu-toggle').click();
  await page.locator('details').evaluateAll((els,freeze)=>{
   els.forEach(el=>el.open=true);
   if(freeze)for(const el of els)for(const animation of el.getAnimations({subtree:true})){
@@ -38,7 +38,7 @@ try{
  const states=[
   {route:'/',state:'expanded-faq-animation-quarter',prepare:page=>expandedFaq(page,true)},
   {route:'/',state:'expanded-menu-and-faq',prepare:page=>expandedFaq(page)},
-  {route:'/solicitar-demo/',state:'generated-guide',prepare:async page=>{await page.getByLabel('Tipo de negocio',{exact:true}).selectOption({label:'Cafeterías'});await page.getByLabel('Cantidad de locales').selectOption({label:'1 local'});await page.getByLabel('Tu prioridad').selectOption({label:'Atención y ventas'});await page.getByRole('button',{name:'Generar mi guía local'}).click();}},
+  {route:'/solicitar-demo/',state:'generated-guide',prepare:async page=>{for(const id of ['business','locations','priority'])await page.locator('#'+id).selectOption({index:1});await page.locator('#demo-guide button[type=submit]').click();}},
   {route:'/funcionalidades/',state:'empty-search',prepare:async page=>{await page.getByRole('searchbox').fill('zz-no-result');}},
  ];
  const interactive=await browser.newContext({viewport:{width:390,height:1000},reducedMotion:'no-preference'});

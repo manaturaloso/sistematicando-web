@@ -1,6 +1,8 @@
 import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {previewServer} from './lib/preview-server.mjs';
+const navigation=JSON.parse(await fs.readFile('content/navigation.json','utf8'));
 const server=await previewServer();
 let browser;
 try{
@@ -17,7 +19,7 @@ try{
  await page.goto(server.url+'/');await page.keyboard.press('Tab');
  assert(await page.locator('.skip-link').evaluate(el=>el===document.activeElement));
  await page.keyboard.press('Enter');assert.equal(await page.evaluate(()=>document.activeElement.id),'contenido');
- const toggle=page.getByRole('button',{name:'Menú'});await toggle.focus();await page.keyboard.press('Enter');
+ const toggle=page.locator('.menu-toggle');assert.equal(await page.getByRole('button',{name:navigation.menuLabel,exact:true}).count(),1);await toggle.focus();await page.keyboard.press('Enter');
  assert.equal(await toggle.getAttribute('aria-expanded'),'true');await page.keyboard.press('Tab');
  assert(await page.locator('#main-nav a').first().evaluate(el=>el===document.activeElement));
  await page.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');

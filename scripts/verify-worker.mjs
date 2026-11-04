@@ -42,7 +42,7 @@ try{
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route);
   assert(await page.evaluate(()=>document.fonts.check('500 32px "Manrope"')),route);
  }
- await page.goto(base+'/');await page.getByRole('button',{name:'Menú'}).click();assert(await page.locator('#main-nav').isVisible());await page.keyboard.press('Escape');assert(!await page.locator('#main-nav').isVisible());
+ await page.goto(base+'/');await page.locator('.menu-toggle').click();assert(await page.locator('#main-nav').isVisible());await page.keyboard.press('Escape');assert(!await page.locator('#main-nav').isVisible());
  assert.equal(failures.length,0,JSON.stringify(failures));
 }finally{await browser.close();}
 await fs.mkdir('docs/qa',{recursive:true});
