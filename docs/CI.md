@@ -43,4 +43,4 @@ Instalación limpia, check, dry-run y suite equivalente **aprobados localmente**
 
 Después de guardar el workflow, revisar **Actions → Site and CMS quality** y comprobar el SHA concreto y el resultado. La API GitHub no está disponible para consultar esos resultados desde esta sesión. No dar por aprobado un job solo porque existe el archivo.
 
-El CMS sigue pendiente de conexión por el propietario (confirmado por él en esta entrega). La primera edición real, autorización GitHub App y subida del logo siguen sin verificar. La rama del Worker se mantiene intacta.
+Guardado real de CMS y subida/selección de logos confirmados por commits 1206881–55f79ee. Pruebas locales aprobadas; Actions alojado sigue sin verificar. No se hizo push a la rama del Worker; el propietario añadió allí .pages.yml vacío en ed7227d.

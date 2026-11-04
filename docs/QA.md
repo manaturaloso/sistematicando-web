@@ -130,3 +130,13 @@ Resultados finales y reproducción en QUALITY.md, evidencia en docs/qa.
 - Workflow YAML parseado con loader que conserva la clave on; comprobados eventos, permisos read-only, referencias a acciones oficiales v7 y uso exclusivo de dry-run. No equivale a validación de ejecución en GitHub.
 - Se mejoró el chequeo de imágenes para cargar también logos con loading=lazy antes de juzgar sus bytes renderizables. No se hizo una nueva carga de logo oficial.
 - Pipeline alojado, instalación de browser en runner y estado de Actions pendientes de verificar con el SHA remoto. No se ejecutó login del CMS, deploy o Lighthouse nuevo; no cambió la web.
+
+## 2026-11-04 · Guardado real de CMS y marca oficial
+
+El propietario guardó tres imágenes originales y su selección de marca en cuatro commits (1206881, a3803b7, 222f48b, 55f79ee). Se incorporaron con fast-forward, sin sobrescribir trabajo. Dimensiones horizontales corregidas a 7958 × 2005; bytes originales preservados. Cabecera/pie/fav probados en seis anchos con test:brand; hashes versionados. /admin deja de afirmar conexión pendiente. Adorno del hero desplazado 1.5rem para corregir overflow a 900 px.
+
+Check 40 archivos y build 19 páginas aprobados; test:ci local 19 rutas/66 destinos, navegación y axe 41 comprobaciones sin infracciones automáticas. Lighthouse local 100/96/100 rendimiento y SEO 66 por noindex; CLS catálogo 0.119 y peso de PNG quedan pendientes. No certificación WCAG ni métricas de producción. Guardado CMS comprobado mediante Git, sin login del agente. Solo Codex principal.
+
+Rama seguida feat/brand-foundation observada en ed7227d con .pages.yml vacío agregado por el propietario. Simulación de integración sin conflictos conserva el esquema completo; no se hizo integración, push a esa rama, deploy ni cambio DNS. Siguiente paso: autorización explícita para integrar versión validada; antes fetch/revisar cambios concurrentes. Actions alojado y PR existentes sin verificar por API Forbidden.
+
+Worker local con originales: test:worker aprobado, 30 comprobaciones de rutas, hashes de fuentes/logos/favicón, 404 privados, normalización, query, POST 405 y navegador móvil. Servidor detenido después de validar. Request.cf usa fallback local; no es fallo de assets ni validación pública. Check requiere ASTRO_TELEMETRY_DISABLED=1 y Wrangler XDG_CONFIG_HOME=/tmp/sistematicando-config en este entorno de permisos.

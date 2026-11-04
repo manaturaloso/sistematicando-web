@@ -1101,4 +1101,4 @@ transform:none
 .menu-toggle[hidden] {display:none!important;}
 /* Preserve navigation and decorative bounds when users enlarge text. */
 .header-inner, .site-header nav {flex-wrap:wrap;}
-.visual-orbit {right:0;}
+.visual-orbit {right:1.5rem;}

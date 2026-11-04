@@ -39,7 +39,7 @@ La referencia anterior `docs/brand-preview.html` permanece independiente. Para v
 
 Tras compilar, iniciar `python3 -m http.server 4322 --bind 127.0.0.1 --directory dist`. En otra terminal ejecutar `python3 scripts/verify-home.py` , `python3 scripts/verify-solutions.py` , `python3 scripts/verify-features.py` , `python3 scripts/verify-commercial.py` y `python3 scripts/verify-privacy.py`. Requiere Playwright Python y Chromium en /usr/bin/chromium, disponibles en el entorno usado; no son dependencias de ejecución del sitio. Resultados y límites en docs/QA.md.
 
-Producción: subir únicamente dist después de autorización. No desplegar aún: faltan logos, validación comercial, contacto real y revisión legal. Ver docs/DEPLOYMENT.md.
+Producción: subir únicamente dist después de autorización. No desplegar aún: faltan validación comercial y revisión legal; contacto y logos ya están incorporados. Ver docs/DEPLOYMENT.md.
 
 ## ZIP para revisión compartible
 
@@ -51,7 +51,7 @@ Rama actual de trabajo: feat/feature-catalog. Cloudflare sigue la rama anterior 
 
 Ver **docs/ADMIN.md**. /admin es el panel de acceso a Pages CMS; la autenticación/edición ocurre en el servicio externo con GitHub. Hay 23 editores configurados en .pages.yml y biblioteca de medios. El propietario aún debe autorizar la GitHub App para el repositorio y probar un guardado real.
 
-Fuente de contenido: content/*.json. Los archivos src/data/*.ts son adaptadores; para cambiar correo/WhatsApp editar content/contact.json y para logos/SEO content/site.json o usar el CMS. Todos los logos originales están pendientes de carga, sin reconstrucciones.
+Fuente de contenido: content/*.json. Los archivos src/data/*.ts son adaptadores; para cambiar correo/WhatsApp editar content/contact.json y para logos/SEO content/site.json o usar el CMS. Tres originales ya fueron cargados y seleccionados desde Pages CMS; ver docs/BRAND.md y docs/qa/brand-report.json. Sin reconstrucciones.
 
 - npm run content:check: validación editorial y referencias (automática antes del build).
 - npm run cms:config: regenerar la configuración al cambiar el esquema editorial.

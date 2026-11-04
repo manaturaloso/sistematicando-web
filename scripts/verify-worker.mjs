@@ -19,7 +19,9 @@ for(const [from,to] of [['/soluciones','/soluciones/'],['/admin','/admin/'],['/p
  const r=await fetch(base+from,{redirect:'manual'});assert.equal(r.status,307,from);assert.equal(new URL(r.headers.get('location'),base).pathname,to);results.push({route:from,status:r.status,location:r.headers.get('location')});
 }
 const query=await fetch(base+'/soluciones?origen=prueba',{redirect:'manual'});assert.equal(query.headers.get('location'),'/soluciones/?origen=prueba');
-for(const file of ['fonts/Manrope-Variable.ttf','fonts/Gluten-Variable.ttf']){
+const site=JSON.parse(await fs.readFile('content/site.json','utf8'));
+const brandAssets=[site.logoLight,site.logoDark,site.favicon].filter(Boolean).map(value=>value.slice(1));
+for(const file of new Set(['fonts/Manrope-Variable.ttf','fonts/Gluten-Variable.ttf',...brandAssets])){
  const r=await fetch(base+'/'+file);assert.equal(r.status,200,file);
  const expected=await fs.readFile('dist/'+file),actual=Buffer.from(await r.arrayBuffer());
  assert.equal(createHash('sha256').update(actual).digest('hex'),createHash('sha256').update(expected).digest('hex'),file);
@@ -39,5 +41,5 @@ try{
  assert.equal(failures.length,0,JSON.stringify(failures));
 }finally{await browser.close();}
 await fs.mkdir('docs/qa',{recursive:true});
-await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font integrity','robots/noindex','POST 405','four mobile browser routes and menu']},null,2)+'\n');
-console.log(`PASS Worker local: ${results.length} route checks, fonts, query, POST 405 and mobile browser.`);
+await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font and selected brand asset integrity','robots/noindex','POST 405','four mobile browser routes and menu']},null,2)+'\n');
+console.log(`PASS Worker local: ${results.length} route checks, fonts/brand assets, query, POST 405 and mobile browser.`);

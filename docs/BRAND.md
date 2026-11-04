@@ -6,7 +6,7 @@
 - Tinta: `#2a3139`.
 - Eslogan: «Todo tu negocio, bajo control.» (referencia del brief).
 - Tipografías entregadas: Gluten variable (wght 100–900, slnt −13–13); Manrope variable (wght 200–800). Metadatos inspeccionados con fontTools.
-- Cuatro imágenes oficiales visibles en el mensaje: logo horizontal claro/oscuro, isotipo claro/oscuro. Sus archivos binarios no están disponibles mediante los adjuntos descargables de esta sesión. No se han recreado.
+- Cuatro imágenes oficiales visibles en el mensaje: logo horizontal claro/oscuro, isotipo claro/oscuro. Tres originales están ahora en public/media, cargados desde Pages CMS: horizontales claro/oscuro e isotipo claro. No se han recreado ni transformado.
 
 ## Implementado
 
@@ -20,7 +20,7 @@ Usar tinta sobre coral: blanco sobre coral no alcanza 4.5:1. No aplicar coral a 
 
 ## Pendiente
 
-Incorporar originales de logotipos y confirmar uso final de tipografías. Los textos completos SIL OFL 1.1 se incluyen junto a cada TTF; los avisos de copyright de los archivos originales se conservan también en NOTICE.md.
+Confirmar uso final de tipografías y revisar identidad en dispositivos reales. Originales integrados. Los textos completos SIL OFL 1.1 se incluyen junto a cada TTF; los avisos de copyright de los archivos originales se conservan también en NOTICE.md.
 
 ## Aplicación en la home
 
@@ -28,6 +28,6 @@ Manrope para contenido y navegación; Gluten en énfasis del eslogan y nota edit
 
 ## Administración de logos
 
-content/site.json controla logoLight/logoDark, dimensiones, alt, favicon y pie oscuro. La marca se renderiza con Brand.astro: original sin recortes ni reconstrucción. Los archivos se suben a public/media desde el CMS. Campos actuales vacíos; no hay logo oficial cargado. La imagen temporal de QA se eliminó y no está versionada. Instrucciones en ADMIN.md.
+content/site.json controla logoLight/logoDark, dimensiones, alt, favicon y pie oscuro. La marca se renderiza con Brand.astro: original sin recortes ni reconstrucción. Los archivos se suben a public/media desde el CMS. Campos actuales seleccionan logofullclear.png, logofulldark.png y logominiclear.png; dimensiones horizontales 7958 × 2005. Pie claro conservado según selección del propietario. Integridad SHA-256 y render en seis anchos: qa/brand-report.json. Instrucciones en ADMIN.md.
 
 Calidad: enlace de marca toma nombre accesible del texto o alt, sin omitir texto visible. Mientras no exista favicon original configurado se usa una referencia vacía, sin inventar un isotipo.

@@ -2,7 +2,7 @@
 
 ## Alcance
 
-Build estático local, no Worker público. 19 páginas, contenido actual y sin los logos originales todavía. No se autoriza despliegue ni se da por conectado el CMS.
+Build estático local, no Worker público. 19 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
 
 ## Correcciones
 
@@ -26,9 +26,9 @@ Una ejecución final por ruta en Chromium local. Valores de laboratorio, variabl
 
 | Ruta | Rendimiento | Accesibilidad automática | Buenas prácticas | SEO | LCP | TBT | CLS |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| / | 100 | 100 | 100 | 63 | 0.92 s | 1.5 ms | 0.0014 |
-| /funcionalidades/ | 100 | 100 | 100 | 63 | 0.94 s | 0 ms | 0.0311 |
-| /solicitar-demo/ | 100 | 100 | 100 | 63 | 0.94 s | 0 ms | 0.0073 |
+| / | 100 | 100 | 100 | 66 | 0.94 s | 3 ms | 0.0014 |
+| /funcionalidades/ | 96 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.1193 |
+| /solicitar-demo/ | 100 | 100 | 100 | 66 | 0.90 s | 4.5 ms | 0.0073 |
 
 SEO se penaliza por bloqueo de indexación deliberado. Se conservan noindex y robots; no se retiran para aumentar una puntuación. No se ha medido INP de usuarios. CSS compartido y dependencias de carga aparecen como oportunidades informativas; no se agregaron optimizaciones de fuentes sin necesidad al pasar el objetivo local.
 
@@ -46,3 +46,5 @@ npm run audit:performance
 Requiere Chromium en /usr/bin/chromium (o adaptar la ruta al entorno). Herramientas fijadas en package-lock.json. Los scripts abren un servidor efímero solo en 127.0.0.1, sirven dist y cierran navegador/servidor en finally. No hacen login, envíos de datos ni despliegues. El entorno restringido necesita permiso para sockets y Chromium.
 
 Resúmenes versionados en docs/qa; los JSON completos de Lighthouse se generan temporalmente en /tmp. La ejecución sobrescribe los resúmenes; revisar el diff antes de guardar. La revisión manual de contraste está separada del reporte automático y debe repetirse si cambia el contenido o estilo.
+
+Última medición con logos originales: CLS del catálogo 0.119, pendiente de mejorar; Lighthouse también señala peso de PNG. Originales preservados. test:brand verifica seis anchos e integridad.

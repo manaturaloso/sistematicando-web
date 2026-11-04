@@ -157,7 +157,7 @@
     "custom missing/private-path 404s",
     "307 trailing slash/index normalization",
     "query preservation",
-    "font integrity",
+    "font and selected brand asset integrity",
     "robots/noindex",
     "POST 405",
     "four mobile browser routes and menu"

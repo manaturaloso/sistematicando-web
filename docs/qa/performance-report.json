@@ -7,19 +7,19 @@
         "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
-        "seo": 63
+        "seo": 66
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 915.2560999999998,
+          "value": 936.54765,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 915.2560999999998,
+          "value": 936.54765,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 1.5,
+          "value": 3,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -27,7 +27,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 915.2560999999998,
+          "value": 936.54765,
           "unit": "millisecond"
         }
       },
@@ -35,8 +35,8 @@
         {
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.84,
-          "displayValue": "150 ms"
+          "score": 0.78,
+          "displayValue": "170 ms"
         },
         {
           "id": "is-crawlable",
@@ -44,10 +44,22 @@
           "score": 0
         },
         {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
           "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 294 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -68,18 +80,18 @@
     {
       "route": "/funcionalidades/",
       "scores": {
-        "performance": 100,
+        "performance": 96,
         "accessibility": 100,
         "best-practices": 100,
-        "seo": 63
+        "seo": 66
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 944.4362999999998,
+          "value": 909.06585,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 944.4362999999998,
+          "value": 909.06585,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -87,20 +99,26 @@
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
-          "value": 0.0310988463293863,
+          "value": 0.1192521282231848,
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 944.4362999999998,
+          "value": 909.06585,
           "unit": "millisecond"
         }
       },
       "findings": [
         {
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.87,
-          "displayValue": "140 ms"
+          "id": "cumulative-layout-shift",
+          "title": "Cumulative Layout Shift",
+          "score": 0.84,
+          "displayValue": "0.119"
+        },
+        {
+          "id": "layout-shifts",
+          "title": "Avoid large layout shifts",
+          "score": 0,
+          "displayValue": "1 layout shift found"
         },
         {
           "id": "unused-css-rules",
@@ -114,10 +132,27 @@
           "score": 0
         },
         {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
+          "id": "cls-culprits-insight",
+          "title": "Layout shift culprits",
+          "score": 0
+        },
+        {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
           "displayValue": "Est savings of 18 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 294 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -141,19 +176,19 @@
         "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
-        "seo": 63
+        "seo": 66
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 937.6227,
+          "value": 903.1829,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 937.6227,
+          "value": 903.1829,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 0,
+          "value": 4.5,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -161,7 +196,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 937.6227,
+          "value": 903.1829,
           "unit": "millisecond"
         }
       },
@@ -178,10 +213,22 @@
           "score": 0
         },
         {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
           "displayValue": "Est savings of 11 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 294 KiB"
         },
         {
           "id": "network-dependency-tree-insight",
@@ -191,7 +238,8 @@
         {
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
-          "score": 0.5
+          "score": 0.5,
+          "displayValue": "Est savings of 10 ms"
         }
       ],
       "warnings": [],

@@ -13,7 +13,7 @@
 2. Instalar/autorizar la GitHub App de Pages CMS **solo para manaturaloso/sistematicando-web**, con los permisos que solicite el servicio. Revisarlos antes de aceptar; no proporcionar tokens por chat.
 3. Seleccionar el repositorio y la rama **feat/feature-catalog**. El enlace de /admin ya apunta a esa rama (la barra del nombre se codifica en la URL).
 4. Comprobar que aparecen Marca, Contactos, Menús, Soluciones, Módulos, FAQ, Guías y los editores por página.
-5. Hacer una edición pequeña, guardar y comprobar el commit en GitHub. Esta conexión y escritura real requieren la cuenta del usuario y **aún no se han ejecutado**.
+5. Hacer una edición pequeña, guardar y comprobar el commit en GitHub. El propietario ya realizó esta conexión y escritura: commits 1206881, a3803b7, 222f48b y 55f79ee verificados en Git.
 
 Acceso directo al repositorio/branch en el CMS: https://app.pagescms.org/manaturaloso/sistematicando-web/feat%2Ffeature-catalog
 
@@ -27,7 +27,7 @@ No se ha instalado una instancia propia del CMS ni creado contraseñas, bases de
 4. El logo claro se usa en cabecera y pie claro. Si se activa el pie oscuro, el pie usa el logo para fondo oscuro. También hay selector de favicon.
 5. Guardar, revisar el diff y ejecutar un build. Sin un logo seleccionado, se muestra el nombre con aviso explícito de que el original está por incorporar.
 
-Los logos visibles en el chat inicial no están como binarios en el workspace. No se sustituyen con una reconstrucción. La prueba de integración usó una imagen temporal de prueba y la eliminó; **el logo oficial aún debe cargarse**.
+Originales actuales: public/media/logofullclear.png, logofulldark.png y logominiclear.png. Horizontales 7958 × 2005; favicon 1325 × 1325. Selección guardada por el propietario en site.json, sin reconstrucciones. Integridad y render comprobados en seis anchos; ver qa/brand-report.json.
 
 ## Qué puede cambiarse sin tocar Astro
 
@@ -55,10 +55,10 @@ Los permisos de edición los controla GitHub/Pages CMS. /admin es una página p�
 - `python3 scripts/verify-cms.py`: modifica contenido/imagen de prueba, verifica su renderizado y restaura los originales con rebuild en finally. No ejecutarlo mientras alguien edita los mismos archivos. Usa /tmp para capturas y nunca conserva la imagen de prueba.
 - Revisar branch y diff antes de guardar. Cambiar IDs/slugs requiere revisar enlaces y referencias; no renombrarlos a ciegas.
 
-La autenticación alojada, autorización GitHub, carga desde el navegador y commit real del CMS están pendientes de prueba con la cuenta del propietario. No afirmar que esa conexión esté lista solo por pasar un build local.
+El guardado real por el propietario está confirmado por commits de Pages CMS. El agente no inició sesión en su cuenta; el flujo autenticado no se sustituye por pruebas locales.
 
 ## Comprobación automática tras guardar
 
 El workflow Site and CMS quality valida los pushes a feat/feature-catalog y las PR; no publica. Revisar resultado en Actions antes de integrar. Si hay errores de enlaces, contenido o accesibilidad, corregirlos y guardar otro commit. El artefacto con dist no es un preview desplegado. Estado y reproducción en CI.md. La primera ejecución en GitHub aún debe confirmarse.
 
-El usuario confirmó que todavía no había conectado Pages CMS en la última actualización: autorización y primer guardado siguen pendientes, no son pasos realizados por el agente.
+El usuario confirmó la conexión y los commits reales la corroboran. La integración a la rama seguida por Cloudflare requiere autorización aparte.
