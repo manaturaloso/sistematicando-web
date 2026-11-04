@@ -1,0 +1,9 @@
+---
+import site from '../../content/site.json';
+interface Props { footer?: boolean; }
+const { footer = false } = Astro.props;
+const logo = footer && site.darkFooter ? site.logoDark : site.logoLight;
+---
+<a class:list={['brand-link', { 'project-name': !footer }]} href="/">
+  {logo ? <img class="brand-logo" src={logo} alt={site.logoAlt} width={site.logoWidth} height={site.logoHeight} loading={footer ? 'lazy' : 'eager'} /> : <span>{site.name}<span class="project-caption">Proyecto web · Logo original por incorporar</span></span>}
+</a>

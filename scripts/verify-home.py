@@ -35,7 +35,8 @@ with sync_playwright() as p:
             assert toggle.evaluate('(el) => el === document.activeElement')
             toggle.click()
             page.locator('#main-nav a').first.click()
-            assert toggle.get_attribute('aria-expanded') == 'false'
+            assert '/precios/' in page.url
+            page.goto('http://127.0.0.1:4322/')
         summary = page.locator('summary').first
         summary.focus()
         page.keyboard.press('Enter')

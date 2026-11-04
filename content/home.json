@@ -1,0 +1,58 @@
+{
+  "sectors": [
+    {
+      "slug": "restaurantes",
+      "n": "01",
+      "title": "Restaurantes",
+      "text": "Del primer pedido al cierre del día. Piensa en una operación donde salón, cocina y administración se entiendan.",
+      "tags": "Mesas · Comandas · Caja",
+      "symbol": "arrow"
+    },
+    {
+      "slug": "cafeterias",
+      "n": "02",
+      "title": "Cafeterías",
+      "text": "Cada detalle hace la diferencia: la atención, las recetas y los insumos que acompañan cada taza.",
+      "tags": "Atención · Recetas · Insumos",
+      "symbol": "cup"
+    },
+    {
+      "slug": "bares",
+      "n": "03",
+      "title": "Bares",
+      "text": "Una buena noche también necesita orden detrás de la barra. Conecta las necesidades de atención y control.",
+      "tags": "Barra · Pedidos · Inventario",
+      "symbol": "sparkle"
+    },
+    {
+      "slug": "",
+      "n": "04",
+      "title": "Más formas de crecer",
+      "text": "Hoteles, eventos o varias sedes. Cada operación merece una evaluación de su alcance y sus necesidades.",
+      "tags": "Hospitalidad · Eventos · Multisede",
+      "symbol": "arrow"
+    }
+  ],
+  "modules": [
+    {
+      "n": "01",
+      "title": "Ventas y atención",
+      "text": "Pedidos, caja y coordinación del servicio."
+    },
+    {
+      "n": "02",
+      "title": "Inventario y costos",
+      "text": "Productos, insumos y una mejor lectura de los recursos."
+    },
+    {
+      "n": "03",
+      "title": "Clientes y reservas",
+      "text": "Información útil para acompañar cada visita."
+    },
+    {
+      "n": "04",
+      "title": "Equipo y gestión",
+      "text": "Personas, sedes e información para decidir."
+    }
+  ]
+}

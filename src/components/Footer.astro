@@ -1,1 +1,8 @@
-<footer class="site-footer"><div class="wrap footer-top"><div><p class="footer-name">Sistematicando</p><p>Todo tu negocio, bajo control.</p></div><nav aria-label="Pie de página"><a href="/#propuesta">La propuesta</a><a href="/soluciones/">Soluciones</a><a href="/#preguntas">Preguntas frecuentes</a></nav></div><div class="wrap footer-bottom"><span>Hecho para pensar en tu negocio.</span><span>Versión de desarrollo · Sin recepción de datos personales</span></div></footer>
+---
+import pageContent from '../../content/pages.json';
+const copy = pageContent['components-Footer'];
+import Brand from './Brand.astro';
+import site from '../../content/site.json';
+import navigation from '../../content/navigation.json';
+---
+<footer class:list={['site-footer', { 'dark-footer': site.darkFooter }]}><div class="wrap footer-top"><div><p class="footer-name"><Brand footer /></p><p>{site.tagline}</p></div><nav aria-label="Pie de página">{navigation.footer.map(link => <a href={link.href}>{link.label}</a>)}</nav></div><div class="wrap footer-bottom"><span>{copy.text_008}</span><span>{site.footerNote}</span></div></footer>

@@ -1,0 +1,14 @@
+.admin-page {padding-block:2rem 4rem;}
+.admin-page>.eyebrow {margin-top:3rem;}
+.admin-page h1 {font-size:clamp(2.8rem,6vw,5rem);}
+.admin-page>.button {margin-block:1.5rem;}
+.admin-steps {padding-block:2rem;border-top:1px solid var(--line);margin-block:2rem;max-width:75ch;}
+.admin-steps h2 {font-size:2rem;}
+.admin-steps li {padding-bottom:.8rem;}
+.admin-steps p {font-size:.9rem;color:#505860;}
+.admin-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.3rem;}
+.admin-card {display:block;padding:1.5rem;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:white;}
+.admin-card:hover {border-color:var(--ink);}
+.admin-card p {font-size:.9rem;color:#505860;}
+.admin-card span {font-size:.8rem;font-weight:700;}
+@media(max-width:599px){.admin-grid{grid-template-columns:1fr;}}

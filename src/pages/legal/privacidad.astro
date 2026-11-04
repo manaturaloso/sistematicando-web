@@ -1,0 +1,27 @@
+---
+import pageContent from '../../../content/pages.json';
+const copy = pageContent['pages-legal-privacidad'];
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { contact } from '../../data/contact';
+import '../../styles/solutions.css';
+import '../../styles/commercial.css';
+---
+<Layout title={copy.seo_title} description={copy.seo_description}>
+  <Header />
+  <main id="contenido" tabindex="-1" class="wrap privacy-page">
+    <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><span aria-current="page">{copy.text_002}</span></nav>
+    <p class="eyebrow">Sitio comercial · {contact.policyDate}</p><h1>{copy.text_003}</h1>
+    <p class="scope-note">{copy.text_004}</p>
+    <section aria-labelledby="responsable"><h2 id="responsable">{copy.text_005}</h2><p>El responsable es {contact.responsible}, RUC {contact.ruc}, con domicilio en {contact.address}.</p><p>{copy.text_006} <a href={`mailto:${contact.email}`}>{contact.email}</a> {copy.text_007} <a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noopener noreferrer">{contact.phoneLabel} (se abre en otra pestaña)</a>{copy.text_008}</p></section>
+    <section aria-labelledby="navegacion"><h2 id="navegacion">{copy.text_009}</h2><p>{copy.text_010}</p><p>{copy.text_011}</p><p>{copy.text_012} <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">{copy.text_013}</a>.</p></section>
+    <section aria-labelledby="guia"><h2 id="guia">{copy.text_014}</h2><p>{copy.text_015}</p><p>{copy.text_016}</p></section>
+    <section aria-labelledby="whatsapp"><h2 id="whatsapp">{copy.text_017}</h2><p>{copy.text_018}</p><p>{copy.text_019}</p><p>{copy.text_020} <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">{copy.text_021}</a>{copy.text_022}</p></section>
+    <section aria-labelledby="finalidades"><h2 id="finalidades">{copy.text_023}</h2><p>{copy.text_024}</p><p>{copy.text_025}</p></section>
+    <section aria-labelledby="proveedores"><h2 id="proveedores">{copy.text_026}</h2><p>{copy.text_027}</p><p>{copy.text_028}</p></section>
+    <section aria-labelledby="conservacion"><h2 id="conservacion">{copy.text_029}</h2><p>{copy.text_030}</p><p>{copy.text_031}</p></section>
+    <section aria-labelledby="derechos"><h2 id="derechos">{copy.text_032}</h2><p>{copy.text_033} <a href={`mailto:${contact.email}`}>{contact.email}</a> o al WhatsApp {contact.phoneLabel}. Indica tu solicitud y un medio para responderte. No adjuntes documentos sensibles de entrada; si hace falta verificar identidad, se coordinará un medio proporcional.</p><p>{copy.text_034}</p></section>
+    <section aria-labelledby="seguridad"><h2 id="seguridad">{copy.text_035}</h2><p>{copy.text_036}</p><p>{copy.text_037}</p></section>
+  </main><Footer />
+</Layout>

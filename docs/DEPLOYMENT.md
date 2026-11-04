@@ -1,33 +1,94 @@
-# Despliegue
+# Worker estático: preparación y despliegue
 
-No se ha desplegado. Producción requiere autorización explícita.
+## Estado real
 
-## Build real
+El usuario desplegó una versión anterior desde `feat/brand-foundation` en **https://sistematicando-web.manaturaloso.workers.dev** y confirmó que la web aparecía. La captura mostraba Workers (no Pages), build command None y deploy `npx wrangler deploy`.
 
-Node 24.22.1; `npm ci`; `ASTRO_TELEMETRY_DISABLED=1 npm run check`; `ASTRO_TELEMETRY_DISABLED=1 npm run build`. Salida estática: dist. Probar con `ASTRO_TELEMETRY_DISABLED=1 npm run preview`. Publicar solo dist, nunca el checkout completo.
+El usuario autorizó integrar `feat/feature-catalog` en `feat/brand-foundation` para actualizar el Worker. Se integró ec19bb7 sobre ed7227d sin conflictos y se envía por Git a la rama seguida. No se cambió DNS ni indexación. El push permite a Workers Builds iniciar el despliegue; su éxito no está confirmado: el proxy bloquea el hostname con CONNECT 403 y la API GitHub devuelve Forbidden. Consultar el commit final con git log -1 en feat/brand-foundation.
 
-## Cloudflare pendiente
+## Configuración versionada
 
-Cloudflare Pages con build npm run build, variable ASTRO_TELEMETRY_DISABLED=1 y salida dist es una opción para evaluar cuando se autorice. No se creó proyecto, pipeline, Worker ni DNS. No hay hostname confirmado; pages.dev y workers.dev no son intercambiables. Configurar comportamiento 404 y comprobar rutas en el hosting elegido.
+`wrangler.jsonc`:
 
-## Antes de indexar o publicar
+- Nombre: sistematicando-web, coincidente con el Worker indicado por el usuario.
+- Wrangler 4.157.0 fijado como devDependency y en package-lock.json; Node 24.22.1 usado.
+- compatibility_date fija: 2026-01-01. No se actualiza automáticamente con cada build.
+- Assets: **solo ./dist**. Sin main, APIs, D1, R2, secretos, rutas de dominio personalizado o código SSR.
+- html_handling force-trailing-slash: normaliza /soluciones a /soluciones/ e index.html a la ruta limpia.
+- not_found_handling 404-page: sirve la página 404 con estado HTTP 404; no usa fallback SPA.
+- Build previo: `node scripts/build-worker.mjs`, que ejecuta npm run build con ASTRO_TELEMETRY_DISABLED=1 y propaga el código de salida. Incluye content:check. Así Wrangler no depende de un dist antiguo ni de un build manual olvidado.
+- Watch local de src/content/public; outputs .wrangler y archivos .dev.vars ignorados por Git.
 
-Resolver identidad y contenido comercial, canal de contacto y privacidad. Aprobar dominio real; entonces añadir canonical/sitemap/metadatos absolutos y retirar noindex/Disallow únicamente con autorización. El build actual bloquea indexación deliberadamente y no contiene formulario ni rastreadores.
+El build de Astro publica 19 páginas actualmente. El CMS puede añadir guías/soluciones y el empaquetado deriva las rutas esperadas desde sus slugs.
 
-## Vista compartible en Cloudflare Pages (autorizada, pendiente de subida)
+## Instalar y validar sin publicar
 
-El usuario aprobó una vista compartible en Cloudflare Pages. Esto no autoriza conectar el dominio oficial ni lanzar el sitio comercial definitivo. No hay acceso Cloudflare configurado en esta sesión, por lo que no se ha creado ningún proyecto ni deployment y no existe URL verificada.
+```sh
+npm ci --include=dev
+ASTRO_TELEMETRY_DISABLED=1 npm run check
+WRANGLER_SEND_METRICS=false npm run worker:check
+```
 
-### Paquete de revisión
+`worker:check` usa **wrangler deploy --dry-run**, reconstruye y valida el paquete en .wrangler/dry-run. No sube archivos, no requiere token ni cambia un Worker. No confundir el texto «Total Upload» del resumen de Wrangler con una carga real: el comando termina con --dry-run: exiting now.
 
-Después del build ejecutar `python3 scripts/package-preview.py`. Genera `/workspace/sistematicando-preview.zip`, fuera del checkout, con el contenido de dist en la raíz del ZIP. Comprueba nueve páginas con noindex, robots, ausencia de archivos ocultos, integridad ZIP y exclusión de docs/src/Git. El ZIP es generado, no se versiona: se reproduce con el commit y el lockfile. Noindex y robots evitan indexación cooperativa, no restringen acceso ni convierten el sitio en privado.
+## Probar el runtime local
 
-### Subida desde la cuenta del usuario
+Terminal 1:
 
-1. En Cloudflare, abrir Workers & Pages y elegir crear una aplicación Pages con carga directa de archivos (los nombres de controles pueden variar).
-2. Usar un proyecto separado de revisión, por ejemplo `sistematicando-revision`, sujeto a disponibilidad; no reutilizar producción ni asociar dominio personalizado.
-3. Subir el ZIP generado o extraerlo y subir su contenido. `index.html` debe estar en la raíz, sin una carpeta dist adicional.
-4. Cloudflare asigna el hostname real; no se anticipa ni se inventa una URL. La primera carga directa puede llamarse producción dentro de ese proyecto: debe ser exclusivamente el proyecto de revisión, nunca el proyecto oficial. Para un deployment de tipo Preview en sentido estricto, usar posteriormente la opción de preview si está disponible o Wrangler con una rama no productiva y autenticación autorizada.
-5. Compartir la URL asignada para verificar home, soluciones, 404, fuentes y noindex. No retirar robots/noindex ni configurar DNS.
+```sh
+WRANGLER_SEND_METRICS=false npm run worker:dev
+```
 
-El acceso a la cuenta se realiza en Cloudflare. No compartir contraseñas ni tokens por chat. La carga directa y la integración con Git son modalidades distintas; confirmar la elegida antes de preparar automatización futura.
+Terminal 2:
+
+```sh
+npm run test:worker
+```
+
+Runtime local en 127.0.0.1:8787. Cerrar con Ctrl+C cuando termine. No es un preview público. En esta máquina requiere permiso para sockets y runtime local. No se inicia sesión ni se usa despliegue remoto.
+
+La prueba comprueba 19 páginas, siete rutas inexistentes/internas, cuatro redirecciones (30 comprobaciones de rutas), query string, bytes de fuentes, robots/noindex, POST rechazado con 405 y cuatro páginas en Chromium móvil. Resumen en docs/qa/worker-report.json.
+
+El runtime local avisó que no podía obtener Request.cf y usó metadatos predeterminados. El Worker es puramente estático y no lee esos metadatos; sus rutas y assets sí se comprobaron. Esto no prueba red, caché, permisos o configuración de la cuenta real.
+
+## Actualización futura en Cloudflare: requiere autorización
+
+Antes de integrar esta rama:
+
+1. Confirmar permisos de la cuenta, Worker objetivo y rama seguida. No asumir que guardar contenido desde CMS está libre de disparar builds.
+2. Revisar el diff y los pendientes de ADMIN.md, PRIVACY_REVIEW.md y LAUNCH_CHECKLIST.md.
+3. Confirmar instalación con dependencias de desarrollo (npm ci --include=dev), Node 24.22.1 y uso del lockfile.
+4. En Workers Builds, el deploy puede usar `npx --no-install wrangler deploy` **solo tras autorización**. La versión local se resuelve desde el lockfile. El custom build versionado genera dist aunque el build command del dashboard esté vacío; si se configura un build separado habrá un rebuild adicional deliberado al desplegar.
+5. Verificar después el hostname real, rutas limpias, 404, /admin, fuentes, privacidad y noindex. No añadir dominio oficial, DNS o indexación por el solo hecho de actualizar una vista de revisión.
+
+No se incluye script npm de despliegue ni workflow que publique automáticamente. La configuración está lista para revisión, no constituye autorización de producción ni prueba de despliegue real.
+
+## CMS
+
+/admin es un acceso estático al editor externo de Pages CMS. El propietario ya autorizó su GitHub App y guardó tres logos y su selección de marca (commits 1206881–55f79ee). Los commits del CMS requieren un nuevo build desde la rama que se quiera publicar. La web no almacena credenciales de GitHub ni Cloudflare.
+
+## Alternativa de carga directa
+
+El ZIP generado por `python3 scripts/package-preview.py` contiene solo assets públicos de dist; no se versiona. Las instrucciones antiguas de Pages eran una alternativa evaluada antes de conocer el Worker actual. Este proyecto prepara **Workers**; no confundir hostname workers.dev con pages.dev ni crear otro proyecto como parte de esta tarea.
+
+## Indexación
+
+Se mantienen noindex y robots Disallow: /. Para un lanzamiento oficial se necesitan dominio aprobado, canonicals/sitemap adecuados y aprobación del contenido y privacidad. Noindex no hace privado el sitio.
+
+## Validación continua
+
+.github/workflows/quality.yml valida pushes de la rama de edición y PR sin ejecutar deploy. Los artefactos no son publicación. Ver CI.md; antes de actualizar el Worker, comprobar el resultado del SHA que se vaya a integrar. No se ha confirmado aún la primera ejecución alojada.
+
+## 2026-11-04 · Guardado real de CMS y marca oficial
+
+El propietario guardó tres imágenes originales y su selección de marca en cuatro commits (1206881, a3803b7, 222f48b, 55f79ee). Se incorporaron con fast-forward, sin sobrescribir trabajo. Dimensiones horizontales corregidas a 7958 × 2005; bytes originales preservados. Cabecera/pie/fav probados en seis anchos con test:brand; hashes versionados. /admin deja de afirmar conexión pendiente. Adorno del hero desplazado 1.5rem para corregir overflow a 900 px.
+
+Check 40 archivos y build 19 páginas aprobados; test:ci local 19 rutas/66 destinos, navegación y axe 41 comprobaciones sin infracciones automáticas. Lighthouse local 100/96/100 rendimiento y SEO 66 por noindex; CLS catálogo 0.119 y peso de PNG quedan pendientes. No certificación WCAG ni métricas de producción. Guardado CMS comprobado mediante Git, sin login del agente. Solo Codex principal.
+
+Rama seguida feat/brand-foundation observada en ed7227d con .pages.yml vacío agregado por el propietario. Simulación de integración sin conflictos conserva el esquema completo; no se hizo integración, push a esa rama, deploy ni cambio DNS. Siguiente paso: autorización explícita para integrar versión validada; antes fetch/revisar cambios concurrentes. Actions alojado y PR existentes sin verificar por API Forbidden.
+
+## 2026-11-04 · Integración autorizada para Worker
+
+El usuario respondió «Sí. autorizo.» a integrar ec19bb7 en feat/brand-foundation para actualizar el Worker público. Fetch confirmó ambas puntas sin cambios nuevos; merge sin conflictos sobre ed7227d conserva el .pages.yml completo, originales y commits del propietario. Integración directa mediante push normal; sin force-push, DNS, secretos nuevos ni retirada de noindex. No se crea PR. Solo Codex principal.
+
+Pruebas funcionales de ec19bb7 siguen vigentes porque no cambia el árbol de aplicación integrado; se repite worker:check del merge como comprobación de paquete. Comprobación remota: curl al Worker bloqueado por proxy (CONNECT 403), consulta Actions por gh bloqueada (Forbidden). No afirmar publicación exitosa ni CI remoto verde. Siguiente paso exacto: comprobar build de este commit en Cloudflare Deployments y recorrer rutas/logo/admin en el hostname; después continuar desarrollo en feat/feature-catalog sincronizada, sin más publicaciones implícitas.

@@ -1,5 +1,7 @@
 ---
+import pageContent from '../../content/pages.json';
+const copy = pageContent['pages-404'];
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 ---
-<Layout title="Página no encontrada · Sistematicando"><main class="wrap section"><p class="eyebrow">404 / Página no encontrada</p><h1>Volvamos al inicio.</h1><p>La página que buscas no está disponible en esta versión.</p><a class="button" href="/">Ir al inicio <Icon /></a></main></Layout>
+<Layout title={copy.seo_title}><main class="wrap section"><p class="eyebrow">{copy.text_001}</p><h1>{copy.text_002}</h1><p>{copy.text_003}</p><a class="button" href="/">{copy.text_004} <Icon /></a></main></Layout>

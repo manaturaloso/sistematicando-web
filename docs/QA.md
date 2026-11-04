@@ -56,3 +56,93 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 - `python3 scripts/package-preview.py`: ZIP de 315086 bytes, nueve páginas, noindex/robots e integridad comprobados; sin docs/src/Git. SHA256 e81bcbd1e0a7e4fff2306986b197d63a746fee1ace6d4a77953e6b903322eaba para el archivo generado en esta sesión (puede variar al reconstruir).
 - `git diff --check`: aprobado.
 - Sin despliegue ni URL pública. Validación remota pendiente tras la carga en Cloudflare; no se repitió el smoke de navegador porque las páginas no cambiaron.
+
+# 2026-11-04 · Catálogo de funcionalidades
+
+- Check (15 archivos) sin errores, advertencias ni hints; build de diez páginas.
+- scripts/verify-features.py aprobado a 320/390/768/900/1024/1440: overflow, IDs únicos, 14 módulos no verificados, cinco grupos, búsqueda sin tildes, varias palabras/espacios, resultados vacíos, limpiar/foco, enlaces de área después de búsqueda vacía, detalles por Enter, menú/Escape y noindex. Enlaces a soluciones y catálogo sin JS comprobados. Sin errores JS o recursos fallidos.
+- Regresión scripts/verify-home.py: cuatro anchos; scripts/verify-solutions.py: 28 combinaciones aprobadas.
+- Revisión visual de capturas del catálogo a 1440/390. Capturas temporales en /tmp/sistematicando-qa.
+- npm run docs:features genera matriz de 14 módulos y comprueba IDs/grupos y consistencia mínima estado/evidencia.
+- Empaquetado scripts/package-preview.py adaptado a diez páginas; ZIP íntegro fuera del checkout, con noindex/robots y sin documentación interna.
+- No se hicieron nuevas pruebas remotas del Worker ni auditoría axe/Lighthouse. Ver PROGRESS para el bloqueo de acceso remoto.
+
+# 2026-11-04 · Precios y guía local
+
+- `ASTRO_TELEMETRY_DISABLED=1 npm run check`: 18 archivos, sin errores, warnings ni hints. Build: doce páginas estáticas.
+- `python3 scripts/verify-commercial.py`: ambas rutas a 320/390/768/900/1024/1440; HTTP, H1/noindex, enlaces/anclas, ausencia de overflow y FAQ por teclado.
+- Demo: envío de formulario incompleto bloqueado por validación; selección de negocio/locales/prioridad, foco al resultado, descarga TXT real comprobada con contenido esperado, invalidación al cambiar selección, regeneración, reset/foco y recarga sin selección. localStorage/sessionStorage vacíos y sin solicitudes HTTP no GET durante el recorrido. Esto valida el flujo probado, no afirma ausencia de logs normales del hosting.
+- Alternativa sin JS visible y herramienta interactiva oculta. No hay backend ni recepción a probar.
+- Regresión home (4 anchos), catálogo (6) y soluciones (28 combinaciones) aprobadas. Capturas precios a 1440 y demo a 390 revisadas.
+- Prueba de home ajustada para navegar a precios desde menú y regresar antes de revisar las FAQ de home.
+- Empaquetado adaptado a doce páginas; comprobación de noindex/robots y ZIP. No se invocó despliegue ni se verificó Worker remoto. Axe/Lighthouse siguen pendientes.
+
+## Borrador de privacidad
+
+Se revisaron los campos tratados por la guía y el código de almacenamiento/envío antes de redactar PRIVACY_DRAFT.md. Se conserva la distinción con registros técnicos de Cloudflare y el tratamiento de WhatsApp. Sin cambios de aplicación después del smoke; no hay enlace activo ni mensajes a probar. No se ha realizado validación legal externa ni se afirma cumplimiento normativo integral.
+
+# 2026-11-04 · Privacidad y WhatsApp
+
+- Check: 21 archivos sin errores, warnings ni hints. Build: trece páginas.
+- scripts/verify-privacy.py: seis anchos, datos confirmados y enlaces, número wa.me 51956832336, codificación de mensaje genérico, rel noopener/noreferrer, no adjuntar selecciones, privacidad accesible y correo exacto. Activación por Enter interceptada en el navegador: sin contactar a WhatsApp ni enviar mensajes. Sin requests externos automáticos. Enlaces disponibles sin JavaScript.
+- scripts/verify-commercial.py adaptado a comprobar forma del enlace externo sin solicitarlo. Guía/descarga/reset y ausencia de envíos siguen aprobados a seis anchos.
+- Regresiones home (4), catálogo (6) y soluciones (28) aprobadas. Revisión visual de privacidad a 390px.
+- Empaquetador actualizado para trece páginas, conserva noindex y exclusión de archivos internos.
+- No se comprobaron bandejas de correo, identidad/titularidad externa, entrega de mensajes o cumplimiento legal. Revisión operativa antes de adoptar política vigente documentada en PRIVACY_REVIEW.md.
+
+# 2026-11-04 · Recursos, contenido editable y /admin
+
+- Check: 31 archivos, cero errores/advertencias/hints. Build: 19 páginas.
+- .pages.yml validado contra lib/config-schema.ts del repositorio público de Pages CMS consultado por HTTPS (el esquema oficial se ejecutó temporalmente con Zod v3 y lista de tipos del registro oficial; no se copió al proyecto). Config de merge y rutas de file/media revisadas en fuente del proveedor.
+- content:check comprueba referencias/IDs, estados con evidencia, contactos, rutas internas, colores, logos dentro de public/media y cobertura de campos por editores. Forma parte de prebuild.
+- scripts/verify-cms.py aprobado: edición de copia en home y FAQ compartida, imagen de prueba en cabecera/pie, pie oscuro/favicon. Administrador a 320/390/768/900/1024/1440 con links de rama correctos y sin credenciales locales. Restaura originales y reconstruye al terminar.
+- Primer ensayo de FAQ falló por usar innerText sobre respuesta cerrada; corregido a textContent para verificar contenido oculto. Segundo ensayo y ensayo final completo aprobados. Los tests de consistencia ya no comparan textos vacíos.
+- verify-resources.py: índice, tres guías y FAQ a seis anchos, enlaces, anclas, títulos únicos, IDs únicos, respuestas compartidas y FAQ sin JS. Capturas de índice/guía y admin generadas.
+- Regresiones verify-privacy, commercial, home, features y solutions: aprobadas tras migrar contenido y menús.
+- Pendiente: login en Pages CMS, permiso GitHub del propietario, subida real de logo y commit alojado. No se accedió a cuentas ni se publicaron cambios. No hay prueba de edición completa alojada aún.
+
+# 2026-11-04 · Auditoría de calidad
+
+Resultados finales y reproducción en QUALITY.md, evidencia en docs/qa.
+
+- Primera prueba sin JS falló: menú oculto. Corregido y test final aprobado.
+- Texto al 200% detectó overflow en navegación/adorno de home. Se identificaron elementos por geometría, se corrigieron y pasó la prueba en cinco rutas.
+- Lighthouse inicial detectó nombre accesible de marca que no incluía leyenda visible y 404 de favicon. Corregidos; última ejecución sin esos fallos.
+- Axe final: 41 comprobaciones, cero infracciones automáticas, con color-contrast incompleto en home preservado. Diagnóstico dirigido de contraste requirió crear contexto explícito de Playwright (primer intento sin él fue rechazado por axe); diagnóstico corregido completado, evidencia y evaluación de colores separadas.
+- Lighthouse final home/catálogo/demo: rendimiento/accesibilidad automática/buenas prácticas 100 en cada ruta, SEO 63 por noindex. Datos de laboratorio, no certificación o CWV de producción.
+- npm run test:navigation: navegación móvil sin JS, salto con foco a main, menú por teclado/Escape, foco y ampliación de texto al 200% aprobados.
+- Regresión de scripts/verify-home.py y verify-resources.py aprobada tras cambios. Check/build y content:check aprobados.
+- No se repitió la prueba mutante del CMS: no se modificaron datos/esquema. Tampoco autenticación real, mensajes, Worker remoto, lector de pantalla o dispositivos físicos.
+
+# 2026-11-04 · Configuración y runtime Worker
+
+- Node 24.22.1, Wrangler 4.157.0 fijado; opciones de assets contrastadas con su config-schema.json instalado.
+- Check, build y content:check aprobados. worker:check con --dry-run ejecutó el build previo, preparó 49 archivos de assets y terminó sin subir ni publicar.
+- Wrangler --local inició correctamente. Request.cf usó valores de desarrollo tras consulta no disponible; no se utiliza en esta web puramente estática.
+- npm run test:worker: 30 comprobaciones de rutas, fuentes comparadas por SHA256, query de redirección conservada, robots/noindex, POST 405 y cuatro páginas en navegador móvil sin errores/overflow. Resultado versionado en docs/qa/worker-report.json.
+- No se accedió a la cuenta de Cloudflare ni se validó Worker remoto, autenticación, DNS o caché de producción. No se repitió Lighthouse/axe porque no se modificaron páginas/estilos.
+
+# 2026-11-04 · Control automático de CMS
+
+- Revisión remota por fetch con refspec explícito: branch de trabajo igual al HEAD local. El primer fetch solo escribió FETCH_HEAD porque no existían refs de seguimiento; se crearon refs explícitas y se comparó el SHA completo. Sin resets ni merges.
+- npm ci --include=dev aprobado desde lockfile. Check (39 archivos) sin errores/advertencias; Worker dry-run aprobado después de reinstalar, con build de 19 páginas.
+- CHROMIUM_PATH=/usr/bin/chromium npm run test:ci aprobado: 19 rutas, 66 destinos/anclas internas, títulos/semántica/overflow, navegación sin JS/teclado/200% y 41 comprobaciones axe sin infracciones automáticas. Incomplete de contraste siguen registrados.
+- Workflow YAML parseado con loader que conserva la clave on; comprobados eventos, permisos read-only, referencias a acciones oficiales v7 y uso exclusivo de dry-run. No equivale a validación de ejecución en GitHub.
+- Se mejoró el chequeo de imágenes para cargar también logos con loading=lazy antes de juzgar sus bytes renderizables. No se hizo una nueva carga de logo oficial.
+- Pipeline alojado, instalación de browser en runner y estado de Actions pendientes de verificar con el SHA remoto. No se ejecutó login del CMS, deploy o Lighthouse nuevo; no cambió la web.
+
+## 2026-11-04 · Guardado real de CMS y marca oficial
+
+El propietario guardó tres imágenes originales y su selección de marca en cuatro commits (1206881, a3803b7, 222f48b, 55f79ee). Se incorporaron con fast-forward, sin sobrescribir trabajo. Dimensiones horizontales corregidas a 7958 × 2005; bytes originales preservados. Cabecera/pie/fav probados en seis anchos con test:brand; hashes versionados. /admin deja de afirmar conexión pendiente. Adorno del hero desplazado 1.5rem para corregir overflow a 900 px.
+
+Check 40 archivos y build 19 páginas aprobados; test:ci local 19 rutas/66 destinos, navegación y axe 41 comprobaciones sin infracciones automáticas. Lighthouse local 100/96/100 rendimiento y SEO 66 por noindex; CLS catálogo 0.119 y peso de PNG quedan pendientes. No certificación WCAG ni métricas de producción. Guardado CMS comprobado mediante Git, sin login del agente. Solo Codex principal.
+
+Rama seguida feat/brand-foundation observada en ed7227d con .pages.yml vacío agregado por el propietario. Simulación de integración sin conflictos conserva el esquema completo; no se hizo integración, push a esa rama, deploy ni cambio DNS. Siguiente paso: autorización explícita para integrar versión validada; antes fetch/revisar cambios concurrentes. Actions alojado y PR existentes sin verificar por API Forbidden.
+
+Worker local con originales: test:worker aprobado, 30 comprobaciones de rutas, hashes de fuentes/logos/favicón, 404 privados, normalización, query, POST 405 y navegador móvil. Servidor detenido después de validar. Request.cf usa fallback local; no es fallo de assets ni validación pública. Check requiere ASTRO_TELEMETRY_DISABLED=1 y Wrangler XDG_CONFIG_HOME=/tmp/sistematicando-config en este entorno de permisos.
+
+## 2026-11-04 · Integración autorizada para Worker
+
+El usuario respondió «Sí. autorizo.» a integrar ec19bb7 en feat/brand-foundation para actualizar el Worker público. Fetch confirmó ambas puntas sin cambios nuevos; merge sin conflictos sobre ed7227d conserva el .pages.yml completo, originales y commits del propietario. Integración directa mediante push normal; sin force-push, DNS, secretos nuevos ni retirada de noindex. No se crea PR. Solo Codex principal.
+
+Pruebas funcionales de ec19bb7 siguen vigentes porque no cambia el árbol de aplicación integrado; se repite worker:check del merge como comprobación de paquete. Comprobación remota: curl al Worker bloqueado por proxy (CONNECT 403), consulta Actions por gh bloqueada (Forbidden). No afirmar publicación exitosa ni CI remoto verde. Siguiente paso exacto: comprobar build de este commit en Cloudflare Deployments y recorrer rutas/logo/admin en el hostname; después continuar desarrollo en feat/feature-catalog sincronizada, sin más publicaciones implícitas.

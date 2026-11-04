@@ -1,0 +1,76 @@
+---
+import pageContent from '../../../content/pages.json';
+const copy = pageContent['pages-funcionalidades-index'];
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import { features, featureGroups, statusLabels } from '../../data/features';
+import { solutions } from '../../data/solutions';
+import '../../styles/solutions.css';
+import '../../styles/features.css';
+---
+<Layout title={copy.seo_title} description={copy.seo_description}>
+  <Header />
+  <main id="contenido" tabindex="-1">
+    <section class="wrap solution-hero feature-hero">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><span aria-current="page">{copy.text_002}</span></nav>
+      <p class="eyebrow">{copy.text_003}</p>
+      <h1>{copy.text_004}<br /><em>{copy.text_005}</em></h1>
+      <p class="solution-intro">{copy.text_006}</p>
+      <aside class="scope-note"><strong>{copy.text_007}</strong><p>{copy.text_008}</p></aside>
+    </section>
+    <section class="wrap feature-catalog" aria-labelledby="catalog-title">
+      <div class="catalog-header"><div><p class="eyebrow">{copy.text_009}</p><h2 id="catalog-title">{copy.text_010}</h2></div><p>{copy.text_011}</p></div>
+      <form class="feature-search" role="search" hidden>
+        <label for="feature-search">{copy.text_012}</label>
+        <div class="search-controls"><input id="feature-search" type="search" placeholder="Por ejemplo: caja, recetas o entradas" autocomplete="off" /><button type="reset">{copy.text_013}</button></div>
+        <p id="search-count" role="status" aria-live="polite" aria-atomic="true">{features.length} módulos en el catálogo.</p>
+      </form>
+      <nav class="feature-jumps" aria-label="Áreas del catálogo">{featureGroups.map(group => <a href={`#area-${group.id}`}>{group.name}</a>)}</nav>
+      <div class="search-empty" hidden><h3>{copy.text_014}</h3><p>{copy.text_015}</p></div>
+      {featureGroups.map(group => <section class="feature-group" id={`area-${group.id}`} aria-labelledby={`${group.id}-title`}>
+        <div class="feature-group-heading"><Icon name={group.icon} /><div><h2 id={`${group.id}-title`}>{group.name}</h2><p>{group.description}</p></div></div>
+        <div class="feature-grid">{features.filter(feature => feature.group === group.id).map(feature => <article class="feature-card" id={feature.id} data-search={`${feature.name} ${feature.description} ${group.name} ${feature.question}`}>
+          <span class="feature-status" data-status={feature.status}>{statusLabels[feature.status]}</span>
+          <h3>{feature.name}</h3><p>{feature.description}</p>
+          <p class="feature-question">{feature.question}</p>
+          <details><summary>{copy.text_016} <span aria-hidden="true">＋</span></summary><p>{feature.limits}</p></details>
+          <div class="feature-sectors"><span>{copy.text_017}</span>{feature.sectors.map(slug => <a href={`/soluciones/${slug}/`}>{solutions.find(solution => solution.slug === slug)?.name}</a>)}</div>
+        </article>)}</div>
+      </section>)}
+    </section>
+    <section class="wrap solution-callout"><div><p class="eyebrow">{copy.text_018}</p><h2>{copy.text_019}<br />{copy.text_020}</h2></div><div><p>{copy.text_021}</p><a class="text-link" href="/soluciones/">{copy.text_022} <Icon /></a><p class="catalog-contact">{copy.text_023} <a href="/solicitar-demo/">{copy.text_024}</a>.</p></div></section>
+  </main>
+  <Footer />
+</Layout>
+<script>
+  const form = document.querySelector<HTMLFormElement>('.feature-search');
+  const input = document.querySelector<HTMLInputElement>('#feature-search');
+  const count = document.querySelector<HTMLElement>('#search-count');
+  const empty = document.querySelector<HTMLElement>('.search-empty');
+  const groups = [...document.querySelectorAll<HTMLElement>('.feature-group')];
+  const cards = [...document.querySelectorAll<HTMLElement>('.feature-card')];
+  const normalize = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es').trim();
+  function filterCatalog() {
+    const words = normalize(input?.value ?? '').split(/\s+/).filter(Boolean);
+    let visible = 0;
+    cards.forEach(card => {
+      card.hidden = !words.every(word => normalize(card.dataset.search ?? '').includes(word));
+      if (!card.hidden) visible++;
+    });
+    groups.forEach(group => { group.hidden = ![...group.querySelectorAll<HTMLElement>('.feature-card')].some(card => !card.hidden); });
+    if (count) count.textContent = `${visible} ${visible === 1 ? 'módulo encontrado' : 'módulos encontrados'}.`;
+    if (empty) empty.hidden = visible !== 0;
+  }
+  if (form && input) {
+    form.hidden = false;
+    form.addEventListener('submit', event => event.preventDefault());
+    input.addEventListener('input', filterCatalog);
+    form.addEventListener('reset', () => { input.value = ''; filterCatalog(); input.focus(); });
+    document.querySelectorAll<HTMLAnchorElement>('.feature-jumps a').forEach(link => link.addEventListener('click', () => {
+      // An area link always reveals its target, including after a zero-result search.
+      input.value = ''; filterCatalog();
+    }));
+  }
+</script>

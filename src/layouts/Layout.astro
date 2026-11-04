@@ -1,7 +1,8 @@
 ---
 import '../styles/home.css';
+import site from '../../content/site.json';
 interface Props { title?: string; description?: string; }
-const { title = 'Sistematicando · Todo tu negocio, bajo control.', description = 'Conoce la propuesta de Sistematicando para organizar la gestión de restaurantes, cafeterías, bares y negocios de hospitalidad.' } = Astro.props;
+const { title = site.defaultTitle, description = site.defaultDescription } = Astro.props;
 ---
 <!doctype html>
 <html lang="es-PE">
@@ -14,7 +15,8 @@ const { title = 'Sistematicando · Todo tu negocio, bajo control.', description 
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_PE" />
+    <link rel="icon" href={site.favicon || 'data:,'} />
     <title>{title}</title>
   </head>
-  <body><slot /></body>
+  <body style={`--coral:${site.coral};--ink:${site.ink}`}><slot /></body>
 </html>

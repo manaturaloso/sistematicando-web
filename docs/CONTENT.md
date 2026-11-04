@@ -7,3 +7,11 @@ La referencia de marca contiene texto editorial interno, no copy comercial final
 Home implementada con copy original, áreas propuestas y FAQ que declara el alcance pendiente de verificar. La demo tiene preparación informativa y canal pendiente, sin datos de contacto inventados. Copy pendiente de aprobación comercial antes del lanzamiento.
 
 Soluciones: seis enfoques originales por sector con prioridades, preguntas de evaluación y límites específicos. Fuente editorial mantenible en src/data/solutions.ts. Nada de este contenido acredita implementación del producto; conservar esa distinción al editar.
+
+Catálogo /funcionalidades/: 14 áreas conceptuales con descripción, pregunta de diagnóstico, límites y sectores. Fuente editorial en features.ts; estados y evidencia compartidos con matriz generada. No interpretar «No verificada» como función disponible.
+
+Precios: información de alcance sin montos. Demo: guía preparada localmente; toda la comunicación distingue generar/descargar de enviar o reservar. No se pide contacto personal ni se declara recepción inexistente.
+
+Contacto confirmado: WhatsApp externo desde demo y correo/WhatsApp de privacidad. Conservar distinción entre abrir un servicio, enviar voluntariamente un mensaje y generar una guía local. Política en revisión con contactos centralizados; no afirmar versión definitiva aprobada ni ausencia de logs de hosting.
+
+Contenido ahora editable en content/*.json mediante Pages CMS. FAQ común y guías originales con secciones/listas; textos por página en pages.json. Editar desde CMS conserva historial Git, pero necesita un nuevo build. ADMIN.md describe alcance y límites.

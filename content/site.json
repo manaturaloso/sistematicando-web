@@ -1,0 +1,16 @@
+{
+  "name": "Sistematicando",
+  "tagline": "Todo tu negocio, bajo control.",
+  "logoLight": "/media/logofullclear.png",
+  "logoDark": "/media/logofulldark.png",
+  "logoAlt": "Sistematicando · Todo tu negocio, bajo control.",
+  "logoWidth": 7958,
+  "logoHeight": 2005,
+  "coral": "#ed735f",
+  "ink": "#2a3139",
+  "defaultTitle": "Sistematicando · Todo tu negocio, bajo control.",
+  "defaultDescription": "Conoce la propuesta de Sistematicando para organizar la gestión de restaurantes, cafeterías, bares y negocios de hospitalidad.",
+  "footerNote": "Versión de desarrollo · Guía local y contacto voluntario",
+  "darkFooter": false,
+  "favicon": "/media/logominiclear.png"
+}

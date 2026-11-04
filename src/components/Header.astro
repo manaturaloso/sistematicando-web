@@ -1,20 +1,23 @@
 ---
 import Icon from './Icon.astro';
-const isSolutions = Astro.url.pathname.startsWith('/soluciones');
+import Brand from './Brand.astro';
+import navigation from '../../content/navigation.json';
+const currentPath = Astro.url.pathname;
 ---
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<a class="skip-link" href="#contenido">{navigation.skipLabel}</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="project-name" href="/" aria-label="Sistematicando, inicio">Sistematicando<span class="project-caption">Proyecto web · Vista de desarrollo</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú <span aria-hidden="true">＋</span></button>
+    <Brand />
+    <button class="menu-toggle" type="button" hidden aria-expanded="false" aria-controls="main-nav">{navigation.menuLabel} <span aria-hidden="true">＋</span></button>
     <nav id="main-nav" aria-label="Principal">
-      <a href="/#propuesta">La propuesta</a><a href="/soluciones/" aria-current={isSolutions ? 'page' : undefined}>Soluciones</a><a href="/#preguntas">Preguntas</a><a class="button small" href="/#conversemos">Preparar una demo <Icon /></a>
+      {navigation.header.map(link => <a href={link.href} class:list={[{ 'button small': link.cta }]} aria-current={currentPath === link.href ? 'page' : link.href !== '/' && currentPath.startsWith(link.href) ? 'location' : undefined}>{link.label}{link.cta && <Icon />}</a>)}
     </nav>
   </div>
 </header>
 <script>
   const button = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const nav = document.querySelector<HTMLElement>('#main-nav');
+  if (button) { button.hidden = false; button.dataset.ready = 'true'; }
   function closeMenu() { button?.setAttribute('aria-expanded', 'false'); }
   button?.addEventListener('click', () => button.setAttribute('aria-expanded', String(button.getAttribute('aria-expanded') !== 'true')));
   nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));

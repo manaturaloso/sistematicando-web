@@ -1,0 +1,311 @@
+{
+  "tool": "axe-core via @axe-core/playwright",
+  "environment": "Local static build; Chromium; not a full WCAG audit",
+  "results": [
+    {
+      "route": "/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "violations": []
+    },
+    {
+      "route": "/404.html",
+      "width": 390,
+      "passes": 20,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/",
+      "width": 390,
+      "passes": 29,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 390,
+      "passes": 46,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/legal/privacidad/",
+      "width": 390,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/precios/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "width": 390,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/",
+      "width": 390,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 390,
+      "passes": 45,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/",
+      "width": 390,
+      "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/bares/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/cafeterias/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/eventos/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/hoteles/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/multisede/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/restaurantes/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 5
+        }
+      ],
+      "violations": []
+    },
+    {
+      "route": "/404.html",
+      "width": 1440,
+      "passes": 20,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/",
+      "width": 1440,
+      "passes": 29,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/",
+      "width": 1440,
+      "passes": 46,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/legal/privacidad/",
+      "width": 1440,
+      "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/precios/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "width": 1440,
+      "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/",
+      "width": 1440,
+      "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/solicitar-demo/",
+      "width": 1440,
+      "passes": 45,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/",
+      "width": 1440,
+      "passes": 35,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/bares/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/cafeterias/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/eventos/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/hoteles/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/multisede/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/soluciones/restaurantes/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "state": "expanded-menu-and-faq",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
+      "violations": []
+    },
+    {
+      "route": "/solicitar-demo/",
+      "state": "generated-guide",
+      "width": 390,
+      "passes": 45,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/",
+      "state": "empty-search",
+      "width": 390,
+      "passes": 45,
+      "incomplete": [],
+      "violations": []
+    }
+  ]
+}

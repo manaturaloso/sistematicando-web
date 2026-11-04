@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import '../../styles/solutions.css';
+import '../../styles/admin.css';
+const branch='feat/feature-catalog';
+const base=`https://app.pagescms.org/manaturaloso/sistematicando-web/${encodeURIComponent(branch)}`;
+const sections=[
+  ['site','Marca y logos','Subir y seleccionar originales, texto alternativo, colores y SEO global.'],
+  ['navigation','Menús y navegación','Textos, orden y destinos de enlaces internos.'],
+  ['contact','Contacto y privacidad','Responsable, domicilio, correo y WhatsApp.'],
+  ['pages-index','Textos de la home','Titulares, párrafos y llamadas a la acción.'],
+  ['solutions','Soluciones','Sectores, enfoques, prioridades y preguntas.'],
+  ['features','Funcionalidades','Módulos, grupos, evidencia y estado de disponibilidad.'],
+  ['faqs','Preguntas frecuentes','Respuestas compartidas por home, precios y FAQ.'],
+  ['guides','Recursos y guías','Contenido, secciones, listas y enlaces relacionados.'],
+  ['pages-precios-index','Precios y comercial','Textos y metadatos; los factores tienen su editor propio.'],
+];
+---
+<Layout title="Administración · Sistematicando" description="Acceso administrativo al CMS conectado a GitHub. Requiere autorización de acceso al repositorio.">
+  <main id="contenido" tabindex="-1" class="wrap admin-page">
+    <a class="text-link" href="/">Volver a la web</a>
+    <p class="eyebrow">Sistematicando / Administración</p><h1>Tu contenido,<br /><em>bajo control.</em></h1>
+    <p class="solution-intro">Edita el sitio con Pages CMS y conserva cada cambio en GitHub. El editor se abre en un servicio externo y requiere acceso autorizado al repositorio.</p>
+    <aside class="scope-note"><strong>Rama de edición: {branch}</strong><p>Guardar crea cambios en GitHub. No actualiza automáticamente la versión pública: la web se reconstruye desde la rama configurada en Cloudflare. Revisa e integra solo cuando quieras publicar.</p></aside>
+    <a class="button" href={base} target="_blank" rel="noopener noreferrer">Abrir el CMS con GitHub</a>
+    <section class="admin-steps" aria-labelledby="setup-title"><h2 id="setup-title">Primera conexión</h2><ol><li>Inicia sesión en Pages CMS con tu cuenta autorizada de GitHub.</li><li>Instala o autoriza su GitHub App únicamente para <strong>manaturaloso/sistematicando-web</strong>.</li><li>Selecciona <strong>{branch}</strong>. Si no aparece, verifica permisos y que la rama esté guardada.</li><li>Para el logo: abre <strong>Logos e imágenes</strong>, sube el original y selecciónalo en <strong>Marca, logos y SEO global</strong>.</li></ol><p>Esta pantalla no contiene contraseñas ni permite cambios anónimos. La autenticación y las escrituras se realizan en el CMS; el acceso depende de los permisos de tu cuenta en GitHub y Pages CMS.</p></section>
+    <section aria-labelledby="sections-title"><h2 id="sections-title">¿Qué quieres editar?</h2><div class="admin-grid">{sections.map(([name,title,text])=><a class="admin-card" href={`${base}/file/${name}`} target="_blank" rel="noopener noreferrer"><h3>{title}</h3><p>{text}</p><span>Abrir editor <Icon /></span></a>)}</div></section>
+    <section class="admin-steps"><h2>Otros textos y medios</h2><p>El CMS incluye editores por página y componente, además de los datos estructurados. Usa sus menús para cambiar textos de demo, privacidad, recursos, cabecera, pie y mockup. Los cambios de código, nuevas integraciones o diseños requieren desarrollo.</p><a class="text-link" href={`${base}/media/images`} target="_blank" rel="noopener noreferrer">Abrir biblioteca de logos e imágenes</a></section>
+  </main>
+</Layout>

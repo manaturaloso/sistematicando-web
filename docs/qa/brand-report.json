@@ -1,0 +1,55 @@
+{
+  "source": "CMS-selected original assets; local static build",
+  "assets": [
+    {
+      "key": "logoLight",
+      "path": "/media/logofullclear.png",
+      "bytes": 301321,
+      "sha256": "977ee50daebb2bb85d198b37dfb14ba680eb8bae7daea83584c8c77f1c4a2183"
+    },
+    {
+      "key": "logoDark",
+      "path": "/media/logofulldark.png",
+      "bytes": 300557,
+      "sha256": "0cddf8c97ad1c084575a4726d63252f2f7fb82281c622ce1cb405fe0f4f5d4ae"
+    },
+    {
+      "key": "favicon",
+      "path": "/media/logominiclear.png",
+      "bytes": 40028,
+      "sha256": "5c52782ba3bb464bb6fcd6e934a4166238bf762869ff738565d1ffd2a5aef75c"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 390,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 768,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 900,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 1024,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "width": 1440,
+      "headerAndFooterLoaded": true,
+      "placeholderRemoved": true
+    }
+  ]
+}

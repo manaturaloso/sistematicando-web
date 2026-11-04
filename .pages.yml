@@ -1,0 +1,2800 @@
+{
+  "media": [
+    {
+      "name": "images",
+      "label": "Logos e imágenes",
+      "input": "public/media",
+      "output": "/media",
+      "extensions": [
+        "png",
+        "jpg",
+        "jpeg",
+        "webp",
+        "svg"
+      ],
+      "rename": "safe"
+    }
+  ],
+  "content": [
+    {
+      "name": "site",
+      "label": "Marca, logos y SEO global",
+      "type": "file",
+      "path": "content/site.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Nombre",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "tagline",
+          "label": "Eslogan",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "logoLight",
+          "label": "Logo para fondo claro",
+          "type": "image",
+          "description": "Sube el original a Medios y selecciónalo. Sin deformar ni recrear el logotipo."
+        },
+        {
+          "name": "logoDark",
+          "label": "Logo para fondo oscuro",
+          "type": "image",
+          "description": "Sube el original a Medios y selecciónalo. Sin deformar ni recrear el logotipo."
+        },
+        {
+          "name": "logoAlt",
+          "label": "Texto alternativo del logo",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "logoWidth",
+          "label": "Ancho original del logo",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "logoHeight",
+          "label": "Alto original del logo",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "coral",
+          "label": "Coral de marca",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ink",
+          "label": "Tinta de marca",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "defaultTitle",
+          "label": "Título SEO por defecto",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "defaultDescription",
+          "label": "Descripción SEO por defecto",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "footerNote",
+          "label": "Nota del pie",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "darkFooter",
+          "label": "Pie con fondo oscuro (usa logo oscuro)",
+          "type": "boolean"
+        },
+        {
+          "name": "favicon",
+          "label": "Icono de pestaña (favicon)",
+          "type": "image",
+          "description": "Sube el original a Medios y selecciónalo. Sin deformar ni recrear el logotipo."
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "label": "Menús y navegación",
+      "type": "file",
+      "path": "content/navigation.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "skipLabel",
+          "label": "Enlace de salto",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "menuLabel",
+          "label": "Botón de menú",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "header",
+          "label": "Menú superior",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Texto del enlace",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "href",
+              "label": "Destino del enlace",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "cta",
+              "label": "Botón destacado",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "footer",
+          "label": "Menú del pie",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "label",
+              "label": "Texto del enlace",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "href",
+              "label": "Destino del enlace",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "label": "Contactos y responsable",
+      "type": "file",
+      "path": "content/contact.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "responsible",
+          "label": "Responsable",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ruc",
+          "label": "RUC",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "address",
+          "label": "Domicilio",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "email",
+          "label": "Correo de privacidad",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp (solo dígitos internacionales)",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "phoneLabel",
+          "label": "Teléfono visible",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "privacyPath",
+          "label": "Ruta de privacidad",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "policyDate",
+          "label": "Fecha de la política",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "whatsappMessage",
+          "label": "Mensaje inicial de WhatsApp (sin adjuntos)",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "label": "Home: sectores",
+      "type": "file",
+      "path": "content/home.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "sectors",
+          "label": "Sectores",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "Ruta (slug)",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "n",
+              "label": "Orden visible",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "Texto",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "tags",
+              "label": "Temas",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "symbol",
+              "label": "Icono",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "modules",
+          "label": "modules",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "n",
+              "label": "Orden visible",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "Texto",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pricing",
+      "label": "Precios: factores de alcance",
+      "type": "file",
+      "path": "content/pricing.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "factors",
+          "label": "Factores de alcance",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Descripción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "detail",
+              "label": "Detalle",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "solutions",
+      "label": "Soluciones por sector",
+      "type": "file",
+      "path": "content/solutions.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Elementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "Ruta (slug)",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "name",
+              "label": "Nombre",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "icon",
+              "label": "Icono",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "intro",
+              "label": "Introducción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "focus",
+              "label": "Enfoque",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "needs",
+              "label": "Prioridades",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "text",
+                  "label": "Texto",
+                  "type": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "areas",
+              "label": "Áreas a evaluar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "questions",
+              "label": "Preguntas de diagnóstico",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "limit",
+              "label": "limit",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "features",
+      "label": "Módulos y estados",
+      "type": "file",
+      "path": "content/features.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "groups",
+          "label": "Grupos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "name",
+              "label": "Nombre",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Descripción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "icon",
+              "label": "Icono",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "items",
+          "label": "Elementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "name",
+              "label": "Nombre",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "group",
+              "label": "Grupo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Descripción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "question",
+              "label": "Pregunta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "sectors",
+              "label": "Sectores",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "dependencies",
+              "label": "Dependencias",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "limits",
+              "label": "Límites y afirmaciones no permitidas",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "status",
+              "label": "Estado de verificación",
+              "type": "select",
+              "required": true,
+              "options": {
+                "values": [
+                  {
+                    "value": "unverified",
+                    "label": "No verificada"
+                  },
+                  {
+                    "value": "proposed",
+                    "label": "Propuesta"
+                  },
+                  {
+                    "value": "planned",
+                    "label": "Planificada"
+                  },
+                  {
+                    "value": "in-development",
+                    "label": "En desarrollo"
+                  },
+                  {
+                    "value": "partial",
+                    "label": "Parcialmente implementada"
+                  },
+                  {
+                    "value": "available",
+                    "label": "Verificada y disponible"
+                  }
+                ]
+              },
+              "description": "No marcar disponible sin evidencia real y revisión comercial."
+            },
+            {
+              "name": "evidence",
+              "label": "Evidencia",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "faqs",
+      "label": "Preguntas frecuentes",
+      "type": "file",
+      "path": "content/faqs.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Elementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "category",
+              "label": "Categoría",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "home",
+              "label": "Mostrar en home",
+              "type": "boolean"
+            },
+            {
+              "name": "question",
+              "label": "Pregunta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "answer",
+              "label": "Respuesta",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "pricing",
+              "label": "Mostrar en precios",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "name": "groups",
+          "label": "Grupos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "guides",
+      "label": "Guías y recursos",
+      "type": "file",
+      "path": "content/guides.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Elementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "Ruta (slug)",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "category",
+              "label": "Categoría",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "intro",
+              "label": "Introducción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "takeaway",
+              "label": "takeaway",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "sections",
+              "label": "Secciones",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "paragraphs",
+                  "label": "Párrafos",
+                  "type": "string",
+                  "list": true
+                },
+                {
+                  "name": "checklist",
+                  "label": "Lista de comprobación",
+                  "type": "string",
+                  "list": true
+                }
+              ]
+            },
+            {
+              "name": "related",
+              "label": "Sectores relacionados",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "feature",
+              "label": "Módulo relacionado",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-404",
+      "label": "Página: 404",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-404",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "404 / Página no encontrada",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Volvamos al inicio.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "La página que buscas no está disponible en esta versión.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Ir al inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-index",
+      "label": "Página: index",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Menos dispersión. Más claridad.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Todo tu negocio,",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "bajo control.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Tu negocio tiene muchas piezas. Nuestra propuesta es ayudarte a verlas como…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Conoce la propuesta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Encuentra tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Pensado para quienes están detrás de cada gran experiencia.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Cada pieza, en su lugar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Un día a día distinto.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Una misma necesidad de orden.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Restaurantes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Cafeterías",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Bares",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Hospitalidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Eventos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "01 / Una forma de verlo mejor",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Tu negocio ya tiene",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "suficientes piezas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Que encajen mejor.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Una venta por aquí. Un inventario por allá. Y tú, tratando de unir los punt…",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Sistematicando nace de una idea sencilla: la gestión debería ayudarte a ent…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "El objetivo es reunir información y procesos para que puedas dedicar más at…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "Explora el ecosistema",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "02 / La visión del producto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "Todo conectado.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_026",
+              "label": "Todo más claro.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_027",
+              "label": "Una propuesta modular que parte de tu operación. Estas son las áreas que bu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_028",
+              "label": "La operación,",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_029",
+              "label": "en el centro.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_030",
+              "label": "Desde lo que ocurre frente al cliente hasta lo que necesitas revisar al ter…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_031",
+              "label": "Visión de producto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_032",
+              "label": "Explorar las áreas de gestión",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_033",
+              "label": "03 / Tu forma de trabajar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_034",
+              "label": "Cada negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_035",
+              "label": "tiene su propio ritmo.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_036",
+              "label": "No todos los negocios necesitan lo mismo. Empezamos por entender qué ocurre…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_037",
+              "label": "Áreas de aplicación propuestas. El alcance para cada sector se confirma ant…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_038",
+              "label": "A tu medida, paso a paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_039",
+              "label": "Primero, lo que necesitas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_040",
+              "label": "Después, lo que sigue.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_041",
+              "label": "La visión es modular: definir una base adecuada para tu negocio y evaluar n…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_042",
+              "label": "Sin una lista interminable de promesas. Con una conversación clara sobre el…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_043",
+              "label": "Conoce cómo definir el alcance",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_044",
+              "label": "04 / Hablemos claro",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_045",
+              "label": "Buenas preguntas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_046",
+              "label": "Respuestas directas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_047",
+              "label": "Lo que conviene saber antes de dar el siguiente paso.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_048",
+              "label": "Ver todas las preguntas",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_049",
+              "label": "Explorar las guías",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_050",
+              "label": "El siguiente paso empieza contigo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_051",
+              "label": "Cuéntanos cómo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_052",
+              "label": "se mueve tu negocio.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_053",
+              "label": "Para una futura demostración útil, lo primero es entender qué quieres organ…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_054",
+              "label": "Contacto voluntario por WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_055",
+              "label": "Prepara tu próxima conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_056",
+              "label": "Tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_057",
+              "label": "Tipo de negocio y cantidad de locales.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_058",
+              "label": "Tu prioridad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_059",
+              "label": "Qué proceso te gustaría ordenar primero.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_060",
+              "label": "Tu punto de partida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_061",
+              "label": "Cómo lo gestionas hoy y qué te gustaría mejorar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_062",
+              "label": "Prepara tu contexto y consulta por WhatsApp desde la página de demo. La guí…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_063",
+              "label": "Preparar mi guía de demo",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-soluciones-sector",
+      "label": "Página: soluciones-sector",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-soluciones-sector",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Soluciones",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Explorar las prioridades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "01 / Lo que importa en tu día a día",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Necesidades que conviene revisar, sin asumir que todas requieren la misma h…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "02 / Definamos el alcance",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Una conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "con las preguntas correctas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Qué falta confirmar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Antes del siguiente paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Tu contexto primero.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Una recomendación útil necesita conocer tu operación y verificar el alcance…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Puedes preparar una guía local y contactar voluntariamente por WhatsApp des…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Preparar una futura demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Otras formas de trabajar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Explora otros enfoques.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Ver todos los sectores",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-soluciones-index",
+      "label": "Página: soluciones",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-soluciones-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Soluciones",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Tu operación es el punto de partida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Distintos negocios.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Una visión más clara.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Cada equipo tiene su ritmo, sus prioridades y su forma de atender. Explora …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Enfoques de solución en evaluación. Las capacidades del producto deben conf…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Encuentra tu punto de partida.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Sin promesas de más",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Primero, entender.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Después, recomendar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Elegir herramientas empieza por saber qué necesitas resolver y comprobar qu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Preparar una futura demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-funcionalidades-index",
+      "label": "Página: funcionalidades",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-funcionalidades-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Funcionalidades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "De una necesidad a una visión conectada",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Las piezas que",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "dan forma al orden.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Ventas, recursos, personas y decisiones. Explora las áreas que contempla Si…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Una propuesta con el alcance por confirmar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Este catálogo describe módulos conceptuales. «No verificada» significa que …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Explora por necesidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "¿Qué quieres organizar?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Empieza por un área o busca un módulo.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Buscar en el catálogo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Limpiar búsqueda",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "No encontramos ese término.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Prueba con otra palabra o limpia la búsqueda para ver todos los módulos.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Qué falta confirmar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Enfoques relacionados",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Cada negocio, su punto de partida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Las prioridades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "marcan el camino.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Elige tu sector para conectar estas áreas con las necesidades de tu operaci…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "Explorar soluciones",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "Puedes preparar una guía local y contactar por WhatsApp en",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "Preparar una demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-preguntas-frecuentes-index",
+      "label": "Página: preguntas-frecuentes",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-preguntas-frecuentes-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Preguntas frecuentes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Hablemos claro",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Buenas preguntas.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Un camino más claro.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Lo que conviene saber sobre la propuesta, sus límites y el siguiente paso.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Para tu siguiente paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Lleva tu contexto.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Prepara una guía local o consulta por WhatsApp. Abrir el servicio no envía …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Preparar una demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-precios-index",
+      "label": "Página: precios",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-precios-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Precios",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Un alcance claro, desde el inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Primero tu negocio.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Después, la propuesta.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Una propuesta útil empieza por entender cómo trabajas. Antes de hablar de u…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Tarifas y planes pendientes de aprobación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "No hay precios oficiales publicados. Tampoco se han definido inclusiones, l…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Preparar mi conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Lo que conviene poner sobre la mesa",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Cuatro puntos para",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "definir un buen alcance.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Antes de elegir",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Que cada condición",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "quede por escrito.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Una futura propuesta debe permitirte saber qué contratas y con qué alcance.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Módulos y funciones disponibles, con sus límites.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Unidad de cobro, impuestos y periodicidad.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Costos de implementación, integraciones y servicios adicionales, si corresp…",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Soporte, acompañamiento, permanencia y cancelación.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Preguntas comerciales",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "Sin letra pequeña",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "inventada.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "El siguiente paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "Ordena tus prioridades.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_026",
+              "label": "Prepara una guía de tu operación para una futura conversación comercial. Si…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_027",
+              "label": "Preparar mi guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-legal-privacidad",
+      "label": "Página: legal-privacidad",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-legal-privacidad",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Política de privacidad.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Versión para revisión antes del lanzamiento oficial. Describe el sitio come…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "1. Responsable y contacto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Para consultas y ejercicio de derechos:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "o WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": ". Sistematicando es el nombre del proyecto comercial.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "2. Información al navegar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "El sitio se entrega mediante Cloudflare. Para procesar las solicitudes web,…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "El código actual del sitio no incorpora publicidad, píxeles de seguimiento …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Consulta la",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "política de privacidad de Cloudflare (otra pestaña)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "3. Guía local de demostración",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Las selecciones de tipo de negocio, locales y prioridad se usan en tu naveg…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Si descargas el archivo, la copia permanece en tu dispositivo bajo tu contr…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "4. Contacto voluntario por WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Los enlaces abren un servicio externo. Abrir el enlace no envía automáticam…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Comparte solo lo necesario para tu consulta. No envíes contraseñas, documen…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "WhatsApp realiza su propio tratamiento conforme a su",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "política de privacidad (otra pestaña)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": ". El uso de WhatsApp es voluntario; también puedes usar el correo de contac…",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "5. Finalidades y carácter voluntario",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "La información se utiliza para entregar y proteger el sitio, responder las …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "La atención se limita a las gestiones que solicites y las obligaciones apli…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_026",
+              "label": "6. Proveedores y transferencias",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_027",
+              "label": "Cloudflare participa en la entrega del sitio. WhatsApp participa cuando eli…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_028",
+              "label": "No se afirma almacenamiento exclusivo en Perú. Esta implementación no conec…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_029",
+              "label": "7. Conservación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_030",
+              "label": "El sitio no conserva en un servidor las selecciones de la guía. Tú decides …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_031",
+              "label": "El criterio previsto para las conversaciones es conservar únicamente lo nec…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_032",
+              "label": "8. Derechos y consultas de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_033",
+              "label": "Puedes solicitar información y ejercer los derechos que correspondan, inclu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_034",
+              "label": "Las solicitudes se atenderán conforme a la Ley N.º 29733 y la normativa per…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_035",
+              "label": "9. Seguridad, menores y cambios",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_036",
+              "label": "La web usa HTTPS en el hostname de revisión. Ningún canal permite garantiza…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_037",
+              "label": "Esta versión se revisará antes del lanzamiento oficial para confirmar las p…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-recursos-index",
+      "label": "Página: recursos",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-recursos-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Recursos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Ideas para el día a día",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Un poco de claridad.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Un buen siguiente paso.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Guías para poner en orden una conversación, revisar un proceso o preparar u…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Guías para empezar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Leer guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Contenido editorial de orientación. No es un manual del software ni acredit…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Respuestas para seguir",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "¿Tienes otra pregunta?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Consulta el alcance del producto, las condiciones pendientes y cómo funcion…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Ver preguntas frecuentes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-solicitar-demo-index",
+      "label": "Página: solicitar-demo",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-solicitar-demo-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Preparar demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Una buena conversación empieza con contexto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Tu negocio tiene",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "mucho que contar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Identifica qué quieres ordenar primero. Esta guía te ayuda a preparar una f…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Una guía local, una conversación a tu elección",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "La guía se genera en tu navegador: no se envía ni se guarda entre visitas. …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Tu punto de partida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Prepara tu guía.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Elige tu contexto y descarga un resumen para conservarlo. No incluye una co…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Qué conviene tener claro",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "El tipo de operación y la cantidad de locales.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "El proceso que te gustaría ordenar primero.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Las preguntas sobre alcance, condiciones y acompañamiento.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "La guía interactiva requiere JavaScript. Puedes usar la lista anterior para…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Tipo de negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Selecciona una opción",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Otra operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Cantidad de locales",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Selecciona una opción",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "1 local",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "2 a 5 locales",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "6 o más locales",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "Por definir",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_026",
+              "label": "Tu prioridad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_027",
+              "label": "Selecciona una opción",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_028",
+              "label": "Atención y ventas",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_029",
+              "label": "Inventario y costos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_030",
+              "label": "Reservas y clientes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_031",
+              "label": "Equipo y reportes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_032",
+              "label": "Eventos y accesos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_033",
+              "label": "Definir mis necesidades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_034",
+              "label": "Estas selecciones solo se usan para preparar el documento en este navegador…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_035",
+              "label": "Generar mi guía local",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_036",
+              "label": "Empezar de nuevo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_037",
+              "label": "Tu guía está preparada",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_038",
+              "label": "No se ha enviado una solicitud ni reservado una demo.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_039",
+              "label": "Descargar guía (.txt)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_040",
+              "label": "Mientras preparas tu conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_041",
+              "label": "Explora a tu ritmo.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_042",
+              "label": "Revisa las áreas conceptuales y el enfoque de tu sector. Disponibilidad y c…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_043",
+              "label": "Ver funcionalidades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_044",
+              "label": "Entender la propuesta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-recursos-guias-slug",
+      "label": "Página: recursos-guias-slug",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-recursos-guias-slug",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Recursos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Orientación editorial. Adapta los pasos a tu operación; no se prometen resu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "En esta guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Con qué te puedes quedar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Conecta con tu contexto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Explora el enfoque de tu negocio.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Puedes revisar el área de",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "gestión relacionada",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "sin asumir que el módulo esté disponible.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Volver a recursos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Preparar una conversación",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "components-Footer",
+      "label": "Página: Componente: Footer",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "components-Footer",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_008",
+              "label": "Hecho para pensar en tu negocio.",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "components-ProductConcept",
+      "label": "Página: Componente: ProductConcept",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "components-ProductConcept",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Una mirada a tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Ejemplo visual",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "TU NEGOCIO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Todo empieza con orden.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "SN",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Ventas",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "En perspectiva",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Una visión más clara",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "En sintonía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Un equipo conectado",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "El pulso de tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Vista ilustrativa",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Información dispersa",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Una visión compartida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Ventas · Equipo · Inventario",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Diseño conceptual. No es una captura del software ni confirma funciones dis…",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "components-WhatsAppContact",
+      "label": "Página: Componente: WhatsAppContact",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "components-WhatsAppContact",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Conversemos sobre tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Contacta por WhatsApp.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Al abrir WhatsApp, ese servicio procesará la conexión según su política. Tú…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Abrir WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Leer política de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Se abre en otra pestaña. Revisa la política antes de compartir información.…",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "content": {
+      "merge": true
+    }
+  }
+}

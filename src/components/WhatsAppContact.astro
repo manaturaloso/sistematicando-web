@@ -1,0 +1,14 @@
+---
+import pageContent from '../../content/pages.json';
+const copy = pageContent['components-WhatsAppContact'];
+import { contact, whatsappUrl } from '../data/contact';
+import Icon from './Icon.astro';
+---
+<section class="whatsapp-contact" aria-labelledby="whatsapp-heading">
+  <p class="eyebrow">{copy.text_001}</p>
+  <h2 id="whatsapp-heading">{copy.text_002}</h2>
+  <p>Puedes consultar por una demostración en el {contact.phoneLabel}. La atención y la coordinación se realizan en una conversación externa.</p>
+  <p>{copy.text_003}</p>
+  <div class="commercial-links"><a class="button whatsapp-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-describedby="whatsapp-notice">{copy.text_004} <Icon /></a><a class="text-link" href={contact.privacyPath}>{copy.text_005}</a></div>
+  <p id="whatsapp-notice" class="local-note">{copy.text_006}</p>
+</section>
