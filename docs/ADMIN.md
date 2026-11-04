@@ -68,3 +68,5 @@ El usuario confirmó la conexión y los commits reales la corroboran. La integra
 El CMS conserva los originales en public/media. Brand.astro genera PNGs de presentación (256/512/768 px) al compilar y sirve srcset/sizes para reducir descarga según pantalla; nunca reemplaza el archivo fuente. SVG conserva ruta directa y favicon no cambia. Con un nuevo raster o selección de variante oscura, el siguiente build actualiza los derivados automáticamente. Se usa la proporción real del raster importado; los campos de dimensiones siguen aplicándose al fallback directo. No editar ni subir derivados /_astro al CMS: son salida de build.
 
 Prueba actual: npm run test:brand con las selecciones PNG oficiales actuales; hashes originales, seis anchos y DPR1/2. Resumen qa/brand-report.json.
+
+El flujo de calidad también comprueba automáticamente la marca configurada después de guardar en feat/feature-catalog. En Actions → artefacto site-quality-<SHA>, brand-report.json registra hashes originales y entrega por ancho/DPR; los informes de ejecuciones previas se eliminan antes de validar. Usar el informe del commit actual. El flujo no publica.

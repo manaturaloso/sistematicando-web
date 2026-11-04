@@ -54,3 +54,5 @@ El menú se inicializa con un script inline pequeño, encapsulado y colocado tra
 Corrección FAQ: texto siempre opaco durante appear, animación de posición conservada. Caso congelado al 25% detecta el bajo contraste de la versión anterior y pasa con la corregida. Detalles y evidencia del fallo alojado en CI.md y QA.md. Resultado alojado del nuevo commit pendiente de observar.
 
 Logo: originales intactos (hashes) y derivados de build; prueba de seis anchos a DPR1/2, 13651/31241 bytes frente a 301321. Última medición Lighthouse con derivados responsive en las tres rutas: rendimiento/accesibilidad/buenas prácticas 100, SEO 66 (noindex). Resumen completo en qa/performance-report.json; no son datos de producción.
+
+CI incluye ahora test:brand automáticamente dentro de test:ci; permite las variantes y campos opcionales del CMS y contrasta cada logo con su original. Artefacto de Actions incluye brand-report.json. Esta ampliación no cambia el producto ni sus métricas Lighthouse.

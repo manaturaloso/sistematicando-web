@@ -26,7 +26,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Remove evidence from older runs
-        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json
+        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
@@ -39,7 +39,7 @@ jobs:
         run: npm run worker:check
       - name: Install browser for local checks
         run: npx --no-install playwright install --with-deps chromium
-      - name: Check pages, navigation and accessibility
+      - name: Check pages, navigation, branding and accessibility
         run: npm run test:ci
       - name: Save build and quality evidence
         if: always()
@@ -50,5 +50,6 @@ jobs:
             dist/
             docs/qa/site-report.json
             docs/qa/accessibility-report.json
+            docs/qa/brand-report.json
           if-no-files-found: warn
           retention-days: 7
