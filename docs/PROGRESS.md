@@ -53,11 +53,11 @@ Evidencia operativa del SaaS; precios y condiciones; adopción final y revisión
 
 ## Siguiente paso exacto
 
-1. Revisar RELEASE_REVIEW.md (aplicación cfad1a7 más documentación de entrega). Solicitar autorización explícita para integrar feat/feature-catalog en feat/brand-foundation y actualizar Worker. No publicar por un «sigamos» de desarrollo.
-2. Después de autorización: fetch/revisar cambios concurrentes, integrar sin reescritura (fast-forward si las puntas no cambian), push y comprobar referencias. Objetivo observado 9a017af; integración simulada limpia y dry-run aprobado.
-3. Comprobar Cloudflare Build/SHA/Ready y recorrer contacto, admin, catálogo, demo, privacidad, home y 404. API local bloquea consulta remota; usar evidencia del dashboard si sigue igual. CI actual no confirmado; verde histórico de 296dc05 confirmado por propietario.
-4. Seguir con revisión manual/dispositivos/lector y definición comercial/legal; mantener noindex/DNS. Módulos sin verificar y tarifas sin aprobar.
-5. Consultar git log -1 y git ls-remote para SHA de entrega documental. Autor Joel Alejandro Yañez Caballero; solo Codex principal. Sin PR creada, existentes no verificadas por API.
+1. Autorización explícita recibida para 0041ff9 más registro documental de autorización, aplicación cfad1a7. Integración por fast-forward en feat/brand-foundation y envío Git; consultar SHA final con git log -1 y git ls-remote en ambas ramas.
+2. Comprobar Cloudflare → sistematicando-web → Deployments → Build: SHA final de esta entrega, estado Ready y versión activa. El resultado remoto no se da por aprobado por el éxito del push. Si el entorno mantiene bloqueo CONNECT 403/API Forbidden, usar evidencia del dashboard del propietario.
+3. Recorrer /, /contacto/, /admin/, /funcionalidades/, /solicitar-demo/, /legal/privacidad/ y ruta inexistente. Comprobar canales y menú sin enviar mensajes reales.
+4. Continuar desarrollo en feat/feature-catalog sincronizada; ediciones CMS siguen allí. Mantener DNS/noindex. Revisar prácticas de privacidad, evidencia SaaS, tarifas y dispositivos/lector. La autorización actual no se extiende a publicaciones futuras.
+5. Autor Joel Alejandro Yañez Caballero; agente Codex principal. Sin PR creada, existentes no verificadas por API. Información completa de la entrega en RELEASE_REVIEW.md.
 
 ## Datos comerciales aplicados
 
@@ -156,3 +156,11 @@ Revisión concreta en RELEASE_REVIEW.md: aplicación cfad1a7 contra Worker 9a017
 Consulta Actions del candidato cfad1a7 bloqueada por Forbidden; verde de 296dc05 confirmado por el propietario no prueba este último. Candidato de entrega añade solo este registro y revisión sobre cfad1a7. Rama feat/feature-catalog; objetivo feat/brand-foundation sigue 9a017af, sin merge/push/deploy a esa rama. Sin PR creada, existentes sin verificar. Autor Joel Alejandro Yañez Caballero; agente Codex principal, sin subagentes.
 
 Siguiente paso exacto: autorización explícita para integrar la entrega descrita y actualizar el Worker público; después fetch, integración segura, push y verificación de build/SHA/versión activa y rutas. Esta confirmación se necesita por la instrucción del propietario de no publicar sin autorización; la aprobación anterior correspondía a 9a017af. Mantener DNS/noindex y pendientes comerciales/legales/dispositivos.
+
+## 2026-11-04 · Actualización del Worker autorizada
+
+El propietario respondió «Sí, autorizo.» a integrar la entrega 0041ff9 de feat/feature-catalog en feat/brand-foundation y actualizar el Worker público. Fetch confirmó origen 0041ff9 y destino 9a017af sin cambios concurrentes. Aplicación idéntica a cfad1a7 (comparadas rutas de código, contenido, scripts, recursos, dependencias, configuración CMS/Worker/CI); solo documentación añadida. Se integra mediante fast-forward, sin reescribir historial ni crear PR.
+
+Validaciones vigentes del código aprobado: check/build y dry-run (20 páginas, 59 assets); suite 20 rutas/68 destinos, marca/editorial/contactos y axe 44 comprobaciones sin infracciones. No se repiten pruebas para registrar la autorización. Identidad efectiva autor/committer Joel Alejandro Yañez Caballero. Solo Codex principal, sin subagentes. No se cambian DNS/noindex ni se añaden bindings/secretos.
+
+El push de feat/brand-foundation permite activar Workers Builds. Resultado de despliegue/versión activa pendiente de verificar; no equivale a éxito por guardar Git. Revisar el SHA final con git log -1 en ambas ramas y git ls-remote. No se creó PR; existentes y Actions remoto no verificables por API Forbidden. Siguiente paso: comprobar en Cloudflare el build de ese SHA, Ready y versión activa; recorrer home/contacto/admin/catálogo/demo/privacidad/404. Mantener las ediciones futuras en feat/feature-catalog; esta autorización es para esta entrega concreta.

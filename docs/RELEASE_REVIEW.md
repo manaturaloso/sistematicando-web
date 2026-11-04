@@ -1,6 +1,6 @@
 # Revisión de integración · 4 de noviembre de 2026
 
-Estado: preparada; pendiente de autorización explícita para actualizar el Worker.
+Estado: autorización explícita recibida («Sí, autorizo.»). Integración por fast-forward y push a la rama del Worker autorizados; resultado del build/despliegue por verificar.
 
 ## Versión concreta
 
@@ -8,7 +8,7 @@ Estado: preparada; pendiente de autorización explícita para actualizar el Work
 - Origen: feat/feature-catalog. El commit posterior de esta revisión solo añade documentación; consultar git log -1 para el SHA de entrega.
 - Destino: feat/brand-foundation, observado en 9a017af54e5f24367f6261b97c2004435bf2c0fc.
 - Worker: https://sistematicando-web.manaturaloso.workers.dev.
-- Fetch sin novedades concurrentes; destino antecesor del candidato. Merge-tree sin conflictos. No se ha movido la rama seguida por Cloudflare.
+- Fetch sin novedades concurrentes; destino antecesor del candidato. Merge-tree sin conflictos. Integración fast-forward autorizada. Consultar el SHA final con git log -1; el registro de autorización solo modifica documentación.
 
 ## Qué cambiaría en la web
 
@@ -38,7 +38,7 @@ Se mantiene noindex/robots. Privacidad requiere revisión/adopción de práctica
 
 ## Siguiente paso exacto
 
-1. Obtener autorización de integración de esta entrega en feat/brand-foundation; el push puede activar Workers Builds y actualizar la URL pública.
+1. Autorización recibida para esta entrega. El push de integración a feat/brand-foundation puede activar Workers Builds y actualizar la URL pública.
 2. Con autorización, fetch de ambas ramas y revisar cualquier cambio concurrente. Si las puntas siguen como aquí, integrar por fast-forward sin reescribir historial y verificar ambas referencias remotas. Conservar la rama del CMS en feat/feature-catalog y sincronizar documentación.
 3. Comprobar Cloudflare Deployments/Build: SHA de integración, estado Ready y versión activa. Un ID de versión de Cloudflare no es el SHA Git.
 4. Recorrer /, /contacto/, /admin/, /funcionalidades/, /solicitar-demo/, /legal/privacidad/ y una ruta inexistente. Comprobar logo, canales, menú y 404; no enviar mensajes reales durante pruebas.
