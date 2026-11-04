@@ -50,3 +50,5 @@ Logos originales descargables; evidencia del SaaS; precios y condiciones; recept
 ## Respuesta comercial recibida durante esta entrega
 
 El usuario indicó WhatsApp +956832336 y pidió generar una política de privacidad. Se redactó docs/PRIVACY_DRAFT.md para web comercial y contacto voluntario por WhatsApp; pendientes de confirmar código de país, identidad/domicilio del responsable, correo y decisiones de conservación/proveedores. Se preguntó si el número corresponde a Perú +51 956 832 336. No se crea enlace hasta confirmarlo. Ver PRIVACY_REVIEW.md para finalizar; este paso tiene prioridad sobre la recepción real de demos. La guía local sigue sin enviar solicitudes.
+
+Actualización posterior: número confirmado como +51 956 832 336 (Perú); responsable JOEL ALEJANDRO YAÑEZ CABALLERO, RUC 10477365928. Ya incorporados al borrador. Pendiente domicilio y correo o confirmación de WhatsApp como canal de privacidad. No volver a preguntar nombre, RUC ni código de país.

@@ -66,3 +66,5 @@
 - El teléfono recibido no incluye código de país inequívoco. Se pide confirmación antes de construir wa.me para evitar dirigir consultas a un destinatario distinto.
 - El borrador separa web, hosting técnico, guía local y contacto voluntario por WhatsApp. No afirma que el hosting carezca de logs ni autoriza marketing por contactar.
 - Sin enlace externo activo, política pública definitiva o mensajes enviados hasta resolver datos esenciales. El borrador se guarda junto a la continuidad en GitHub.
+
+- Respuesta aplicada: teléfono de Perú confirmado y responsable/RUC incorporados. No volver a pedirlos. Se pidió únicamente domicilio y canal de privacidad aún faltantes; no se activa recepción como si la política estuviera cerrada.

@@ -4,7 +4,7 @@ Fecha de preparación: 2026-11-04. Documento de trabajo; no es una política pub
 
 ## 1. Responsable del tratamiento
 
-Sistematicando es el nombre del proyecto comercial. El responsable legal de los datos es **[pendiente: nombre completo o razón social]**, con domicilio en **[pendiente: domicilio aplicable]**. El canal para consultas y ejercicio de derechos es **[pendiente: correo de privacidad]**.
+Sistematicando es el nombre del proyecto comercial. El responsable legal de los datos es **JOEL ALEJANDRO YAÑEZ CABALLERO**, RUC **10477365928**, con domicilio en **[pendiente: domicilio aplicable]**. El canal para consultas y ejercicio de derechos es **[pendiente: correo de privacidad]**.
 
 No se presume una razón social, RUC ni identidad del responsable a partir del nombre de una cuenta de GitHub o Cloudflare.
 
@@ -30,7 +30,7 @@ El enlace abrirá WhatsApp, servicio de un tercero, para que el visitante decida
 
 Si el visitante envía un mensaje, el responsable podrá conocer su número de teléfono, nombre de perfil y el contenido compartido, además de los datos del negocio que facilite voluntariamente. Se solicita no enviar documentos de identidad, contraseñas, datos bancarios, información sensible ni datos personales de clientes o trabajadores por este canal.
 
-WhatsApp realiza su propio tratamiento conforme a sus condiciones y política de privacidad: https://www.whatsapp.com/legal/privacy-policy. El uso de ese servicio es voluntario. **[Pendiente: confirmar número con código de país, tipo de cuenta WhatsApp/Business, personas con acceso, y tratamientos adicionales que use el negocio.]**
+WhatsApp realiza su propio tratamiento conforme a sus condiciones y política de privacidad: https://www.whatsapp.com/legal/privacy-policy. El uso de ese servicio es voluntario. El número comercial confirmado es **+51 956 832 336 (Perú)**. **[Pendiente: confirmar tipo de cuenta WhatsApp/Business, personas con acceso y tratamientos adicionales que use el negocio.]**
 
 ## 6. Finalidades
 

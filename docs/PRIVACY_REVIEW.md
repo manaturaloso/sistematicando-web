@@ -2,15 +2,15 @@
 
 ## Solicitud actual del usuario
 
-Canal indicado: WhatsApp `+956832336`. Falta confirmar el código de país; se preguntó si corresponde a Perú `+51 956 832 336`. No normalizar ni publicar un enlace wa.me con una suposición: podría dirigir datos a un tercero.
+Canal confirmado por el usuario: WhatsApp **+51 956 832 336 (Perú)**. Identidad confirmada: **JOEL ALEJANDRO YAÑEZ CABALLERO**, RUC **10477365928**. No se ha enviado ningún mensaje.
 
 El usuario pidió generar la política. Se redactó el borrador completo en PRIVACY_DRAFT.md. No hay política pública anterior aprobada.
 
 ## Información necesaria para finalizar
 
-1. Confirmar teléfono internacional.
-2. Nombre o razón social del responsable y domicilio aplicable; no inventar identidad, RUC o dirección.
-3. Correo de atención de privacidad y procedimiento de derechos.
+1. Teléfono internacional ya confirmado: +51 956 832 336.
+2. Nombre y RUC confirmados; falta domicilio aplicable. No inventar dirección.
+3. Correo de atención de privacidad o confirmación de uso del WhatsApp para ese fin, más procedimiento de derechos. Se preguntó al usuario.
 4. Definir conversación comercial, conservación y personal con acceso; confirmar WhatsApp Business y herramientas vinculadas.
 5. Revisar configuración real de Cloudflare, registros, proveedores y transferencias.
 6. Confirmar finalidad/base jurídica y requisitos aplicables en Perú, incluidos registros o medidas que correspondan al responsable.
