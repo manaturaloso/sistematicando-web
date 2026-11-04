@@ -1,5 +1,7 @@
 # Revisión de integración · 4 de noviembre de 2026
 
+> Revisión histórica de la entrega de contacto/CMS, integrada en 96bd165. Después se envió af35674 con identificación de versión. Para estado actual consultar [PROGRESS.md](PROGRESS.md); esta revisión no autoriza otra publicación.
+
 Estado: autorización explícita recibida («Sí, autorizo.»). Integración por fast-forward y push a la rama del Worker autorizados; resultado del build/despliegue por verificar.
 
 ## Versión concreta

@@ -1,5 +1,7 @@
 # Worker estático: preparación y despliegue
 
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+
 ## Estado real
 
 El usuario desplegó una versión anterior desde `feat/brand-foundation` en **https://sistematicando-web.manaturaloso.workers.dev** y confirmó que la web aparecía. La captura mostraba Workers (no Pages), build command None y deploy `npx wrangler deploy`.

@@ -1,5 +1,7 @@
 # Validación · 2026-11-03
 
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+
 ## Ejecutado y aprobado
 
 - fontTools.TTFont: lectura de tablas name y fvar de ambos TTF; ejes y licencias registrados en BRAND.md.

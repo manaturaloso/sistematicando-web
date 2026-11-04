@@ -1,5 +1,7 @@
 # Validación automática de ediciones del CMS
 
+> Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Última integración Git enviada al Worker: af35674; resultado remoto pendiente de confirmar. Este documento conserva también registros anteriores.
+
 ## Implementado
 
 Workflow `.github/workflows/quality.yml`, nombre **Site and CMS quality**.
