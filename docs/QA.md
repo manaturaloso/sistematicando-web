@@ -113,3 +113,11 @@ Resultados finales y reproducción en QUALITY.md, evidencia en docs/qa.
 - npm run test:navigation: navegación móvil sin JS, salto con foco a main, menú por teclado/Escape, foco y ampliación de texto al 200% aprobados.
 - Regresión de scripts/verify-home.py y verify-resources.py aprobada tras cambios. Check/build y content:check aprobados.
 - No se repitió la prueba mutante del CMS: no se modificaron datos/esquema. Tampoco autenticación real, mensajes, Worker remoto, lector de pantalla o dispositivos físicos.
+
+# 2026-11-04 · Configuración y runtime Worker
+
+- Node 24.22.1, Wrangler 4.157.0 fijado; opciones de assets contrastadas con su config-schema.json instalado.
+- Check, build y content:check aprobados. worker:check con --dry-run ejecutó el build previo, preparó 49 archivos de assets y terminó sin subir ni publicar.
+- Wrangler --local inició correctamente. Request.cf usó valores de desarrollo tras consulta no disponible; no se utiliza en esta web puramente estática.
+- npm run test:worker: 30 comprobaciones de rutas, fuentes comparadas por SHA256, query de redirección conservada, robots/noindex, POST 405 y cuatro páginas en navegador móvil sin errores/overflow. Resultado versionado en docs/qa/worker-report.json.
+- No se accedió a la cuenta de Cloudflare ni se validó Worker remoto, autenticación, DNS o caché de producción. No se repitió Lighthouse/axe porque no se modificaron páginas/estilos.

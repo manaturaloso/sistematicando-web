@@ -101,3 +101,13 @@
 - Se conservan resultados incomplete de contraste y evaluación manual, sin declarar conformidad completa. Noindex/robots no se retiran para maquillar puntuaciones SEO.
 - Resultados Lighthouse son laboratorio local con simulación móvil, no usuarios reales ni producción. Se guardan resúmenes y comandos reproducibles.
 - Solo Codex principal. Sin cambios de contenido comercial, CMS alojado, DNS o rama del Worker.
+
+## 2026-11-04 · Worker reproducible sin despliegue
+
+- Wrangler 4.157.0 fijado y configuración de assets estáticos solo dist. Sin main/SSR o bindings innecesarios: la web no necesita backend para este flujo.
+- Rutas con barra final y 404-page; no se usa fallback SPA que convierta rutas inexistentes en éxitos 200.
+- Build previo versionado ejecuta Astro y content:check con telemetría desactivada, propaga errores y evita depender de dist persistido. Observación local de src/content/public.
+- Se ofrecen comandos de dry-run/dev/test; no script de publicación automática ni cambios del Worker/DNS.
+- Runtime local verificado con estado HTTP, fuentes por hash, rutas internas excluidas y navegador móvil. Warning de Request.cf predeterminado documentado, sin relevancia funcional para assets estáticos; no equivale a validación de producción.
+- DEPLOYMENT.md se reescribe para priorizar el Worker real y separar Pages histórico, configuración preparada y publicación no realizada.
+- Solo Codex principal; rama desplegada sin cambios.

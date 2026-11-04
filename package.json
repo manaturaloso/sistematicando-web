@@ -17,7 +17,10 @@
     "prebuild": "npm run content:check",
     "audit:a11y": "node scripts/audit-accessibility.mjs",
     "audit:performance": "node scripts/audit-performance.mjs",
-    "test:navigation": "node scripts/verify-navigation.mjs"
+    "test:navigation": "node scripts/verify-navigation.mjs",
+    "worker:check": "wrangler deploy --dry-run --outdir .wrangler/dry-run",
+    "worker:dev": "wrangler dev --local --ip 127.0.0.1 --port 8787",
+    "test:worker": "node scripts/verify-worker.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",
@@ -27,6 +30,7 @@
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.64.1",
-    "lighthouse": "13.6.0"
+    "lighthouse": "13.6.0",
+    "wrangler": "4.157.0"
   }
 }

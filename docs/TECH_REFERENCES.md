@@ -15,3 +15,5 @@ Astro 7.4.5 (MIT), @astrojs/check 0.9.12 y TypeScript 6.0.3 (Apache-2.0). Herram
 - Licencia MIT verificada en LICENSE del archivo. No se vendorea el CMS ni se añaden sus dependencias al sitio.
 - Revisados esquema config, registro de campos, formatos JSON, rutas file/media y merge de objetos. Esquema público ejecutado temporalmente para validar .pages.yml.
 - Hosting externo elegido para autenticación GitHub, historial y carga de medios sin una implementación propia de usuarios. No se afirma conexión alojada validada; requiere autorización GitHub del propietario.
+
+Wrangler 4.157.0: Node >=22 según registry npm; probado en Node 24.22.1. Configuración validada mediante CLI/schema instalados y runtime --local; sin servicio remoto ni dependencia runtime de servidor para el sitio.

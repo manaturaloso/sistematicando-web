@@ -20,20 +20,22 @@
 - `/admin/`: panel de entrada a Pages CMS; autenticación y edición en servicio externo. Configuración .pages.yml con 23 editores y medios.
 - Contenido editorial migrado a content/*.json: marca/logos/SEO, menús, contactos, textos por página, home, precios, sectores, módulos, FAQ y guías. Validación automática antes del build.
 - Render de logos/favicón y variante de pie oscuro configurables. Logo oficial aún pendiente de subir: no hay binarios originales en el workspace y no se han recreado.
+- Wrangler fijado, wrangler.jsonc de assets estáticos, build previo obligatorio y pruebas del runtime local. Sin APIs/bindings nuevos ni despliegue.
 - Empaquetado verifica rutas esperadas dinámicamente (19 actuales). No hay páginas individuales de módulos ni receptor propio de leads. Otros legales pendientes.
 
 ## Fases
 
-0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 recursos y FAQ iniciales implementados, SEO/indexación parciales; 8 auditoría automática local y correcciones completadas; revisión manual final pendiente; 9 preparación parcial; 10 lanzamiento oficial pendiente.
+0 inicialización completada; 1 investigación parcial; 2 sistema visual base, logos pendientes; 3 home inicial implementada; 4 soluciones iniciales implementadas; 5 catálogo implementado, páginas individuales condicionadas a evidencia; 6 precios/guía y contacto externo implementados, tarifas y revisión operativa de privacidad pendientes; 7 recursos y FAQ iniciales implementados, SEO/indexación parciales; 8 auditoría automática local y correcciones completadas; revisión manual final pendiente; 9 configuración Worker reproducible y validación local implementadas; verificación remota/autorización pendientes; 10 lanzamiento oficial pendiente.
 
 ## Validación de esta entrega
 
-- Check sin errores/advertencias; build de 19 páginas y content:check aprobado.
-- Axe: 41 comprobaciones (19 páginas en móvil/escritorio más tres estados interactivos), cero infracciones automáticas. Conservada evidencia de contraste incompleto de home y evaluación separada de colores/captura.
-- Navegación sin JS en móvil, foco de salto/main, menú/Escape y texto al 200% en cinco rutas: aprobado. Regresión home y recursos/FAQ aprobada.
-- Lighthouse final, simulación móvil local en home/catálogo/demo: 100 rendimiento, 100 accesibilidad automática, 100 buenas prácticas; SEO 63 por bloqueo de indexación deliberado. Métricas y límites en QUALITY.md; no son mediciones de producción.
-- Corregidos menú oculto sin JS, overflow con texto ampliado, nombre accesible de marca y petición fallida de favicon ausente.
-- Pendientes acceso real CMS, logos, auditoría manual exhaustiva/lectores de pantalla y validación Worker. No se afirma conformidad completa o producción lista.
+- Astro check/build y content:check aprobados (19 páginas).
+- worker:check con Wrangler 4.157.0: custom build ejecutado, assets preparados y salida --dry-run sin carga ni publicación.
+- Runtime Wrangler --local iniciado; 30 comprobaciones de rutas aprobadas: 19 páginas, siete 404 de rutas inexistentes/internas, cuatro redirecciones 307. Query preservada, fuentes idénticas por SHA256, robots/noindex, POST 405.
+- Chromium móvil sobre Worker local: home, catálogo, admin y demo sin overflow/errores de recursos; menú/Escape aprobado.
+- Resumen docs/qa/worker-report.json. Request.cf local usó metadatos predeterminados al fallar su consulta; este Worker estático no los utiliza.
+- Auditorías locales de la entrega anterior conservadas en QUALITY.md. No se repitieron por no cambiar HTML/estilos de la web.
+- Sin validación remota, permisos de cuenta, carga de logo o sesión de CMS. No se afirma producción lista.
 
 ## Git, despliegue y agentes
 
@@ -53,7 +55,7 @@ Conectar Pages CMS con GitHub y subir los logos originales; evidencia del SaaS; 
 2. Cargar originales del logo en Medios y seleccionarlos en Marca. Hacer una edición pequeña y verificar el commit real en GitHub. Requiere cuenta del usuario; no se ha probado todavía.
 3. Revisar diff y build. Para ver estos cambios en el Worker debe autorizarse la integración o cambio de rama seguida; no hacerlo por continuar programando.
 4. Revisar contenido y prácticas pendientes de privacidad, alcance SaaS y precios. Datos de contacto confirmados en content/contact.json; no volver a pedirlos. Los archivos src/data son adaptadores, no la fuente editable.
-5. Continuar fase 9 sin publicar: preparar configuración reproducible del Worker estático y comprobaciones de build/dry-run. Confirmar configuración real de Cloudflare antes de integrar la rama. La revisión manual final debe repetirse con logos/contenido aprobados. No retirar noindex ni inventar dominio definitivo.
+5. Configuración Worker y dry-run ya implementados y probados. Confirmar configuración real de Workers Builds y permisos antes de integrar. Repetir test:worker con contenido/logo final. La siguiente validación pendiente es un guardado real del CMS y revisión del logo por el propietario; después revisión manual final. No retirar noindex ni inventar dominio definitivo.
 6. Mantener docs y GitHub actualizados. docs:features para matriz, cms:config para cambios de esquema, content:check antes de build.
 
 ## Datos comerciales aplicados

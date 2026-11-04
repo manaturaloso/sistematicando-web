@@ -6,3 +6,6 @@ dist/
 !.env.example
 test-results/
 __pycache__/
+.wrangler/
+.dev.vars
+.dev.vars.*

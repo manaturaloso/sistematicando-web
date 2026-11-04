@@ -64,3 +64,16 @@ Recursos nuevos: /recursos/, tres guías y /preguntas-frecuentes/. La rama despl
 ## Auditoría de calidad
 
 Con dist generado, ejecutar `npm run test:navigation`, `npm run audit:a11y` y `npm run audit:performance`. Usan un servidor local efímero y Chromium en /usr/bin/chromium, sin desplegar. Resúmenes versionados en docs/qa y alcance en docs/QUALITY.md. No confundir puntuaciones de laboratorio con rendimiento real ni auditoría WCAG completa.
+
+## Worker reproducible (sin publicar)
+
+Ver docs/DEPLOYMENT.md. `wrangler.jsonc` sirve solo dist, normaliza barras finales y usa la 404 real. Wrangler está fijado en el lockfile. Su custom build ejecuta automáticamente Astro/content:check con telemetría desactivada.
+
+```sh
+WRANGLER_SEND_METRICS=false npm run worker:check
+WRANGLER_SEND_METRICS=false npm run worker:dev
+# En otra terminal, con el runtime local iniciado:
+npm run test:worker
+```
+
+worker:check es un dry-run, no un despliegue. /admin y el resto de la rama de trabajo siguen sin integrarse al Worker público. No ejecutar deploy sin autorización; no hay script npm ni workflow automático que lo haga.

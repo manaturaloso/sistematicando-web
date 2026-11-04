@@ -1,0 +1,165 @@
+{
+  "environment": "Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "finalPath": "/"
+    },
+    {
+      "route": "/404.html",
+      "status": 200,
+      "finalPath": "/404/"
+    },
+    {
+      "route": "/admin/",
+      "status": 200,
+      "finalPath": "/admin/"
+    },
+    {
+      "route": "/funcionalidades/",
+      "status": 200,
+      "finalPath": "/funcionalidades/"
+    },
+    {
+      "route": "/legal/privacidad/",
+      "status": 200,
+      "finalPath": "/legal/privacidad/"
+    },
+    {
+      "route": "/precios/",
+      "status": 200,
+      "finalPath": "/precios/"
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "finalPath": "/preguntas-frecuentes/"
+    },
+    {
+      "route": "/recursos/",
+      "status": 200,
+      "finalPath": "/recursos/"
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "status": 200,
+      "finalPath": "/recursos/guias/evaluar-software-para-tu-negocio/"
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "status": 200,
+      "finalPath": "/recursos/guias/ordenar-inventario-inicial/"
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "status": 200,
+      "finalPath": "/recursos/guias/preparar-cierre-de-caja/"
+    },
+    {
+      "route": "/solicitar-demo/",
+      "status": 200,
+      "finalPath": "/solicitar-demo/"
+    },
+    {
+      "route": "/soluciones/",
+      "status": 200,
+      "finalPath": "/soluciones/"
+    },
+    {
+      "route": "/soluciones/bares/",
+      "status": 200,
+      "finalPath": "/soluciones/bares/"
+    },
+    {
+      "route": "/soluciones/cafeterias/",
+      "status": 200,
+      "finalPath": "/soluciones/cafeterias/"
+    },
+    {
+      "route": "/soluciones/eventos/",
+      "status": 200,
+      "finalPath": "/soluciones/eventos/"
+    },
+    {
+      "route": "/soluciones/hoteles/",
+      "status": 200,
+      "finalPath": "/soluciones/hoteles/"
+    },
+    {
+      "route": "/soluciones/multisede/",
+      "status": 200,
+      "finalPath": "/soluciones/multisede/"
+    },
+    {
+      "route": "/soluciones/restaurantes/",
+      "status": 200,
+      "finalPath": "/soluciones/restaurantes/"
+    },
+    {
+      "route": "/ruta-inexistente/",
+      "status": 404,
+      "finalPath": "/ruta-inexistente/"
+    },
+    {
+      "route": "/admin/no-existe/",
+      "status": 404,
+      "finalPath": "/admin/no-existe/"
+    },
+    {
+      "route": "/docs/PROGRESS.md",
+      "status": 404,
+      "finalPath": "/docs/PROGRESS.md"
+    },
+    {
+      "route": "/content/contact.json",
+      "status": 404,
+      "finalPath": "/content/contact.json"
+    },
+    {
+      "route": "/.git/config",
+      "status": 404,
+      "finalPath": "/.git/config"
+    },
+    {
+      "route": "/.pages.yml",
+      "status": 404,
+      "finalPath": "/.pages.yml"
+    },
+    {
+      "route": "/wrangler.jsonc",
+      "status": 404,
+      "finalPath": "/wrangler.jsonc"
+    },
+    {
+      "route": "/soluciones",
+      "status": 307,
+      "location": "/soluciones/"
+    },
+    {
+      "route": "/admin",
+      "status": 307,
+      "location": "/admin/"
+    },
+    {
+      "route": "/precios/index.html",
+      "status": 307,
+      "location": "/precios/"
+    },
+    {
+      "route": "/soluciones/restaurantes/index.html",
+      "status": 307,
+      "location": "/soluciones/restaurantes/"
+    }
+  ],
+  "checks": [
+    "all built pages",
+    "custom missing/private-path 404s",
+    "307 trailing slash/index normalization",
+    "query preservation",
+    "font integrity",
+    "robots/noindex",
+    "POST 405",
+    "four mobile browser routes and menu"
+  ]
+}

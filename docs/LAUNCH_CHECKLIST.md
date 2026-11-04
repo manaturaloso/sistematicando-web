@@ -22,3 +22,7 @@ El usuario desplegó una versión previa en un Worker. La rama de catálogo no s
 - [x] Configuración CMS y /admin implementados, contenido migrado y validado localmente.
 - [ ] Autorizar GitHub App, probar guardado real y subir logos oficiales.
 - [x] Recursos iniciales y FAQ compartida implementados y probados.
+
+- [x] Wrangler/configuración de assets versionados y dry-run aprobado.
+- [x] Runtime local: rutas, redirecciones, 404, fuentes y navegador móvil probados.
+- [ ] Confirmar Workers Builds real, rama/triggers y permisos antes de autorizar actualización remota.
