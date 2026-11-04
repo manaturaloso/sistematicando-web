@@ -26,3 +26,11 @@
 - Noindex y bloqueo de rastreo hasta aprobación. No se inventa hostname para canonicals, sitemap o metadatos absolutos.
 - Desactivar telemetría de Astro con variable de comando resuelve el intento de escritura fuera del workspace, sin ampliar permisos de archivos.
 - Se corrigió una forma decorativa rotada que provocaba desbordamiento a 320px. Iconos SVG propios evitan glifos ausentes o emojis dependientes del dispositivo.
+
+## 2026-11-03 · Soluciones sectoriales
+
+- Se implementan índice y seis sectores del brief usando datos tipados y una plantilla estática común; cada sector tiene necesidades, preguntas y límites propios.
+- Header, Footer y home enlazan rutas reales. No se añaden páginas vacías, librerías ni formularios.
+- Las páginas describen enfoques por evaluar, no capacidades contratables confirmadas. Hoteles declara explícitamente que no hay evidencia de PMS ni conectividad OTA; eventos no promete QR, pagos u operación offline.
+- Cada página conserva noindex, metadatos propios, breadcrumbs y contexto sobre el canal comercial pendiente. No se crean precios, datos legales ni dominios ficticios.
+- Se conserva feat/brand-foundation para continuidad; no se publica producción ni se fuerza historial. Solo trabaja Codex principal.

@@ -16,3 +16,5 @@ Todas las afirmaciones comerciales requieren validación del propietario con evi
 ## Web comercial (no SaaS)
 
 Home, menú móvil, FAQ por teclado y página 404 implementados. Preparación de demo solo informativa. Sin integración de leads ni páginas internas de producto. Build estático y pruebas descritos en QA.md.
+
+Índice de soluciones y seis páginas sectoriales implementados en la web, sin verificar nuevas capacidades SaaS. La página de hoteles no afirma PMS y eventos no garantiza venta/validación QR. Navegación, breadcrumbs y enlaces internos probados según QA.md.

@@ -3,7 +3,8 @@
 - [ ] Recuperar historial remoto y verificar cambios guardados en GitHub.
 - [ ] Integrar logos oficiales originales (licencias de fuentes ya incluidas).
 - [x] Primera home y 404 implementadas y probadas localmente.
-- [ ] Implementar páginas internas y aprobar contenido comercial.
+- [x] Índice y seis páginas sectoriales implementados y probados localmente.
+- [ ] Implementar catálogo de funcionalidades y otras páginas pendientes; aprobar contenido comercial.
 - [ ] Verificar capacidades del SaaS y aprobar precios y copy.
 - [ ] Configurar recepción real de formularios y privacidad.
 - [ ] Aprobar textos legales y datos empresariales.

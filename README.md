@@ -1,6 +1,6 @@
 # Sistematicando Web
 
-Web comercial en desarrollo, construida con Astro + TypeScript y CSS nativo. Home estática responsive, sin integración SaaS ni recepción de solicitudes. No desplegada.
+Web comercial en desarrollo, construida con Astro + TypeScript y CSS nativo. Home e índice de soluciones con seis páginas sectoriales estáticas responsive, sin integración SaaS ni recepción de solicitudes. No desplegada.
 
 ## Continuidad entre cuentas
 
@@ -23,6 +23,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm run preview -- --port 4321
 ## Estructura
 
 - `src/pages/index.astro`: home. `404.astro`: página de error.
+- `src/pages/soluciones/`: índice y plantilla sectorial; contenido tipado en `src/data/solutions.ts`.
 - `src/components/`: cabecera, pie, mockup conceptual e iconos SVG.
 - `src/layouts/Layout.astro`: documento, metadatos y noindex.
 - `src/styles/home.css`: estilos responsive y fuentes en /fonts.
@@ -33,6 +34,6 @@ La referencia anterior `docs/brand-preview.html` permanece independiente. Para v
 
 ## QA del build
 
-Tras compilar, iniciar `python3 -m http.server 4322 --bind 127.0.0.1 --directory dist`. En otra terminal ejecutar `python3 scripts/verify-home.py`. Requiere Playwright Python y Chromium en /usr/bin/chromium, disponibles en el entorno usado; no son dependencias de ejecución del sitio. Resultados y límites en docs/QA.md.
+Tras compilar, iniciar `python3 -m http.server 4322 --bind 127.0.0.1 --directory dist`. En otra terminal ejecutar `python3 scripts/verify-home.py` y `python3 scripts/verify-solutions.py`. Requiere Playwright Python y Chromium en /usr/bin/chromium, disponibles en el entorno usado; no son dependencias de ejecución del sitio. Resultados y límites en docs/QA.md.
 
 Producción: subir únicamente dist después de autorización. No desplegar aún: faltan logos, validación comercial, contacto real y revisión legal. Ver docs/DEPLOYMENT.md.

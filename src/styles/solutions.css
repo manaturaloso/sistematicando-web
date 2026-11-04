@@ -1,0 +1,36 @@
+.breadcrumbs {display:flex;flex-wrap:wrap;gap:.7rem;font-size:.75rem;margin-bottom:3.5rem;align-items:center;}
+.breadcrumbs a {min-height:44px;display:inline-flex;align-items:center;}
+.solution-hero {padding-block:2rem 4.5rem;}
+.solution-hero h1 {max-width:20ch;font-size:clamp(2.7rem,5.4vw,4.8rem);}
+.solution-intro {max-width:62ch;font-size:1.1rem;color:#505860;}
+.scope-note {border-left:3px solid var(--coral);padding:.5rem 0 .5rem 1.2rem;font-size:.8rem;max-width:70ch;margin-top:2rem;}
+.scope-note strong {display:block;margin-bottom:.5rem;}
+.scope-note p {margin-bottom:0;}
+.solutions-section {padding-block:1rem 4.5rem;}
+.solutions-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;margin:2.5rem 0;}
+.solution-card {position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;padding:2rem;background:#fff;}
+.solution-card:hover {border-color:var(--ink);}
+.solution-card:focus-within {outline:3px solid var(--ink);outline-offset:4px;}
+.solution-card-icon {font-size:2rem;margin-bottom:2rem;}
+.solution-card h3 {font-size:1.4rem;}
+.solution-card h3 a {text-decoration:none;}
+.solution-card h3 a::after {content:'';position:absolute;inset:0;border-radius:10px;}
+.solution-card p {font-size:.9rem;color:#505860;}
+.solution-card-link {display:flex;justify-content:space-between;gap:1rem;font-size:.75rem;font-weight:800;margin-top:auto;padding-top:1.5rem;}
+.solution-callout {display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding:3rem;background:#f4dfd7;border-radius:12px;margin-bottom:4.5rem;}
+.solution-callout p:not(.eyebrow) {font-size:.9rem;}
+.sector-hero h1 {max-width:22ch;}
+.sector-hero .button {margin-top:1rem;}
+.sector-priorities {background:var(--soft);padding-block:4rem;}
+.sector-priorities .section-heading h2 {max-width:22ch;}
+.needs-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem;margin-top:3rem;}
+.needs-grid article {border-top:1px solid var(--ink);padding-top:1.5rem;}
+.needs-grid .eyebrow {display:block;}
+.needs-grid p {font-size:.9rem;color:#505860;}
+.solution-evaluation {display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding-block:5rem;}
+.evaluation-areas {font-size:.85rem;color:#505860;max-width:45ch;}
+.sector-questions {padding-left:1.5rem;margin-top:0;}
+.sector-questions li {padding:0 0 1.2rem .6rem;font-size:1rem;}
+.related-grid {margin-bottom:1rem;}
+@media(max-width:899px) {.solutions-grid {grid-template-columns:repeat(2,minmax(0,1fr));}.related-grid {grid-template-columns:1fr;}.solution-card {padding:1.5rem;}.solution-callout,.solution-evaluation {gap:2rem;}.needs-grid {gap:1.5rem;}.solution-intro {font-size:1rem;}}
+@media(max-width:599px) {.solutions-grid,.needs-grid,.solution-callout,.solution-evaluation {grid-template-columns:1fr;}.solution-callout {padding:1.5rem;gap:1rem;}.solution-hero {padding-bottom:3rem;}.breadcrumbs {margin-bottom:2rem;}.solution-hero h1 {font-size:clamp(2.4rem,10vw,3.5rem);}.solution-evaluation {padding-block:3rem;gap:1rem;}.sector-priorities {padding-block:3rem;}.solution-card-icon {margin-bottom:1rem;}.solutions-section {padding-bottom:3rem;}}

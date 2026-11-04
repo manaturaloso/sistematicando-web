@@ -1,0 +1,12 @@
+---
+import Icon from './Icon.astro';
+import type { solutions } from '../data/solutions';
+interface Props { solution: (typeof solutions)[number]; }
+const { solution } = Astro.props;
+---
+<article class="solution-card">
+  <span class="solution-card-icon"><Icon name={solution.icon} /></span>
+  <h3><a href={`/soluciones/${solution.slug}/`}>{solution.name}</a></h3>
+  <p>{solution.focus}</p>
+  <span class="solution-card-link">Explorar el enfoque <Icon /></span>
+</article>

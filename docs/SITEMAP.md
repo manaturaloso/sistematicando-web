@@ -1,11 +1,18 @@
 # Arquitectura
 
-## Implementado
+## Implementado (desarrollo, noindex)
 
-- `/`: home estática de desarrollo, noindex.
-- `/404.html`: página de error para configurar en hosting estático.
-- Referencia interna `docs/brand-preview.html`: fuera de dist, solo servidor independiente.
+- `/`: home.
+- `/soluciones/`: índice de sectores.
+- `/soluciones/restaurantes/`
+- `/soluciones/bares/`
+- `/soluciones/cafeterias/`
+- `/soluciones/hoteles/`
+- `/soluciones/eventos/`
+- `/soluciones/multisede/`
+- `/404.html`: página de error a configurar en hosting estático.
+- `docs/brand-preview.html`: referencia interna fuera de dist, con servidor independiente.
 
 ## Siguiente
 
-`/soluciones` y páginas sectoriales. Otras rutas del brief son propuestas, no implementadas. No existen enlaces a rutas vacías ni sitemap público mientras falten dominio y aprobación de indexación. Navegación actual usa anclas reales de la home.
+`/funcionalidades/`: catálogo por grupos y estado verificable. Precios, contacto, recursos, legales y páginas de módulos siguen pendientes. No existen enlaces a rutas vacías ni sitemap público hasta contar con dominio y aprobación de indexación. Las páginas de soluciones presentan enfoques de evaluación y no disponibilidad verificada del SaaS.

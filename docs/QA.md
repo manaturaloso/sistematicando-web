@@ -39,3 +39,13 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 
 - Instalación reproducible: `npm ci --ignore-scripts` completado desde el lockfile; check y build repetidos después para validar las dependencias reinstaladas. Se omitieron scripts de instalación en esta comprobación; el npm install inicial sí se ejecutó con su comportamiento predeterminado.
 - `git diff --check` sin errores para esta entrega.
+
+# Tercera entrega · Soluciones
+
+- `ASTRO_TELEMETRY_DISABLED=1 npm run check`: 13 archivos, cero errores, advertencias o hints.
+- `ASTRO_TELEMETRY_DISABLED=1 npm run build`: nueve páginas estáticas (home, 404, índice de soluciones y seis sectores).
+- `python3 scripts/verify-solutions.py` contra dist servido en puerto 4322: 7 rutas a 320, 390, 768 y 1440 px (28 combinaciones), HTTP 200, H1 único, noindex, ausencia de overflow, breadcrumbs, menú móvil/Escape y foco, títulos únicos, enlaces entre páginas y anclas con destino válido. Sin errores JS ni recursos fallidos.
+- Regresión `python3 scripts/verify-home.py`: aprobada a los cuatro anchos tras cambiar navegación y tarjetas de sectores.
+- Revisión visual de capturas del índice a 1440 y restaurantes a 390: jerarquía, tarjetas, contenidos y disposición responsive. Los focos visibles en las capturas proceden de las pruebas de teclado.
+- Capturas temporales en /tmp/sistematicando-qa; los scripts quedan versionados para repetirlas.
+- No ejecutados axe, Lighthouse ni dispositivos físicos; no se afirma accesibilidad completa o resultados de rendimiento. No hay pruebas de recepción de datos porque no se implementó recepción.
