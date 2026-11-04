@@ -6,7 +6,7 @@ Web comercial estática con Astro + TypeScript y CSS nativo. 20 páginas HTML, c
 
 Leer [AGENTS.md](AGENTS.md), [HANDOFF.md](docs/HANDOFF.md), [PROGRESS.md](docs/PROGRESS.md) y [DECISIONS.md](docs/DECISIONS.md). El brief en docs/PROJECT_BRIEF.md es referencia, no autorización de despliegue. Historial íntegro en docs/PROGRESS_HISTORY.md y docs/DECISIONS_HISTORY.md.
 
-Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/brand-foundation, último envío autorizado af35674. El propietario confirmó la versión servida af35674 mediante /version.json con sourceModified false; evidencia guardada en docs/qa/deployed-version-af35674.json. Esto no sustituye el recorrido funcional ni la comprobación de CI. Consultar Git y /version.json, no confundir SHA con ID de Cloudflare.
+Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/brand-foundation, nueva entrega autorizada c1b0baf más registro documental; SHA final en Git. El propietario confirmó la copia anterior af35674 mediante /version.json con sourceModified false; la actualización de reflujo requiere comprobar su nuevo SHA servido; evidencia guardada en docs/qa/deployed-version-af35674.json. Esto no sustituye el recorrido funcional ni la comprobación de CI. Consultar Git y /version.json, no confundir SHA con ID de Cloudflare.
 
 ## Desarrollo y pruebas
 

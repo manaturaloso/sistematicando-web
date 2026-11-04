@@ -27,7 +27,7 @@ Trabajar en feat/feature-catalog. Cloudflare sigue feat/brand-foundation: no env
 
 CMS conectado y logos subidos/seleccionados por el propietario. Datos comerciales/privacidad confirmados en content/contact.json; los avisos legales aún requieren revisión operativa. No solicitar tokens ni contraseñas. No sustituir originales ni marcar SaaS disponible sin evidencia.
 
-Última integración enviada al Worker: af35674. Versión servida confirmada por el propietario mediante /version.json (sourceModified false); evidencia en qa/deployed-version-af35674.json. No fue una consulta directa exitosa del agente ni auditoría funcional completa. Mejoras de pruebas posteriores a 5c92a27 y corrección de reflujo al ampliar texto al 200% están en desarrollo; no se han publicado. Consultar HEAD para SHA exacto, no asumir que esta lista es la punta remota actual.
+Nueva entrega autorizada para Worker: c1b0baf más registro documental; consultar SHA final en la rama feat/brand-foundation. Versión pública confirmada antes de esa actualización: af35674. Versión servida confirmada por el propietario mediante /version.json (sourceModified false); evidencia en qa/deployed-version-af35674.json. No fue una consulta directa exitosa del agente ni auditoría funcional completa. La corrección de reflujo c1b0baf y las mejoras de pruebas acumuladas se integran con autorización del propietario. Falta verificar el nuevo build/versión activa. Consultar HEAD para SHA exacto, no asumir que esta lista es la punta remota actual.
 
 ## Ejecutar y validar
 
@@ -49,7 +49,7 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Identidad pública af35674 confirmada por JSON del propietario: no repetir esa solicitud salvo un despliegue nuevo. Revisar Actions del HEAD y recorrer home/contacto/demo/catálogo/privacidad/admin/404 en dispositivos/lector. La revisión asistida local ya corrigió reflujo móvil 200% y verificó teclado; no sustituye dispositivos físicos/lector. Si se detecta un fallo, obtener evidencia concreta y corregirlo antes de ampliar alcance.
+Identidad pública anterior af35674 confirmada por JSON del propietario. Se ha autorizado una nueva entrega (c1b0baf más registro): comprobar su SHA final en Cloudflare y /version.json antes de dar el despliegue por finalizado. Revisar Actions del HEAD y recorrer home/contacto/demo/catálogo/privacidad/admin/404 en dispositivos/lector. La revisión asistida local ya corrigió reflujo móvil 200% y verificó teclado; no sustituye dispositivos físicos/lector. Si se detecta un fallo, obtener evidencia concreta y corregirlo antes de ampliar alcance.
 
 Quedan evidencia SaaS, precios y privacidad. No crear afirmaciones para rellenar información ausente. Cualquier actualización pública exige autorización correspondiente. Las mejoras de pruebas/documentación posteriores a af35674 no necesitan desplegarse para documentar este estado.
 

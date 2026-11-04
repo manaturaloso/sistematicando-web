@@ -5,7 +5,7 @@ Estado consolidado: 4 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio: manaturaloso/sistematicando-web. Desarrollo y CMS: `feat/feature-catalog`.
-- Base funcional publicada: `1be0fc0`, integrada y confirmada como `af35674`. Esta entrega añade corrección de reflujo con texto ampliado, solo en desarrollo.
+- Base pública confirmada por el propietario: `af35674`. Nueva entrega autorizada: corrección de reflujo `c1b0baf` más registro documental; SHA final con git log -1. Verificación de la nueva versión servida pendiente.
 - Pruebas posteriores a `5c92a27` ahora cubren texto 200% en móvil/escritorio y foco de teclado en demo/catálogo. Consultar `git log -1` para SHA final de esta entrega.
 - Fetch de ambas ramas sin cambios concurrentes antes de consolidar. El push y referencias se verifican al entregar; repetir fetch en la próxima sesión.
 - Worker: https://sistematicando-web.manaturaloso.workers.dev. La versión servida `af35674` quedó confirmada por el JSON de /version.json aportado por el propietario; sourceModified false y fecha coincidente con Git. Evidencia en qa/deployed-version-af35674.json. El agente no hizo una consulta directa exitosa ni un recorrido funcional remoto.
@@ -56,13 +56,23 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 
 ## Siguiente paso exacto
 
-1. Revisar Actions del SHA de esta corrección de reflujo. Para verla en el Worker, revisar diff y obtener autorización de integración concreta a feat/brand-foundation; no publicar por continuar desarrollo. Versión pública af35674 ya confirmada, no volver a pedir ese JSON salvo otro despliegue.
-2. Revisión asistida local de contacto/demo/catálogo/admin realizada; faltan dispositivos físicos y lector de pantalla. Corregidos desbordamientos a texto 200%, sin horizontal en las 12 combinaciones de regresión. QA.md y qa/reflow-review.json contienen alcance y evidencia.
-3. Resolver evidencia SaaS, tarifas y revisión/adopción legal/operativa con el propietario. Mantener noindex y DNS mientras no se autorice lanzamiento oficial.
-4. Continuidad en HANDOFF.md, identidad local obligatoria y fetch antes de editar. Recompilar tras cambiar HEAD para actualizar version.json. No se creó PR, existentes sin verificar por API.
+1. Publicación de c1b0baf expresamente autorizada; integración por fast-forward y push a feat/brand-foundation con registro documental. Consultar SHA final con git log -1 y git ls-remote de ambas ramas.
+2. Comprobar Build de Cloudflare del SHA final: Ready y /version.json con el mismo commit y sourceModified false. af35674 es la copia anterior confirmada; el nuevo push no acredita por sí solo finalización del despliegue.
+3. Revisar texto 200% en móvil: portada, contacto, demo, catálogo y admin. Pruebas locales y evidencia de 12 combinaciones en QA.md/qa/reflow-review.json. Dispositivos reales/lector de pantalla siguen pendientes.
+4. Continuar en feat/feature-catalog sincronizada y revisar CI. No se creó PR, existentes sin verificar por API. Nuevas publicaciones requieren autorización correspondiente; mantener DNS/noindex y pendientes comerciales/legales.
 
 Agente usado: Codex principal, sin subagentes. Identidad obligatoria: Joel Alejandro Yañez Caballero, joel.yc23@gmail.com. No reescribir commits publicados ni desplegar/cambiar DNS sin autorización. Las autorizaciones previas son entregas concretas.
 
 ## Confirmación de versión pública · 4 de noviembre de 2026
 
 El propietario pegó el JSON de /version.json: af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00, sourceModified false. Coincide con la referencia remota de feat/brand-foundation y fecha de commit en Git. Validación documental/schema/SHA/fecha y diff; sin repetir pruebas de aplicación ni nuevo despliegue. No equivale a auditoría de todas las rutas ni CI remoto aprobado. Solo Codex principal; sin PR creada, existentes sin verificar por API.
+
+## 4 de noviembre de 2026 · Publicación de corrección de reflujo autorizada
+
+El propietario respondió «Sí, autorizo» a integrar c1b0baf en feat/brand-foundation para publicar la corrección de texto ampliado. Fetch confirmó origen c1b0baf y destino af35674 sin cambios concurrentes; destino antecesor. Se agrega solo este registro documental, se integra por fast-forward y se envía mediante push normal, preservando historial. Consultar git log -1 y referencias remotas para SHA final.
+
+Código aprobado sin nuevas modificaciones: check 45 archivos/build 20 páginas; test:ci 20 rutas/69 destinos y axe 44 comprobaciones; reflujo 200% en seis rutas a 390/1280 y pruebas de foco/teclado; Lighthouse local 100 en las tres rutas medidas. Antes del push se recompila con dry-run y se verifica versión contra el nuevo commit y sourceModified false. No se repite la suite por el registro documental.
+
+Última copia pública confirmada por el propietario antes de esta entrega: af35674. El nuevo build/versión activa queda pendiente de comprobar; no se afirma éxito por el push. API/hostname del entorno siguen restringidos. Sin DNS/noindex/bindings nuevos; autor Joel Alejandro Yañez Caballero. Solo Codex principal, sin subagentes. Sin PR creada; existentes sin verificar.
+
+Siguiente paso: comprobar Cloudflare Build/SHA final, Ready y /version.json; comparar commit y sourceModified false. Revisar texto 200% en móvil en contacto/demo/catálogo/admin y portada. Continuar desarrollo en feat/feature-catalog sincronizada; esta aprobación no autoriza otras publicaciones. Pendientes reales: dispositivos/lector, CI remoto actual y evidencia comercial/legal.

@@ -144,3 +144,13 @@ Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. Sin PR c
 Evidencia: JSON pegado por el usuario desde /version.json, guardado íntegro en qa/deployed-version-af35674.json. SHA af3567400d596d0f9e386de1cee47e5297985187, fecha 2026-11-04T21:47:13+00:00 y sourceModified false. Contrastados con ref remota feat/brand-foundation y fecha Git; coincidencia exacta/instante equivalente. Confirma identidad de la copia servida; no implica que el agente accediera directamente, CI actual verde ni revisión funcional de todas las páginas.
 
 Se actualizan resúmenes/continuidad para no repetir el bloqueo de verificación ya resuelto por el usuario. Cambios solo documentales, sin despliegue. Agente Codex principal, identidad Joel Alejandro Yañez Caballero; sin PR creada, existentes no verificadas por API. Siguiente paso: revisión funcional manual y CI del HEAD, luego pendientes comerciales/legales.
+
+## 4 de noviembre de 2026 · Publicación de corrección de reflujo autorizada
+
+El propietario respondió «Sí, autorizo» a integrar c1b0baf en feat/brand-foundation para publicar la corrección de texto ampliado. Fetch confirmó origen c1b0baf y destino af35674 sin cambios concurrentes; destino antecesor. Se agrega solo este registro documental, se integra por fast-forward y se envía mediante push normal, preservando historial. Consultar git log -1 y referencias remotas para SHA final.
+
+Código aprobado sin nuevas modificaciones: check 45 archivos/build 20 páginas; test:ci 20 rutas/69 destinos y axe 44 comprobaciones; reflujo 200% en seis rutas a 390/1280 y pruebas de foco/teclado; Lighthouse local 100 en las tres rutas medidas. Antes del push se recompila con dry-run y se verifica versión contra el nuevo commit y sourceModified false. No se repite la suite por el registro documental.
+
+Última copia pública confirmada por el propietario antes de esta entrega: af35674. El nuevo build/versión activa queda pendiente de comprobar; no se afirma éxito por el push. API/hostname del entorno siguen restringidos. Sin DNS/noindex/bindings nuevos; autor Joel Alejandro Yañez Caballero. Solo Codex principal, sin subagentes. Sin PR creada; existentes sin verificar.
+
+Siguiente paso: comprobar Cloudflare Build/SHA final, Ready y /version.json; comparar commit y sourceModified false. Revisar texto 200% en móvil en contacto/demo/catálogo/admin y portada. Continuar desarrollo en feat/feature-catalog sincronizada; esta aprobación no autoriza otras publicaciones. Pendientes reales: dispositivos/lector, CI remoto actual y evidencia comercial/legal.
