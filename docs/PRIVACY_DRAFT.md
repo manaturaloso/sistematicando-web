@@ -1,10 +1,12 @@
 # Política de privacidad de Sistematicando — borrador
 
-Fecha de preparación: 2026-11-04. Documento de trabajo; no es una política publicada ni una declaración de cumplimiento. Su alcance es el sitio comercial, no la aplicación SaaS. Completar las decisiones identificadas antes de convertirlo en la página pública de privacidad.
+Fecha de preparación: 2026-11-04.
+
+Estado actualizado: se incorporó una versión para revisión en src/pages/legal/privacidad.astro, con contactos centralizados en src/data/contact.ts. Este documento conserva los aspectos operativos que aún necesitan revisión; no volver a pedir datos de identidad o contacto ya confirmados. Documento de trabajo; no es una política publicada ni una declaración de cumplimiento. Su alcance es el sitio comercial, no la aplicación SaaS. Completar las decisiones identificadas antes de convertirlo en la página pública de privacidad.
 
 ## 1. Responsable del tratamiento
 
-Sistematicando es el nombre del proyecto comercial. El responsable legal de los datos es **JOEL ALEJANDRO YAÑEZ CABALLERO**, RUC **10477365928**, con domicilio en **[pendiente: domicilio aplicable]**. El canal para consultas y ejercicio de derechos es **[pendiente: correo de privacidad]**.
+Sistematicando es el nombre del proyecto comercial. El responsable legal de los datos es **JOEL ALEJANDRO YAÑEZ CABALLERO**, RUC **10477365928**, con domicilio en **Calle Enrique Barrón 586, Barranco**. Los canales para consultas y ejercicio de derechos son **joel.yc23@gmail.com** y **WhatsApp +51 956 832 336**, ambos confirmados por el responsable y sujetos a cambio posterior.
 
 No se presume una razón social, RUC ni identidad del responsable a partir del nombre de una cuenta de GitHub o Cloudflare.
 

@@ -80,3 +80,12 @@ Para repetir: npm ci, ASTRO_TELEMETRY_DISABLED=1 npm run check y build; servidor
 ## Borrador de privacidad
 
 Se revisaron los campos tratados por la guía y el código de almacenamiento/envío antes de redactar PRIVACY_DRAFT.md. Se conserva la distinción con registros técnicos de Cloudflare y el tratamiento de WhatsApp. Sin cambios de aplicación después del smoke; no hay enlace activo ni mensajes a probar. No se ha realizado validación legal externa ni se afirma cumplimiento normativo integral.
+
+# 2026-11-04 · Privacidad y WhatsApp
+
+- Check: 21 archivos sin errores, warnings ni hints. Build: trece páginas.
+- scripts/verify-privacy.py: seis anchos, datos confirmados y enlaces, número wa.me 51956832336, codificación de mensaje genérico, rel noopener/noreferrer, no adjuntar selecciones, privacidad accesible y correo exacto. Activación por Enter interceptada en el navegador: sin contactar a WhatsApp ni enviar mensajes. Sin requests externos automáticos. Enlaces disponibles sin JavaScript.
+- scripts/verify-commercial.py adaptado a comprobar forma del enlace externo sin solicitarlo. Guía/descarga/reset y ausencia de envíos siguen aprobados a seis anchos.
+- Regresiones home (4), catálogo (6) y soluciones (28) aprobadas. Revisión visual de privacidad a 390px.
+- Empaquetador actualizado para trece páginas, conserva noindex y exclusión de archivos internos.
+- No se comprobaron bandejas de correo, identidad/titularidad externa, entrega de mensajes o cumplimiento legal. Revisión operativa antes de adoptar política vigente documentada en PRIVACY_REVIEW.md.

@@ -53,6 +53,9 @@ with sync_playwright() as p:
                 page.reload()
                 assert page.locator('#business').input_value() == ''
             for href in page.locator('a').evaluate_all('(links)=>links.map(a=>a.getAttribute("href"))'):
+                if href.startswith('https://'):
+                    assert href.startswith('https://wa.me/51956832336?text='), href
+                    continue
                 target='http://127.0.0.1:4322'+(route+href if href.startswith('#') else href)
                 response=page.request.get(target)
                 assert response.ok,href

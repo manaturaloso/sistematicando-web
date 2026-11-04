@@ -8,7 +8,8 @@
 - [x] Precios informativos y guía local de demo implementados y probados.
 - [ ] Aprobar tarifas, verificar módulos y copy; desarrollar páginas restantes.
 - [ ] Verificar capacidades del SaaS y aprobar precios y copy.
-- [ ] Configurar recepción real de formularios y privacidad.
+- [x] Enlace externo de WhatsApp y privacidad en revisión con datos confirmados.
+- [ ] Adoptar la política tras revisar prácticas reales; receptor propio de formularios solo si se decide añadirlo.
 - [ ] Aprobar textos legales y datos empresariales.
 - [x] Build, tipos y smoke de navegación/teclado a cuatro anchos.
 - [ ] Auditoría de accesibilidad y rendimiento antes de lanzamiento.

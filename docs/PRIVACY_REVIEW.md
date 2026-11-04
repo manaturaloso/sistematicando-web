@@ -1,28 +1,30 @@
-# Completar privacidad y WhatsApp
+# Privacidad y WhatsApp: estado actual
 
-## Solicitud actual del usuario
+## Confirmado por el usuario
 
-Canal confirmado por el usuario: WhatsApp **+51 956 832 336 (Perú)**. Identidad confirmada: **JOEL ALEJANDRO YAÑEZ CABALLERO**, RUC **10477365928**. No se ha enviado ningún mensaje.
+- Responsable: JOEL ALEJANDRO YAÑEZ CABALLERO; RUC 10477365928.
+- Domicilio: Calle Enrique Barrón 586, Barranco.
+- Correo de privacidad: joel.yc23@gmail.com (el usuario prevé cambiarlo).
+- WhatsApp comercial y de derechos de privacidad: +51 956 832 336 (Perú; también prevé cambiarlo).
 
-El usuario pidió generar la política. Se redactó el borrador completo en PRIVACY_DRAFT.md. No hay política pública anterior aprobada.
+Fuente central editable: src/data/contact.ts. No volver a preguntar estos datos. No se ha enviado ningún mensaje ni se ha comprobado titularidad por un contacto externo.
 
-## Información necesaria para finalizar
+## Implementado
 
-1. Teléfono internacional ya confirmado: +51 956 832 336.
-2. Nombre y RUC confirmados; falta domicilio aplicable. No inventar dirección.
-3. Correo de atención de privacidad o confirmación de uso del WhatsApp para ese fin, más procedimiento de derechos. Se preguntó al usuario.
-4. Definir conversación comercial, conservación y personal con acceso; confirmar WhatsApp Business y herramientas vinculadas.
-5. Revisar configuración real de Cloudflare, registros, proveedores y transferencias.
-6. Confirmar finalidad/base jurídica y requisitos aplicables en Perú, incluidos registros o medidas que correspondan al responsable.
+/legal/privacidad/ como versión para revisión, sin marcadores internos pendientes; cubre web comercial, Cloudflare, guía local, contacto voluntario, finalidades, conservación prevista y derechos. No es una declaración de cumplimiento integral ni la política del SaaS.
 
-## Implementación cuando estén confirmados
+Contacto WhatsApp en /solicitar-demo/: aviso de tercero, enlace a privacidad y botón explícito que abre otra pestaña. Texto genérico, sin transmitir la guía o las selecciones. Correo mediante mailto en la política, sin envío automático. Footer enlaza privacidad en todas las páginas con Footer.
 
-- Convertir el borrador resuelto en /legal/privacidad/, con fecha y contacto real. No publicar los marcadores internos como texto definitivo.
-- Añadir enlace a privacidad antes de abrir WhatsApp, explicar que se abre un tercero y que el usuario decide enviar el mensaje.
-- Enlace wa.me únicamente al número internacional confirmado, con texto genérico; no adjuntar ni transmitir automáticamente la guía ni datos de contacto.
-- Pruebas: número, codificación de mensaje, enlace accesible, ausencia de envío automático y privacidad enlazada.
-- Guardar en la rama de trabajo. No integrar a la rama desplegada sin autorización.
+La guía sigue siendo local; WhatsApp recibe información solo si el usuario decide enviar un mensaje en ese servicio. No existe backend, CRM, tracking ni recepción propia de leads.
 
-## Estado
+## Antes del lanzamiento oficial
 
-Borrador elaborado; no se ha habilitado el enlace ni cambiado el flujo local. No se ha enviado ningún mensaje ni hecho una solicitud a WhatsApp.
+- Revisar y adoptar la política y el procedimiento de atención de derechos; verificar cambios de contacto antes de reemplazarlos.
+- Confirmar acceso de personal, tipo/configuración de cuenta WhatsApp y proveedor de correo.
+- Revisar conservación, eliminación, backups, registros Cloudflare y transferencias/proveedores reales.
+- Determinar bases aplicables, medidas y requisitos regulatorios del responsable en Perú. No afirmar cumplimiento auditado sin evidencia.
+- Cuando exista versión vigente aprobada, actualizar fecha/estado y conservar trazabilidad.
+
+## Publicación
+
+Solo rama feat/feature-catalog. Sin deploy, DNS ni integración a feat/brand-foundation. La ruta aún no se ha publicado en el Worker por esta entrega.

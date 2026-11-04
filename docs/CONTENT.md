@@ -11,3 +11,5 @@ Soluciones: seis enfoques originales por sector con prioridades, preguntas de ev
 Catálogo /funcionalidades/: 14 áreas conceptuales con descripción, pregunta de diagnóstico, límites y sectores. Fuente editorial en features.ts; estados y evidencia compartidos con matriz generada. No interpretar «No verificada» como función disponible.
 
 Precios: información de alcance sin montos. Demo: guía preparada localmente; toda la comunicación distingue generar/descargar de enviar o reservar. No se pide contacto personal ni se declara recepción inexistente.
+
+Contacto confirmado: WhatsApp externo desde demo y correo/WhatsApp de privacidad. Conservar distinción entre abrir un servicio, enviar voluntariamente un mensaje y generar una guía local. Política en revisión con contactos centralizados; no afirmar versión definitiva aprobada ni ausencia de logs de hosting.

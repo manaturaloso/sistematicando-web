@@ -68,3 +68,11 @@
 - Sin enlace externo activo, política pública definitiva o mensajes enviados hasta resolver datos esenciales. El borrador se guarda junto a la continuidad en GitHub.
 
 - Respuesta aplicada: teléfono de Perú confirmado y responsable/RUC incorporados. No volver a pedirlos. Se pidió únicamente domicilio y canal de privacidad aún faltantes; no se activa recepción como si la política estuviera cerrada.
+
+## 2026-11-04 · Contactos completos y enlace WhatsApp
+
+- Se incorporan domicilio y correo aportados; usuario confirma WhatsApp también para derechos de privacidad. Datos centralizados en contact.ts para cambios posteriores.
+- /legal/privacidad/ es versión para revisión, sin placeholders, conservando de forma explícita la revisión de prácticas operativas antes del lanzamiento; no es texto definitivo inventado ni certificación legal.
+- WhatsApp solo se abre por acción del visitante, con mensaje genérico y aviso de tercero. La guía no se inserta en el enlace. No se llama a la API ni se envían mensajes desde herramientas o código.
+- Se actualizan copys que decían canal pendiente y enlace de privacidad del pie. Correo y WhatsApp son alternativas para consultas, no automatizaciones.
+- No se realizan cambios en Worker, DNS, producción o rama desplegada. Solo Codex principal.

@@ -9,13 +9,13 @@ build = root / 'dist'
 output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root.parent / 'sistematicando-preview.zip'
 if build == output or build in output.parents or root == output or root in output.parents:
     raise SystemExit('Save the archive outside the checkout and dist.')
-required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html']
+required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html', 'legal/privacidad/index.html']
 for name in required:
     if not (build / name).is_file():
         raise SystemExit(f'Missing build output: {name}; run npm run build first.')
 html = list(build.rglob('*.html'))
-if len(html) != 12:
-    raise SystemExit(f'Expected 12 built pages, found {len(html)}; review the package check before changing it.')
+if len(html) != 13:
+    raise SystemExit(f'Expected 13 built pages, found {len(html)}; review the package check before changing it.')
 for file in html:
     text = file.read_text()
     if 'name="robots" content="noindex, nofollow"' not in text:
