@@ -10,7 +10,7 @@ build = root / 'dist'
 output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root.parent / 'sistematicando-preview.zip'
 if build == output or build in output.parents or root == output or root in output.parents:
     raise SystemExit('Save the archive outside the checkout and dist.')
-required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html', 'legal/privacidad/index.html', 'recursos/index.html', 'preguntas-frecuentes/index.html', 'admin/index.html', 'contacto/index.html', 'version.json', 'nosotros/index.html', 'ayuda/index.html', 'blog/index.html']
+required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html', 'legal/privacidad/index.html', 'recursos/index.html', 'preguntas-frecuentes/index.html', 'admin/index.html', 'contacto/index.html', 'version.json', 'nosotros/index.html', 'ayuda/index.html', 'blog/index.html', 'implementacion/index.html']
 for name in required:
     if not (build / name).is_file():
         raise SystemExit(f'Missing build output: {name}; run npm run build first.')

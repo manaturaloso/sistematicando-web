@@ -122,6 +122,11 @@
       "finalPath": "/funcionalidades/reservas/"
     },
     {
+      "route": "/implementacion/",
+      "status": 200,
+      "finalPath": "/implementacion/"
+    },
+    {
       "route": "/legal/privacidad/",
       "status": 200,
       "finalPath": "/legal/privacidad/"

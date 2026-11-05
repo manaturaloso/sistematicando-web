@@ -913,6 +913,87 @@
       ]
     },
     {
+      "name": "implementation",
+      "label": "Implementación: recorrido y preparación",
+      "type": "file",
+      "path": "content/implementation.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "stages",
+          "label": "Etapas de implementación",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "summary",
+              "label": "Resumen comercial",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "Texto",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "outcome",
+              "label": "Acuerdo o resultado a definir",
+              "type": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "preparation",
+          "label": "Contexto para preparar",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text",
+              "label": "Texto",
+              "type": "text",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "responsibilities",
+          "label": "Responsabilidades por acordar",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "items",
+              "label": "Elementos",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages-404",
       "label": "Página: 404",
       "type": "file",
@@ -2067,6 +2148,36 @@
               "label": "Descripción SEO",
               "type": "text",
               "required": true
+            },
+            {
+              "name": "text_028",
+              "label": "Después de definir la propuesta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_029",
+              "label": "Prepara el camino a la implementación.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_030",
+              "label": "Revisa qué acuerdos, información y responsables conviene organizar para emp…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_031",
+              "label": "Ver las etapas de implementación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_032",
+              "label": "Etapas de implementación",
+              "type": "string",
+              "required": true
             }
           ]
         }
@@ -2730,7 +2841,7 @@
             },
             {
               "name": "text_042",
-              "label": "Revisa las áreas conceptuales y el enfoque de tu sector. Disponibilidad y c…",
+              "label": "Explora los módulos, revisa cómo se define una propuesta y conoce qué convi…",
               "type": "text",
               "required": true
             },
@@ -2827,6 +2938,12 @@
                   "description": "La guía se genera en el navegador. No afirmar que se ha enviado una solicitud ni recibido una reserva."
                 }
               ]
+            },
+            {
+              "name": "text_045",
+              "label": "Conocer la implementación",
+              "type": "string",
+              "required": true
             }
           ]
         }
@@ -3111,6 +3228,12 @@
             {
               "name": "text_006",
               "label": "Se abre en otra pestaña. Revisa la política antes de compartir información.…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Puedes consultar por una demostración en el {phone}. La atención y la coord…",
               "type": "text",
               "required": true
             }
@@ -3962,6 +4085,178 @@
               "name": "text_012",
               "label": "Recurso editorial de gestión. Adapta las recomendaciones al contexto y los …",
               "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-implementacion-index",
+      "label": "Página: implementacion",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-implementacion-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Implementación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "De la evaluación a la operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Un buen inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "se prepara en equipo.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Entiende qué conviene revisar en cada etapa y cómo definir un alcance adecu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Un recorrido para acordar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Estas etapas orientan la planificación. Servicios, responsables, plazos y c…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "El recorrido",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Cuatro etapas, con un objetivo claro.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Qué conviene dejar definido",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Antes de conversar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Reúne el contexto, sin complicarte.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "No necesitas tener toda la información resuelta para empezar. Identifica qu…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Trabajo coordinado",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Cada tarea necesita un responsable.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Usa esta separación como punto de partida. Las responsabilidades finales de…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Da el siguiente paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Conversemos sobre tu punto de partida.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Prepara tu guía y consulta por una demostración. También puedes revisar qué…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Preparar mi demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "Revisar la propuesta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "Consultar por WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "Resolver preguntas",
+              "type": "string",
               "required": true
             }
           ]

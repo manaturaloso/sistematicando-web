@@ -3,7 +3,7 @@
 ## Qué está implementado
 
 - `/admin/`: panel de acceso y enlaces por sección. **La edición y autenticación ocurren en Pages CMS, fuera del sitio.** No es un editor embebido ni una API de escritura anónima.
-- `.pages.yml`: configuración de 30 editores, con biblioteca de imágenes. El archivo usa JSON, válido como YAML 1.2.
+- `.pages.yml`: configuración de 32 editores, con biblioteca de imágenes. El archivo usa JSON, válido como YAML 1.2.
 - Contenido en `content/*.json`, consumido por Astro: marca/SEO, menús, contactos, home, factores comerciales, soluciones, módulos, FAQ, guías y textos por página/componente.
 - Los cambios guardados por el CMS son commits en la rama seleccionada. La web estática necesita un nuevo build desde esa rama para reflejarlos. Guardar no implica integrar ni publicar producción.
 
@@ -79,7 +79,7 @@ En **Página: solicitar-demo → Documento y mensajes de la guía local** puedes
 
 La nueva prueba editorial se ejecuta dentro de test:ci y comprueba también el TXT descargado. No necesitas regenerar .pages.yml al cambiar estos valores; solo cuando se desarrolla un esquema nuevo. Guardar en el CMS crea un commit en feat/feature-catalog; no publica por sí solo en el Worker actual.
 
-Página: contacto permite cambiar los textos de /contacto/. Los datos del responsable y canales se editan en Contactos y responsable; los del bloque comercial compartido con demo en Componente: WhatsAppContact. /admin incluye acceso directo al nuevo editor y a los textos de catálogo/demo. Son 30 editores actualmente.
+Página: contacto permite cambiar los textos de /contacto/. Los datos del responsable y canales se editan en Contactos y responsable; los del bloque comercial compartido con demo en Componente: WhatsAppContact. /admin incluye acceso directo al nuevo editor y a los textos de catálogo/demo. Son 32 editores actualmente.
 
 ## Identificar qué versión estás viendo
 
@@ -98,3 +98,9 @@ Marca, logos y SEO global incluye launchDraft y su etiqueta/aviso de vista previ
 Cinco editores nuevos, 30 en total: Blog: artículos editoriales y textos de páginas nosotros-index, ayuda-index, blog-index y blog-article. Artículos: título, categoría, introducción, secciones con párrafos/puntos clave, conclusión, moduleId y guideSlugs. Añadir un artículo genera una ruta `/blog/<slug>/` al compilar. No cambiar slugs existentes sin revisar enlaces y redirecciones.
 
 Ayuda permite editar tarjetas (título/texto/href) y seleccionar FAQ por identificador. Nosotros incluye principios editables. Los enlaces de módulos, guías y FAQ deben existir; content:check bloquea referencias inválidas. No introducir autores/fechas, disponibilidad de soporte ni promesas operativas sin confirmación. Estos cambios se guardan en desarrollo; no publicar hasta autorización final.
+
+## Implementación y contacto editable
+
+Dos editores nuevos: Implementación: recorrido y preparación (`implementation`) y Página: implementacion-index. Etapas con título/resumen/texto/acuerdo; preparación con título/texto; responsabilidades con título/lista. Los enlaces desde precios se generan por posición (paso-1, paso-2…); revisar al reordenar. No introducir servicios, fechas o SLA como aprobados sin confirmación del propietario.
+
+El párrafo de WhatsApp es ahora components-WhatsAppContact.text_007. Debe contener exactamente un `{phone}`; se sustituye por contact.phoneLabel. El validador bloquea marcadores ausentes, repetidos o desconocidos. Se mantiene la separación entre contactos centralizados y copy por página.

@@ -1,20 +1,20 @@
-# Calidad local · 2026-11-04
+# Calidad local · 2026-11-05
 
 ## Alcance
 
-Build estático local, no Worker público. 40 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
+Build estático local, no Worker público. 41 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
 
 ## Correcciones
 
 - Menú móvil sin JavaScript: ahora los enlaces permanecen visibles y el botón solo aparece cuando su comportamiento está inicializado.
 - Salto al contenido: el destino main acepta foco programático; probado con teclado.
-- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 26 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
+- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 28 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
 - Enlace de marca: usa el nombre visible o alt del logo como nombre accesible, evitando un aria-label que omitía la leyenda visible.
 - Favicon: si aún no se ha cargado uno, referencia vacía explícita para evitar una petición automática fallida a /favicon.ico. No se inventó un isotipo.
 
 ## Accesibilidad automática
 
-`npm run audit:a11y`: 80 combinaciones (40 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **84 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
+`npm run audit:a11y`: 82 combinaciones (41 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **86 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
 
 Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultados como aprobaciones automáticas. Evidencia en qa/contrast-review.json: flechas decorativas aria-hidden y etiquetas del mockup cuya transformación/fondo no pudo resolver. Revisión de estilos y captura desktop: tinta/superficie 11.59:1, tinta/blanco 13.15:1, tinta/líneas del gráfico 11.31:1 y texto claro/tinta 12.58:1. No se observó ocultación del texto en la captura revisada.
 
@@ -61,7 +61,7 @@ CI incluye ahora test:brand automáticamente dentro de test:ci; permite las vari
 
 Revisión asistida actual: capturas y teclado en los cuatro flujos; datos antes/después en qa/reflow-review.json. Se corrigió reflujo a 200% en móvil y se añadieron regresiones para foco de validación/generación/reset y salto desde búsqueda vacía. Dispositivos físicos y lectores de pantalla siguen pendientes. Lighthouse de la tabla repetido tras la corrección; no métricas de campo.
 
-Entrega de lanzamiento: 40 rutas/146 destinos, 14 fichas CMS y 84 comprobaciones axe aprobadas. Navegación/texto 200% incluye los 14 módulos. Worker local 45 rutas, cabeceras y JSON aprobados; capturas de módulo, catálogo, sector y precios revisadas. Lighthouse de la tabla repetido con la vista previa global activa. No se publica.
+Entrega de lanzamiento: 41 rutas/152 destinos, 14 fichas CMS y 86 comprobaciones axe aprobadas. Navegación/texto 200% incluye los 14 módulos. Worker local 45 rutas, cabeceras y JSON aprobados; capturas de módulo, catálogo, sector y precios revisadas. Lighthouse de la tabla repetido con la vista previa global activa. No se publica.
 
 ## Empresa, Ayuda y Blog
 
@@ -70,3 +70,11 @@ Check final: 53 archivos, sin errores, advertencias ni hints. Build: 40 páginas
 Incidencia del ejecutor: la auditoría inicial coincidió con un rebuild de dist al iniciar Worker y produjo cinco reglas sobre una respuesta transitoria de error de punto-de-venta, no sobre su HTML. Repetición aislada tras detener Worker; el auditor exige respuesta HTTP 200 desde ahora. Ver PROGRESS.md para detalle. No publicar ni retirar noindex.
 
 Revisión visual de Nosotros móvil, Ayuda escritorio y artículo móvil/escritorio completada; capturas de referencia en LAUNCH_PREVIEW.md. No sustituye prueba con dispositivos físicos/lector de pantalla.
+
+## 5 de noviembre de 2026 · Implementación y recorrido comercial
+
+Check 54 archivos sin errores/advertencias/hints; build 41 páginas y 32 editores CMS. Suite completa test:ci aprobada en secuencia sobre build estable: sitio 41 rutas/152 destinos, reflujo 200% en 28 rutas a 390/1280, marca, editorial/comercial, módulos, recursos, versión y axe 86 comprobaciones sin infracciones detectadas. Sin recompilar dist durante la auditoría. Pruebas específicas: precios → última etapa por teclado → demo con/sin JS; teléfono desde CMS y guía sin adjuntos/datos añadidos al enlace WhatsApp.
+
+La evidencia Lighthouse anterior no se repitió: no son métricas de esta página ni de producción. Revisión manual con lectores/dispositivos sigue pendiente. Sin nueva publicación.
+
+Worker local final: 52 verificaciones de rutas más cabeceras/JSON/assets/query/405 y navegador; servidor detenido tras las pruebas. Paquete de 41 páginas validado fuera del checkout. Capturas de implementación móvil y precios escritorio revisadas; referencia en LAUNCH_PREVIEW.md. Sin nueva ejecución Lighthouse.

@@ -124,3 +124,7 @@ Siguiente paso exacto: revisar Actions del nuevo SHA y copy comercial de las 14 
 ## Cobertura Empresa/Ayuda/Blog
 
 `verify-resources.mjs` forma parte de test:ci y prueba descubrimiento de artículos, tabla de contenidos por teclado, relaciones con guías/módulos y FAQ nativa de Ayuda con/sin JS. Produce qa/resources-report.json, también como artefacto Actions. Verificación de sitio/axe recorre todas las rutas generadas; reflujo al 200% incluye Nosotros/Ayuda/Blog y cada artículo (26 rutas × dos anchos en esta entrega). No contacta canales comerciales ni publica.
+
+## 5 de noviembre de 2026 · Recorrido comercial
+
+verify-editorial recorre precios → última etapa de implementación (ancla por teclado) → demo con y sin JavaScript; valida WhatsApp configurado, texto con teléfono CMS y guía oculta sin JS. Tras generar la guía se comprueba que el enlace WhatsApp no incorpore sus selecciones. verify-navigation incluye precios/implementación en texto al 200% (28 rutas a dos anchos). Validación de contenido exige etapas, preparación, responsabilidades y un único {phone}. Todo sin comunicaciones externas ni despliegue. Ejecutar Worker después de test:ci para evitar recompilar dist durante axe.

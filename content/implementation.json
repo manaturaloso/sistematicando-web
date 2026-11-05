@@ -1,0 +1,64 @@
+{
+  "stages": [
+    {
+      "title": "Entender tu operación",
+      "summary": "Revisar el recorrido del negocio, las prioridades y las personas involucradas.",
+      "text": "Parte de una situación concreta: qué ocurre hoy, dónde se pierde información y qué cambio quieres evaluar. Una demostración debería recorrer ese caso, además de mostrar funciones.",
+      "outcome": "Un caso de uso y las preguntas que deben resolverse antes de definir el alcance."
+    },
+    {
+      "title": "Acordar el alcance",
+      "summary": "Dejar claros módulos, locales, servicios y condiciones de la propuesta.",
+      "text": "Distingue lo incluido de lo que requeriría trabajo adicional. Revisa límites, dependencias, costos e impuestos aplicables; las integraciones y los servicios deben confirmarse para tu caso.",
+      "outcome": "Una propuesta escrita con alcance, exclusiones y condiciones por revisar antes de contratar."
+    },
+    {
+      "title": "Preparar datos y equipo",
+      "summary": "Organizar la información inicial y asignar responsables para cada tarea.",
+      "text": "Revisa formatos, calidad de datos, accesos por rol y necesidades de capacitación. Define qué información se preparará, quién la validará y cómo se comprobará la configuración.",
+      "outcome": "Un plan de preparación con tareas, responsables y criterios de revisión acordados."
+    },
+    {
+      "title": "Validar la puesta en marcha",
+      "summary": "Revisar los recorridos acordados y definir cómo atender las incidencias.",
+      "text": "Antes de iniciar, acuerda qué operaciones se probarán, quién dará conformidad y qué hacer si una comprobación falla. Los tiempos, canales y alcance del acompañamiento deben quedar definidos en la propuesta.",
+      "outcome": "Criterios de conformidad y un plan de inicio y seguimiento según el alcance contratado."
+    }
+  ],
+  "preparation": [
+    {
+      "title": "Tu operación actual",
+      "text": "Tipo de negocio, cantidad de locales y recorrido que necesitas revisar primero."
+    },
+    {
+      "title": "Información de partida",
+      "text": "Qué catálogos o registros existen, en qué formato están y quién puede revisarlos. Para la primera conversación basta describirlos."
+    },
+    {
+      "title": "Las personas involucradas",
+      "text": "Quién toma decisiones, quién valida los datos y quiénes usarían cada área."
+    },
+    {
+      "title": "Dependencias y prioridades",
+      "text": "Equipos, conexiones o herramientas que deban evaluarse, y restricciones de tu operación."
+    }
+  ],
+  "responsibilities": [
+    {
+      "title": "Por parte de tu negocio",
+      "items": [
+        "Describir los procesos y priorizar qué se necesita resolver.",
+        "Asignar a las personas que revisarán información y decisiones.",
+        "Validar los datos y los recorridos definidos para el inicio."
+      ]
+    },
+    {
+      "title": "Por acordar en la propuesta",
+      "items": [
+        "Qué configuración, preparación de datos y capacitación se incluirían.",
+        "Qué integraciones, equipos y servicios quedan dentro o fuera del alcance.",
+        "Responsables, calendario, criterios de aceptación y acompañamiento aplicable."
+      ]
+    }
+  ]
+}

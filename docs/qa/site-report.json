@@ -122,6 +122,11 @@
       "title": "Reservas · Sistematicando"
     },
     {
+      "route": "/implementacion/",
+      "status": 200,
+      "title": "Implementación y puesta en marcha · Sistematicando"
+    },
+    {
       "route": "/legal/privacidad/",
       "status": 200,
       "title": "Política de privacidad · Sistematicando"
@@ -202,5 +207,5 @@
       "title": "Software para restaurantes · Sistematicando"
     }
   ],
-  "destinations": 146
+  "destinations": 152
 }

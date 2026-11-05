@@ -25,3 +25,7 @@ El propietario autoriza preparar la comunicación como producto completo, aunque
 ## Empresa, Ayuda y Blog
 
 Nosotros presenta propósito y principios sin historia corporativa fabricada. Ayuda reúne recorridos existentes, preguntas compartidas y contacto, sin prometer horarios/SLA. Tres artículos originales en articles.json cubren priorización de procesos, crecimiento multisede y recorrido pedido-cierre, con referencias internas a guías/módulos. Textos y metadatos comunes en pages.json. No hay fechas ni firmas ficticias, testimonios ni estadísticas de resultados. Mantener el aviso de borrador hasta revisión final.
+
+## Recorrido comercial e implementación
+
+La nueva página /implementacion/ explica evaluación, alcance, preparación y validación del inicio como acuerdos a definir. Contenido en implementation.json, textos comunes en pages.json. Precios y demo enlazan al recorrido; no hay nuevas tarifas, plazos, soporte ni servicios prometidos. El contacto real sigue externo y voluntario. Párrafo con teléfono editable mediante {phone}, dato centralizado. Ver COMMERCIAL_SCOPE.md para límites y pendientes concretos.

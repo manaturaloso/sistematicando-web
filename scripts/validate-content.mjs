@@ -53,6 +53,13 @@ for(const article of articles){
  for(const section of article.sections){ensure(section.title?.trim()&&Array.isArray(section.paragraphs)&&section.paragraphs.length>0&&section.paragraphs.every(text=>typeof text==='string'&&text.trim()),`Sección inválida en artículo: ${article.slug}`);ensure(Array.isArray(section.points)&&section.points.every(text=>typeof text==='string'&&text.trim()),`Puntos inválidos en artículo: ${article.slug}`);}
 }
 for(const item of faqs)ensure(['producto','comercial','privacidad'].includes(item.category),`Categoría FAQ inválida: ${item.category}`);
+const implementation=read('implementation');
+for(const key of ['stages','preparation','responsibilities'])ensure(Array.isArray(implementation[key])&&implementation[key].length>0,`Implementación sin ${key}`);
+for(const stage of implementation.stages)for(const key of ['title','summary','text','outcome'])ensure(typeof stage[key]==='string'&&stage[key].trim(),`Etapa de implementación sin ${key}`);
+for(const item of implementation.preparation)for(const key of ['title','text'])ensure(typeof item[key]==='string'&&item[key].trim(),`Preparación sin ${key}`);
+for(const group of implementation.responsibilities)ensure(group.title?.trim()&&Array.isArray(group.items)&&group.items.length>0&&group.items.every(item=>typeof item==='string'&&item.trim()),'Responsabilidades de implementación inválidas');
+const phoneCopy=read('pages')['components-WhatsAppContact'].text_007;
+ensure(typeof phoneCopy==='string'&&phoneCopy.split('{phone}').length===2&&!/[{}]/.test(phoneCopy.replace('{phone}','')),'Texto de contacto necesita exactamente un {phone}');
 const pages=read('pages'),search=pages['pages-funcionalidades-index'].search,guide=pages['pages-solicitar-demo-index'].guide;
 const help=pages['pages-ayuda-index'];
 ensure(Array.isArray(help.helpLinks)&&help.helpLinks.length>0,'Ayuda sin recorridos');

@@ -40,3 +40,24 @@
 .privacy-page h2 {font-size:clamp(1.35rem,3vw,1.8rem);}
 .privacy-page p {overflow-wrap:anywhere;}
 @media(max-width:599px) {.whatsapp-contact {padding:1.3rem;}}
+
+.implementation-section {padding-block:4rem;overflow-wrap:anywhere;}
+.implementation-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin-block:2rem;}
+.implementation-links>a {display:block;padding:1.5rem;border:1px solid var(--line);border-radius:8px;text-decoration:none;min-width:0;}
+.implementation-links h3 {font-size:1.35rem;margin-block:.7rem;}
+.implementation-links p {font-size:.9rem;}
+.implementation-links>a:hover {border-color:var(--ink);}
+.implementation-stages {list-style:none;padding:0;margin-block:2rem;}
+.implementation-stages>li {display:grid;grid-template-columns:4rem minmax(0,1fr);gap:1.5rem;padding-block:2rem;border-top:1px solid var(--line);scroll-margin-top:9rem;}
+.implementation-stages h3 {font-size:clamp(1.6rem,3vw,2rem);}
+.implementation-stages p {max-width:75ch;font-size:1rem;}
+.implementation-outcome {background:var(--soft);border-left:3px solid var(--coral);padding:1.25rem;margin-top:1.5rem;}
+.implementation-outcome h4 {font-size:.9rem;margin:0;}
+.implementation-outcome p {font-size:.9rem;margin-bottom:0;}
+.implementation-responsibilities {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-top:2rem;}
+.implementation-responsibilities article {min-width:0;border-top:1px solid var(--ink);padding-top:1.5rem;}
+.implementation-responsibilities h3 {font-size:1.4rem;}
+.implementation-responsibilities li {margin-bottom:1rem;}
+.commercial-review,.commercial-factors,.demo-workspace {overflow-wrap:anywhere;}
+.commercial-review>div,.commercial-review>ul,.commercial-factors>article,.demo-workspace>div {min-width:0;}
+@media(max-width:599px) {.implementation-links,.implementation-responsibilities {grid-template-columns:1fr;}.implementation-stages>li {grid-template-columns:1fr;gap:.5rem;}.implementation-section {padding-block:3rem;}}

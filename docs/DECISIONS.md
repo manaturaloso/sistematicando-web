@@ -1,6 +1,6 @@
 # Decisiones vigentes
 
-Consolidación: 4 de noviembre de 2026 (America/Lima). El registro anterior íntegro está en [DECISIONS_HISTORY.md](DECISIONS_HISTORY.md); los estados históricos no sustituyen este resumen y [PROGRESS.md](PROGRESS.md).
+Consolidación: 5 de noviembre de 2026 (America/Lima). El registro anterior íntegro está en [DECISIONS_HISTORY.md](DECISIONS_HISTORY.md); los estados históricos no sustituyen este resumen y [PROGRESS.md](PROGRESS.md).
 
 ## Producto y contenido
 
@@ -10,7 +10,7 @@ Consolidación: 4 de noviembre de 2026 (America/Lima). El registro anterior ínt
 
 ## Administración y fuentes
 
-- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 30 editores.
+- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 32 editores.
 - Fuente editorial content/*.json. src/data son adaptadores. .pages.yml se regenera cuando cambia el esquema, no tras cada edición: evitar sobrescribir configuración por rutina.
 - Diseño estructural, lógica e integraciones requieren desarrollo. La identidad de compilación es técnica y de solo lectura, no un campo CMS.
 - Originales del logo preservados. Derivados PNG de presentación generados por Astro, sin recorte/reconstrucción; selección y variante oscura en site.json. No subir derivados /_astro al CMS.
@@ -84,3 +84,11 @@ Se añaden seis rutas estáticas y cinco editores CMS (total 40 páginas / 30 ed
 Ayuda orienta hacia guías, FAQ, preparación de demo y contacto; no simula una base de soporte del software ni instrucciones de una interfaz inexistente. FAQ y tabla de contenidos funcionan con teclado sin JavaScript. El blog es lectura estática, sin comentarios, suscripciones ni envíos. CMS sigue externo y autenticado. Se amplía la navegación y el pie con ajuste responsive. Se mantiene launchDraft, noindex y congelación del Worker.
 
 Codex principal, sin subagentes. Siguiente paso: recorrido comercial de precios/demo, alcance de implementación y pendientes legales/comerciales documentados, sin inventar tarifas ni publicar.
+
+## 5 de noviembre de 2026 · Implementación y recorrido comercial
+
+/implementacion/ organiza cuatro etapas como planificación por acordar, no como servicio, calendario o alcance ya contratado. Preparación y responsabilidades se editan en implementation.json; copy en pages-implementacion-index. Precios ofrece enlaces a las etapas y demo permite continuar hacia esa explicación. Total actual: 41 páginas y 32 editores.
+
+No se inventan planes, tarifas, impuestos aplicables, plazos, migraciones incluidas, SLA, capacitación ni condiciones de contratación. El flujo comercial real continúa siendo WhatsApp externo; no hay envío de solicitudes ni adjuntos automáticos desde la guía local. Párrafo de contacto editable con marcador {phone} único y validado; dato centralizado en contact.json.
+
+Pruebas de recorrido sin/con JavaScript, anclas por teclado, coincidencia del contacto y ausencia de datos de la guía en el enlace comercial. Mantener launchDraft/noindex y no publicar. Siguiente paso: preparación/revisión legal y editorial; agente Codex principal, sin subagentes.

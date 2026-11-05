@@ -176,6 +176,13 @@
       "violations": []
     },
     {
+      "route": "/implementacion/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
       "route": "/legal/privacidad/",
       "width": 390,
       "passes": 37,
@@ -457,6 +464,13 @@
       "route": "/funcionalidades/reservas/",
       "width": 1440,
       "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/implementacion/",
+      "width": 1440,
+      "passes": 37,
       "incomplete": [],
       "violations": []
     },

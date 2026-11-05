@@ -186,7 +186,12 @@
     "text_026": "Reúne el contexto de tu operación y conversemos por WhatsApp sobre la configuración que necesitas.",
     "text_027": "Preparar mi guía",
     "seo_title": "Precios y alcance de la propuesta · Sistematicando",
-    "seo_description": "Consulta una propuesta de Sistematicando según tu operación, locales, módulos y servicios. Conoce los factores que definen su alcance."
+    "seo_description": "Consulta una propuesta de Sistematicando según tu operación, locales, módulos y servicios. Conoce los factores que definen su alcance.",
+    "text_028": "Después de definir la propuesta",
+    "text_029": "Prepara el camino a la implementación.",
+    "text_030": "Revisa qué acuerdos, información y responsables conviene organizar para empezar. El alcance y el calendario se definen para cada negocio.",
+    "text_031": "Ver las etapas de implementación",
+    "text_032": "Etapas de implementación"
   },
   "pages-legal-privacidad": {
     "text_001": "Inicio",
@@ -295,7 +300,7 @@
     "text_039": "Descargar guía (.txt)",
     "text_040": "Mientras preparas tu conversación",
     "text_041": "Explora a tu ritmo.",
-    "text_042": "Revisa las áreas conceptuales y el enfoque de tu sector. Disponibilidad y condiciones comerciales pendientes de confirmación.",
+    "text_042": "Explora los módulos, revisa cómo se define una propuesta y conoce qué conviene preparar para la implementación.",
     "text_043": "Ver funcionalidades",
     "text_044": "Entender la propuesta",
     "seo_title": "Prepara tu futura demo · Sistematicando",
@@ -316,7 +321,8 @@
       "disclaimer": "Documento preparado localmente. No es cotización, solicitud enviada ni reserva de demo.",
       "generatedStatus": "Guía generada localmente. No se ha enviado información.",
       "downloadStatus": "Descarga de la guía iniciada. No se ha enviado una solicitud."
-    }
+    },
+    "text_045": "Conocer la implementación"
   },
   "pages-recursos-guias-slug": {
     "text_001": "Inicio",
@@ -361,7 +367,8 @@
     "text_003": "Al abrir WhatsApp, ese servicio procesará la conexión según su política. Tú decides si envías el mensaje; la guía local no se adjunta automáticamente.",
     "text_004": "Abrir WhatsApp",
     "text_005": "Leer política de privacidad",
-    "text_006": "Se abre en otra pestaña. Revisa la política antes de compartir información. No envíes datos sensibles ni datos personales de tus clientes o trabajadores."
+    "text_006": "Se abre en otra pestaña. Revisa la política antes de compartir información. No envíes datos sensibles ni datos personales de tus clientes o trabajadores.",
+    "text_007": "Puedes consultar por una demostración en el {phone}. La atención y la coordinación se realizan en una conversación externa."
   },
   "pages-contacto-index": {
     "seo_title": "Contacto · Sistematicando",
@@ -532,5 +539,33 @@
     "text_010": "Preparar una conversación",
     "text_011": "Leer guía",
     "text_012": "Recurso editorial de gestión. Adapta las recomendaciones al contexto y los datos reales de tu negocio."
+  },
+  "pages-implementacion-index": {
+    "seo_title": "Implementación y puesta en marcha · Sistematicando",
+    "seo_description": "Conoce qué conviene acordar al implementar Sistematicando: alcance, preparación de datos, equipo, validación y acompañamiento.",
+    "text_001": "Inicio",
+    "text_002": "Implementación",
+    "text_003": "De la evaluación a la operación",
+    "text_004": "Un buen inicio",
+    "text_005": "se prepara en equipo.",
+    "text_006": "Entiende qué conviene revisar en cada etapa y cómo definir un alcance adecuado para tu negocio. La implementación empieza por acuerdos claros.",
+    "text_007": "Un recorrido para acordar",
+    "text_008": "Estas etapas orientan la planificación. Servicios, responsables, plazos y condiciones se definen para cada propuesta; esta página no confirma una contratación ni un calendario.",
+    "text_009": "El recorrido",
+    "text_010": "Cuatro etapas, con un objetivo claro.",
+    "text_011": "Qué conviene dejar definido",
+    "text_012": "Antes de conversar",
+    "text_013": "Reúne el contexto, sin complicarte.",
+    "text_014": "No necesitas tener toda la información resuelta para empezar. Identifica qué sabes y qué requiere una revisión conjunta.",
+    "text_015": "Trabajo coordinado",
+    "text_016": "Cada tarea necesita un responsable.",
+    "text_017": "Usa esta separación como punto de partida. Las responsabilidades finales dependen del alcance que se acuerde por escrito.",
+    "text_018": "Da el siguiente paso",
+    "text_019": "Conversemos sobre tu punto de partida.",
+    "text_020": "Prepara tu guía y consulta por una demostración. También puedes revisar qué condiciones conviene incluir en la propuesta.",
+    "text_021": "Preparar mi demo",
+    "text_022": "Revisar la propuesta",
+    "text_023": "Consultar por WhatsApp",
+    "text_024": "Resolver preguntas"
   }
 }

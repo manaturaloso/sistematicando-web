@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {chromium} from '@playwright/test';
 import {previewServer} from './lib/preview-server.mjs';
+const implementation=JSON.parse(await fs.readFile('content/implementation.json','utf8'));
 const pages=JSON.parse(await fs.readFile('content/pages.json','utf8'));
 const catalogCopy=pages['pages-funcionalidades-index'],demoCopy=pages['pages-solicitar-demo-index'];
 const search=catalogCopy.search,guide=demoCopy.guide;
@@ -24,6 +25,19 @@ try{
    assert(await contactPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Contact overflow: ${width}`);
    if(width===390||width===1440){await fs.mkdir('/tmp/sistematicando-qa',{recursive:true});await contactPage.screenshot({path:`/tmp/sistematicando-qa/contact-${width}.png`});}
   }
+  await contactPage.goto(server.url+'/precios/');
+  const stages=contactPage.locator('.implementation-links a');assert.equal(await stages.count(),implementation.stages.length);
+  for(let index=0;index<implementation.stages.length;index++)assert.equal(await stages.nth(index).getAttribute('href'),`/implementacion/#paso-${index+1}`);
+  await stages.last().focus();await contactPage.keyboard.press('Enter');await contactPage.waitForURL('**/implementacion/#paso-'+implementation.stages.length);
+  assert(await contactPage.locator(`#paso-${implementation.stages.length}`).isVisible());
+  assert.equal(await contactPage.locator('.implementation-stages h3').last().innerText(),implementation.stages.at(-1).title);
+  assert.equal(await contactPage.locator('form').count(),0);
+  await contactPage.locator('main a[href="/solicitar-demo/"]').first().click();await contactPage.waitForURL('**/solicitar-demo/');
+  assert.equal(await contactPage.locator('.demo-builder').isVisible(),javaScriptEnabled);
+  assert(await contactPage.locator('main a[href="/implementacion/"]').isVisible());
+  const demoSales=new URL(await contactPage.locator('.whatsapp-link').getAttribute('href'));
+  assert.equal(demoSales.pathname,'/'+contact.whatsapp);assert.equal(demoSales.searchParams.get('text'),contact.whatsappMessage);
+  assert((await contactPage.locator('.whatsapp-contact').innerText()).includes(pages['components-WhatsAppContact'].text_007.replace('{phone}',contact.phoneLabel)));
   await contactContext.close();
  }
  await page.goto(server.url+'/funcionalidades/');
@@ -54,8 +68,10 @@ try{
  for(const id of ['business','locations','priority'])await page.locator('#'+id).selectOption({index:1});
  const values=await Promise.all(['business','locations','priority'].map(id=>page.locator('#'+id).inputValue()));
  await page.locator('#demo-guide button[type=submit]').click();
+ const salesBefore=await page.locator('.whatsapp-link').getAttribute('href');
  const expected=[guide.heading,'',`${guide.businessLabel}: ${values[0]}`,`${guide.locationsLabel}: ${values[1]}`,`${guide.priorityLabel}: ${values[2]}`,'',guide.questionsHeading,...guide.questions.map(question=>`- ${question}`),'',guide.disclaimer].join('\n');
  assert.equal(await page.locator('#guide-text').textContent(),expected);
+ assert.equal(await page.locator('.whatsapp-link').getAttribute('href'),salesBefore,'Guide selections must not be appended to WhatsApp');
  assert.equal(await page.evaluate(()=>document.activeElement.id),'result-title');
  assert.equal(await page.locator('#guide-status').textContent(),guide.generatedStatus);
  const downloadPromise=page.waitForEvent('download');await page.locator('#download-guide').click();const download=await downloadPromise;
@@ -64,5 +80,6 @@ try{
  await page.locator('#priority').selectOption({index:2});assert(!await page.locator('#guide-result').isVisible());assert.equal(await page.locator('#guide-text').textContent(),'');
  await page.locator('#demo-guide button[type=reset]').focus();await page.keyboard.press('Enter');
  assert.equal(await page.evaluate(()=>document.activeElement.id),'business');assert.equal(await page.locator('#business').inputValue(),'');
+ console.log('PASS commercial journey pricing → implementation stage → demo with/without JavaScript; configured WhatsApp and CMS phone copy.');
  console.log('PASS keyboard validation/result/reset/area jumps, contact channels (JS/no-JS), five contact widths and CMS editorial copy: placeholder, dynamic counts, accessible labels, guide text/download/status and invalidation.');
 }finally{await browser?.close();await server.close();}

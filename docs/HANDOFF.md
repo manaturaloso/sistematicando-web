@@ -1,6 +1,6 @@
 # Retomar Sistematicando desde otra cuenta de Codex
 
-Usa el repositorio GitHub manaturaloso/sistematicando-web. Fecha de esta guía: 4 de noviembre de 2026; las referencias remotas deben comprobarse otra vez al retomar.
+Usa el repositorio GitHub manaturaloso/sistematicando-web. Fecha de esta guía: 5 de noviembre de 2026; las referencias remotas deben comprobarse otra vez al retomar.
 
 ## Inicio seguro
 
@@ -49,11 +49,11 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar el recorrido comercial de precios/demo y alcance de implementación; Empresa/Ayuda/Blog ya están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar preparación legal/editorial de privacidad y alcance de términos; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
-Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 40 rutas/146 destinos, 84 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md; nueva evidencia editorial en qa/resources-report.json.
+Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 41 rutas/152 destinos, 86 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md; nueva evidencia editorial en qa/resources-report.json.
 
 ## Mensaje para iniciar otra sesión
 
@@ -61,6 +61,10 @@ Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 40 rutas/146 destino
 
 ## Directiva actual de producto y lanzamiento
 
-El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 40 páginas y 30 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
+El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 41 páginas y 32 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
 
-No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: recorrido comercial de precios/demo y oferta comercial sin precios inventados; pruebas/pendientes en PROGRESS.md.
+No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: revisión legal/editorial y alcance de términos sin condiciones inventadas; pruebas/pendientes en PROGRESS.md.
+
+## Entrega actual: implementación
+
+/implementacion/ tiene cuatro etapas, contexto de preparación y responsabilidades a acordar; enlazado desde precios y demo. Fuente implementation.json; textos en pages-implementacion-index; párrafo WhatsApp en components-WhatsAppContact.text_007 con {phone}. 41 páginas / 32 editores. No hay precios/plazos/SLA aprobados ni nueva publicación. No reiniciar el recorrido comercial ya implementado: continuar privacidad/alcance de términos y pendientes de COMMERCIAL_SCOPE.md. Usar SHA de git log -1, no confundir refs de tracking antiguas con ls-remote.
