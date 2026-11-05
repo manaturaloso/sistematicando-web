@@ -35,6 +35,10 @@ Resultado local registrado: 42 rutas/162 destinos internos; marca a seis anchos 
 
 [PERFORMANCE.md](docs/PERFORMANCE.md) registra las cinco rutas medidas y dos repeticiones de la anomalía del módulo. `npm run audit:performance` genera muestras locales; no son métricas de producción ni permiso de publicación.
 
+## Compatibilidad
+
+[COMPATIBILITY.md](docs/COMPATIBILITY.md) registra motores y movimiento reducido. `npm run test:compatibility` prueba los flujos disponibles; la CI exige Chromium, Firefox y WebKit. Localmente solo Chromium está probado; los otros motores y dispositivos físicos siguen pendientes.
+
 ## Editar contenido
 
 /admin abre Pages CMS externo con autenticación GitHub: 34 editores, medios y guardados reales verificados. Fuente editable content/*.json; src/data son adaptadores. [ADMIN.md](docs/ADMIN.md) describe textos por página, logos, contactos y guía/buscador. Estructura y lógica requieren desarrollo; no es constructor visual arbitrario.

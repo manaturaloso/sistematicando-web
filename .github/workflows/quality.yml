@@ -26,7 +26,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Remove evidence from older runs
-        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json docs/qa/modules-report.json
+        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json docs/qa/modules-report.json docs/qa/resources-report.json docs/qa/legal-report.json docs/qa/release-report.json docs/qa/release-guards-report.json docs/qa/compatibility-report.json docs/RELEASE_CHECKLIST.md
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
@@ -37,9 +37,11 @@ jobs:
         run: npm run check
       - name: Build and dry-run Worker (never deploy)
         run: npm run worker:check
-      - name: Install browser for local checks
-        run: npx --no-install playwright install --with-deps chromium
+      - name: Install browser engines for checks
+        run: npx --no-install playwright install --with-deps chromium firefox webkit
       - name: Check pages, navigation, branding and accessibility
+        env:
+          COMPAT_REQUIRED_ENGINES: chromium,firefox,webkit
         run: npm run test:ci
       - name: Save build and quality evidence
         if: always()
@@ -54,6 +56,7 @@ jobs:
             docs/qa/modules-report.json
             docs/qa/resources-report.json
             docs/qa/legal-report.json
+            docs/qa/compatibility-report.json
             docs/qa/release-report.json
             docs/qa/release-guards-report.json
             docs/RELEASE_CHECKLIST.md

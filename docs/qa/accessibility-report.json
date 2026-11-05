@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "b6d1d2222034d39da466d19397342621a6c5dfa5",
-    "commitDate": "2026-11-05T15:17:27Z",
+    "commit": "dc85c3631bd6eb8b8c6d1b9e25356239aa3db50e",
+    "commitDate": "2026-11-05T16:34:18Z",
     "sourceModified": true
   },
   "tool": "axe-core via @axe-core/playwright",

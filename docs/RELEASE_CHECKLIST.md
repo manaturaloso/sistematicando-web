@@ -2,7 +2,7 @@
 
 Generado con npm run audit:release tras test:ci. Fuente: qa/release-report.json. Este informe describe un build local, no el Worker público ni una aprobación del producto.
 
-Base Git del build verificado: b6d1d2222034d39da466d19397342621a6c5dfa5; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
+Base Git del build verificado: dc85c3631bd6eb8b8c6d1b9e25356239aa3db50e; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
 
 42 páginas, 162 destinos internos y 88 comprobaciones axe sin infracciones detectadas. Metadata incluye título/descripción únicos, Open Graph coherente, idioma, viewport y noindex; enlaces/fragmentos e imágenes verificados. Los incomplete de axe permanecen en el JSON y requieren revisión humana. Las cifras no expresan porcentaje de preparación comercial ni certificación WCAG.
 

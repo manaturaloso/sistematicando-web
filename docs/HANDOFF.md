@@ -49,7 +49,7 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar movimiento reducido y compatibilidad de flujos/navegadores; rendimiento actual en PERFORMANCE.md; revisión visual local registrada en VISUAL_REVIEW.md; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar paquete final de revisión; compatibilidad local y CI estricta en COMPATIBILITY.md; rendimiento actual en PERFORMANCE.md; revisión visual local registrada en VISUAL_REVIEW.md; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
@@ -94,3 +94,9 @@ Siguiente paso exacto: extender/ejecutar medición de rendimiento para home, cat
 PERFORMANCE.md y dos JSON en qa contienen cinco rutas y dos repeticiones focales: cuatro rutas 100; módulo 86 inicial, luego 100/100 sin cambios frontend. La anomalía no se reproduce y se conserva; no hay una optimización aplicada ni una causa demostrada. SEO 66 deliberado, no retirar noindex. Auditor permite --route/--runs/--output bajo /tmp; datos completos temporales y resúmenes versionados. Identidad de la instantánea en cada JSON.
 
 Siguiente paso exacto: probar menú/buscador/guía con movimiento reducido y preparar matriz de navegadores. Ejecutar Firefox/WebKit si están disponibles; registrar limitaciones en lugar de asumir compatibilidad. Dispositivos físicos/lector y decisiones de lanzamiento continúan pendientes. No volver a bloquear frontend preguntando si el producto parcial ya está completo ni publicar nuevas versiones.
+
+## Compatibilidad ya implementada
+
+COMPATIBILITY.md y qa/compatibility-report.json: Chromium 155 cinco escenarios aprobados (390/1440 con movimiento normal/reducido + no-JS). Firefox/WebKit no instalados/no ejecutados en este entorno; la política no incluye sus descargas, no se cambia para sortearla. Nunca convertir unavailable en aprobación. Prueba local estricta rechazó motores obligatorios ausentes (guard JSON); CI instala/exige los tres, resultado remoto pendiente de observar.
+
+`CHROMIUM_PATH=/usr/bin/chromium npm run test:compatibility`; para requerir todos usar COMPAT_REQUIRED_ENGINES=chromium,firefox,webkit con binarios/dependencias realmente disponibles. Incluido en test:ci. No frontend/CMS nuevo; 42 páginas / 34 editores. Siguiente paso exacto: paquete final de revisión de recorridos y decisiones comerciales/legales; incorporar evidencia real de Actions cuando sea accesible, sin bloquear el trabajo independiente ni pedir publicación. No repetir movimiento reducido básico ya cubierto.

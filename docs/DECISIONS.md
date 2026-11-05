@@ -21,7 +21,7 @@ Consolidación: 5 de noviembre de 2026 (America/Lima). El registro anterior ínt
 - CI de lectura y sin deploy. Revisa páginas, navegación, marca, editorial, versión y axe; elimina evidencia vieja antes de ejecutar. Mantener reglas y resultados incomplete, no silenciar fallos para obtener verde.
 - Pruebas usan controles estables o nombres accesibles del contenido vigente; no exigir etiquetas históricas que el propietario puede editar. El arreglo FAQ conserva texto opaco durante la animación y cubre un instante intermedio.
 - Versión: metadatos Git al compilar, sin variables de entorno/autor/correo/secretos; Git ausente → null. sourceModified cubre fuentes/configuración relevantes, no docs/QA. Fecha del commit, no de publicación. Cambiar HEAD requiere nuevo build.
-- Lighthouse es laboratorio de tres rutas, no Core Web Vitals reales ni certificación WCAG completa. No quitar noindex para aumentar SEO.
+- Lighthouse es laboratorio de cinco rutas y repeticiones focales, no Core Web Vitals reales ni certificación WCAG completa. No quitar noindex para aumentar SEO.
 
 ## Git, permisos e identidad
 
@@ -128,3 +128,11 @@ Auditor local ampliado: home, catálogo, demo, primer módulo y primer artículo
 Cuatro rutas dieron 100; módulo 86/LCP 4.204 s inicial y 100 con LCP 0.906/0.903 s en dos repeticiones sin cambios frontend. Se conserva el 86 y no se atribuye causa ni mejora sin reproducción. No se modificó la web para perseguir una cifra. SEO 66 por noindex deliberado; oportunidades locales no justifican cambiar logos/fuentes/caché de producción. PERFORMANCE.md documenta resultados y límites.
 
 Sin dependencias, contenidos, permisos o publicación nuevos. Check/build y siete Lighthouse; no repetir navegación/axe/Worker sin modificación de frontend. Los informes anteriores conservan su identidad; CI actual no se infiere de pruebas locales. Codex principal, sin subagentes. Próximo paso: movimiento reducido y compatibilidad de flujos/navegadores, dejando explícito lo no ejecutado.
+
+## 5 de noviembre de 2026 · Compatibilidad y movimiento reducido
+
+Prueba reproducible de menú/FAQ, búsqueda y guía con Chromium/Firefox/WebKit; cuatro combinaciones de ancho/movimiento y un fallback sin JS por motor. Solo Chromium está instalado localmente y sus cinco escenarios pasan. Firefox/WebKit quedan unavailable, con versión null y cero casos; no se simula compatibilidad. La política actual no incluye destinos de descarga y no se cambia ni se sortea.
+
+CI instala los tres motores y los exige con COMPAT_REQUIRED_ENGINES. Ausente/arranque fallido de motor obligatorio causa fallo; contenido de la guía se contrasta con TXT descargado y no se permite tráfico externo en esos flujos. Se comprobó la modalidad estricta local: rechaza la falta de Firefox/WebKit. El workflow limpia todas sus evidencias antes de preparar navegadores para no publicar un informe viejo si falla setup.
+
+No hay cambios de producto, frontend, contenido CMS ni dependencias. No se vuelve a medir Lighthouse sin causa nueva. Informes identifican su build local y no un commit posterior o CI remoto. Codex principal, sin subagentes; desarrollo solo, no publicación. Siguiente paso: paquete final de revisión e incorporar la ejecución real de CI cuando esté disponible; siguen pendientes físicos/lector y decisiones de lanzamiento.

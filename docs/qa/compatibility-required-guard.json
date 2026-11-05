@@ -1,0 +1,15 @@
+{
+  "scope": "Expected local failure with all three engines required; no actual Firefox/WebKit execution",
+  "requiredEngines": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "exitCode": 1,
+  "chromium": "passed",
+  "unavailable": [
+    "firefox",
+    "webkit"
+  ],
+  "missingRequiredRejected": true
+}

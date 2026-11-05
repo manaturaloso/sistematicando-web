@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "dc85c3631bd6eb8b8c6d1b9e25356239aa3db50e",
+    "commitDate": "2026-11-05T16:34:18Z",
+    "sourceModified": true
+  },
+  "scope": "Local automation of three flows; desktop engines and resized viewports, not physical devices, Safari/Chrome/Firefox release certification or screen-reader review",
+  "requiredEngines": [
+    "chromium"
+  ],
+  "allRequiredPassed": true,
+  "allEnginesTested": false,
+  "results": [
+    {
+      "engine": "chromium",
+      "required": true,
+      "status": "passed",
+      "version": "155.0.8059.79",
+      "cases": [
+        {
+          "width": 390,
+          "reducedMotion": "no-preference",
+          "javaScriptEnabled": true,
+          "status": "passed",
+          "checks": [
+            "skip/menu keyboard and Escape",
+            "native FAQ",
+            "reduced-motion animation/transition when selected",
+            "search result/empty/area recovery",
+            "guide validation/focus/TXT/invalidation/reset",
+            "no external messages or persistent storage"
+          ]
+        },
+        {
+          "width": 1440,
+          "reducedMotion": "no-preference",
+          "javaScriptEnabled": true,
+          "status": "passed",
+          "checks": [
+            "skip/menu keyboard and Escape",
+            "native FAQ",
+            "reduced-motion animation/transition when selected",
+            "search result/empty/area recovery",
+            "guide validation/focus/TXT/invalidation/reset",
+            "no external messages or persistent storage"
+          ]
+        },
+        {
+          "width": 390,
+          "reducedMotion": "reduce",
+          "javaScriptEnabled": true,
+          "status": "passed",
+          "checks": [
+            "skip/menu keyboard and Escape",
+            "native FAQ",
+            "reduced-motion animation/transition when selected",
+            "search result/empty/area recovery",
+            "guide validation/focus/TXT/invalidation/reset",
+            "no external messages or persistent storage"
+          ]
+        },
+        {
+          "width": 1440,
+          "reducedMotion": "reduce",
+          "javaScriptEnabled": true,
+          "status": "passed",
+          "checks": [
+            "skip/menu keyboard and Escape",
+            "native FAQ",
+            "reduced-motion animation/transition when selected",
+            "search result/empty/area recovery",
+            "guide validation/focus/TXT/invalidation/reset",
+            "no external messages or persistent storage"
+          ]
+        },
+        {
+          "width": 390,
+          "reducedMotion": "reduce",
+          "javaScriptEnabled": false,
+          "status": "passed",
+          "checks": [
+            "visible navigation without JavaScript",
+            "all catalog cards available",
+            "interactive guide hidden; voluntary contact available"
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "firefox",
+      "required": false,
+      "status": "unavailable",
+      "version": null,
+      "cases": [],
+      "reason": "Browser executable is not installed; no compatibility claim"
+    },
+    {
+      "engine": "webkit",
+      "required": false,
+      "status": "unavailable",
+      "version": null,
+      "cases": [],
+      "reason": "Browser executable is not installed; no compatibility claim"
+    }
+  ]
+}
