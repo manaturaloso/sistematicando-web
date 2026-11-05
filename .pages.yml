@@ -827,6 +827,92 @@
       ]
     },
     {
+      "name": "articles",
+      "label": "Blog: artículos editoriales",
+      "type": "file",
+      "path": "content/articles.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "items",
+          "label": "Elementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "slug",
+              "label": "Ruta (slug)",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "category",
+              "label": "Categoría",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "intro",
+              "label": "Introducción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "takeaway",
+              "label": "takeaway",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "moduleId",
+              "label": "Módulo relacionado",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "guideSlugs",
+              "label": "Guías relacionadas",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "sections",
+              "label": "Secciones",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "paragraphs",
+                  "label": "Párrafos",
+                  "type": "string",
+                  "list": true
+                },
+                {
+                  "name": "points",
+                  "label": "Puntos clave",
+                  "type": "string",
+                  "list": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages-404",
       "label": "Página: 404",
       "type": "file",
@@ -2337,6 +2423,48 @@
               "label": "Descripción SEO",
               "type": "text",
               "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Más formas de encontrar claridad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Artículos para mirar tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Ideas sobre prioridades, procesos y crecimiento que complementan nuestras g…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Leer el blog",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "¿Por dónde empezar?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "El centro de ayuda reúne los recorridos para explorar módulos, resolver pre…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Visitar Ayuda",
+              "type": "string",
+              "required": true
             }
           ]
         }
@@ -3286,6 +3414,554 @@
               "name": "text_018",
               "label": "Conocer el recorrido",
               "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-nosotros-index",
+      "label": "Página: nosotros",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-nosotros-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Nosotros",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "La idea detrás de Sistematicando",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Todo tu negocio,",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "bajo control.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Creemos que entender un negocio debería ser más sencillo que reunir informa…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Una forma de ver el negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Las piezas importan. Cómo se conectan, también.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Una venta mueve productos, recursos y responsabilidades. Una reserva prepar…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Nuestro enfoque es modular: reunir las herramientas que necesita cada opera…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Lo que guía nuestra propuesta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Claridad para trabajar. Contexto para decidir.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "values",
+              "label": "Principios de la marca",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "text",
+                  "label": "Texto",
+                  "type": "text",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "text_013",
+              "label": "Cerca de la operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Distintos negocios. Una necesidad compartida de orden.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Desde una cafetería hasta una operación con varios establecimientos, el pun…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Explorar solución para",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Conversemos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Tu negocio es el mejor punto de partida.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Cuéntanos qué quieres organizar y revisemos juntos qué herramientas tienen …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Ir a contacto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Conocer los módulos",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-ayuda-index",
+      "label": "Página: ayuda",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-ayuda-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Ayuda",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Encuentra tu siguiente paso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Respuestas claras.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Un camino para continuar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Explora los módulos, consulta nuestras guías y prepara la información que t…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "¿Qué necesitas hacer?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "helpLinks",
+              "label": "Recorridos de ayuda",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Título",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "text",
+                  "label": "Texto",
+                  "type": "text",
+                  "required": true
+                },
+                {
+                  "name": "href",
+                  "label": "Destino del enlace",
+                  "type": "string",
+                  "required": true
+                }
+              ]
+            },
+            {
+              "name": "faqIds",
+              "label": "Preguntas para mostrar",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "text_008",
+              "label": "Consultar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Preguntas para avanzar",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Antes de tu próxima conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Recursos para tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Una guía puede ayudarte a empezar.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Revisa pasos y listas de comprobación sobre caja, inventario y evaluación d…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Explorar las guías",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Leer el blog",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "¿Necesitas más orientación?",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Conversemos sobre tu caso.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Usa el canal de contacto para explicar tu consulta. La coordinación, el alc…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Ir a contacto",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-blog-index",
+      "label": "Página: blog",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-blog-index",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Blog",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Ideas para mirar mejor tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Del día a día,",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "a una visión más clara.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Explora ideas para organizar tu operación, conectar al equipo y preparar de…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Artículos para tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Leer artículo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Contenido editorial sobre gestión de negocios. Adapta las recomendaciones a…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "De la idea a la práctica",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Continúa con una guía.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Encuentra pasos y listas de comprobación para preparar tus próximos cambios…",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Explorar guías",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Visitar el centro de ayuda",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-blog-article",
+      "label": "Página: blog-article",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-blog-article",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Blog",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Artículo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "En este artículo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Para llevar a tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Continúa explorando",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Recursos relacionados",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Conocer módulo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Volver al blog",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Preparar una conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Leer guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Recurso editorial de gestión. Adapta las recomendaciones al contexto y los …",
+              "type": "text",
               "required": true
             }
           ]

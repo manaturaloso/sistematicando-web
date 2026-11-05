@@ -21,3 +21,7 @@ Contenido ahora editable en content/*.json mediante Pages CMS. FAQ común y guí
 ## Copy objetivo de lanzamiento
 
 El propietario autoriza preparar la comunicación como producto completo, aunque el software esté parcialmente desarrollado. Home, seis sectores, FAQ, precios y 14 fichas de módulos adoptan ese tono en la rama de desarrollo. Vista previa global identifica el borrador; no se publica hasta validación final. La evidencia operativa se mantiene interna y no se falsea. Copy futuro no equivale a testimonio, certificación, integración validada ni precio aprobado.
+
+## Empresa, Ayuda y Blog
+
+Nosotros presenta propósito y principios sin historia corporativa fabricada. Ayuda reúne recorridos existentes, preguntas compartidas y contacto, sin prometer horarios/SLA. Tres artículos originales en articles.json cubren priorización de procesos, crecimiento multisede y recorrido pedido-cierre, con referencias internas a guías/módulos. Textos y metadatos comunes en pages.json. No hay fechas ni firmas ficticias, testimonios ni estadísticas de resultados. Mantener el aviso de borrador hasta revisión final.

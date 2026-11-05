@@ -18,6 +18,11 @@
       "cta": false
     },
     {
+      "label": "Recursos",
+      "href": "/recursos/",
+      "cta": false
+    },
+    {
       "label": "Preparar una demo",
       "href": "/solicitar-demo/",
       "cta": true
@@ -47,6 +52,18 @@
     {
       "label": "Preguntas frecuentes",
       "href": "/preguntas-frecuentes/"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog/"
+    },
+    {
+      "label": "Ayuda",
+      "href": "/ayuda/"
+    },
+    {
+      "label": "Nosotros",
+      "href": "/nosotros/"
     },
     {
       "label": "Contacto",

@@ -10,7 +10,7 @@ build = root / 'dist'
 output = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root.parent / 'sistematicando-preview.zip'
 if build == output or build in output.parents or root == output or root in output.parents:
     raise SystemExit('Save the archive outside the checkout and dist.')
-required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html', 'legal/privacidad/index.html', 'recursos/index.html', 'preguntas-frecuentes/index.html', 'admin/index.html', 'contacto/index.html', 'version.json']
+required = ['index.html', '404.html', 'robots.txt', 'soluciones/index.html', 'funcionalidades/index.html', 'precios/index.html', 'solicitar-demo/index.html', 'legal/privacidad/index.html', 'recursos/index.html', 'preguntas-frecuentes/index.html', 'admin/index.html', 'contacto/index.html', 'version.json', 'nosotros/index.html', 'ayuda/index.html', 'blog/index.html']
 for name in required:
     if not (build / name).is_file():
         raise SystemExit(f'Missing build output: {name}; run npm run build first.')
@@ -22,6 +22,8 @@ for item in json.loads((root / 'content/guides.json').read_text())['items']:
     expected.add(f"recursos/guias/{item['slug']}/index.html")
 for item in json.loads((root / 'content/features.json').read_text())['items']:
     expected.add(f"funcionalidades/{item['id']}/index.html")
+for item in json.loads((root / 'content/articles.json').read_text())['items']:
+    expected.add(f"blog/{item['slug']}/index.html")
 actual = {file.relative_to(build).as_posix() for file in html}
 if actual != expected:
     raise SystemExit(f'Unexpected page set: missing={expected-actual}, extra={actual-expected}')

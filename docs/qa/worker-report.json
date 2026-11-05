@@ -17,6 +17,31 @@
       "finalPath": "/admin/"
     },
     {
+      "route": "/ayuda/",
+      "status": 200,
+      "finalPath": "/ayuda/"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "finalPath": "/blog/"
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "status": 200,
+      "finalPath": "/blog/conectar-pedido-cierre-operacion/"
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "status": 200,
+      "finalPath": "/blog/elegir-que-ordenar-primero/"
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "status": 200,
+      "finalPath": "/blog/estandarizar-al-crecer-en-sedes/"
+    },
+    {
       "route": "/contacto/",
       "status": 200,
       "finalPath": "/contacto/"
@@ -100,6 +125,11 @@
       "route": "/legal/privacidad/",
       "status": 200,
       "finalPath": "/legal/privacidad/"
+    },
+    {
+      "route": "/nosotros/",
+      "status": 200,
+      "finalPath": "/nosotros/"
     },
     {
       "route": "/precios/",

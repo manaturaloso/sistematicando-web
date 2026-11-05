@@ -1,0 +1,41 @@
+{
+  "scope": "Company/help navigation, native FAQ and blog TOC/related reading with and without JavaScript",
+  "results": [
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "javaScriptEnabled": true,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "javaScriptEnabled": true,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "javaScriptEnabled": true,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "javaScriptEnabled": false,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "javaScriptEnabled": false,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "javaScriptEnabled": false,
+      "tocKeyboard": true,
+      "relatedLinks": true
+    }
+  ]
+}

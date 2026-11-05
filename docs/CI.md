@@ -120,3 +120,7 @@ Pruebas: check 47 archivos sin errores/advertencias, build y content:check aprob
 Agente Codex principal, sin subagentes; autor Joel Alejandro Yañez Caballero. Todo solo en feat/feature-catalog. Rama Worker permanece en 557222e (envío anterior autorizado, no hay confirmación nueva de esa versión activa); af35674 fue la última identidad pública confirmada por el propietario. Sin deploy, DNS ni PR creada; PR existentes/CI remoto no verificables por API.
 
 Siguiente paso exacto: revisar Actions del nuevo SHA y copy comercial de las 14 páginas; continuar Empresa/Ayuda/recursos editoriales y arquitectura de la oferta sin cifras inventadas. El producto parcial ya está confirmado: no volver a preguntar ese estado para bloquear frontend. Mantener launchDraft/noindex y no integrar a la rama del Worker hasta que el propietario confirme preparación completa y autorice el lanzamiento. Validación operativa, tarifas/condiciones, legal/privacidad y dispositivos/lector siguen pendientes antes de publicar.
+
+## Cobertura Empresa/Ayuda/Blog
+
+`verify-resources.mjs` forma parte de test:ci y prueba descubrimiento de artículos, tabla de contenidos por teclado, relaciones con guías/módulos y FAQ nativa de Ayuda con/sin JS. Produce qa/resources-report.json, también como artefacto Actions. Verificación de sitio/axe recorre todas las rutas generadas; reflujo al 200% incluye Nosotros/Ayuda/Blog y cada artículo (26 rutas × dos anchos en esta entrega). No contacta canales comerciales ni publica.

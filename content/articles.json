@@ -1,0 +1,153 @@
+{
+  "items": [
+    {
+      "slug": "elegir-que-ordenar-primero",
+      "title": "Cómo elegir qué ordenar primero en tu negocio",
+      "category": "Organización",
+      "intro": "Cuando varios procesos necesitan atención, una prioridad clara ayuda más que una lista interminable de cambios. Empieza por observar qué interrumpe el trabajo.",
+      "takeaway": "Elige un problema observable, define quién lo revisará y acuerda qué señal permitirá evaluar el cambio.",
+      "moduleId": "reportes",
+      "guideSlugs": [
+        "evaluar-software-para-tu-negocio"
+      ],
+      "sections": [
+        {
+          "title": "Empieza por una situación concreta",
+          "paragraphs": [
+            "“Necesitamos más orden” puede expresar una preocupación real, pero todavía no señala dónde actuar. Busca una situación que puedas describir: un pedido que pierde contexto, un cierre que requiere reconstruir movimientos o una compra sin información comparable.",
+            "Pregunta a quienes participan qué ocurrió, qué dato les faltó y qué hicieron para continuar. Conviene separar el problema observado de la solución que cada persona imagina. Un proceso confuso no siempre se resuelve añadiendo otra herramienta."
+          ],
+          "points": [
+            "Describe un ejemplo reciente sin buscar culpables.",
+            "Identifica los pasos y personas que participaron.",
+            "Anota qué información faltó para completar el trabajo."
+          ]
+        },
+        {
+          "title": "Compara el impacto y la dependencia",
+          "paragraphs": [
+            "Revisa qué consecuencias tiene cada situación en la atención, la coordinación y la información del negocio. La prioridad no depende solo de lo molesto que resulte un caso: también importa con qué frecuencia aparece y a cuántas áreas afecta.",
+            "Antes de cambiar un proceso, identifica de qué depende. Ordenar recetas puede requerir unidades consistentes; revisar caja necesita separar turnos y movimientos. Trabajar primero esas bases puede hacer más útil la mejora posterior."
+          ],
+          "points": [
+            "Distingue una urgencia de un problema que se repite.",
+            "Revisa qué datos y acuerdos necesita cada cambio.",
+            "Elige una primera mejora con alcance manejable."
+          ]
+        },
+        {
+          "title": "Acuerda cómo revisar el resultado",
+          "paragraphs": [
+            "Define quién acompaña el cambio y cuándo lo revisarán. Usa una señal que puedas observar con tus registros: menos información por reconstruir, un traspaso de turno más completo o responsabilidades mejor identificadas.",
+            "Conserva el contexto de la revisión. Si cambió el equipo, el horario o la demanda, ese dato ayuda a interpretar lo ocurrido. El objetivo es aprender qué funciona en tu operación, no atribuir todos los resultados a una sola decisión."
+          ],
+          "points": [
+            "Registra el punto de partida.",
+            "Acuerda un responsable y una fecha de revisión.",
+            "Ajusta el siguiente paso con lo que observes."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "estandarizar-al-crecer-en-sedes",
+      "title": "De un local a varias sedes: qué conviene estandarizar",
+      "category": "Crecimiento",
+      "intro": "Crecer exige compartir criterios sin borrar el contexto de cada establecimiento. Distingue qué debe ser común y qué necesita una decisión local.",
+      "takeaway": "Define una base compartida, responsabilidades por sede y un criterio consistente para comparar la información.",
+      "moduleId": "multisede",
+      "guideSlugs": [
+        "ordenar-inventario-inicial",
+        "preparar-cierre-de-caja"
+      ],
+      "sections": [
+        {
+          "title": "Define una base que todos puedan entender",
+          "paragraphs": [
+            "Un mismo producto puede terminar con nombres, unidades o referencias distintas entre locales. Antes de consolidar información, acuerda qué identifica cada recurso y cómo se registra. Sin esa base, una comparación puede reunir datos que no representan lo mismo.",
+            "No todo necesita ser idéntico. Separa las reglas comunes de las particularidades de cada sede: horarios, oferta, almacenamiento o dinámica de atención. Documentar la diferencia es más útil que ocultarla para que los registros parezcan uniformes."
+          ],
+          "points": [
+            "Alinea nombres, unidades e identificadores.",
+            "Documenta las diferencias que sí necesita cada sede.",
+            "Mantén una referencia común para los cambios."
+          ]
+        },
+        {
+          "title": "Separa responsabilidad local y coordinación central",
+          "paragraphs": [
+            "Aclara qué decisiones corresponden a cada establecimiento y cuáles requieren coordinación. Una transferencia, una modificación del catálogo o un ajuste de inventario necesita un recorrido que el equipo comprenda.",
+            "Los accesos deben acompañar las responsabilidades. Revisa qué información necesita cada persona y cómo se atienden los cambios de función. Tener más usuarios no reemplaza un acuerdo sobre quién registra, revisa y decide."
+          ],
+          "points": [
+            "Define responsables por proceso y local.",
+            "Aclara qué cambios requieren coordinación.",
+            "Revisa accesos cuando cambian las funciones."
+          ]
+        },
+        {
+          "title": "Compara con el contexto de cada operación",
+          "paragraphs": [
+            "Un reporte conjunto ayuda a ver el negocio, pero no explica por sí solo las diferencias entre sedes. Revisa períodos equivalentes y considera horarios, capacidad, oferta y cambios operativos antes de sacar conclusiones.",
+            "Combina la vista consolidada con la conversación local. Cuando aparece una diferencia, vuelve al detalle que la compone y acuerda qué revisar. La información compartida funciona mejor cuando el equipo también comparte los criterios para interpretarla."
+          ],
+          "points": [
+            "Compara períodos y definiciones equivalentes.",
+            "Conserva las particularidades relevantes de cada sede.",
+            "Revisa el detalle antes de decidir una medida."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "conectar-pedido-cierre-operacion",
+      "title": "Del pedido al cierre: mira tu operación como un recorrido",
+      "category": "Operación",
+      "intro": "Una venta atraviesa varias áreas. Seguir su recorrido ayuda a reconocer dónde se pierde información y qué necesita el equipo para continuar.",
+      "takeaway": "Dibuja el recorrido real de una atención y define qué información debe conservarse en cada cambio de responsabilidad.",
+      "moduleId": "mesas-y-comandas",
+      "guideSlugs": [
+        "preparar-cierre-de-caja",
+        "evaluar-software-para-tu-negocio"
+      ],
+      "sections": [
+        {
+          "title": "Sigue una atención real de principio a fin",
+          "paragraphs": [
+            "Elige una atención reciente y reconstruye sus pasos: cómo se recibió el pedido, qué información llegó a preparación, cómo se comunicaron los cambios y qué quedó registrado al cobrar. Usa el recorrido real, no solo el que debería ocurrir.",
+            "Invita a participar a las personas que intervienen en esos pasos. Cada área ve una parte distinta y puede señalar información que las demás dan por conocida. El mapa resulta más útil cuando recoge esas diferencias sin convertirlas en un juicio sobre el equipo."
+          ],
+          "points": [
+            "Elige un caso concreto.",
+            "Anota cada paso y cambio de responsable.",
+            "Incluye modificaciones, excepciones y devoluciones."
+          ]
+        },
+        {
+          "title": "Identifica qué contexto debe acompañar el trabajo",
+          "paragraphs": [
+            "En cada traspaso, pregunta qué necesita recibir la siguiente persona para continuar. Pueden ser cantidades, indicaciones, estado de atención o referencia de un movimiento. Un dato correcto que no llega a tiempo también puede generar confusión.",
+            "Distingue la información operativa de lo que se anota por costumbre. Pedir más campos no siempre ayuda: conviene priorizar los datos necesarios y acordar dónde se consultan. Así evitas que el equipo tenga que reconstruir el contexto en varias conversaciones."
+          ],
+          "points": [
+            "Define los datos necesarios para cada traspaso.",
+            "Aclara dónde se registra y consulta cada dato.",
+            "Revisa qué información se repite sin aportar contexto."
+          ]
+        },
+        {
+          "title": "Conecta el cierre con lo que ocurrió durante el servicio",
+          "paragraphs": [
+            "El cierre es una oportunidad para revisar el recorrido, no solo un importe final. Relaciona ventas y movimientos con los turnos, las modificaciones y los registros que los sustentan. Cuando aparece una diferencia, ese contexto facilita decidir qué investigar.",
+            "Elige una mejora pequeña y comprueba si el siguiente recorrido resulta más claro. Puede ser una indicación mejor registrada o una responsabilidad antes ambigua. Conserva lo aprendido para que el proceso dependa menos de explicaciones improvisadas."
+          ],
+          "points": [
+            "Relaciona el cierre con sus registros y responsables.",
+            "Investiga diferencias sin ocultar su contexto.",
+            "Documenta el ajuste que ayudará al siguiente turno."
+          ]
+        }
+      ]
+    }
+  ]
+}

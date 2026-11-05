@@ -29,7 +29,7 @@
 
 ## Siguiente
 
-Desarrollo: 34 páginas, incluido contacto; CMS con 25 editores. Auditoría automática local y pruebas de navegación implementadas. Quedan revisión manual/dispositivos/lector, aprobación comercial/privacidad y lanzamiento con dominio/indexación autorizados. Contacto externo por WhatsApp y correo de privacidad disponible; recepción propia de datos no implementada. Las páginas de módulos ya están preparadas como objetivo de lanzamiento; la disponibilidad real requiere validación antes de publicar. Recursos y FAQ iniciales ya están implementados. Sin sitemap público hasta contar con dominio y aprobación de indexación.
+Desarrollo: 40 páginas, incluido contacto; CMS con 30 editores. Auditoría automática local y pruebas de navegación implementadas. Quedan revisión manual/dispositivos/lector, aprobación comercial/privacidad y lanzamiento con dominio/indexación autorizados. Contacto externo por WhatsApp y correo de privacidad disponible; recepción propia de datos no implementada. Las páginas de módulos ya están preparadas como objetivo de lanzamiento; la disponibilidad real requiere validación antes de publicar. Recursos y FAQ iniciales ya están implementados. Sin sitemap público hasta contar con dominio y aprobación de indexación.
 
 - /version.json: metadatos de compilación estáticos, enlazados desde /admin; no es una página comercial ni una API con backend.
 
@@ -51,3 +51,14 @@ Desarrollo: 34 páginas, incluido contacto; CMS con 25 editores. Auditoría auto
 - /funcionalidades/control-de-accesos/
 
 Rutas completas generadas desde contenido CMS. Su preparación no verifica la disponibilidad real del producto ni autoriza publicación.
+
+## Empresa y recursos editoriales implementados
+
+- `/nosotros/`: enfoque y principios de marca; enlaces a sectores/contacto.
+- `/ayuda/`: recorridos internos, FAQ compartida y orientación al contacto.
+- `/blog/`: índice editorial.
+- `/blog/elegir-que-ordenar-primero/`
+- `/blog/estandarizar-al-crecer-en-sedes/`
+- `/blog/conectar-pedido-cierre-operacion/`
+
+Artículos en `content/articles.json`, rutas generadas por slug y enlaces a módulos/guías existentes. Son borradores editoriales, sin fecha ni autor inventados. No hay feed público ni comentarios.

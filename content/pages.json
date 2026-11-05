@@ -244,7 +244,14 @@
     "text_012": "Consulta el alcance del producto, las condiciones pendientes y cómo funciona el contacto por WhatsApp.",
     "text_013": "Ver preguntas frecuentes",
     "seo_title": "Recursos para organizar tu negocio · Sistematicando",
-    "seo_description": "Guías prácticas para revisar caja, ordenar insumos y preparar la evaluación de un software de gestión. Contenido editorial, sin promesas de resultados."
+    "seo_description": "Guías prácticas para revisar caja, ordenar insumos y preparar la evaluación de un software de gestión. Contenido editorial, sin promesas de resultados.",
+    "text_014": "Más formas de encontrar claridad",
+    "text_015": "Artículos para mirar tu operación",
+    "text_016": "Ideas sobre prioridades, procesos y crecimiento que complementan nuestras guías prácticas.",
+    "text_017": "Leer el blog",
+    "text_018": "¿Por dónde empezar?",
+    "text_019": "El centro de ayuda reúne los recorridos para explorar módulos, resolver preguntas y preparar una conversación.",
+    "text_020": "Visitar Ayuda"
   },
   "pages-solicitar-demo-index": {
     "text_001": "Inicio",
@@ -404,5 +411,126 @@
     "text_016": "Explorar módulo",
     "text_017": "Ver beneficios",
     "text_018": "Conocer el recorrido"
+  },
+  "pages-nosotros-index": {
+    "seo_title": "Nosotros · Sistematicando",
+    "seo_description": "Conoce la idea detrás de Sistematicando: conectar las piezas de la operación para que los negocios trabajen con más claridad.",
+    "text_001": "Inicio",
+    "text_002": "Nosotros",
+    "text_003": "La idea detrás de Sistematicando",
+    "text_004": "Todo tu negocio,",
+    "text_005": "bajo control.",
+    "text_006": "Creemos que entender un negocio debería ser más sencillo que reunir información de herramientas desconectadas. Por eso ponemos la operación en el centro.",
+    "text_007": "Una forma de ver el negocio",
+    "text_008": "Las piezas importan. Cómo se conectan, también.",
+    "text_009": "Una venta mueve productos, recursos y responsabilidades. Una reserva prepara al equipo. Un nuevo local cambia la forma de coordinar. Sistematicando parte de esas relaciones para organizar el trabajo como un conjunto.",
+    "text_010": "Nuestro enfoque es modular: reunir las herramientas que necesita cada operación, conservar su contexto y acompañar nuevas necesidades con una configuración clara.",
+    "text_011": "Lo que guía nuestra propuesta",
+    "text_012": "Claridad para trabajar. Contexto para decidir.",
+    "values": [
+      {
+        "title": "Claridad",
+        "text": "Información comprensible y recorridos que ayuden al equipo a saber qué hacer y qué revisar."
+      },
+      {
+        "title": "Conexión",
+        "text": "Procesos relacionados para que cada área conserve el contexto de lo que ocurre en las demás."
+      },
+      {
+        "title": "Evolución",
+        "text": "Una configuración modular que permita revisar nuevas necesidades a medida que cambia el negocio."
+      }
+    ],
+    "text_013": "Cerca de la operación",
+    "text_014": "Distintos negocios. Una necesidad compartida de orden.",
+    "text_015": "Desde una cafetería hasta una operación con varios establecimientos, el punto de partida es entender cómo trabaja el equipo y qué necesita coordinar.",
+    "text_016": "Explorar solución para",
+    "text_017": "Conversemos",
+    "text_018": "Tu negocio es el mejor punto de partida.",
+    "text_019": "Cuéntanos qué quieres organizar y revisemos juntos qué herramientas tienen sentido para tu operación.",
+    "text_020": "Ir a contacto",
+    "text_021": "Conocer los módulos"
+  },
+  "pages-ayuda-index": {
+    "seo_title": "Centro de ayuda · Sistematicando",
+    "seo_description": "Encuentra respuestas, guías y canales para explorar Sistematicando, preparar una demostración y consultar sobre tu operación.",
+    "text_001": "Inicio",
+    "text_002": "Ayuda",
+    "text_003": "Encuentra tu siguiente paso",
+    "text_004": "Respuestas claras.",
+    "text_005": "Un camino para continuar.",
+    "text_006": "Explora los módulos, consulta nuestras guías y prepara la información que te ayudará a conversar sobre tu negocio.",
+    "text_007": "¿Qué necesitas hacer?",
+    "helpLinks": [
+      {
+        "title": "Conocer la plataforma",
+        "text": "Explora qué aporta cada módulo y cómo encaja en la operación.",
+        "href": "/funcionalidades/"
+      },
+      {
+        "title": "Resolver una pregunta",
+        "text": "Consulta respuestas sobre configuración, contacto y privacidad.",
+        "href": "/preguntas-frecuentes/"
+      },
+      {
+        "title": "Preparar una demostración",
+        "text": "Genera una guía local con tu tipo de negocio y tus prioridades.",
+        "href": "/solicitar-demo/"
+      },
+      {
+        "title": "Encontrar un canal de contacto",
+        "text": "Accede al WhatsApp comercial o a los canales de privacidad.",
+        "href": "/contacto/"
+      }
+    ],
+    "faqIds": [
+      "demostracion",
+      "guia-local",
+      "contacto-privacidad"
+    ],
+    "text_008": "Consultar",
+    "text_009": "Preguntas para avanzar",
+    "text_010": "Antes de tu próxima conversación",
+    "text_011": "Recursos para tu operación",
+    "text_012": "Una guía puede ayudarte a empezar.",
+    "text_013": "Revisa pasos y listas de comprobación sobre caja, inventario y evaluación de herramientas. Son recursos editoriales para organizar tu información.",
+    "text_014": "Explorar las guías",
+    "text_015": "Leer el blog",
+    "text_016": "¿Necesitas más orientación?",
+    "text_017": "Conversemos sobre tu caso.",
+    "text_018": "Usa el canal de contacto para explicar tu consulta. La coordinación, el alcance de la atención y las condiciones de soporte se confirman durante la conversación.",
+    "text_019": "Ir a contacto"
+  },
+  "pages-blog-index": {
+    "seo_title": "Blog de gestión y operación · Sistematicando",
+    "seo_description": "Ideas prácticas para ordenar procesos, coordinar equipos y preparar el crecimiento de tu negocio. Artículos editoriales de Sistematicando.",
+    "text_001": "Inicio",
+    "text_002": "Blog",
+    "text_003": "Ideas para mirar mejor tu negocio",
+    "text_004": "Del día a día,",
+    "text_005": "a una visión más clara.",
+    "text_006": "Explora ideas para organizar tu operación, conectar al equipo y preparar decisiones con información útil.",
+    "text_007": "Artículos para tu operación",
+    "text_008": "Leer artículo",
+    "text_009": "Contenido editorial sobre gestión de negocios. Adapta las recomendaciones a tus procesos y a la información real de tu operación.",
+    "text_010": "De la idea a la práctica",
+    "text_011": "Continúa con una guía.",
+    "text_012": "Encuentra pasos y listas de comprobación para preparar tus próximos cambios.",
+    "text_013": "Explorar guías",
+    "text_014": "Visitar el centro de ayuda"
+  },
+  "pages-blog-article": {
+    "text_001": "Inicio",
+    "text_002": "Blog",
+    "text_003": "Artículo",
+    "text_004": "En este artículo",
+    "text_005": "Para llevar a tu operación",
+    "text_006": "Continúa explorando",
+    "text_007": "Recursos relacionados",
+    "text_008": "Conocer módulo",
+    "text_009": "Volver al blog",
+    "text_010": "Preparar una conversación",
+    "text_011": "Leer guía",
+    "text_012": "Recurso editorial de gestión. Adapta las recomendaciones al contexto y los datos reales de tu negocio."
   }
 }

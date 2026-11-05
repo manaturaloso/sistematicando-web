@@ -1,0 +1,23 @@
+---
+import pageContent from '../../../content/pages.json';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FAQList from '../../components/FAQList.astro';
+import Icon from '../../components/Icon.astro';
+import { faqs } from '../../data/faqs';
+import '../../styles/solutions.css';
+import '../../styles/resources.css';
+import '../../styles/company.css';
+const copy=pageContent['pages-ayuda-index'];
+const helpFaqs=faqs.filter(item=>copy.faqIds.includes(item.id));
+---
+<Layout title={copy.seo_title} description={copy.seo_description}>
+  <Header/><main id="contenido" tabindex="-1">
+    <section class="wrap solution-hero"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><span aria-current="page">{copy.text_002}</span></nav><p class="eyebrow">{copy.text_003}</p><h1>{copy.text_004}<br/><em>{copy.text_005}</em></h1><p class="solution-intro">{copy.text_006}</p></section>
+    <section class="wrap resources-section" aria-labelledby="help-topics"><h2 id="help-topics">{copy.text_007}</h2><div class="help-grid">{copy.helpLinks.map(link=><article class="guide-card"><h3><a href={link.href}>{link.title}</a></h3><p>{link.text}</p><a class="text-link" href={link.href} aria-label={`${copy.text_008}: ${link.title}`}>{copy.text_008}<Icon/></a></article>)}</div></section>
+    <section class="wrap resources-section help-faq" aria-labelledby="help-faq-title"><p class="eyebrow">{copy.text_009}</p><h2 id="help-faq-title">{copy.text_010}</h2><FAQList items={helpFaqs}/></section>
+    <section class="wrap resources-section company-story"><div><p class="eyebrow">{copy.text_011}</p><h2>{copy.text_012}</h2></div><div><p>{copy.text_013}</p><div class="company-links"><a class="text-link" href="/recursos/">{copy.text_014}<Icon/></a><a class="text-link" href="/blog/">{copy.text_015}<Icon/></a></div></div></section>
+    <section class="wrap solution-callout"><div><p class="eyebrow">{copy.text_016}</p><h2>{copy.text_017}</h2></div><div><p>{copy.text_018}</p><a class="text-link" href="/contacto/">{copy.text_019}<Icon/></a></div></section>
+  </main><Footer/>
+</Layout>

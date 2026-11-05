@@ -17,6 +17,31 @@
       "title": "Administración · Sistematicando"
     },
     {
+      "route": "/ayuda/",
+      "status": 200,
+      "title": "Centro de ayuda · Sistematicando"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "title": "Blog de gestión y operación · Sistematicando"
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "status": 200,
+      "title": "Del pedido al cierre: mira tu operación como un recorrido · Sistematicando"
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "status": 200,
+      "title": "Cómo elegir qué ordenar primero en tu negocio · Sistematicando"
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "status": 200,
+      "title": "De un local a varias sedes: qué conviene estandarizar · Sistematicando"
+    },
+    {
       "route": "/contacto/",
       "status": 200,
       "title": "Contacto · Sistematicando"
@@ -102,6 +127,11 @@
       "title": "Política de privacidad · Sistematicando"
     },
     {
+      "route": "/nosotros/",
+      "status": 200,
+      "title": "Nosotros · Sistematicando"
+    },
+    {
       "route": "/precios/",
       "status": 200,
       "title": "Precios y alcance de la propuesta · Sistematicando"
@@ -172,5 +202,5 @@
       "title": "Software para restaurantes · Sistematicando"
     }
   ],
-  "destinations": 125
+  "destinations": 146
 }

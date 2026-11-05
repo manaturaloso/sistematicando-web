@@ -29,6 +29,41 @@
       "violations": []
     },
     {
+      "route": "/ayuda/",
+      "width": 390,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/",
+      "width": 390,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
       "route": "/contacto/",
       "width": 390,
       "passes": 38,
@@ -144,6 +179,13 @@
       "route": "/legal/privacidad/",
       "width": 390,
       "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/nosotros/",
+      "width": 390,
+      "passes": 36,
       "incomplete": [],
       "violations": []
     },
@@ -272,6 +314,41 @@
       "violations": []
     },
     {
+      "route": "/ayuda/",
+      "width": 1440,
+      "passes": 37,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/",
+      "width": 1440,
+      "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
       "route": "/contacto/",
       "width": 1440,
       "passes": 37,
@@ -387,6 +464,13 @@
       "route": "/legal/privacidad/",
       "width": 1440,
       "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/nosotros/",
+      "width": 1440,
+      "passes": 35,
       "incomplete": [],
       "violations": []
     },

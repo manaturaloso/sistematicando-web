@@ -1114,3 +1114,7 @@ h1 em {max-width:100%;}
 
 .launch-draft-notice {background:var(--soft);border-bottom:1px solid var(--line);color:var(--ink);font-size:.75rem;}
 .launch-draft-notice>.wrap {display:flex;gap:.5rem 1.5rem;flex-wrap:wrap;padding-block:.75rem;overflow-wrap:anywhere;}
+
+.footer-top nav {flex-wrap:wrap;max-width:65%;justify-content:flex-end;min-width:0;}
+.footer-top nav a {display:inline-flex;align-items:center;min-height:44px;overflow-wrap:anywhere;}
+@media(max-width:899px) {.footer-top nav {max-width:none;justify-content:start;}}

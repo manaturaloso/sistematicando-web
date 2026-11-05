@@ -49,11 +49,11 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y seguir Empresa/Ayuda/recursos/oferta. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar el recorrido comercial de precios/demo y alcance de implementación; Empresa/Ayuda/Blog ya están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
-Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 34 rutas/125 destinos, 72 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md.
+Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 40 rutas/146 destinos, 84 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md; nueva evidencia editorial en qa/resources-report.json.
 
 ## Mensaje para iniciar otra sesión
 
@@ -61,6 +61,6 @@ Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 34 rutas/125 destino
 
 ## Directiva actual de producto y lanzamiento
 
-El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 34 páginas y 25 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
+El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 40 páginas y 30 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
 
-No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: Empresa/Ayuda/recursos y oferta comercial sin precios inventados; pruebas/pendientes en PROGRESS.md.
+No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: recorrido comercial de precios/demo y oferta comercial sin precios inventados; pruebas/pendientes en PROGRESS.md.

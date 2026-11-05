@@ -29,6 +29,8 @@
 .faq-category {display:grid;grid-template-columns:1fr 1.5fr;gap:3rem;padding-block:2rem 3rem;border-top:1px solid var(--line);scroll-margin-top:8rem;}
 .faq-category h2 {font-size:clamp(1.6rem,3vw,2.2rem);}
 .commercial-links {display:flex;flex-wrap:wrap;gap:1.5rem;}
-.footer-top nav {flex-wrap:wrap;max-width:65%;justify-content:flex-end;}
-@media(max-width:899px) {.guide-grid {grid-template-columns:1fr;}.guide-content {grid-template-columns:1fr;gap:1rem;}.guide-toc {position:static;}.faq-category {gap:2rem;}.footer-top nav {max-width:none;justify-content:start;}}
+@media(max-width:899px) {.guide-grid {grid-template-columns:1fr;}.guide-content {grid-template-columns:1fr;gap:1rem;}.guide-toc {position:static;}.faq-category {gap:2rem;}}
 @media(max-width:599px) {.guide-card {padding:1.5rem;}.faq-category {grid-template-columns:1fr;gap:.5rem;}.guide-heading h1 {font-size:clamp(2.3rem,9vw,3rem);}}
+
+.guide-card,.guide-toc {min-width:0;overflow-wrap:anywhere;}
+.guide-body {overflow-wrap:anywhere;}

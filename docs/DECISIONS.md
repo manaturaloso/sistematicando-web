@@ -10,7 +10,7 @@ Consolidación: 4 de noviembre de 2026 (America/Lima). El registro anterior ínt
 
 ## Administración y fuentes
 
-- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 24 editores.
+- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 30 editores.
 - Fuente editorial content/*.json. src/data son adaptadores. .pages.yml se regenera cuando cambia el esquema, no tras cada edición: evitar sobrescribir configuración por rutina.
 - Diseño estructural, lógica e integraciones requieren desarrollo. La identidad de compilación es técnica y de solo lectura, no un campo CMS.
 - Originales del logo preservados. Derivados PNG de presentación generados por Astro, sin recorte/reconstrucción; selección y variante oscura en site.json. No subir derivados /_astro al CMS.
@@ -76,3 +76,11 @@ Pruebas: check 47 archivos sin errores/advertencias, build y content:check aprob
 Agente Codex principal, sin subagentes; autor Joel Alejandro Yañez Caballero. Todo solo en feat/feature-catalog. Rama Worker permanece en 557222e (envío anterior autorizado, no hay confirmación nueva de esa versión activa); af35674 fue la última identidad pública confirmada por el propietario. Sin deploy, DNS ni PR creada; PR existentes/CI remoto no verificables por API.
 
 Siguiente paso exacto: revisar Actions del nuevo SHA y copy comercial de las 14 páginas; continuar Empresa/Ayuda/recursos editoriales y arquitectura de la oferta sin cifras inventadas. El producto parcial ya está confirmado: no volver a preguntar ese estado para bloquear frontend. Mantener launchDraft/noindex y no integrar a la rama del Worker hasta que el propietario confirme preparación completa y autorice el lanzamiento. Validación operativa, tarifas/condiciones, legal/privacidad y dispositivos/lector siguen pendientes antes de publicar.
+
+## Empresa, Ayuda y Blog · 4 de noviembre de 2026
+
+Se añaden seis rutas estáticas y cinco editores CMS (total 40 páginas / 30 editores). `content/articles.json` contiene artículos originales de organización, crecimiento y operación; `pages.json` contiene textos comunes, Nosotros y Ayuda. Referencias a módulos/guías/FAQ se validan antes de compilar. No se inventan fechas de publicación, autores, historia corporativa, clientes, cifras de resultados ni SLA de soporte.
+
+Ayuda orienta hacia guías, FAQ, preparación de demo y contacto; no simula una base de soporte del software ni instrucciones de una interfaz inexistente. FAQ y tabla de contenidos funcionan con teclado sin JavaScript. El blog es lectura estática, sin comentarios, suscripciones ni envíos. CMS sigue externo y autenticado. Se amplía la navegación y el pie con ajuste responsive. Se mantiene launchDraft, noindex y congelación del Worker.
+
+Codex principal, sin subagentes. Siguiente paso: recorrido comercial de precios/demo, alcance de implementación y pendientes legales/comerciales documentados, sin inventar tarifas ni publicar.

@@ -5,6 +5,7 @@ const fail=message=>{throw new Error(`Contenido: ${message}`)};
 const ensure=(condition,message)=>{if(!condition)fail(message)};
 const navigation=read('navigation');
 for(const link of [...navigation.header,...navigation.footer]){ensure(link.label?.trim(),'Enlace sin texto');ensure(/^\/(?!\/)[a-zA-Z0-9/_#-]*$/.test(link.href),'Solo rutas internas válidas en navegación');}
+const articles=read('articles').items;
 const site=read('site'),contact=read('contact'),solutions=read('solutions').items,features=read('features'),guides=read('guides').items,faqs=read('faqs').items;
 for(const name of ['name','tagline','logoAlt','defaultTitle','defaultDescription'])ensure(typeof site[name]==='string'&&site[name].trim(),`Marca: falta ${name}`);
 ensure(typeof site.launchDraft==='boolean','Vista previa de lanzamiento inválida');
@@ -30,7 +31,8 @@ const unique=(items,key,label)=>{
 const sectors=unique(solutions,'slug','soluciones');
 const modules=unique(features.items,'id','módulos');
 const groups=unique(features.groups,'id','grupos');
-unique(guides,'slug','guías');unique(faqs,'id','FAQ');
+const guideIds=unique(guides,'slug','guías'),faqIds=unique(faqs,'id','FAQ');
+unique(articles,'slug','artículos');
 for(const item of features.items){
  ensure(item.launch&&typeof item.launch==='object',`Contenido de lanzamiento ausente: ${item.id}`);
  for(const key of ['headline','summary','scope'])ensure(typeof item.launch[key]==='string'&&item.launch[key].trim(),`Lanzamiento ${item.id}: falta ${key}`);
@@ -43,8 +45,19 @@ for(const item of features.items){
  for(const slug of item.sectors)ensure(sectors.has(slug),`Sector desconocido en ${item.id}: ${slug}`);
 }
 for(const guide of guides){ensure(guide.sections.length>0,`Guía sin secciones: ${guide.slug}`);ensure(modules.has(guide.feature),`Módulo desconocido en guía: ${guide.feature}`);for(const slug of guide.related)ensure(sectors.has(slug),`Sector desconocido en guía: ${slug}`);}
+for(const article of articles){
+ for(const key of ['title','category','intro','takeaway'])ensure(typeof article[key]==='string'&&article[key].trim(),`Artículo ${article.slug}: falta ${key}`);
+ ensure(modules.has(article.moduleId),`Módulo desconocido en artículo: ${article.slug}`);
+ ensure(Array.isArray(article.guideSlugs)&&article.guideSlugs.length>0&&article.guideSlugs.every(slug=>guideIds.has(slug)),`Guía desconocida en artículo: ${article.slug}`);
+ ensure(Array.isArray(article.sections)&&article.sections.length>0,`Artículo sin secciones: ${article.slug}`);
+ for(const section of article.sections){ensure(section.title?.trim()&&Array.isArray(section.paragraphs)&&section.paragraphs.length>0&&section.paragraphs.every(text=>typeof text==='string'&&text.trim()),`Sección inválida en artículo: ${article.slug}`);ensure(Array.isArray(section.points)&&section.points.every(text=>typeof text==='string'&&text.trim()),`Puntos inválidos en artículo: ${article.slug}`);}
+}
 for(const item of faqs)ensure(['producto','comercial','privacidad'].includes(item.category),`Categoría FAQ inválida: ${item.category}`);
 const pages=read('pages'),search=pages['pages-funcionalidades-index'].search,guide=pages['pages-solicitar-demo-index'].guide;
+const help=pages['pages-ayuda-index'];
+ensure(Array.isArray(help.helpLinks)&&help.helpLinks.length>0,'Ayuda sin recorridos');
+for(const link of help.helpLinks)ensure(link.title?.trim()&&link.text?.trim()&&/^\/(?!\/)[a-zA-Z0-9/_#-]*$/.test(link.href),'Recorrido de ayuda inválido');
+ensure(Array.isArray(help.faqIds)&&help.faqIds.length>0&&help.faqIds.every(id=>faqIds.has(id)),'FAQ desconocida en ayuda');
 for(const key of ['initialCount','singularCount','pluralCount']){
  ensure(typeof search[key]==='string'&&search[key].split('{count}').length===2,`Buscador: ${key} necesita exactamente un {count}`);
  ensure(!/[{}]/.test(search[key].replace('{count}','')),`Buscador: marcador no reconocido en ${key}`);
