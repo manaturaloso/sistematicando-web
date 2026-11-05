@@ -20,7 +20,23 @@ Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultad
 
 Esto no certifica WCAG completo. Faltan lectores de pantalla, dispositivos físicos y una revisión manual exhaustiva con el contenido/logo final.
 
-## Lighthouse móvil simulado
+## Lighthouse actual · cinco rutas y repeticiones
+
+Medición secuencial móvil simulada del 5/11/2026. Valores completos y límites en PERFORMANCE.md. No hay cambios frontend ni optimización aplicada en esta entrega; no se repitió la suite funcional/axe/Worker porque solo cambió el auditor. Check final 59 archivos sin errores/advertencias/hints y build 42 páginas / 34 editores.
+
+| Ruta | Rendimiento inicial | LCP inicial | TBT | CLS |
+| --- | --- | --- | --- | --- |
+| / | 100 | 0.906 s | 0.0 ms | 0.000000 |
+| /funcionalidades/ | 100 | 0.905 s | 0.0 ms | 0.000000 |
+| /solicitar-demo/ | 100 | 1.055 s | 0.0 ms | 0.000000 |
+| /funcionalidades/punto-de-venta/ | 86 | 4.204 s | 0.0 ms | 0.000225 |
+| /blog/elegir-que-ordenar-primero/ | 100 | 0.902 s | 0.0 ms | 0.000000 |
+
+Módulo: 86 inicial/LCP 4.204 s; dos repeticiones sin cambios dieron 100, LCP 0.906/0.903 s, TBT 0 y CLS 0. La muestra lenta se conserva en qa/performance-report.json; repeticiones en qa/performance-module-repeat-report.json. No se declara causa resuelta ni estabilidad de producción. Accesibilidad y buenas prácticas Lighthouse: 100 en las siete ejecuciones; SEO 66 por noindex, que permanece.
+
+La tabla siguiente conserva historia; no es la medición actual. Repetir solo ante cambios, fallos o necesidad concreta de contrastar la variación. Siguiente paso: compatibilidad/movimiento reducido y matriz de navegadores; no retirar bloqueos de lanzamiento.
+
+## Lighthouse histórico · tres rutas (medición anterior)
 
 Una ejecución final por ruta en Chromium local. Valores de laboratorio, variables entre ejecuciones; no son métricas de usuarios ni Core Web Vitals de producción.
 

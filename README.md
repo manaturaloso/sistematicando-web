@@ -31,6 +31,10 @@ Resultado local registrado: 42 rutas/162 destinos internos; marca a seis anchos 
 
 `CHROMIUM_PATH=/usr/bin/chromium npm run review:visual -- /tmp/sistematicando-visual` genera una galería local de todas las rutas y estados interactivos. Alcance, hallazgos y límites en [VISUAL_REVIEW.md](docs/VISUAL_REVIEW.md). No publica ni modifica contenido del CMS.
 
+## Rendimiento local
+
+[PERFORMANCE.md](docs/PERFORMANCE.md) registra las cinco rutas medidas y dos repeticiones de la anomalía del módulo. `npm run audit:performance` genera muestras locales; no son métricas de producción ni permiso de publicación.
+
 ## Editar contenido
 
 /admin abre Pages CMS externo con autenticación GitHub: 34 editores, medios y guardados reales verificados. Fuente editable content/*.json; src/data son adaptadores. [ADMIN.md](docs/ADMIN.md) describe textos por página, logos, contactos y guía/buscador. Estructura y lógica requieren desarrollo; no es constructor visual arbitrario.

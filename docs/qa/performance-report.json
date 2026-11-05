@@ -1,5 +1,21 @@
 {
-  "environment": "Local static server; Lighthouse simulated mobile; no field/Core Web Vitals claim. noindex is deliberate.",
+  "schemaVersion": 1,
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "43645c02da1eda979c8b5c9b09d2dca9ab826614",
+    "commitDate": "2026-11-05T16:11:31Z",
+    "sourceModified": true
+  },
+  "environment": "Local static server; Lighthouse simulated mobile; one sequential run per route, no concurrent browser work. Not field/Core Web Vitals data or full WCAG certification. noindex is deliberate.",
+  "sampleSelection": "Home, catalog, demo, first existing module and first existing editorial article; not all 42 pages.",
+  "rawDirectory": "/tmp/sistematicando-lighthouse-RsM7TP",
+  "rawFilesTemporary": true,
+  "labReferenceBudgets": {
+    "lcpMs": 2500,
+    "tbtMs": 200,
+    "cls": 0.1,
+    "scope": "Review references for this local sample, not production acceptance or launch authorization"
+  },
   "results": [
     {
       "route": "/",
@@ -11,15 +27,15 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 906.5518999999999,
+          "value": 905.6512,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 906.5518999999999,
+          "value": 905.6512,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 13.5,
+          "value": 0,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -27,17 +43,15 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 906.5518999999999,
+          "value": 905.6512,
           "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 621466,
+          "unit": "byte"
         }
       },
       "findings": [
-        {
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.99,
-          "displayValue": "80 ms"
-        },
         {
           "id": "is-crawlable",
           "title": "Page is blocked from indexing",
@@ -70,13 +84,23 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 40 ms"
+          "displayValue": "Est savings of 60 ms"
         }
       ],
+      "labReview": [],
       "warnings": [],
       "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:26:59.663Z",
       "formFactor": "mobile",
-      "throttlingMethod": "simulate"
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
     },
     {
       "route": "/funcionalidades/",
@@ -88,11 +112,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 906.3610000000001,
+          "value": 905.1995,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 906.3610000000001,
+          "value": 905.1995,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -104,8 +128,12 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 906.3610000000001,
+          "value": 905.1995,
           "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 640259,
+          "unit": "byte"
         }
       },
       "findings": [
@@ -147,13 +175,23 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 60 ms"
+          "displayValue": "Est savings of 80 ms"
         }
       ],
+      "labReview": [],
       "warnings": [],
       "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:27:10.114Z",
       "formFactor": "mobile",
-      "throttlingMethod": "simulate"
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
     },
     {
       "route": "/solicitar-demo/",
@@ -165,11 +203,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 905.4567999999999,
+          "value": 1054.5778,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 905.4567999999999,
+          "value": 1054.5778,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -181,8 +219,12 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 905.4567999999999,
+          "value": 1054.5778,
           "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 623666,
+          "unit": "byte"
         }
       },
       "findings": [
@@ -190,7 +232,7 @@
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
           "score": 0.5,
-          "displayValue": "Est savings of 11 KiB"
+          "displayValue": "Est savings of 12 KiB"
         },
         {
           "id": "is-crawlable",
@@ -207,7 +249,203 @@
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
+          "displayValue": "Est savings of 10 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 27 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 230 ms"
+        }
+      ],
+      "labReview": [],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:27:20.779Z",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "scores": {
+        "performance": 86,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 903.9623999999999,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 4203.9624,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.0002251562451466452,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 903.9623999999999,
+          "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 616955,
+          "unit": "byte"
+        }
+      },
+      "findings": [
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.44,
+          "displayValue": "4.2 s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.85,
+          "displayValue": "4.2 s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
           "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 9 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0,
+          "displayValue": "Est savings of 27 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 270 ms"
+        }
+      ],
+      "labReview": [
+        "LCP > 2500 ms"
+      ],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:27:31.224Z",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 902.461,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 902.461,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 902.461,
+          "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 618175,
+          "unit": "byte"
+        }
+      },
+      "findings": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0.5,
+          "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 10 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -227,10 +465,20 @@
           "displayValue": "Est savings of 90 ms"
         }
       ],
+      "labReview": [],
       "warnings": [],
       "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:27:41.829Z",
       "formFactor": "mobile",
-      "throttlingMethod": "simulate"
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
     }
   ]
 }

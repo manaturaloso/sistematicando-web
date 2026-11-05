@@ -148,3 +148,9 @@ verify-release-evidence.mjs ejecuta tres casos negativos tras generar el checkli
 `npm run review:visual -- /tmp/sistematicando-visual` descubre rutas de dist y captura 390/1440 px, página completa/primera pantalla/pie, once estados del menú/buscador/guía y hojas de contacto. Genera index.html/report.json bajo /tmp; no es una comparación pixel a pixel ni aprobación humana. `--states-only` al final captura solo interacciones; usar carpeta distinta. Las capturas esperan fuentes, fijan scroll al inicio y desactivan animaciones para estabilizar la evidencia. Los componentes se capturan con altura suficiente para evitar la cabecera sticky sobre los campos.
 
 No forma parte de cada ejecución CI por el volumen de imágenes; la regresión de geometría sí está en verify-navigation: home/pie en 320/390/768/900/1440 a 100/200%, altura de enlaces ≥44, sin colisiones ni desbordamiento. Revisión de todas las rutas a dos anchos y estados mantiene la evidencia local, no sustituye dispositivos/lector ni cambia permisos de publicación.
+
+## Medición de rendimiento focal
+
+`npm run audit:performance` mide cinco muestras secuenciales: home, catálogo, demo, primer módulo/artículo definidos en contenido. Incluye buildVersion, métricas, bytes, hallazgos, configuración y carpetas únicas /tmp con los Lighthouse completos. `--route=<una muestra> --runs=1..3 --output=/tmp/archivo.json` permite investigar sin reemplazar el informe principal. No hacer build ni correr otros navegadores en paralelo; no es un umbral de CI/publicación ni un benchmark de campo.
+
+En esta entrega no se modifica frontend ni se repite test:ci/Worker; check/build y mediciones reales son las validaciones pertinentes. No agregar a cada push un informe Lighthouse histórico como si se hubiera regenerado en Actions. PERFORMANCE.md conserva los valores iniciales y las repeticiones, incluido el 86 aislado; no se eliminan outliers para afirmar un 100 universal.

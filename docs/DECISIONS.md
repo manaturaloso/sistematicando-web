@@ -120,3 +120,11 @@ Nuevas comprobaciones a 320/390/768/900/1440 y texto 100/200% detectaron dos def
 review:visual captura 42 páginas × 390/1440, página completa, primera pantalla, pie y once estados de menú/buscador/guía. Salida bajo /tmp, sin publicar ni añadir toda la galería al repositorio. Scroll al inicio y animaciones estabilizados; capturas de componentes con altura suficiente para que el sticky header no tape campos. El script comprueba geometría, no asigna aprobación humana ni aprobación de lanzamiento. Revisión y límites en VISUAL_REVIEW.md.
 
 La evidencia del repositorio sigue identificando la instantánea de build, no un commit posterior ni el Worker. Codex principal, sin subagentes. Próximo paso: rendimiento de cinco rutas representativas y optimizaciones justificadas; dispositivos físicos/lector, producto/comercial/legal y autorización final permanecen pendientes.
+
+## 5 de noviembre de 2026 · Rendimiento de cinco muestras
+
+Auditor local ampliado: home, catálogo, demo, primer módulo y primer artículo; registra identidad del build, payload, métricas, configuración, hallazgos y JSON completo en /tmp único. Permite --route, --runs=1..3 y salida alternativa bajo /tmp para no borrar la medición principal al investigar una anomalía. El resumen anterior se elimina antes de medir para no presentar una salida vieja como nueva si falla.
+
+Cuatro rutas dieron 100; módulo 86/LCP 4.204 s inicial y 100 con LCP 0.906/0.903 s en dos repeticiones sin cambios frontend. Se conserva el 86 y no se atribuye causa ni mejora sin reproducción. No se modificó la web para perseguir una cifra. SEO 66 por noindex deliberado; oportunidades locales no justifican cambiar logos/fuentes/caché de producción. PERFORMANCE.md documenta resultados y límites.
+
+Sin dependencias, contenidos, permisos o publicación nuevos. Check/build y siete Lighthouse; no repetir navegación/axe/Worker sin modificación de frontend. Los informes anteriores conservan su identidad; CI actual no se infiere de pruebas locales. Codex principal, sin subagentes. Próximo paso: movimiento reducido y compatibilidad de flujos/navegadores, dejando explícito lo no ejecutado.

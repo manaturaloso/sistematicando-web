@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "43645c02da1eda979c8b5c9b09d2dca9ab826614",
+    "commitDate": "2026-11-05T16:11:31Z",
+    "sourceModified": true
+  },
+  "runsPerRoute": 2,
+  "environment": "Local static server; Lighthouse simulated mobile; sequential runs, no concurrent browser work. Not field/Core Web Vitals data or full WCAG certification. noindex is deliberate.",
+  "sampleSelection": "Home, catalog, demo, first existing module and first existing editorial article; not an audit of every generated page.",
+  "rawDirectory": "/tmp/sistematicando-lighthouse-5s3rSe",
+  "rawFilesTemporary": true,
+  "labReferenceBudgets": {
+    "lcpMs": 2500,
+    "tbtMs": 200,
+    "cls": 0.1,
+    "scope": "Review references for this local sample, not production acceptance or launch authorization"
+  },
+  "results": [
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "sample": 1,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 906.1158,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 906.1158,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 906.1158,
+          "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 616955,
+          "unit": "byte"
+        }
+      },
+      "findings": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 9 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 27 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 240 ms"
+        }
+      ],
+      "labReview": [],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:29:28.927Z",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "sample": 2,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 902.8018,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 902.8018,
+          "unit": "millisecond"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "speed-index": {
+          "value": 902.8018,
+          "unit": "millisecond"
+        },
+        "total-byte-weight": {
+          "value": 616955,
+          "unit": "byte"
+        }
+      },
+      "findings": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "displayValue": "Est savings of 12 KiB"
+        },
+        {
+          "id": "is-crawlable",
+          "title": "Page is blocked from indexing",
+          "score": 0
+        },
+        {
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "displayValue": "2 failure reasons"
+        },
+        {
+          "id": "document-latency-insight",
+          "title": "Document request latency",
+          "score": 0.5,
+          "displayValue": "Est savings of 9 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "score": 0.5,
+          "displayValue": "Est savings of 27 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "displayValue": "Est savings of 240 ms"
+        }
+      ],
+      "labReview": [],
+      "warnings": [],
+      "lighthouseVersion": "13.6.0",
+      "fetchTime": "2026-11-05T16:29:39.536Z",
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      }
+    }
+  ]
+}

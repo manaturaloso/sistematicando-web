@@ -49,7 +49,7 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar rendimiento de cinco rutas representativas y optimizaciones justificadas; revisión visual local registrada en VISUAL_REVIEW.md; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar movimiento reducido y compatibilidad de flujos/navegadores; rendimiento actual en PERFORMANCE.md; revisión visual local registrada en VISUAL_REVIEW.md; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
@@ -88,3 +88,9 @@ VISUAL_REVIEW.md y qa/visual-report.json registran el alcance: 84 capturas por r
 Reproducir: CHROMIUM_PATH=/usr/bin/chromium npm run review:visual -- /tmp/sistematicando-visual. Galería index.html y report.json fuera del checkout. Solo estados: añadir --states-only al final (usar otra carpeta para no reemplazar el informe completo). No ejecutar build/Worker a la vez que captura o test:ci. Se mantienen 42 páginas / 34 editores; sin deploy.
 
 Siguiente paso exacto: extender/ejecutar medición de rendimiento para home, catálogo, demo, una ficha de módulo y un artículo; conservar noindex y no prometer resultados de producción. No repetir el inventario o la revisión visual básica ya registrada.
+
+## Rendimiento medido: no repetir por falta de historial
+
+PERFORMANCE.md y dos JSON en qa contienen cinco rutas y dos repeticiones focales: cuatro rutas 100; módulo 86 inicial, luego 100/100 sin cambios frontend. La anomalía no se reproduce y se conserva; no hay una optimización aplicada ni una causa demostrada. SEO 66 deliberado, no retirar noindex. Auditor permite --route/--runs/--output bajo /tmp; datos completos temporales y resúmenes versionados. Identidad de la instantánea en cada JSON.
+
+Siguiente paso exacto: probar menú/buscador/guía con movimiento reducido y preparar matriz de navegadores. Ejecutar Firefox/WebKit si están disponibles; registrar limitaciones en lugar de asumir compatibilidad. Dispositivos físicos/lector y decisiones de lanzamiento continúan pendientes. No volver a bloquear frontend preguntando si el producto parcial ya está completo ni publicar nuevas versiones.
