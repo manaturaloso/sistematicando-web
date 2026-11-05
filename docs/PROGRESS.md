@@ -5,12 +5,16 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: 6765801 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: 5f796ce en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
-## Entrega actual: propuesta de precios
+## Entrega actual: herramienta interna de viabilidad
+
+Completada la preparación del cálculo económico reproducible: ver docs/commercial/README.md y el registro al final. Precios de la entrega anterior intactos; costos reales aún por completar en privado.
+
+## Propuesta de precios implementada
 
 Por encargo expreso del propietario: Esencial S/99, Gestión S/199 y Multisede S/399/mes; puesta en marcha S/199, S/399 y S/699. Complementos S/39 facturación, S/79 eventos/accesos y S/99 sede adicional, con unidades y exclusiones explícitas. PRICING_STRATEGY.md registra funciones, cupos y criterio. /precios terminado como borrador comercial editable: tarjetas, primer mes calculado, tabla de 14 módulos, extras y WhatsApp sin envío. No se modifica evidencia del SaaS. FAQs/términos y esquema CMS actualizados. 42 páginas/34 editores.
 
@@ -178,3 +182,11 @@ Check: 62 archivos, cero errores/avisos/hints. Build: 42 páginas. test:ci local
 Agentes: solo Codex principal. Pendientes: validación de margen/costes, tributación, condiciones finales y operación real; CI remota/pruebas humanas y otros siete bloqueos de lanzamiento conservados. Siguiente paso exacto: revisar PRICING_STRATEGY.md contra costes/capacidad y registrar ajustes en LAUNCH_DECISIONS.md; no publicar.
 
 Worker dry-run de esta entrega aprobado: build de 42 páginas y 106 archivos estáticos; `--dry-run: exiting now`, sin subir ni desplegar. No se repitió runtime Worker; evidencia anterior claramente separada.
+
+## Escenarios económicos internos · continuación del 5/11/2026
+
+Implementados scripts/pricing-economics.py, plantilla sin supuestos inventados en docs/commercial/cost-assumptions.example.json y guía docs/commercial/README.md. Lee cuotas actuales; calcula margen de contribución, umbral por cartera de un solo plan, cuota de referencia para objetivo y puesta en marcha separada, con Decimal. Datos desconocidos producen missing-inputs, sin resultados económicos ficticios. No cambia precios ni permite aprobación financiera/publicación automática. Escenarios reales deben permanecer fuera de Git.
+
+Seis pruebas sintéticas aprobadas; ejecución con plantilla vigente detecta 21 entradas pendientes y cero planes calculados. CI incorpora pruebas Python, resultado remoto no confirmado. Sin cambios frontend/CMS, sin repetir navegación/axe/Lighthouse ya aprobados en la entrega anterior. 42 páginas/34 editores terminados como borrador siguen intactos. Solo Codex principal, sin subagentes.
+
+Siguiente paso exacto: completar una copia privada con costos reales por cuenta y de puesta en marcha, costos fijos, margen objetivo e impuesto indirecto confirmado; ejecutar el calculador y revisar viabilidad antes de ajustar/adoptar precios. No se presume impuesto ni se requiere rediseñar planes. Bloqueos operativos/legales/CI/manuales/dominio y autorización final conservados.

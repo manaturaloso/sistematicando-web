@@ -178,3 +178,11 @@ Para abrir la web sin Node: extraer site-preview.zip a site y servirla con `pyth
 verify-resources recorre las tres guías con y sin JavaScript, activa por teclado el enlace directo y comprueba el h1 de la ficha destino. Nuevos resultados en qa/resources-report.json; el validador de contenido ya exige una referencia de módulo existente. No se afirma que navegar a una ficha acredite disponibilidad del SaaS.
 
 `CHROMIUM_PATH=/usr/bin/chromium node scripts/verify-pricing.mjs` comprueba precios y suma del primer mes contra contenido, cupos, matriz de 14 módulos, extras, enlaces WhatsApp sin enviar, ausencia de compra, no-JS y anchos 320/390/768/1024/1440; prueba desplazamiento por teclado de la tabla móvil. Incluido en test:ci, con docs/qa/pricing-report.json en limpieza y artefactos del workflow.
+
+## Escenarios económicos internos · continuación del 5/11/2026
+
+Implementados scripts/pricing-economics.py, plantilla sin supuestos inventados en docs/commercial/cost-assumptions.example.json y guía docs/commercial/README.md. Lee cuotas actuales; calcula margen de contribución, umbral por cartera de un solo plan, cuota de referencia para objetivo y puesta en marcha separada, con Decimal. Datos desconocidos producen missing-inputs, sin resultados económicos ficticios. No cambia precios ni permite aprobación financiera/publicación automática. Escenarios reales deben permanecer fuera de Git.
+
+Seis pruebas sintéticas aprobadas; ejecución con plantilla vigente detecta 21 entradas pendientes y cero planes calculados. CI incorpora pruebas Python, resultado remoto no confirmado. Sin cambios frontend/CMS, sin repetir navegación/axe/Lighthouse ya aprobados en la entrega anterior. 42 páginas/34 editores terminados como borrador siguen intactos. Solo Codex principal, sin subagentes.
+
+Siguiente paso exacto: completar una copia privada con costos reales por cuenta y de puesta en marcha, costos fijos, margen objetivo e impuesto indirecto confirmado; ejecutar el calculador y revisar viabilidad antes de ajustar/adoptar precios. No se presume impuesto ni se requiere rediseñar planes. Bloqueos operativos/legales/CI/manuales/dominio y autorización final conservados.

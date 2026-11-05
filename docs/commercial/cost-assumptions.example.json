@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "currency": "PEN",
+  "salesTaxPercent": null,
+  "targetContributionMarginPercent": null,
+  "monthlyFixedCosts": null,
+  "plans": {
+    "esencial": {
+      "monthlyInfrastructure": null,
+      "monthlySupportHours": null,
+      "hourlyLaborCost": null,
+      "monthlyOtherVariableCosts": null,
+      "setupHours": null,
+      "setupOtherCosts": null
+    },
+    "gestion": {
+      "monthlyInfrastructure": null,
+      "monthlySupportHours": null,
+      "hourlyLaborCost": null,
+      "monthlyOtherVariableCosts": null,
+      "setupHours": null,
+      "setupOtherCosts": null
+    },
+    "multisede": {
+      "monthlyInfrastructure": null,
+      "monthlySupportHours": null,
+      "hourlyLaborCost": null,
+      "monthlyOtherVariableCosts": null,
+      "setupHours": null,
+      "setupOtherCosts": null
+    }
+  }
+}

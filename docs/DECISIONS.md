@@ -158,3 +158,11 @@ Copy de demo matiza la restauración posible del navegador en vez de prometer au
 Las tres guías enlazan directamente a la ficha del módulo, con nombre específico; recorrido por teclado sin/con JS añadido a verify-resources. Se hacen editables en Página: recursos-guias-slug las etiquetas comunes visibles/accesibles; 42 páginas / 34 editores, sin nuevo tipo de contenido. Factores de precios, contactos y términos no cambian; decisiones pendientes del propietario no se asumen por «sigamos».
 
 EDITORIAL_REVIEW.md registra cambios y límites. Paquete regenerable sin publicar; no se cambia Worker, DNS ni noindex. Codex principal, sin subagentes. Siguiente paso: observaciones y decisiones de oferta/alcance en el paquete, más resultado real de CI cuando sea accesible.
+
+## Escenarios económicos internos · continuación del 5/11/2026
+
+Implementados scripts/pricing-economics.py, plantilla sin supuestos inventados en docs/commercial/cost-assumptions.example.json y guía docs/commercial/README.md. Lee cuotas actuales; calcula margen de contribución, umbral por cartera de un solo plan, cuota de referencia para objetivo y puesta en marcha separada, con Decimal. Datos desconocidos producen missing-inputs, sin resultados económicos ficticios. No cambia precios ni permite aprobación financiera/publicación automática. Escenarios reales deben permanecer fuera de Git.
+
+Seis pruebas sintéticas aprobadas; ejecución con plantilla vigente detecta 21 entradas pendientes y cero planes calculados. CI incorpora pruebas Python, resultado remoto no confirmado. Sin cambios frontend/CMS, sin repetir navegación/axe/Lighthouse ya aprobados en la entrega anterior. 42 páginas/34 editores terminados como borrador siguen intactos. Solo Codex principal, sin subagentes.
+
+Siguiente paso exacto: completar una copia privada con costos reales por cuenta y de puesta en marcha, costos fijos, margen objetivo e impuesto indirecto confirmado; ejecutar el calculador y revisar viabilidad antes de ajustar/adoptar precios. No se presume impuesto ni se requiere rediseñar planes. Bloqueos operativos/legales/CI/manuales/dominio y autorización final conservados.

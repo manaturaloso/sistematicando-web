@@ -33,6 +33,8 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci --include=dev
+      - name: Check internal pricing arithmetic
+        run: python3 scripts/test-pricing-economics.py
       - name: Check types and content
         run: npm run check
       - name: Build and dry-run Worker (never deploy)

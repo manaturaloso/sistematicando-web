@@ -122,3 +122,11 @@ CI d52bccc consultada: Forbidden (qa/remote-ci-status.json); no hay conclusión 
 EDITORIAL_REVIEW.md registra cuatro correcciones independientes: demo ya no promete ausencia de restauración entre visitas; guía de evaluación enlaza la comunicación de lanzamiento; tres guías van directamente a su ficha de módulo (probado por teclado con/sin JS); etiquetas comunes de guías ahora editables en Página: recursos-guias-slug. Paquete sigue con 42 páginas / 34 editores. No reabrir esos hallazgos ni modificar evidencia del SaaS para justificar copy futuro.
 
 Siguiente paso exacto: revisar el paquete actualizado y registrar observaciones/decisiones comerciales/legales concretas en LAUNCH_DECISIONS.md; la elección comercial ya fue delegada: revisar viabilidad de la propuesta implementada ni publicar. CI/Firefox/WebKit permanecen sin resultado remoto confirmado por la restricción conocida.
+
+## Escenarios económicos internos · continuación del 5/11/2026
+
+Implementados scripts/pricing-economics.py, plantilla sin supuestos inventados en docs/commercial/cost-assumptions.example.json y guía docs/commercial/README.md. Lee cuotas actuales; calcula margen de contribución, umbral por cartera de un solo plan, cuota de referencia para objetivo y puesta en marcha separada, con Decimal. Datos desconocidos producen missing-inputs, sin resultados económicos ficticios. No cambia precios ni permite aprobación financiera/publicación automática. Escenarios reales deben permanecer fuera de Git.
+
+Seis pruebas sintéticas aprobadas; ejecución con plantilla vigente detecta 21 entradas pendientes y cero planes calculados. CI incorpora pruebas Python, resultado remoto no confirmado. Sin cambios frontend/CMS, sin repetir navegación/axe/Lighthouse ya aprobados en la entrega anterior. 42 páginas/34 editores terminados como borrador siguen intactos. Solo Codex principal, sin subagentes.
+
+Siguiente paso exacto: completar una copia privada con costos reales por cuenta y de puesta en marcha, costos fijos, margen objetivo e impuesto indirecto confirmado; ejecutar el calculador y revisar viabilidad antes de ajustar/adoptar precios. No se presume impuesto ni se requiere rediseñar planes. Bloqueos operativos/legales/CI/manuales/dominio y autorización final conservados.
