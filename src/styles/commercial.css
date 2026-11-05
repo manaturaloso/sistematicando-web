@@ -72,3 +72,38 @@
 .legal-toc ol {list-style:none;padding-left:0;}
 
 .solution-hero>.commercial-links {margin-top:1.5rem;}
+
+.pricing-section {padding-block:0 4rem;overflow-wrap:anywhere;scroll-margin-top:8rem;}
+.pricing-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-block:2rem;}
+.pricing-card {min-width:0;border:1px solid var(--line);border-radius:12px;padding:1.5rem;background:white;display:flex;flex-direction:column;}
+.pricing-featured {border:2px solid var(--coral);}
+.plan-badge {min-height:2rem;font-size:.7rem;font-weight:800;}
+.plan-badge>span {display:inline-block;background:#f4dfd7;border-radius:4px;padding:.2rem .5rem;}
+.pricing-card h3 {font-size:1.8rem;margin:0;}
+.plan-tagline {font-weight:750;font-size:.95rem;}
+.plan-description {font-size:.9rem;}
+.plan-price {display:flex;flex-direction:column;line-height:1.2;margin-block:1rem;}
+.plan-price strong {font-size:clamp(2.2rem,3.5vw,3rem);}
+.plan-price span {font-size:.8rem;margin-top:.5rem;}
+.plan-limits {margin-block:1rem;font-size:.85rem;}
+.plan-limits>div {display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;border-bottom:1px solid var(--line);padding-block:.5rem;}
+.plan-limits dd {margin:0;font-weight:800;}
+.pricing-card ul {padding-left:1.2rem;font-size:.85rem;}
+.pricing-card li {margin-bottom:.6rem;}
+.plan-setup {border-top:1px solid var(--line);margin-top:auto;padding-block:1rem;font-size:.85rem;}
+.plan-setup span,.pricing-note {font-size:.8rem;}
+.pricing-card .plan-cta {font-size:.8rem;justify-content:center;}
+.pricing-table-wrap {max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:8px;}
+.pricing-table {border-collapse:collapse;width:100%;min-width:40rem;font-size:.85rem;}
+.pricing-table caption {text-align:left;padding:1rem;font-weight:700;}
+.pricing-table th,.pricing-table td {padding:1rem;text-align:left;border-bottom:1px solid var(--line);}
+.pricing-table thead {background:var(--soft);}
+.pricing-table th[scope=row] {font-weight:650;}
+.pricing-addons>article {min-width:0;background:var(--soft);padding:1.5rem;border-radius:10px;}
+.pricing-addons h3 {font-size:1.35rem;}
+.pricing-addons p {font-size:.85rem;}
+.pricing-addons .addon-price {font-size:1rem;}
+.pricing-service-scope {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin-block:2rem;}
+.pricing-service-scope>article {min-width:0;}
+.pricing-service-scope h3 {font-size:1.35rem;}
+@media(max-width:999px) {.pricing-grid {grid-template-columns:1fr;}.plan-badge {min-height:0;}.pricing-service-scope {grid-template-columns:1fr;}}

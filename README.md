@@ -67,3 +67,7 @@ Versión activa identificada; quedan CI remoto, revisión manual con dispositivo
 Producto parcialmente desarrollado: se trabaja la web objetivo como plataforma completa, sin publicar nuevas versiones hasta confirmación del propietario de producto/web al 100% y autorización final. Borrador identificado por launchDraft; noindex intacto. Las 14 páginas /funcionalidades/<id>/ usan copy comercial editable, con matriz operativa separada. El catálogo y los sectores enlazan los módulos. Precios presenta consulta personalizada, sin cifras ni contratos inventados.
 
 Esta entrega solo se guarda en feat/feature-catalog. No enviar a feat/brand-foundation ni interpretar un siguiente «sigamos» de desarrollo como autorización de lanzamiento.
+
+## Planes propuestos
+
+Propuesta autorizada: Esencial S/99, Gestión S/199 y Multisede S/399 mensuales, con puesta en marcha y complementos separados. Alcance, CMS y revisión pendiente: [docs/PRICING_STRATEGY.md](docs/PRICING_STRATEGY.md). Implementado como borrador, sin desplegar.

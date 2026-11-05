@@ -58,6 +58,27 @@ for(const key of ['stages','preparation','responsibilities'])ensure(Array.isArra
 for(const stage of implementation.stages)for(const key of ['title','summary','text','outcome'])ensure(typeof stage[key]==='string'&&stage[key].trim(),`Etapa de implementación sin ${key}`);
 for(const item of implementation.preparation)for(const key of ['title','text'])ensure(typeof item[key]==='string'&&item[key].trim(),`Preparación sin ${key}`);
 for(const group of implementation.responsibilities)ensure(group.title?.trim()&&Array.isArray(group.items)&&group.items.length>0&&group.items.every(item=>typeof item==='string'&&item.trim()),'Responsabilidades de implementación inválidas');
+const pricing=read('pricing');
+ensure(pricing.draft===true&&pricing.currency==='PEN','Los planes permanecen como propuesta en soles');
+const planIds=unique(pricing.plans,'id','planes');unique(pricing.addons,'id','complementos');
+for(const key of ['billingLabel','taxNotice','setupScope','supportScope'])ensure(typeof pricing[key]==='string'&&pricing[key].trim(),`Precios: falta ${key}`);
+ensure(pricing.plans.filter(plan=>plan.featured).length<=1,'Solo un plan recomendado');
+let previous=[];
+for(const plan of pricing.plans){
+ for(const key of ['name','tagline','description'])ensure(typeof plan[key]==='string'&&plan[key].trim(),`Plan sin ${key}`);
+ for(const key of ['monthlyPrice','setupPrice'])ensure(Number.isFinite(plan[key])&&plan[key]>0&&Math.abs(plan[key]*100-Math.round(plan[key]*100))<1e-7,`Plan ${plan.id}: importe positivo con hasta dos decimales`);
+ for(const key of ['locations','users'])ensure(Number.isSafeInteger(plan[key])&&plan[key]>0,`Plan ${plan.id}: ${key} debe ser entero positivo`);
+ ensure(typeof plan.featured==='boolean','Destacado inválido');
+ ensure(Array.isArray(plan.moduleIds)&&plan.moduleIds.length>0&&new Set(plan.moduleIds).size===plan.moduleIds.length&&plan.moduleIds.every(id=>modules.has(id)),`Módulos inválidos en ${plan.id}`);
+ ensure(previous.every(id=>plan.moduleIds.includes(id)),`El plan ${plan.id} pierde módulos del nivel anterior`);previous=plan.moduleIds;
+ ensure(Array.isArray(plan.highlights)&&plan.highlights.length>0&&plan.highlights.every(text=>typeof text==='string'&&text.trim()),'Resumen de plan inválido');
+}
+for(const addon of pricing.addons){
+ for(const key of ['name','unit','scope'])ensure(typeof addon[key]==='string'&&addon[key].trim(),`Complemento sin ${key}`);
+ ensure(Number.isFinite(addon.monthlyPrice)&&addon.monthlyPrice>0&&Math.abs(addon.monthlyPrice*100-Math.round(addon.monthlyPrice*100))<1e-7,'Precio de complemento inválido');
+ ensure(Array.isArray(addon.moduleIds)&&addon.moduleIds.length>0&&addon.moduleIds.every(id=>modules.has(id)),'Módulo desconocido en complemento');
+ ensure(Array.isArray(addon.planIds)&&addon.planIds.length>0&&addon.planIds.every(id=>planIds.has(id)),'Plan desconocido en complemento');
+}
 const terms=read('terms');
 unique(terms.sections,'id','secciones legales');
 for(const section of terms.sections){ensure(!['contenido','responsable','contacto-legal','contacto-title'].includes(section.id)&&!section.id.endsWith('-title'),'Identificador legal reservado');ensure(section.title?.trim()&&Array.isArray(section.paragraphs)&&section.paragraphs.length>0&&section.paragraphs.every(text=>typeof text==='string'&&text.trim()),'Sección legal inválida');}

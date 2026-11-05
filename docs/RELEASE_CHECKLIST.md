@@ -2,9 +2,9 @@
 
 Generado con npm run audit:release tras test:ci. Fuente: qa/release-report.json. Este informe describe un build local, no el Worker público ni una aprobación del producto.
 
-Base Git del build verificado: d075a27da32114b960ce84bee8e22876d9c3776b; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
+Base Git del build verificado: 67658017417e3b06814ec5221409bd7b9e98057b; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
 
-42 páginas, 159 destinos internos y 88 comprobaciones axe sin infracciones detectadas. Metadata incluye título/descripción únicos, Open Graph coherente, idioma, viewport y noindex; enlaces/fragmentos e imágenes verificados. Los incomplete de axe permanecen en el JSON y requieren revisión humana. Las cifras no expresan porcentaje de preparación comercial ni certificación WCAG.
+42 páginas, 162 destinos internos y 88 comprobaciones axe sin infracciones detectadas. Metadata incluye título/descripción únicos, Open Graph coherente, idioma, viewport y noindex; enlaces/fragmentos e imágenes verificados. Los incomplete de axe permanecen en el JSON y requieren revisión humana. Las cifras no expresan porcentaje de preparación comercial ni certificación WCAG.
 
 | Ruta | Título | Tipo OG | Metadatos | Enlaces internos | Axe 390 / 1440 |
 | --- | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ Base Git del build verificado: d075a27da32114b960ce84bee8e22876d9c3776b; cambios
 | /legal/privacidad/ | Política de privacidad · Sistematicando | website | Sí | 22 | 0 / 0 |
 | /legal/terminos/ | Términos de uso del sitio · Sistematicando | website | Sí | 30 | 0 / 0 |
 | /nosotros/ | Nosotros · Sistematicando | website | Sí | 29 | 0 / 0 |
-| /precios/ | Precios y alcance de la propuesta · Sistematicando | website | Sí | 28 | 0 / 0 |
+| /precios/ | Planes y precios · Sistematicando | website | Sí | 53 | 0 / 0 |
 | /preguntas-frecuentes/ | Preguntas frecuentes · Sistematicando | website | Sí | 25 | 0 / 0 |
 | /recursos/ | Recursos para organizar tu negocio · Sistematicando | website | Sí | 30 | 0 / 0 |
 | /recursos/guias/evaluar-software-para-tu-negocio/ | Qué preguntar antes de elegir un software de gestión · Sistematicando | article | Sí | 32 | 0 / 0 |
@@ -56,7 +56,7 @@ Base Git del build verificado: d075a27da32114b960ce84bee8e22876d9c3776b; cambios
 | Área | Estado | Acción |
 | --- | --- | --- |
 | product | pending | Confirmar disponibilidad y evidencia real del SaaS; 14 módulos sin estado available en la matriz interna. |
-| commercial | pending | Aprobar tarifas, alcance, servicios y condiciones de contratación. |
+| commercial | pending | Propuesta de planes implementada por encargo; validar viabilidad económica/tributaria, alcance operativo y condiciones finales de contratación. |
 | legal | pending | Revisar/adoptar privacidad y términos; contrato SaaS y operación de datos pendientes. Ver LEGAL_REVIEW.md. |
 | manual | pending | Revisión humana del contenido y recorridos con dispositivos físicos/lector de pantalla; resolver incomplete de axe. |
 | remote-ci | unverified | Comprobar Actions del SHA que se vaya a revisar; resultados locales no acreditan CI remoto. |

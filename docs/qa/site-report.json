@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "d075a27da32114b960ce84bee8e22876d9c3776b",
-    "commitDate": "2026-11-05T18:32:31Z",
+    "commit": "67658017417e3b06814ec5221409bd7b9e98057b",
+    "commitDate": "2026-11-05T19:39:31Z",
     "sourceModified": true
   },
   "scope": "Local build: all generated routes and internal link/anchor targets; no external services contacted.",
@@ -262,10 +262,10 @@
     {
       "route": "/precios/",
       "status": 200,
-      "title": "Precios y alcance de la propuesta · Sistematicando",
-      "description": "Consulta una propuesta de Sistematicando según tu operación, locales, módulos y servicios. Conoce los factores que definen su alcance.",
+      "title": "Planes y precios · Sistematicando",
+      "description": "Compara los planes Esencial, Gestión y Multisede de Sistematicando: mensualidad, puesta en marcha, locales, usuarios y módulos. Propuesta de lanzamiento en revisión.",
       "type": "website",
-      "internalLinks": 28,
+      "internalLinks": 53,
       "metadata": true
     },
     {
@@ -386,5 +386,5 @@
       "metadata": true
     }
   ],
-  "destinations": 159
+  "destinations": 162
 }

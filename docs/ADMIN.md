@@ -1,5 +1,11 @@
 # Administración con GitHub y Pages CMS
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 ## Qué está implementado
 
 - `/admin/`: panel de acceso y enlaces por sección. **La edición y autenticación ocurren en Pages CMS, fuera del sitio.** No es un editor embebido ni una API de escritura anónima.
@@ -120,3 +126,7 @@ El pie conserva los mismos enlaces CMS y los organiza en columnas según ancho/t
 ## Textos comunes de guías
 
 Página: recursos-guias-slug incluye text_014 (Guía práctica), text_015 (nombre accesible del índice) y text_016 (soluciones relacionadas). El módulo relacionado se selecciona por el identificador existente en Guías y recursos; la plantilla crea el enlace directo a su ficha y usa su nombre. Cambiar el identificador exige una referencia válida; no pegar enlaces manuales para reconstruir ese recorrido.
+
+### Edición de planes
+
+En «Planes, precios y complementos (propuesta)» editar cuotas, puesta en marcha, cupos, módulos, resúmenes y exclusiones. Mantener moneda PEN y draft activo. Importes positivos con hasta dos decimales y cupos enteros positivos. Ordenar planes de menor a mayor alcance: cada uno incluye módulos del anterior. Solo un destacado. Usar IDs de módulos/planes existentes; sede adicional permanece específica de Multisede. El primer mes se calcula automáticamente. La validación del build rechaza referencias e importes inválidos.

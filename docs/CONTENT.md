@@ -1,5 +1,11 @@
 # Contenido
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 Español peruano profesional, cercano y claro. Conservar «Todo tu negocio, bajo control.». Separar beneficios propuestos de capacidades verificadas. No inventar resultados, métricas, testimonios, tarifas ni destinatarios.
 
 La referencia de marca contiene texto editorial interno, no copy comercial final aprobado.

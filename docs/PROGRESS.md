@@ -5,16 +5,22 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: d075a27 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: 6765801 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
+
+## Entrega actual: propuesta de precios
+
+Por encargo expreso del propietario: Esencial S/99, Gestión S/199 y Multisede S/399/mes; puesta en marcha S/199, S/399 y S/699. Complementos S/39 facturación, S/79 eventos/accesos y S/99 sede adicional, con unidades y exclusiones explícitas. PRICING_STRATEGY.md registra funciones, cupos y criterio. /precios terminado como borrador comercial editable: tarjetas, primer mes calculado, tabla de 14 módulos, extras y WhatsApp sin envío. No se modifica evidencia del SaaS. FAQs/términos y esquema CMS actualizados. 42 páginas/34 editores.
+
+Siguiente paso exacto vigente: contrastar costes/margen, capacidad de puesta en marcha, tributación y condiciones finales; revisar paquete y CI real. El diseño de planes ya fue delegado y resuelto; no volver a pedir esa elección. Sin publicación. Agentes: Codex principal solamente.
 
 ## Implementado
 
 Astro 7.4.5, TypeScript 6.0.3, Node 24.22.1 y Wrangler 4.157.0 fijados. Sitio estático; no hay integración SaaS ni receptor propio de solicitudes.
 
-42 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, precios informativos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación, más términos de uso en borrador. Inventario en [SITEMAP.md](SITEMAP.md).
+42 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, planes y precios propuestos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación, más términos de uso en borrador. Inventario en [SITEMAP.md](SITEMAP.md).
 
 - Catálogo de 14 módulos, cinco áreas y páginas individuales con beneficios/recorrido/ámbito de lanzamiento, todo editable. Búsqueda, recuentos y estado vacío; sin JS se conserva el catálogo. La matriz interna conserva evidencia/estados reales, sin convertir el copy objetivo en validación del SaaS.
 - Guía local: tres selecciones, validación, resumen, descarga TXT, reset e invalidación al cambiar opciones. Generar/descargar no envía datos ni reserva una demo.
@@ -33,7 +39,7 @@ Suite local de la revisión editorial/recorridos actual. Firefox/WebKit no ejecu
 | Comprobación | Resultado observado |
 | --- | --- |
 | Check/build/content | Sin errores; 42 páginas HTML más JSON de versión, 34 editores. |
-| Sitio | 42 rutas y 159 destinos internos. |
+| Sitio | 42 rutas y 162 destinos internos. |
 | Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 31 rutas a 390/1280 px, home/pie en cinco anchos a 100/200% y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
 | Editorial/contacto | Canales JS/no-JS sin mensajes reales; copia CMS, descarga TXT e invalidación. |
@@ -49,14 +55,14 @@ Esta entrega: copy de demo coherente con restauración del navegador, guía de e
 
 ## Fases y pendientes
 
-El plan original numera 0–10: inicialización y base visual completadas; home/soluciones/catálogo/contacto/precios informativos/recursos/CMS implementados. Cierre de QA y verificación del Worker en curso (fases 8–9). Lanzamiento oficial (10) pendiente.
+El plan original numera 0–10: inicialización y base visual completadas; home/soluciones/catálogo/contacto/planes y precios propuestos/recursos/CMS implementados. Cierre de QA y verificación del Worker en curso (fases 8–9). Lanzamiento oficial (10) pendiente.
 
-Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lector de pantalla; evidencia del SaaS y tarifas; revisión/adopción de privacidad y otros textos legales; dominio/canonicals/sitemap/indexación autorizados. Las páginas de módulos están preparadas como objetivo comercial; su disponibilidad operativa sigue por acreditar. No hay backend propio de leads.
+Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lector de pantalla; evidencia del SaaS y validación económica/tributaria de tarifas; revisión/adopción de privacidad y otros textos legales; dominio/canonicals/sitemap/indexación autorizados. Las páginas de módulos están preparadas como objetivo comercial; su disponibilidad operativa sigue por acreditar. No hay backend propio de leads.
 
 ## Siguiente paso exacto
 
 1. Abrir REVIEW_PACKAGE.md y seguir el recorrido sobre el preview local/ZIP de desarrollo; no usar el Worker anterior como si mostrara esta entrega. RELEASE_CHECKLIST.md conserva las 42 rutas y pendientes.
-2. Registrar observaciones y decisiones concretas en LAUNCH_DECISIONS.md, empezando por presentación comercial/alcance; el paquete actualizado ya incorpora las correcciones independientes de EDITORIAL_REVIEW.md. Incorporar Actions y compatibility-report reales del SHA revisado cuando exista acceso, sin inferir resultados por la configuración. COMPATIBILITY.md registra lo ejecutado y lo pendiente. La medición de cinco rutas y repetición de la anomalía ya están documentadas en PERFORMANCE.md. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
+2. Registrar observaciones y decisiones concretas en LAUNCH_DECISIONS.md, empezando por presentación comercial/alcance; el paquete actualizado ya incorpora las correcciones independientes de EDITORIAL_REVIEW.md. Incorporar Actions y compatibility-report reales del SHA revisado cuando exista acceso, sin inferir resultados por la configuración. COMPATIBILITY.md registra lo ejecutado y lo pendiente. La medición de cinco rutas y repetición de la anomalía ya están documentadas en PERFORMANCE.md. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. Los precios propuestos autorizados están en PRICING_STRATEGY.md; validar viabilidad y condiciones finales, sin inventar certificaciones.
 3. Mantener launchDraft/noindex; no publicar, integrar ni pedir despliegue ahora. El propietario confirmará cuando producto y web estén al 100% y autorizará lanzamiento. Rama Worker sigue 557222e.
 4. Antes del lanzamiento: confirmar evidencias operativas, precios/condiciones, legal/privacidad, dominio/indexación y pruebas con dispositivos/lector. Fuente actual de implementación/evidencias internas en FEATURE_STATUS.md.
 5. Continuidad HANDOFF.md y AGENTS.md. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se creó PR, existentes sin verificar por API.
@@ -164,3 +170,11 @@ Pruebas reales: check 60 archivos sin errores/advertencias/hints; build/content 
 features.json, pricing.json, contact.json y terms.json permanecen intactos: no se cambian estados del SaaS, factores comerciales, identidad/canales ni términos. No se asume respuesta a la pregunta comercial pendiente. Paquete interno regenerable y actualizado; sin publicación/DNS/noindex cambiado. Base remota d075a27 y Worker 557222e verificadas al comenzar; consultar git log -1 y comprobar push/ref al entregar.
 
 Autor Joel Alejandro Yañez Caballero; Codex principal sin subagentes. Sin PR nueva; existentes/CI remoto no verificados por la restricción conocida, sin repetir la consulta. Próximo paso exacto: revisión del paquete actualizado y decisiones concretas de oferta/alcance y adopción legal en LAUNCH_DECISIONS.md; incorporar evidencia real de CI cuando sea accesible. No inventar esas decisiones para cerrar la web al 100%.
+
+## Verificación de esta propuesta (5/11/2026)
+
+Check: 62 archivos, cero errores/avisos/hints. Build: 42 páginas. test:ci local final aprobado: 42 rutas, 162 destinos internos, navegación/200%/marca/editorial/módulos/recursos/versión/legales y pruebas nuevas de precios con/sin JS; 88 comprobaciones axe, cero infracciones. Compatibilidad: cinco escenarios Chromium aprobados; Firefox/WebKit no disponibles localmente, CI remota no confirmada. No se enviaron mensajes ni se efectuaron compras. Revisadas capturas de tarjetas a 390/1440 px y viewport móvil. Lighthouse no repetido en esta entrega. Informes conservan la identidad del build probado (6765801 con cambios de fuente), no se reetiquetan con el commit documental posterior.
+
+Agentes: solo Codex principal. Pendientes: validación de margen/costes, tributación, condiciones finales y operación real; CI remota/pruebas humanas y otros siete bloqueos de lanzamiento conservados. Siguiente paso exacto: revisar PRICING_STRATEGY.md contra costes/capacidad y registrar ajustes en LAUNCH_DECISIONS.md; no publicar.
+
+Worker dry-run de esta entrega aprobado: build de 42 páginas y 106 archivos estáticos; `--dry-run: exiting now`, sin subir ni desplegar. No se repitió runtime Worker; evidencia anterior claramente separada.

@@ -337,7 +337,7 @@
     },
     {
       "name": "pricing",
-      "label": "Precios: factores de alcance",
+      "label": "Planes, precios y complementos (propuesta)",
       "type": "file",
       "path": "content/pricing.json",
       "format": "json",
@@ -364,6 +364,166 @@
               "name": "detail",
               "label": "Detalle",
               "type": "string",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "draft",
+          "label": "Propuesta comercial en revisión",
+          "type": "boolean"
+        },
+        {
+          "name": "currency",
+          "label": "Moneda (PEN)",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "billingLabel",
+          "label": "Unidad de cobro del plan",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "taxNotice",
+          "label": "Presentación de impuestos por revisar",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "setupScope",
+          "label": "Alcance de puesta en marcha",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "supportScope",
+          "label": "Alcance de atención",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "plans",
+          "label": "Planes",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "name",
+              "label": "Nombre",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "tagline",
+              "label": "Eslogan",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Descripción",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "monthlyPrice",
+              "label": "Precio mensual",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "setupPrice",
+              "label": "Puesta en marcha (pago único)",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "locations",
+              "label": "Locales incluidos",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "users",
+              "label": "Usuarios totales por cuenta",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "featured",
+              "label": "Destacar como recomendado",
+              "type": "boolean"
+            },
+            {
+              "name": "moduleIds",
+              "label": "Identificadores de módulos",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "highlights",
+              "label": "Resumen del plan",
+              "type": "string",
+              "list": true
+            }
+          ]
+        },
+        {
+          "name": "addons",
+          "label": "Complementos",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "name",
+              "label": "Nombre",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "monthlyPrice",
+              "label": "Precio mensual",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "unit",
+              "label": "Unidad de cobro del complemento",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "moduleIds",
+              "label": "Identificadores de módulos",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "planIds",
+              "label": "Planes aplicables",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "scope",
+              "label": "Ámbito del módulo",
+              "type": "text",
               "required": true
             }
           ]
@@ -2043,37 +2203,37 @@
             },
             {
               "name": "text_003",
-              "label": "Un alcance claro, desde el inicio",
+              "label": "Planes para cada etapa de tu negocio",
               "type": "string",
               "required": true
             },
             {
               "name": "text_004",
-              "label": "Primero tu negocio.",
+              "label": "Empieza con orden.",
               "type": "string",
               "required": true
             },
             {
               "name": "text_005",
-              "label": "Después, la propuesta.",
+              "label": "Crece con claridad.",
               "type": "string",
               "required": true
             },
             {
               "name": "text_006",
-              "label": "Define una configuración según tu tipo de negocio, tus locales y las herram…",
+              "label": "Elige el alcance que encaja con tu operación: desde un local hasta una gest…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_007",
-              "label": "Una propuesta personalizada",
+              "label": "Propuesta comercial de lanzamiento",
               "type": "string",
               "required": true
             },
             {
               "name": "text_008",
-              "label": "Consulta la configuración y las condiciones para tu operación. La propuesta…",
+              "label": "Planes y valores preparados como borrador por encargo del propietario. Esta…",
               "type": "text",
               "required": true
             },
@@ -2231,6 +2391,174 @@
               "name": "text_032",
               "label": "Etapas de implementación",
               "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_033",
+              "label": "Elige tu punto de partida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_034",
+              "label": "Tres planes, un alcance claro.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_035",
+              "label": "Recomendado para crecer",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_036",
+              "label": "Puesta en marcha",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_037",
+              "label": "pago único por cuenta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_038",
+              "label": "Primer mes:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_039",
+              "label": "plan + puesta en marcha, sin complementos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_040",
+              "label": "Locales incluidos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_041",
+              "label": "Usuarios por cuenta",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_042",
+              "label": "Consultar por WhatsApp",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_043",
+              "label": "Los botones abren WhatsApp con el nombre del plan. Tú decides si envías el …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_044",
+              "label": "Comparar módulos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_045",
+              "label": "Distribución propuesta para lanzamiento",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_046",
+              "label": "Módulo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_047",
+              "label": "Incluido",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_048",
+              "label": "Complemento",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_049",
+              "label": "No incluido",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_050",
+              "label": "La tabla se puede desplazar horizontalmente cuando no cabe en pantalla.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_051",
+              "label": "Tabla de comparación de planes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_052",
+              "label": "Completa tu configuración",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_053",
+              "label": "Complementos, por separado.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_054",
+              "label": "Aplicable a:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_055",
+              "label": "Más alcance, con una propuesta a medida",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_056",
+              "label": "Si necesitas más usuarios, migración de datos o integraciones específicas, …",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_057",
+              "label": "Consultar un caso especial",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_058",
+              "label": "Qué cubre la puesta en marcha",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_059",
+              "label": "Atención y acompañamiento",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_060",
+              "label": "Cobro mensual. La periodicidad de pago no define por sí sola permanencia, r…",
+              "type": "text",
               "required": true
             }
           ]

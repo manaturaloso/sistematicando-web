@@ -1,5 +1,11 @@
 # Validación automática de ediciones del CMS
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 > Estado vigente consolidado en [PROGRESS.md](PROGRESS.md) y [HANDOFF.md](HANDOFF.md). Versión servida af35674 confirmada por JSON del propietario; el estado de CI de los nuevos SHA sigue sin verificar. Este documento conserva también registros anteriores.
 
 ## Implementado
@@ -170,3 +176,5 @@ Para abrir la web sin Node: extraer site-preview.zip a site y servirla con `pyth
 ## Guía → ficha de módulo
 
 verify-resources recorre las tres guías con y sin JavaScript, activa por teclado el enlace directo y comprueba el h1 de la ficha destino. Nuevos resultados en qa/resources-report.json; el validador de contenido ya exige una referencia de módulo existente. No se afirma que navegar a una ficha acredite disponibilidad del SaaS.
+
+`CHROMIUM_PATH=/usr/bin/chromium node scripts/verify-pricing.mjs` comprueba precios y suma del primer mes contra contenido, cupos, matriz de 14 módulos, extras, enlaces WhatsApp sin enviar, ausencia de compra, no-JS y anchos 320/390/768/1024/1440; prueba desplazamiento por teclado de la tabla móvil. Incluido en test:ci, con docs/qa/pricing-report.json en limpieza y artefactos del workflow.

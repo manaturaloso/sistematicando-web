@@ -1,5 +1,11 @@
 # Retomar Sistematicando desde otra cuenta de Codex
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 Usa el repositorio GitHub manaturaloso/sistematicando-web. Fecha de esta guía: 5 de noviembre de 2026; las referencias remotas deben comprobarse otra vez al retomar.
 
 ## Prioridad actual
@@ -115,4 +121,4 @@ CI d52bccc consultada: Forbidden (qa/remote-ci-status.json); no hay conclusión 
 
 EDITORIAL_REVIEW.md registra cuatro correcciones independientes: demo ya no promete ausencia de restauración entre visitas; guía de evaluación enlaza la comunicación de lanzamiento; tres guías van directamente a su ficha de módulo (probado por teclado con/sin JS); etiquetas comunes de guías ahora editables en Página: recursos-guias-slug. Paquete sigue con 42 páginas / 34 editores. No reabrir esos hallazgos ni modificar evidencia del SaaS para justificar copy futuro.
 
-Siguiente paso exacto: revisar el paquete actualizado y registrar observaciones/decisiones comerciales/legales concretas en LAUNCH_DECISIONS.md; no asumir respuesta a la pregunta comercial pendiente ni publicar. CI/Firefox/WebKit permanecen sin resultado remoto confirmado por la restricción conocida.
+Siguiente paso exacto: revisar el paquete actualizado y registrar observaciones/decisiones comerciales/legales concretas en LAUNCH_DECISIONS.md; la elección comercial ya fue delegada: revisar viabilidad de la propuesta implementada ni publicar. CI/Firefox/WebKit permanecen sin resultado remoto confirmado por la restricción conocida.

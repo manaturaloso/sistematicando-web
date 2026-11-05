@@ -22,7 +22,7 @@ assert((await fs.readFile('dist/robots.txt','utf8')).includes('Disallow: /'),'Cr
 assert(!(await fs.readdir('dist')).some(file=>/^sitemap.*\.xml$/i.test(file)),'Public sitemap must not be introduced without launch approval');
 const gates=[
  {id:'product',status:'pending',detail:`Confirmar disponibilidad y evidencia real del SaaS; ${features.items.filter(item=>item.status!=='available').length} módulos sin estado available en la matriz interna.`},
- {id:'commercial',status:'pending',detail:'Aprobar tarifas, alcance, servicios y condiciones de contratación.'},
+ {id:'commercial',status:'pending',detail:'Propuesta de planes implementada por encargo; validar viabilidad económica/tributaria, alcance operativo y condiciones finales de contratación.'},
  {id:'legal',status:'pending',detail:'Revisar/adoptar privacidad y términos; contrato SaaS y operación de datos pendientes. Ver LEGAL_REVIEW.md.'},
  {id:'manual',status:'pending',detail:'Revisión humana del contenido y recorridos con dispositivos físicos/lector de pantalla; resolver incomplete de axe.'},
  {id:'remote-ci',status:'unverified',detail:'Comprobar Actions del SHA que se vaya a revisar; resultados locales no acreditan CI remoto.'},

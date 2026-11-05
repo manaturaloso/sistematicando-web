@@ -1,5 +1,11 @@
 # Calidad local · 2026-11-05
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 ## Alcance
 
 Build estático local, no Worker público. 42 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
@@ -132,3 +138,11 @@ CI d52bccc: consulta read-only Forbidden; no hay conclusión observada, resultad
 Copy de demo/guía de evaluación y etiquetas editables corregidos; guías enlazan directamente al módulo y usan su nombre. Check 60 archivos limpio y build 42 páginas/34 editores. test:ci aprobado: 42 rutas/159 destinos, seis nuevos recorridos guía→ficha (tres con/sin JS), cinco escenarios Chromium, marca/editorial/legal/versión y axe 88 sin infracciones; checklist/controles de evidencia aprobados. Los tres destinos menos corresponden a anclas del catálogo sustituidas por fichas ya enlazadas, no a páginas eliminadas.
 
 No se repite Lighthouse ni Worker sin cambio relevante de carga/routing; no se afirma verificación nueva de Firefox/WebKit o CI remoto. Estados reales del SaaS, precios/contactos y términos sin modificar. EDITORIAL_REVIEW.md y paquete de revisión actualizados; no publicación.
+
+## Verificación de esta propuesta (5/11/2026)
+
+Check: 62 archivos, cero errores/avisos/hints. Build: 42 páginas. test:ci local final aprobado: 42 rutas, 162 destinos internos, navegación/200%/marca/editorial/módulos/recursos/versión/legales y pruebas nuevas de precios con/sin JS; 88 comprobaciones axe, cero infracciones. Compatibilidad: cinco escenarios Chromium aprobados; Firefox/WebKit no disponibles localmente, CI remota no confirmada. No se enviaron mensajes ni se efectuaron compras. Revisadas capturas de tarjetas a 390/1440 px y viewport móvil. Lighthouse no repetido en esta entrega. Informes conservan la identidad del build probado (6765801 con cambios de fuente), no se reetiquetan con el commit documental posterior.
+
+Agentes: solo Codex principal. Pendientes: validación de margen/costes, tributación, condiciones finales y operación real; CI remota/pruebas humanas y otros siete bloqueos de lanzamiento conservados. Siguiente paso exacto: revisar PRICING_STRATEGY.md contra costes/capacidad y registrar ajustes en LAUNCH_DECISIONS.md; no publicar.
+
+Worker dry-run de esta entrega aprobado: build de 42 páginas y 106 archivos estáticos; `--dry-run: exiting now`, sin subir ni desplegar. No se repitió runtime Worker; evidencia anterior claramente separada.

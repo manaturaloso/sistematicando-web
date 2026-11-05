@@ -11,12 +11,14 @@ Registro para el propietario; no contiene aprobaciones implícitas. Editar decis
 - CMS conectado a GitHub con acceso desde /admin; edición en feat/feature-catalog.
 - Producto parcial; web de lanzamiento completa en borrador. Sin nuevas publicaciones hasta confirmación de producto/web completos y autorización final. No volver a preguntar el estado global para continuar frontend.
 
+- Diseño de precios/planes delegado al agente el 5/11; propuesta implementada, no adopción económica/tributaria ni permiso de publicación.
+
 ## Pendientes con evidencia necesaria
 
 | ID | Decisión pendiente | Punto de partida preparado | Para cerrar | Estado |
 | --- | --- | --- | --- | --- |
 | producto | Alcance disponible para lanzamiento | 14 fichas comerciales; estados reales separados | Evidencia por módulo/integración y revisión del propietario; actualizar fuente/matriz sin falsear estados | Pendiente |
-| oferta | Oferta y condiciones de contratación | Propuesta personalizada, sin tarifas públicas ni planes ficticios | Confirmar presentación, alcance, moneda/precios/impuestos si se publican, servicios y condiciones reales; o confirmar mantener consulta personalizada | Pendiente de revisión |
+| oferta | Oferta y condiciones de contratación | Tres planes y tres complementos propuestos por encargo; ver PRICING_STRATEGY.md | Validar margen/costes, tratamiento tributario, capacidad de puesta en marcha y condiciones finales; diseño de planes ya delegado e implementado | Pendiente de revisión |
 | legal | Adopción de privacidad/términos y operación de datos | Borradores de la web, contacto real, LEGAL_REVIEW.md | Revisión/adopción, conservación/proveedores/solicitudes y acuerdo SaaS separado cuando corresponda | Pendiente |
 | manual | Aceptación editorial y pruebas humanas | Capturas, recorridos, teclado/Chromium/movimiento reducido | Observaciones por ruta, dispositivos físicos y lector; resolver incomplete relevantes | Pendiente |
 | ci | Resultado real de CI para versión revisada | Workflow exige Chromium/Firefox/WebKit | Enlace de ejecución, SHA, conclusión y compatibility-report real; corregir fallos si los hay | No verificado; consulta Forbidden |

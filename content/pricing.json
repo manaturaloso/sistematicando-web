@@ -20,5 +20,141 @@
       "description": "Los módulos, integraciones y condiciones que se verifiquen.",
       "detail": "Qué está disponible, qué incluye y qué queda fuera."
     }
+  ],
+  "draft": true,
+  "currency": "PEN",
+  "billingLabel": "mes por cuenta",
+  "taxNotice": "Importes propuestos como precio final al cliente, con los impuestos que correspondan incluidos. El tratamiento tributario y las condiciones finales se revisarán antes del lanzamiento.",
+  "setupScope": "La puesta en marcha propuesta cubre configuración inicial de los módulos del plan, orientación al responsable y revisión del primer recorrido operativo. Migraciones, cargas masivas, integraciones, equipos y desplazamientos se evalúan y cotizan aparte.",
+  "supportScope": "Atención y coordinación por WhatsApp. Horarios, tiempos de respuesta y alcance del acompañamiento se definirán en la propuesta; no se ofrece un SLA ni atención 24/7 desde esta web.",
+  "plans": [
+    {
+      "id": "esencial",
+      "name": "Esencial",
+      "tagline": "Ordena el día a día de tu local.",
+      "description": "Para empezar con ventas, caja, atención e inventario en una sola operación.",
+      "monthlyPrice": 99,
+      "setupPrice": 199,
+      "locations": 1,
+      "users": 3,
+      "featured": false,
+      "moduleIds": [
+        "punto-de-venta",
+        "caja",
+        "mesas-y-comandas",
+        "inventarios",
+        "clientes",
+        "reportes",
+        "personal-y-permisos"
+      ],
+      "highlights": [
+        "Ventas, mesas y caja conectadas",
+        "Inventario y clientes en el mismo recorrido",
+        "Reportes y accesos por rol"
+      ]
+    },
+    {
+      "id": "gestion",
+      "name": "Gestión",
+      "tagline": "Conecta la operación con tus costos.",
+      "description": "Para un local que necesita gestionar recetas, abastecimiento y reservas con más equipo.",
+      "monthlyPrice": 199,
+      "setupPrice": 399,
+      "locations": 1,
+      "users": 10,
+      "featured": true,
+      "moduleIds": [
+        "punto-de-venta",
+        "caja",
+        "mesas-y-comandas",
+        "inventarios",
+        "clientes",
+        "reportes",
+        "personal-y-permisos",
+        "recetas-y-costos",
+        "compras-y-proveedores",
+        "reservas"
+      ],
+      "highlights": [
+        "Todo el alcance de Esencial",
+        "Recetas, costos y compras a proveedores",
+        "Reservas y mayor capacidad de usuarios"
+      ]
+    },
+    {
+      "id": "multisede",
+      "name": "Multisede",
+      "tagline": "Una visión compartida de tus locales.",
+      "description": "Para coordinar hasta tres establecimientos con gestión central y contexto por sede.",
+      "monthlyPrice": 399,
+      "setupPrice": 699,
+      "locations": 3,
+      "users": 25,
+      "featured": false,
+      "moduleIds": [
+        "punto-de-venta",
+        "caja",
+        "mesas-y-comandas",
+        "inventarios",
+        "clientes",
+        "reportes",
+        "personal-y-permisos",
+        "recetas-y-costos",
+        "compras-y-proveedores",
+        "reservas",
+        "multisede"
+      ],
+      "highlights": [
+        "Todo el alcance de Gestión",
+        "Administración de varias sedes",
+        "Consulta por local y visión consolidada"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "facturacion",
+      "name": "Facturación electrónica",
+      "monthlyPrice": 39,
+      "unit": "mes por sede",
+      "moduleIds": [
+        "facturacion-electronica"
+      ],
+      "planIds": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "scope": "Tarifa propuesta del módulo. Documentos, volúmenes, proveedor y requisitos tributarios deben validarse; consumos y cargos de terceros se cotizan aparte. No acredita integración SUNAT operativa."
+    },
+    {
+      "id": "eventos",
+      "name": "Eventos y control de accesos",
+      "monthlyPrice": 79,
+      "unit": "mes por sede",
+      "moduleIds": [
+        "eventos-y-entradas",
+        "control-de-accesos"
+      ],
+      "planIds": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "scope": "Organización de eventos, entradas y validación de accesos según configuración. No incluye pasarela de pago, comisiones por transacción ni equipos de control."
+    },
+    {
+      "id": "sede-adicional",
+      "name": "Sede adicional",
+      "monthlyPrice": 99,
+      "unit": "mes por sede adicional",
+      "moduleIds": [
+        "multisede"
+      ],
+      "planIds": [
+        "multisede"
+      ],
+      "scope": "Solo para Multisede, a partir de la cuarta sede. Mantiene el cupo de 25 usuarios de la cuenta; usuarios adicionales y necesidades especiales se revisan en la propuesta."
+    }
   ]
 }

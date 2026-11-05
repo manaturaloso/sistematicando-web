@@ -1,0 +1,27 @@
+{
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "67658017417e3b06814ec5221409bd7b9e98057b",
+    "commitDate": "2026-11-05T19:39:31Z",
+    "sourceModified": true
+  },
+  "scope": "Proposed commercial configuration and UI arithmetic, not operational SaaS validation or financial/tax approval",
+  "results": [
+    {
+      "javaScriptEnabled": true,
+      "plans": 3,
+      "comparisonRows": 14,
+      "totalsAndLimits": true,
+      "whatsappLinksInspectedWithoutSending": true,
+      "noCheckout": true
+    },
+    {
+      "javaScriptEnabled": false,
+      "plans": 3,
+      "comparisonRows": 14,
+      "totalsAndLimits": true,
+      "whatsappLinksInspectedWithoutSending": true,
+      "noCheckout": true
+    }
+  ]
+}

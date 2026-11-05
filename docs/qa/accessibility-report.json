@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "d075a27da32114b960ce84bee8e22876d9c3776b",
-    "commitDate": "2026-11-05T18:32:31Z",
+    "commit": "67658017417e3b06814ec5221409bd7b9e98057b",
+    "commitDate": "2026-11-05T19:39:31Z",
     "sourceModified": true
   },
   "tool": "axe-core via @axe-core/playwright",
@@ -212,8 +212,13 @@
     {
       "route": "/precios/",
       "width": 390,
-      "passes": 39,
-      "incomplete": [],
+      "passes": 52,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 28
+        }
+      ],
       "violations": []
     },
     {
@@ -511,7 +516,7 @@
     {
       "route": "/precios/",
       "width": 1440,
-      "passes": 38,
+      "passes": 50,
       "incomplete": [],
       "violations": []
     },

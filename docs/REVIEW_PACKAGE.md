@@ -1,5 +1,11 @@
 # Paquete final de revisión · 5 de noviembre de 2026
 
+## Actualización vigente: planes propuestos (5/11/2026)
+
+El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
+
+Siguiente paso: revisar viabilidad económica/tributaria y condiciones de contratación de esta propuesta; incorporar evidencia real de CI y pruebas humanas cuando esté disponible. No pedir otra vez diseñar los planes ni publicar. Agente principal únicamente.
+
 La web objetivo está implementada como borrador: 42 páginas, 34 editores CMS y recorridos locales de navegación, catálogo y guía de demo. Esta entrega reúne el material para revisar; no significa que el producto SaaS, los textos legales o el lanzamiento estén aprobados.
 
 ## Qué abrir primero
@@ -34,7 +40,7 @@ No hay login de clientes SaaS, compra/cobro, receptor propio de leads ni envío 
 | / | Mirar logo, titulares y menú; usar teclado/Escape en móvil | Marca correcta, enlaces visibles y foco recuperable |
 | /soluciones/ → un sector | Abrir una prioridad y una ficha de módulo | Contenido coherente con el negocio y navegación completa |
 | /funcionalidades/ | Buscar un módulo, probar una palabra inexistente y recuperar un área | Recuento/estado vacío claros y catálogo restaurado |
-| /precios/ → /implementacion/ | Revisar condiciones propuestas y etapas | Sin montos, plazos o servicios inventados como aprobados |
+| /precios/ → /implementacion/ | Revisar condiciones propuestas y etapas | Tres planes autorizados como propuesta, puesta en marcha, totales y extras; condiciones finales pendientes |
 | /solicitar-demo/ | Generar, descargar, cambiar una opción y reiniciar | TXT local; resultado invalidado cuando cambia; sin solicitud enviada |
 | /contacto/ | Revisar número, identidad y canales de privacidad | Datos confirmados, sin simular recepción ni enviar mensajes durante esta revisión |
 | /recursos/ y /blog/ | Leer una guía/artículo y probar su índice | Lectura y enlaces relacionados utilizables en móvil/escritorio |
@@ -66,4 +72,4 @@ npm run preview -- --port 4321
 
 ## Decisión siguiente
 
-Revisar los recorridos y registrar observaciones/decisiones en LAUNCH_DECISIONS.md, empezando por oferta y alcance, sin inventar tarifas ni cerrar asuntos legales por defecto. Incorporar el resultado real de CI con enlace, SHA y artefacto cuando sea accesible. Mantener congelación de publicación hasta confirmación de producto/web completos y autorización final explícita. Agente: Codex principal, sin subagentes.
+Revisar los recorridos y registrar observaciones/decisiones en LAUNCH_DECISIONS.md, empezando por oferta y alcance, con los precios propuestos autorizados, sin cerrar asuntos legales por defecto. Incorporar el resultado real de CI con enlace, SHA y artefacto cuando sea accesible. Mantener congelación de publicación hasta confirmación de producto/web completos y autorización final explícita. Agente: Codex principal, sin subagentes.

@@ -32,22 +32,22 @@
       "category": "comercial",
       "home": true,
       "pricing": true,
-      "question": "¿Cómo obtengo una propuesta?",
-      "answer": "Conversemos sobre tu negocio, tus locales y los módulos que necesitas. La propuesta debe detallar su alcance, los servicios, los valores y los impuestos aplicables antes de contratar."
+      "question": "¿Cómo elijo mi plan?",
+      "answer": "Compara Esencial, Gestión y Multisede en la página de precios según locales, usuarios y módulos. La mensualidad, la puesta en marcha y los complementos se muestran por separado como propuesta de lanzamiento; la configuración final se confirma antes de contratar."
     },
     {
       "id": "modulos-plan",
       "category": "comercial",
       "pricing": true,
       "question": "¿Todos los módulos se incluyen en mi configuración?",
-      "answer": "La configuración se define según la operación. Revisa en tu propuesta los módulos, límites y servicios incluidos, y cualquier componente adicional que necesite tu equipo."
+      "answer": "Cada plan tiene su distribución de módulos en la tabla comparativa. Facturación electrónica, eventos y accesos se proponen como complementos; las sedes adicionales corresponden a Multisede. Revisa el alcance y los servicios incluidos antes de contratar."
     },
     {
       "id": "unidad-cobro",
       "category": "comercial",
       "pricing": true,
       "question": "¿Qué condiciones debo revisar?",
-      "answer": "La propuesta debe indicar la unidad de cobro, la periodicidad, los límites y los impuestos aplicables. También conviene revisar implementación, soporte y condiciones de continuidad."
+      "answer": "Los planes propuestos se expresan en soles por mes y por cuenta, con límites de locales y usuarios. La puesta en marcha es un cargo único y los complementos se detallan aparte. Impuestos, condiciones de continuidad, soporte y configuración final requieren revisión antes del lanzamiento."
     },
     {
       "id": "prueba-gratuita",
