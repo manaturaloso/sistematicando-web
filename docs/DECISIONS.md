@@ -144,3 +144,11 @@ REVIEW_PACKAGE.md reúne áreas terminadas, recorrido del propietario, límites 
 package-review.py crea un ZIP interno con site-preview.zip y review/ separados; el ZIP del sitio se valida con package-preview.py. El manifiesto registra hashes, identidad del sitio y la de cada informe, sin reasignar snapshots. CRC/integridad, nombres únicos y ausencia de documentos internos en el ZIP anidado se comprueban al generar. Fuente de docs/scripts guardada en Git; el ZIP temporal se regenera desde otra cuenta. No se despliega el paquete externo.
 
 Consulta read-only de CI d52bccc por gh run list: Forbidden; conclusión/runs desconocidos, no ausencia de ejecuciones ni verde. Registro en qa/remote-ci-status.json. No reintentar por rutas alternativas para eludir la restricción ni pedir tokens. Sin frontend/dependencias nuevas; no se repite suite de navegador por empaquetar documentos. Agente Codex principal, identidad Joel Alejandro Yañez Caballero, sin subagentes. Próximo paso: revisión del propietario y decisiones concretas; mantener congelación de lanzamiento.
+
+## 5 de noviembre de 2026 · Coherencia editorial y enlaces de guías
+
+Copy de demo matiza la restauración posible del navegador en vez de prometer ausencia de datos entre visitas; coincide con privacidad sin añadir persistencia/transmisión. Guía de evaluación deja el término histórico «catálogo conceptual» y orienta hacia las fichas de lanzamiento y el alcance por acordar. El borrador global y los estados/evidencias reales permanecen intactos.
+
+Las tres guías enlazan directamente a la ficha del módulo, con nombre específico; recorrido por teclado sin/con JS añadido a verify-resources. Se hacen editables en Página: recursos-guias-slug las etiquetas comunes visibles/accesibles; 42 páginas / 34 editores, sin nuevo tipo de contenido. Factores de precios, contactos y términos no cambian; decisiones pendientes del propietario no se asumen por «sigamos».
+
+EDITORIAL_REVIEW.md registra cambios y límites. Paquete regenerable sin publicar; no se cambia Worker, DNS ni noindex. Codex principal, sin subagentes. Siguiente paso: observaciones y decisiones de oferta/alcance en el paquete, más resultado real de CI cuando sea accesible.

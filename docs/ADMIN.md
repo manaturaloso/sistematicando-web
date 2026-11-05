@@ -116,3 +116,7 @@ Textos de responsable: privacidad text_039 y términos text_007 requieren exacta
 Página: 404 incluye descripción SEO propia, etiqueta del grupo de enlaces y enlace de Ayuda. Los metadatos generales se editan por página; guías/artículos toman título/introducción del editor estructurado y se identifican técnicamente como OG article. No introducir títulos/descripciones vacíos o duplicados: test:site los detecta tras compilar. El checklist técnico es generado, no un documento editorial del CMS ni permiso de publicar.
 
 El pie conserva los mismos enlaces CMS y los organiza en columnas según ancho/tamaño de texto; no hace falta recrear el menú. La revisión visual local no altera logos ni marca disponibilidad operativa de módulos.
+
+## Textos comunes de guías
+
+Página: recursos-guias-slug incluye text_014 (Guía práctica), text_015 (nombre accesible del índice) y text_016 (soluciones relacionadas). El módulo relacionado se selecciona por el identificador existente en Guías y recursos; la plantilla crea el enlace directo a su ficha y usa su nombre. Cambiar el identificador exige una referencia válida; no pegar enlaces manuales para reconstruir ese recorrido.

@@ -3,8 +3,8 @@
   "scope": "Validated local build snapshot; automated checks are not approval to launch",
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "dc85c3631bd6eb8b8c6d1b9e25356239aa3db50e",
-    "commitDate": "2026-11-05T16:34:18Z",
+    "commit": "d075a27da32114b960ce84bee8e22876d9c3776b",
+    "commitDate": "2026-11-05T18:32:31Z",
     "sourceModified": true
   },
   "pages": [
@@ -818,7 +818,7 @@
     }
   ],
   "interactiveChecks": 4,
-  "destinations": 162,
+  "destinations": 159,
   "launchDraft": true,
   "robotsBlocked": true,
   "readyToPublish": false,

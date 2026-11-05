@@ -279,7 +279,7 @@
     "text_005": "mucho que contar.",
     "text_006": "Identifica qué quieres ordenar primero. Esta guía te ayuda a preparar una futura demostración, sin pedirte nombre, correo ni teléfono.",
     "text_007": "Una guía local, una conversación a tu elección",
-    "text_008": "La guía se genera en tu navegador: no se envía ni se guarda entre visitas. Si quieres consultar por una demo, puedes abrir WhatsApp y decidir si envías un mensaje.",
+    "text_008": "La guía se prepara en tu navegador. Esta herramienta no envía tus selecciones ni guarda un historial; el navegador puede restaurar campos al volver a la página. Si quieres consultar por una demo, abre WhatsApp y decide si envías un mensaje.",
     "text_009": "Tu punto de partida",
     "text_010": "Prepara tu guía.",
     "text_011": "Elige tu contexto y descarga un resumen para conservarlo. No incluye una cotización ni confirma disponibilidad de módulos.",
@@ -341,16 +341,19 @@
     "text_001": "Inicio",
     "text_002": "Recursos",
     "text_003": "Guía",
-    "text_004": "Orientación editorial. Adapta los pasos a tu operación; no se prometen resultados ni funciones disponibles del producto.",
+    "text_004": "Orientación editorial para preparar decisiones de gestión. Adapta los pasos al contexto y a los datos de tu negocio.",
     "text_005": "En esta guía",
     "text_006": "Con qué te puedes quedar",
     "text_007": "Conecta con tu contexto",
     "text_008": "Explora el enfoque de tu negocio.",
-    "text_009": "Puedes revisar el área de",
-    "text_010": "gestión relacionada",
-    "text_011": "sin asumir que el módulo esté disponible.",
+    "text_009": "Continúa con el módulo relacionado:",
+    "text_010": "Ver módulo",
+    "text_011": "Revisa su alcance y las condiciones que correspondan a tu operación.",
     "text_012": "Volver a recursos",
-    "text_013": "Preparar una conversación"
+    "text_013": "Preparar una conversación",
+    "text_014": "Guía práctica",
+    "text_015": "Contenido de la guía",
+    "text_016": "Soluciones relacionadas"
   },
   "components-Footer": {
     "text_008": "Hecho para pensar en tu negocio."

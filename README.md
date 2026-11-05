@@ -10,7 +10,7 @@ Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/
 
 ## Revisión del propietario
 
-Empezar por [REVIEW_PACKAGE.md](docs/REVIEW_PACKAGE.md) y registrar observaciones en [LAUNCH_DECISIONS.md](docs/LAUNCH_DECISIONS.md). El paquete interno se genera con `python scripts/package-review.py /tmp/sistematicando-review.zip`; incluye la web y documentos separados, con manifiesto de integridad. Se puede regenerar desde otra cuenta; no publica.
+Empezar por [REVIEW_PACKAGE.md](docs/REVIEW_PACKAGE.md) y registrar observaciones en [LAUNCH_DECISIONS.md](docs/LAUNCH_DECISIONS.md). La revisión independiente de copy y enlaces figura en [EDITORIAL_REVIEW.md](docs/EDITORIAL_REVIEW.md). El paquete interno se genera con `python scripts/package-review.py /tmp/sistematicando-review.zip`; incluye la web y documentos separados, con manifiesto de integridad. Se puede regenerar desde otra cuenta; no publica.
 
 ## Desarrollo y pruebas
 
@@ -25,7 +25,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm run dev -- --port 4321
 
 `npm run test:ci` usa un servidor efímero y navegador Playwright instalado. En esta máquina: `CHROMIUM_PATH=/usr/bin/chromium npm run test:ci`. Instalación y permisos en [HANDOFF.md](docs/HANDOFF.md). Recompilar tras cambiar HEAD para que el identificador del build coincida. Scripts Python antiguos son comprobaciones auxiliares históricas; el flujo principal y actualizado es test:ci.
 
-Resultado local registrado: 42 rutas/162 destinos internos; marca a seis anchos DPR1/2; contactos/editorial/descarga; identificación Git; axe 88 comprobaciones sin infracciones detectadas. Incomplete y límites en [QUALITY.md](docs/QUALITY.md); no certificación WCAG ni métricas de producción.
+Resultado local registrado: 42 rutas/159 destinos internos; marca a seis anchos DPR1/2; contactos/editorial/descarga; identificación Git; axe 88 comprobaciones sin infracciones detectadas. Incomplete y límites en [QUALITY.md](docs/QUALITY.md); no certificación WCAG ni métricas de producción.
 
 ## Checklist de cierre
 

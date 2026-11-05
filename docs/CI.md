@@ -166,3 +166,7 @@ Cinco escenarios por motor disponible: 390/1440 × no-preference/reduce, más m�
 `python scripts/package-review.py /tmp/sistematicando-review.zip` usa el empaquetador estático existente para site-preview.zip y añade una carpeta review separada con documentos/QA. manifest.json registra hashes y buildVersion propios de sitio/informes. Verifica CRC, nombres únicos, hashes y exclusión de docs/review/src/.git dentro de la web. El paquete externo es interno y no se despliega. Se regenera después de cambiar HEAD/recompilar, sin editar identidades de informes anteriores.
 
 Para abrir la web sin Node: extraer site-preview.zip a site y servirla con `python3 -m http.server 4321 --bind 127.0.0.1 --directory site`. LEEME.md del paquete contiene instrucciones. Los ZIPs permanecen fuera del checkout; fuentes/documentos están en Git. No se repite test:ci por un cambio aislado del empaquetador/documents sin frontend. Consulta de CI d52bccc por gh run list respondió Forbidden, evidencia de consulta en remote-ci-status.json; no se simula resultado remoto.
+
+## Guía → ficha de módulo
+
+verify-resources recorre las tres guías con y sin JavaScript, activa por teclado el enlace directo y comprueba el h1 de la ficha destino. Nuevos resultados en qa/resources-report.json; el validador de contenido ya exige una referencia de módulo existente. No se afirma que navegar a una ficha acredite disponibilidad del SaaS.

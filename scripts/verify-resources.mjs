@@ -3,6 +3,8 @@ import fs from 'node:fs/promises';
 import {chromium} from '@playwright/test';
 import {previewServer} from './lib/preview-server.mjs';
 const {items:articles}=JSON.parse(await fs.readFile('content/articles.json','utf8'));
+const {items:guides}=JSON.parse(await fs.readFile('content/guides.json','utf8'));
+const {items:features}=JSON.parse(await fs.readFile('content/features.json','utf8'));
 const pages=JSON.parse(await fs.readFile('content/pages.json','utf8'));
 const server=await previewServer();let browser;
 const results=[];
@@ -36,8 +38,16 @@ try{
    results.push({route,javaScriptEnabled,tocKeyboard:true,relatedLinks:true});
    if(javaScriptEnabled&&article===articles[0]){await fs.mkdir('/tmp/sistematicando-editorial',{recursive:true});for(const width of [390,1440]){await page.setViewportSize({width,height:1000});await page.evaluate(()=>{document.activeElement?.blur();document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,0)});await page.screenshot({path:`/tmp/sistematicando-editorial/article-${width}.png`,fullPage:true});}}
   }
+  for(const guide of guides){
+   const route=`/recursos/guias/${guide.slug}/`;await page.goto(server.url+route);
+   const feature=features.find(item=>item.id===guide.feature),target=`/funcionalidades/${guide.feature}/`;
+   const link=page.locator(`main a[href="${target}"]`);assert.equal(await link.count(),1);assert((await link.innerText()).includes(feature.name));
+   await link.focus();await page.keyboard.press('Enter');await page.waitForURL(server.url+target);
+   assert.equal(await page.locator('h1').innerText(),feature.name);
+   results.push({route,javaScriptEnabled,directModuleNavigation:true,target});
+  }
   await context.close();
  }
- await fs.writeFile('docs/qa/resources-report.json',JSON.stringify({scope:'Company/help navigation, native FAQ and blog TOC/related reading with and without JavaScript',results},null,2)+'\n');
- console.log('PASS company/help, keyboard FAQ, blog discovery, article TOC and related guides/modules with and without JavaScript.');
+ await fs.writeFile('docs/qa/resources-report.json',JSON.stringify({scope:'Company/help, native FAQ, blog TOC and direct guide-to-module navigation with and without JavaScript',results},null,2)+'\n');
+ console.log('PASS company/help, keyboard FAQ, blog discovery, article TOC and direct guide-to-module keyboard navigation with and without JavaScript.');
 }finally{await browser?.close();await server.close();}

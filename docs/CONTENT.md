@@ -37,3 +37,9 @@ Términos de uso del sitio en terms.json; ocho secciones sin cláusulas de contr
 ## Metadatos y cierre técnico
 
 Cada ruta requiere título y descripción propios y coherentes con Open Graph. La 404 dispone de descripción específica y recuperación a Inicio/Ayuda. Tres guías y tres artículos son de tipo OG article, sin autores/fechas inventados. RELEASE_CHECKLIST.md consolida la evidencia por página; pendientes legales/comerciales continúan separados de los checks técnicos. Canonicals, og:url y sitemap públicos siguen pendientes de dominio/autorización.
+
+## Coherencia de guía local y recursos
+
+Demo explica que la herramienta no envía selecciones ni guarda un historial, pero el navegador puede restaurar campos al volver; no prometer borrado universal por recargar o salir. La guía de evaluación orienta a las fichas de lanzamiento y al alcance de la propuesta, sin llamar al catálogo actual «conceptual» ni acreditar disponibilidad operativa.
+
+Las tres guías abren directamente el módulo relacionado, con nombre específico. «Guía práctica», nombre accesible del índice y soluciones relacionadas se editan desde Página: recursos-guias-slug. Ver EDITORIAL_REVIEW.md; mantener datos operativos/precios/términos separados de la revisión del copy.

@@ -1,5 +1,5 @@
 {
-  "scope": "Company/help navigation, native FAQ and blog TOC/related reading with and without JavaScript",
+  "scope": "Company/help, native FAQ, blog TOC and direct guide-to-module navigation with and without JavaScript",
   "results": [
     {
       "route": "/blog/elegir-que-ordenar-primero/",
@@ -20,6 +20,24 @@
       "relatedLinks": true
     },
     {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "javaScriptEnabled": true,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/caja/"
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "javaScriptEnabled": true,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/inventarios/"
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "javaScriptEnabled": true,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/reportes/"
+    },
+    {
       "route": "/blog/elegir-que-ordenar-primero/",
       "javaScriptEnabled": false,
       "tocKeyboard": true,
@@ -36,6 +54,24 @@
       "javaScriptEnabled": false,
       "tocKeyboard": true,
       "relatedLinks": true
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "javaScriptEnabled": false,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/caja/"
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "javaScriptEnabled": false,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/inventarios/"
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "javaScriptEnabled": false,
+      "directModuleNavigation": true,
+      "target": "/funcionalidades/reportes/"
     }
   ]
 }

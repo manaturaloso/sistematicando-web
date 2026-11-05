@@ -10,7 +10,7 @@ La web objetivo está implementada como borrador: 42 páginas, 34 editores CMS y
 4. [COMPATIBILITY.md](COMPATIBILITY.md), [VISUAL_REVIEW.md](VISUAL_REVIEW.md) y [PERFORMANCE.md](PERFORMANCE.md): qué se probó, cómo y con qué límites.
 5. [HANDOFF.md](HANDOFF.md): continuar desde otra cuenta sin reconstruir el historial.
 
-Los JSON guardados identifican sus propias instantáneas; no se reasignan a un commit posterior. La matriz técnica no certifica el SaaS ni autoriza publicar.
+Las correcciones independientes posteriores están en [EDITORIAL_REVIEW.md](EDITORIAL_REVIEW.md). Los JSON guardados identifican sus propias instantáneas; no se reasignan a un commit posterior. La matriz técnica no certifica el SaaS ni autoriza publicar.
 
 ## Qué está terminado en la web
 
@@ -59,7 +59,7 @@ npm run preview -- --port 4321
 
 ## Pruebas y límites que deben mantenerse visibles
 
-- Última suite local: 42 rutas/162 destinos, axe 88 comprobaciones sin infracciones detectadas, reflujo y flujos documentados. Los incomplete y pruebas manuales pendientes no equivalen a aprobados.
+- Última suite local: 42 rutas/159 destinos, axe 88 comprobaciones sin infracciones detectadas, reflujo y flujos documentados. Los incomplete y pruebas manuales pendientes no equivalen a aprobados.
 - Chromium: cinco escenarios de movimiento normal/reducido y fallback no-JS. Firefox/WebKit solo configurados como obligatorios en CI; resultado real aún no verificado desde este entorno.
 - Rendimiento: cinco rutas; módulo 86 inicial y dos 100 sin cambios. Se conserva la variación, no se promete 100 universal ni Core Web Vitals de producción.
 - CI del commit d52bccc consultada por gh run list: Forbidden. Registro en [qa/remote-ci-status.json](qa/remote-ci-status.json). No se infiere verde remoto ni ausencia de ejecuciones/PR.

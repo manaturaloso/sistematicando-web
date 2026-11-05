@@ -110,3 +110,9 @@ COMPATIBILITY.md y qa/compatibility-report.json: Chromium 155 cinco escenarios a
 REVIEW_PACKAGE.md describe 42 páginas/34 editores terminados como borrador y un recorrido concreto; LAUNCH_DECISIONS.md conserva datos confirmados y asuntos abiertos. `python scripts/package-review.py /tmp/sistematicando-review.zip` genera web anidada e informes separados con manifiesto de hashes/versiones. Para otra cuenta: clonar rama, leer documentos, build y regenerar; el ZIP temporal no tiene que viajar con el historial del chat. No desplegar el ZIP externo ni interpretar su generación como aprobación.
 
 CI d52bccc consultada: Forbidden (qa/remote-ci-status.json); no hay conclusión observada ni verificación nueva de PR existentes. Chromium local pasó; Firefox/WebKit siguen pendientes de resultado real. Siguiente paso exacto: revisar recorridos y registrar observaciones/decisiones de oferta/alcance en LAUNCH_DECISIONS.md; incorporar la ejecución real de Actions cuando sea accesible. No pedir de nuevo datos ya confirmados ni solicitar publicar para seguir revisando.
+
+## Revisión editorial posterior al paquete
+
+EDITORIAL_REVIEW.md registra cuatro correcciones independientes: demo ya no promete ausencia de restauración entre visitas; guía de evaluación enlaza la comunicación de lanzamiento; tres guías van directamente a su ficha de módulo (probado por teclado con/sin JS); etiquetas comunes de guías ahora editables en Página: recursos-guias-slug. Paquete sigue con 42 páginas / 34 editores. No reabrir esos hallazgos ni modificar evidencia del SaaS para justificar copy futuro.
+
+Siguiente paso exacto: revisar el paquete actualizado y registrar observaciones/decisiones comerciales/legales concretas en LAUNCH_DECISIONS.md; no asumir respuesta a la pregunta comercial pendiente ni publicar. CI/Firefox/WebKit permanecen sin resultado remoto confirmado por la restricción conocida.

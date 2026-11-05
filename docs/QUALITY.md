@@ -126,3 +126,9 @@ Firefox/WebKit no instalados ni ejecutados; no se simula un resultado. Modo estr
 Sin cambios frontend/dependencias. Build/content de 42 páginas, compilación Python y enlaces de los documentos nuevos aprobados. package-review valida ZIP interno/anidado, CRC, hashes y nombres únicos; la versión del sitio coincide con dist/version.json y su ZIP excluye docs/review/src/.git. Los documentos internos quedan fuera del sitio; el manifiesto no reasigna informes históricos al SHA empaquetado. Se regenera tras el commit/build final.
 
 CI d52bccc: consulta read-only Forbidden; no hay conclusión observada, resultado real de Firefox/WebKit pendiente. No se repiten suites previas por un empaquetador aislado; sus resultados siguen ligados a sus instantáneas. REVIEW_PACKAGE.md y LAUNCH_DECISIONS.md ordenan revisión y pendientes. No hay nueva publicación.
+
+## 5 de noviembre de 2026 · Coherencia editorial y guías
+
+Copy de demo/guía de evaluación y etiquetas editables corregidos; guías enlazan directamente al módulo y usan su nombre. Check 60 archivos limpio y build 42 páginas/34 editores. test:ci aprobado: 42 rutas/159 destinos, seis nuevos recorridos guía→ficha (tres con/sin JS), cinco escenarios Chromium, marca/editorial/legal/versión y axe 88 sin infracciones; checklist/controles de evidencia aprobados. Los tres destinos menos corresponden a anclas del catálogo sustituidas por fichas ya enlazadas, no a páginas eliminadas.
+
+No se repite Lighthouse ni Worker sin cambio relevante de carga/routing; no se afirma verificación nueva de Firefox/WebKit o CI remoto. Estados reales del SaaS, precios/contactos y términos sin modificar. EDITORIAL_REVIEW.md y paquete de revisión actualizados; no publicación.

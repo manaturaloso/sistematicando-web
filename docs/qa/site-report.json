@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "dc85c3631bd6eb8b8c6d1b9e25356239aa3db50e",
-    "commitDate": "2026-11-05T16:34:18Z",
+    "commit": "d075a27da32114b960ce84bee8e22876d9c3776b",
+    "commitDate": "2026-11-05T18:32:31Z",
     "sourceModified": true
   },
   "scope": "Local build: all generated routes and internal link/anchor targets; no external services contacted.",
@@ -386,5 +386,5 @@
       "metadata": true
     }
   ],
-  "destinations": 162
+  "destinations": 159
 }

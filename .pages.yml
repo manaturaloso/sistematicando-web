@@ -2751,7 +2751,7 @@
             },
             {
               "name": "text_008",
-              "label": "La guía se genera en tu navegador: no se envía ni se guarda entre visitas. …",
+              "label": "La guía se prepara en tu navegador. Esta herramienta no envía tus seleccion…",
               "type": "text",
               "required": true
             },
@@ -3095,7 +3095,7 @@
             },
             {
               "name": "text_004",
-              "label": "Orientación editorial. Adapta los pasos a tu operación; no se prometen resu…",
+              "label": "Orientación editorial para preparar decisiones de gestión. Adapta los pasos…",
               "type": "text",
               "required": true
             },
@@ -3125,19 +3125,19 @@
             },
             {
               "name": "text_009",
-              "label": "Puedes revisar el área de",
+              "label": "Continúa con el módulo relacionado:",
               "type": "string",
               "required": true
             },
             {
               "name": "text_010",
-              "label": "gestión relacionada",
+              "label": "Ver módulo",
               "type": "string",
               "required": true
             },
             {
               "name": "text_011",
-              "label": "sin asumir que el módulo esté disponible.",
+              "label": "Revisa su alcance y las condiciones que correspondan a tu operación.",
               "type": "string",
               "required": true
             },
@@ -3150,6 +3150,24 @@
             {
               "name": "text_013",
               "label": "Preparar una conversación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Guía práctica",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Contenido de la guía",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Soluciones relacionadas",
               "type": "string",
               "required": true
             }
