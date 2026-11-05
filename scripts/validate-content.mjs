@@ -58,6 +58,14 @@ for(const key of ['stages','preparation','responsibilities'])ensure(Array.isArra
 for(const stage of implementation.stages)for(const key of ['title','summary','text','outcome'])ensure(typeof stage[key]==='string'&&stage[key].trim(),`Etapa de implementación sin ${key}`);
 for(const item of implementation.preparation)for(const key of ['title','text'])ensure(typeof item[key]==='string'&&item[key].trim(),`Preparación sin ${key}`);
 for(const group of implementation.responsibilities)ensure(group.title?.trim()&&Array.isArray(group.items)&&group.items.length>0&&group.items.every(item=>typeof item==='string'&&item.trim()),'Responsabilidades de implementación inválidas');
+const terms=read('terms');
+unique(terms.sections,'id','secciones legales');
+for(const section of terms.sections){ensure(!['contenido','responsable','contacto-legal','contacto-title'].includes(section.id)&&!section.id.endsWith('-title'),'Identificador legal reservado');ensure(section.title?.trim()&&Array.isArray(section.paragraphs)&&section.paragraphs.length>0&&section.paragraphs.every(text=>typeof text==='string'&&text.trim()),'Sección legal inválida');}
+for(const [page,key] of [['pages-legal-privacidad','text_039'],['pages-legal-terminos','text_007']]){
+ let template=read('pages')[page][key];ensure(typeof template==='string','Texto de responsable inválido');
+ for(const token of ['responsible','ruc','address']){ensure(template.split('{'+token+'}').length===2,`Responsable necesita un {${token}}`);template=template.replace('{'+token+'}','');}
+ ensure(!/[{}]/.test(template),'Marcador de responsable desconocido');
+}
 const phoneCopy=read('pages')['components-WhatsAppContact'].text_007;
 ensure(typeof phoneCopy==='string'&&phoneCopy.split('{phone}').length===2&&!/[{}]/.test(phoneCopy.replace('{phone}','')),'Texto de contacto necesita exactamente un {phone}');
 const pages=read('pages'),search=pages['pages-funcionalidades-index'].search,guide=pages['pages-solicitar-demo-index'].guide;

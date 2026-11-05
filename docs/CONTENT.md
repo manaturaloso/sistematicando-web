@@ -29,3 +29,7 @@ Nosotros presenta propósito y principios sin historia corporativa fabricada. Ay
 ## Recorrido comercial e implementación
 
 La nueva página /implementacion/ explica evaluación, alcance, preparación y validación del inicio como acuerdos a definir. Contenido en implementation.json, textos comunes en pages.json. Precios y demo enlazan al recorrido; no hay nuevas tarifas, plazos, soporte ni servicios prometidos. El contacto real sigue externo y voluntario. Párrafo con teléfono editable mediante {phone}, dato centralizado. Ver COMMERCIAL_SCOPE.md para límites y pendientes concretos.
+
+## Privacidad y términos informativos
+
+Términos de uso del sitio en terms.json; ocho secciones sin cláusulas de contratación inventadas. Copy en pages-legal-terminos. Privacidad añade administración externa, matiza restauración del navegador y distingue correo de privacidad de contacto comercial. Los textos de responsable se editan con marcadores únicos y datos centralizados. No afirmar cookies/analítica ausentes en toda la infraestructura: la evidencia local cubre código del build, no configuración del hosting ni terceros abiertos por el usuario. LEGAL_REVIEW.md registra decisiones pendientes y alcance de revisión.

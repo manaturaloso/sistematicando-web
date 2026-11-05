@@ -72,6 +72,10 @@
     {
       "label": "Privacidad",
       "href": "/legal/privacidad/"
+    },
+    {
+      "label": "Términos de uso",
+      "href": "/legal/terminos/"
     }
   ]
 }

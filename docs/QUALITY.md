@@ -2,19 +2,19 @@
 
 ## Alcance
 
-Build estático local, no Worker público. 41 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
+Build estático local, no Worker público. 42 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
 
 ## Correcciones
 
 - Menú móvil sin JavaScript: ahora los enlaces permanecen visibles y el botón solo aparece cuando su comportamiento está inicializado.
 - Salto al contenido: el destino main acepta foco programático; probado con teclado.
-- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 28 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
+- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 30 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
 - Enlace de marca: usa el nombre visible o alt del logo como nombre accesible, evitando un aria-label que omitía la leyenda visible.
 - Favicon: si aún no se ha cargado uno, referencia vacía explícita para evitar una petición automática fallida a /favicon.ico. No se inventó un isotipo.
 
 ## Accesibilidad automática
 
-`npm run audit:a11y`: 82 combinaciones (41 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **86 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
+`npm run audit:a11y`: 84 combinaciones (42 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **88 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
 
 Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultados como aprobaciones automáticas. Evidencia en qa/contrast-review.json: flechas decorativas aria-hidden y etiquetas del mockup cuya transformación/fondo no pudo resolver. Revisión de estilos y captura desktop: tinta/superficie 11.59:1, tinta/blanco 13.15:1, tinta/líneas del gráfico 11.31:1 y texto claro/tinta 12.58:1. No se observó ocultación del texto en la captura revisada.
 
@@ -78,3 +78,11 @@ Check 54 archivos sin errores/advertencias/hints; build 41 páginas y 32 editore
 La evidencia Lighthouse anterior no se repitió: no son métricas de esta página ni de producción. Revisión manual con lectores/dispositivos sigue pendiente. Sin nueva publicación.
 
 Worker local final: 52 verificaciones de rutas más cabeceras/JSON/assets/query/405 y navegador; servidor detenido tras las pruebas. Paquete de 41 páginas validado fuera del checkout. Capturas de implementación móvil y precios escritorio revisadas; referencia en LAUNCH_PREVIEW.md. Sin nueva ejecución Lighthouse.
+
+## 5 de noviembre de 2026 · Revisión legal informativa
+
+Check 56 archivos sin errores/advertencias/hints; build 42 páginas y 34 editores. Suite completa aprobada: sitio 42 rutas/162 destinos, reflujo 200% en 30 rutas a 390/1280, marca, editorial, módulos, recursos, versión, prueba legal y axe 88 comprobaciones sin infracciones detectadas. Worker local 53 verificaciones de rutas más assets/JSON/cabeceras/query/405/navegador, servidor detenido. Lighthouse conserva evidencia histórica, sin repetir.
+
+verify-legal prueba identidad confirmada, vínculos legales, TOC por teclado, contactos diferenciados, navegación y guía local sin peticiones externas, cookies ni persistencia, con/sin JS. No cubre configuración de Cloudflare, servicios externos abiertos voluntariamente ni adopción legal. Tras revisar la captura se quitó la numeración visual duplicada del índice conservando la lista semántica; se repitieron navegación/reflujo y pruebas legales sobre el build final. No se omiten reglas de accesibilidad ni se retira noindex.
+
+Comprobación final del ajuste del índice: cuatro análisis axe focales (privacidad/términos a 390/1440) sin infracciones; evidencia adicional en qa/legal-report.json. Para axe usar browser.newContext() explícito: la comprobación puntual inicial con browser.newPage() fue rechazada por la API antes del análisis y se corrigió. Check final: 56 archivos, cero errores/advertencias/hints.

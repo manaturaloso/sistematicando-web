@@ -128,3 +128,9 @@ Siguiente paso exacto: revisar Actions del nuevo SHA y copy comercial de las 14 
 ## 5 de noviembre de 2026 · Recorrido comercial
 
 verify-editorial recorre precios → última etapa de implementación (ancla por teclado) → demo con y sin JavaScript; valida WhatsApp configurado, texto con teléfono CMS y guía oculta sin JS. Tras generar la guía se comprueba que el enlace WhatsApp no incorpore sus selecciones. verify-navigation incluye precios/implementación en texto al 200% (28 rutas a dos anchos). Validación de contenido exige etapas, preparación, responsabilidades y un único {phone}. Todo sin comunicaciones externas ni despliegue. Ejecutar Worker después de test:ci para evitar recompilar dist durante axe.
+
+## Cobertura legal local
+
+verify-legal.mjs forma parte de test:ci; qa/legal-report.json se limpia antes de la suite y se incluye como artefacto. Verifica identidad/canales, enlaces entre documentos, índice de términos por teclado y ausencia de formularios de aceptación, con/sin JS. Navega las dos páginas y genera la guía local, sin abrir servicios externos: exige peticiones GET al origen local, cero cookies y localStorage/sessionStorage vacíos. No prueba configuración pública/terceros ni constituye revisión legal.
+
+Reflujo incluye privacidad/términos: 30 rutas a dos anchos. El validador bloqueó inicialmente un id «contenido» reservado para main; se cambió a informacion-comercial antes de compilar. No se debilitaron reglas. Ejecutar Worker solo después de terminar test:ci para no recompilar dist durante axe.

@@ -132,6 +132,11 @@
       "title": "Política de privacidad · Sistematicando"
     },
     {
+      "route": "/legal/terminos/",
+      "status": 200,
+      "title": "Términos de uso del sitio · Sistematicando"
+    },
+    {
       "route": "/nosotros/",
       "status": 200,
       "title": "Nosotros · Sistematicando"
@@ -207,5 +212,5 @@
       "title": "Software para restaurantes · Sistematicando"
     }
   ],
-  "destinations": 152
+  "destinations": 162
 }

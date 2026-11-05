@@ -25,7 +25,7 @@ function field(name,value){
  }
  return f;
 }
-const definitions=[['site','Marca, logos y SEO global'],['navigation','Menús y navegación'],['contact','Contactos y responsable'],['home','Home: sectores'],['pricing','Precios: factores de alcance'],['solutions','Soluciones por sector'],['features','Módulos y estados'],['faqs','Preguntas frecuentes'],['guides','Guías y recursos'],['articles','Blog: artículos editoriales'],['implementation','Implementación: recorrido y preparación']];
+const definitions=[['site','Marca, logos y SEO global'],['navigation','Menús y navegación'],['contact','Contactos y responsable'],['home','Home: sectores'],['pricing','Precios: factores de alcance'],['solutions','Soluciones por sector'],['features','Módulos y estados'],['faqs','Preguntas frecuentes'],['guides','Guías y recursos'],['articles','Blog: artículos editoriales'],['implementation','Implementación: recorrido y preparación'],['terms','Legal: términos de uso del sitio (borrador)']];
 const content=definitions.map(([name,label])=>({name,label,type:'file',path:`content/${name}.json`,format:'json',fields:Object.entries(read(name)).map(([key,val])=>field(key,val))}));
 const pages=read('pages');
 for(const [name,values] of Object.entries(pages)){

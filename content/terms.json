@@ -1,0 +1,68 @@
+{
+  "sections": [
+    {
+      "id": "alcance",
+      "title": "1. Alcance de la web",
+      "paragraphs": [
+        "Sistematicando es el nombre del proyecto comercial presentado en este sitio. Aquí puedes consultar módulos, sectores, recursos y orientación para preparar una demostración o propuesta.",
+        "La web es informativa: no incluye registro de una cuenta del software, carrito de compra, cobro ni aceptación de una suscripción. La navegación o la descarga de recursos no confirma una contratación."
+      ]
+    },
+    {
+      "id": "informacion-comercial",
+      "title": "2. Contenido y propuesta comercial",
+      "paragraphs": [
+        "Durante la preparación del lanzamiento, el aviso de vista previa identifica contenido pensado para el producto completo previsto. Su presencia no acredita que todas las funciones o integraciones estén operativas.",
+        "El alcance disponible para tu caso, los módulos, límites, servicios, costos, impuestos y condiciones deben confirmarse en una propuesta específica. Las descripciones de módulos y etapas de implementación no fijan un precio, una fecha de entrega ni un compromiso de soporte."
+      ]
+    },
+    {
+      "id": "guia-local",
+      "title": "3. Guía local y recursos editoriales",
+      "paragraphs": [
+        "La guía de demo permite organizar selecciones en tu navegador y descargar un archivo de texto. Generarla o descargarla no envía una solicitud, no adjunta archivos a WhatsApp, no reserva una fecha y no produce una cotización.",
+        "Las guías y artículos ofrecen orientación general para organizar una operación. Adapta su contenido al contexto de tu negocio; no sustituyen la revisión profesional que una decisión contable, tributaria, legal o técnica pueda requerir."
+      ]
+    },
+    {
+      "id": "servicios-externos",
+      "title": "4. Enlaces y servicios externos",
+      "paragraphs": [
+        "Al abrir WhatsApp, un enlace de correo u otro servicio externo, sales de la web y el servicio puede tratar información conforme a sus propias condiciones. Tú decides si envías un mensaje y qué información compartes.",
+        "El acceso de administración remite a Pages CMS y requiere una cuenta GitHub autorizada. No concede acceso público a la edición ni crea una cuenta del software. La política de privacidad describe la separación entre estos servicios y la navegación del sitio."
+      ]
+    },
+    {
+      "id": "contenidos-marca",
+      "title": "5. Uso de los contenidos y la marca",
+      "paragraphs": [
+        "Respeta los derechos y las licencias aplicables a textos, logotipos, tipografías y otros materiales. Que un archivo sea visible o descargable no implica autorización para usar la marca de forma que sugiera una relación comercial inexistente.",
+        "Puedes usar la guía que generes para preparar y conservar tus propias preguntas. Este texto no modifica licencias de terceros ni limita los usos permitidos por la normativa aplicable."
+      ]
+    },
+    {
+      "id": "uso-administracion",
+      "title": "6. Uso del sitio y administración",
+      "paragraphs": [
+        "Utiliza la web y sus canales para consultas legítimas. El acceso a herramientas administrativas y repositorios depende de los permisos concedidos a cada cuenta; los enlaces de administración no autorizan acceder o modificar contenido sin permiso.",
+        "La información puede actualizarse durante el desarrollo. La disponibilidad del sitio y de los servicios externos depende también de sus proveedores; esta página no establece un nivel de servicio contractual."
+      ]
+    },
+    {
+      "id": "contratacion-software",
+      "title": "7. Contratación del software",
+      "paragraphs": [
+        "Las condiciones de una futura contratación del SaaS deberán tratarse por separado: alcance, tarifas y pago, duración, renovación, cancelación, implementación, soporte, responsabilidades y tratamiento de datos dentro de la aplicación.",
+        "Estas decisiones comerciales y legales siguen pendientes de aprobación. No se fija aquí una prueba gratuita, permanencia, renovación automática, política de reembolso, límite de responsabilidad ni jurisdicción elegida. La revisión de un acuerdo específico debe respetar los derechos que resulten aplicables."
+      ]
+    },
+    {
+      "id": "revision-contacto",
+      "title": "8. Revisión y contacto",
+      "paragraphs": [
+        "Este borrador se revisará antes del lanzamiento para que refleje las funciones y condiciones efectivas. Las modificaciones de la política de privacidad deben acompañar los cambios en el tratamiento de datos.",
+        "Para consultar por el producto utiliza el canal comercial indicado al final. Para cuestiones sobre datos personales o ejercicio de derechos utiliza los canales de privacidad."
+      ]
+    }
+  ]
+}

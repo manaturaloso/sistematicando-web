@@ -132,6 +132,11 @@
       "finalPath": "/legal/privacidad/"
     },
     {
+      "route": "/legal/terminos/",
+      "status": 200,
+      "finalPath": "/legal/terminos/"
+    },
+    {
       "route": "/nosotros/",
       "status": 200,
       "finalPath": "/nosotros/"

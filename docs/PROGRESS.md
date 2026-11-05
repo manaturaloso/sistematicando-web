@@ -5,7 +5,7 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: 3de5f3e en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: 7fb5d9c en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
@@ -14,12 +14,12 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 
 Astro 7.4.5, TypeScript 6.0.3, Node 24.22.1 y Wrangler 4.157.0 fijados. Sitio estático; no hay integración SaaS ni receptor propio de solicitudes.
 
-41 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, precios informativos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación. Inventario en [SITEMAP.md](SITEMAP.md).
+42 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, precios informativos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación, más términos de uso en borrador. Inventario en [SITEMAP.md](SITEMAP.md).
 
 - Catálogo de 14 módulos, cinco áreas y páginas individuales con beneficios/recorrido/ámbito de lanzamiento, todo editable. Búsqueda, recuentos y estado vacío; sin JS se conserva el catálogo. La matriz interna conserva evidencia/estados reales, sin convertir el copy objetivo en validación del SaaS.
 - Guía local: tres selecciones, validación, resumen, descarga TXT, reset e invalidación al cambiar opciones. Generar/descargar no envía datos ni reserva una demo.
 - WhatsApp comercial autorizado y canales separados de privacidad en contacto/demo. Datos confirmados en `content/contact.json`; política aún para revisión/adopción.
-- Pages CMS conectado a GitHub, con guardados reales comprobados (commits `1206881`–`55f79ee`). `/admin/` abre el servicio externo autenticado; 32 editores, medios y contenido `content/*.json`. No es un constructor visual arbitrario.
+- Pages CMS conectado a GitHub, con guardados reales comprobados (commits `1206881`–`55f79ee`). `/admin/` abre el servicio externo autenticado; 34 editores, medios y contenido `content/*.json`. No es un constructor visual arbitrario.
 - Textos dinámicos del buscador y del documento/avisos de demo editables. Recuentos requieren exactamente un `{count}`; validación antes del build.
 - Logos originales en `public/media`, hashes conservados. Astro genera PNGs de presentación de 256/512/768 px con srcset; favicon/SVG directos. Fuentes locales Gluten/Manrope y licencias.
 - Menú progresivo con teclado/Escape, texto ampliado y navegación sin JS; inicialización temprana y precarga de fuentes. FAQ sin pérdida transitoria de contraste por opacidad.
@@ -32,19 +32,19 @@ Resultados finales de la entrega de lanzamiento:
 
 | Comprobación | Resultado observado |
 | --- | --- |
-| Check/build/content | Sin errores; 41 páginas HTML más JSON de versión, 32 editores. |
-| Sitio | 41 rutas y 152 destinos internos. |
-| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 28 rutas a 390/1280 px y scripts externos bloqueados. |
+| Check/build/content | Sin errores; 42 páginas HTML más JSON de versión, 34 editores. |
+| Sitio | 42 rutas y 162 destinos internos. |
+| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 30 rutas a 390/1280 px y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
 | Editorial/contacto | Canales JS/no-JS sin mensajes reales; copia CMS, descarga TXT e invalidación. |
 | Versión | Git limpio/modificado/ausente; JSON/admin coincidentes; Worker no-store/noindex. |
-| Axe | 86 comprobaciones, cero infracciones detectadas. Incomplete conservados; no certificación WCAG. |
-| Worker local | 52 comprobaciones de rutas más JSON/cabeceras, assets, query, POST 405 y navegador. |
+| Axe | 88 comprobaciones, cero infracciones detectadas. Incomplete conservados; no certificación WCAG. |
+| Worker local | 53 comprobaciones de rutas más JSON/cabeceras, assets, query, POST 405 y navegador. |
 | Etiquetas personalizadas (entrega anterior) | Menú, buscador, campos, botones y opciones editados temporalmente; pruebas aprobadas; fuentes y build restaurados. |
 
 Informes en `docs/qa`. Lighthouse histórico de tres rutas llegó a rendimiento/accesibilidad/buenas prácticas 100 y CLS 0; SEO 66 por noindex. No son métricas de producción ni una auditoría de todas las páginas.
 
-Esta entrega: /implementacion/ con etapas, preparación y responsabilidades; enlaces desde precios/demo y párrafo de contacto enteramente editable. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 32 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse conserva evidencia histórica y no se repitió en esta entrega. No se publica.
+Esta entrega: términos de uso informativo en borrador, revisión de privacidad según el código, textos de identidad editables y navegación legal. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 34 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse conserva evidencia histórica y no se repitió en esta entrega. No se publica.
 
 ## Fases y pendientes
 
@@ -54,8 +54,8 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 
 ## Siguiente paso exacto
 
-1. Revisar Actions del SHA final y el recorrido /precios/ → /implementacion/ → /solicitar-demo/. CMS: Implementación: recorrido y preparación; Página: implementacion-index.
-2. Continuar la preparación legal/editorial de lanzamiento: revisar privacidad y preparar el alcance de términos comerciales, distinguiendo textos de la web de condiciones de contratación SaaS pendientes. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
+1. Revisar Actions del SHA final, /legal/privacidad/ y /legal/terminos/. CMS: Legal: términos de uso del sitio (borrador), páginas legal-privacidad y legal-terminos.
+2. Consolidar el cierre de lanzamiento por página y recorrido: revisar metadatos, navegación/errores y evidencias de contenido. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
 3. Mantener launchDraft/noindex; no publicar, integrar ni pedir despliegue ahora. El propietario confirmará cuando producto y web estén al 100% y autorizará lanzamiento. Rama Worker sigue 557222e.
 4. Antes del lanzamiento: confirmar evidencias operativas, precios/condiciones, legal/privacidad, dominio/indexación y pruebas con dispositivos/lector. Fuente actual de implementación/evidencias internas en FEATURE_STATUS.md.
 5. Continuidad HANDOFF.md y AGENTS.md. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se creó PR, existentes sin verificar por API.
@@ -91,3 +91,13 @@ El párrafo de WhatsApp usa texto CMS con un único marcador {phone}, validado a
 Agente: Codex principal, sin subagentes. Se conserva el bloqueo de publicación y la evidencia operativa real. Próximo paso exacto: auditoría de contenido legal de privacidad y alcance de términos, sin convertir borradores en condiciones aprobadas. Consultar git log -1 para SHA final; sin PR creada, pendientes externos sin verificar.
 
 Verificación final de esta entrega: check 54 archivos sin errores/advertencias/hints, build 41 páginas, 32 editores, suite completa aprobada (41 rutas/152 destinos, reflujo 28 rutas × dos anchos, recorrido comercial con/sin JS y axe 86 comprobaciones sin infracciones). Worker local 52 verificaciones aprobado y detenido; paquete de 41 páginas validado, capturas revisadas. Lighthouse histórico sin repetir. Git remoto base 3de5f3e y rama Worker 557222e comprobados antes de editar; el push final debe verificarse con ls-remote. No hay cambios concurrentes observados.
+
+## 5 de noviembre de 2026 · Privacidad y términos del sitio
+
+/legal/terminos/ implementada como borrador de ocho secciones, índice por teclado y contactos separados. Textos/identidad desde CMS, dos editores nuevos (34 total); privacidad corregida según comportamiento local y administración externa. No hay contratación ni aceptación simulada; contrato SaaS y aprobación de términos siguen pendientes en LEGAL_REVIEW.md.
+
+Validación: check 56 archivos sin errores/advertencias/hints; build 42 páginas; test:ci aprobado, 42 rutas/162 destinos, reflujo en 30 rutas y axe 88 comprobaciones sin infracciones. Prueba legal con/sin JS y guía sin solicitudes externas/cookies/persistencia local. Worker local 53 verificaciones aprobado y detenido. Revisión visual y corrección de numeración del índice; recorridos legales/navegación repetidos tras el ajuste. Paquete local sin desplegar. Un id reservado fue rechazado por content:check y corregido antes del build final; no se desactivaron validaciones.
+
+Rama de trabajo feat/feature-catalog, base remota 7fb5d9c y rama Worker 557222e comprobadas antes de editar. Consultar git log -1 para SHA final; verificar push con ls-remote. Sin PR creada; pendientes existentes y verde remoto no verificados por API. Autor Joel Alejandro Yañez Caballero, Codex principal sin subagentes. Próximo paso exacto: checklist consolidado de cierre por página/recorrido y revisión de metadatos, navegación y errores; mantener congelación de publicación.
+
+Comprobación final del ajuste del índice: cuatro análisis axe focales (privacidad/términos a 390/1440) sin infracciones; evidencia adicional en qa/legal-report.json. Para axe usar browser.newContext() explícito: la comprobación puntual inicial con browser.newPage() fue rechazada por la API antes del análisis y se corrigió. Check final: 56 archivos, cero errores/advertencias/hints.

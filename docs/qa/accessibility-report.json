@@ -190,6 +190,13 @@
       "violations": []
     },
     {
+      "route": "/legal/terminos/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
       "route": "/nosotros/",
       "width": 390,
       "passes": 36,
@@ -478,6 +485,13 @@
       "route": "/legal/privacidad/",
       "width": 1440,
       "passes": 36,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/legal/terminos/",
+      "width": 1440,
+      "passes": 38,
       "incomplete": [],
       "violations": []
     },

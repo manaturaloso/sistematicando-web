@@ -53,5 +53,6 @@ jobs:
             docs/qa/brand-report.json
             docs/qa/modules-report.json
             docs/qa/resources-report.json
+            docs/qa/legal-report.json
           if-no-files-found: warn
           retention-days: 7

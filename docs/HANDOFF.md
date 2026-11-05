@@ -49,11 +49,11 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar preparación legal/editorial de privacidad y alcance de términos; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar cierre de lanzamiento por página/recorrido y decisiones de LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
-Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 41 rutas/152 destinos, 86 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md; nueva evidencia editorial en qa/resources-report.json.
+Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 42 rutas/162 destinos, 88 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md; nueva evidencia editorial en qa/resources-report.json.
 
 ## Mensaje para iniciar otra sesión
 
@@ -61,10 +61,16 @@ Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 41 rutas/152 destino
 
 ## Directiva actual de producto y lanzamiento
 
-El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 41 páginas y 32 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
+El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 42 páginas y 34 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
 
-No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: revisión legal/editorial y alcance de términos sin condiciones inventadas; pruebas/pendientes en PROGRESS.md.
+No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: checklist de cierre y revisión de metadatos/navegación/errores; decisiones legales en LEGAL_REVIEW.md; pruebas/pendientes en PROGRESS.md.
 
 ## Entrega actual: implementación
 
-/implementacion/ tiene cuatro etapas, contexto de preparación y responsabilidades a acordar; enlazado desde precios y demo. Fuente implementation.json; textos en pages-implementacion-index; párrafo WhatsApp en components-WhatsAppContact.text_007 con {phone}. 41 páginas / 32 editores. No hay precios/plazos/SLA aprobados ni nueva publicación. No reiniciar el recorrido comercial ya implementado: continuar privacidad/alcance de términos y pendientes de COMMERCIAL_SCOPE.md. Usar SHA de git log -1, no confundir refs de tracking antiguas con ls-remote.
+/implementacion/ tiene cuatro etapas, contexto de preparación y responsabilidades a acordar; enlazado desde precios y demo. Fuente implementation.json; textos en pages-implementacion-index; párrafo WhatsApp en components-WhatsAppContact.text_007 con {phone}. 42 páginas / 34 editores. No hay precios/plazos/SLA aprobados ni nueva publicación. No reiniciar el recorrido comercial ya implementado: continuar privacidad/alcance de términos y pendientes de COMMERCIAL_SCOPE.md. Usar SHA de git log -1, no confundir refs de tracking antiguas con ls-remote.
+
+## Entrega legal actual
+
+/legal/terminos/ está preparada como borrador informativo, no contrato SaaS; ocho secciones en terms.json, copy en pages-legal-terminos. Privacidad ajustada al código e incluye administración externa. Identidad y mensajes con marcadores validados, contactos centrales intactos. La fecha original de la política identifica el borrador inicial, no aprobación legal. 42 páginas / 34 editores. Nueva prueba verify-legal y qa/legal-report.json, también en CI.
+
+Siguiente acción exacta: consolidar checklist de lanzamiento por página/recorrido y revisar metadatos, navegación y errores; no crear otro contrato con condiciones inventadas ni repetir la revisión básica ya implementada. LEGAL_REVIEW.md lista adopción y decisiones operativas pendientes. No publicar; rama Worker 557222e intacta. Codex principal, sin subagentes.

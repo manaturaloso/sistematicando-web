@@ -1,0 +1,65 @@
+{
+  "scope": "Draft website terms and privacy; not legal adoption or a SaaS contract",
+  "results": [
+    {
+      "route": "/legal/privacidad/",
+      "javaScriptEnabled": true,
+      "confirmedIdentity": true,
+      "legalNavigation": true
+    },
+    {
+      "route": "/legal/terminos/",
+      "javaScriptEnabled": true,
+      "confirmedIdentity": true,
+      "legalNavigation": true
+    },
+    {
+      "javaScriptEnabled": true,
+      "scope": "Local build only; hosting and external services not exercised",
+      "requests": 22,
+      "externalRequests": 0,
+      "cookies": 0
+    },
+    {
+      "route": "/legal/privacidad/",
+      "javaScriptEnabled": false,
+      "confirmedIdentity": true,
+      "legalNavigation": true
+    },
+    {
+      "route": "/legal/terminos/",
+      "javaScriptEnabled": false,
+      "confirmedIdentity": true,
+      "legalNavigation": true
+    },
+    {
+      "javaScriptEnabled": false,
+      "scope": "Local build only; hosting and external services not exercised",
+      "requests": 21,
+      "externalRequests": 0,
+      "cookies": 0
+    }
+  ],
+  "finalLayoutAccessibility": [
+    {
+      "route": "/legal/privacidad/",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/legal/terminos/",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "route": "/legal/privacidad/",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "route": "/legal/terminos/",
+      "width": 1440,
+      "violations": []
+    }
+  ]
+}

@@ -10,7 +10,7 @@ Consolidación: 5 de noviembre de 2026 (America/Lima). El registro anterior ínt
 
 ## Administración y fuentes
 
-- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 32 editores.
+- Pages CMS conectado a GitHub; /admin es acceso al servicio externo, sin usuarios/credenciales ni API de escritura en el sitio. Edición en feat/feature-catalog, 34 editores.
 - Fuente editorial content/*.json. src/data son adaptadores. .pages.yml se regenera cuando cambia el esquema, no tras cada edición: evitar sobrescribir configuración por rutina.
 - Diseño estructural, lógica e integraciones requieren desarrollo. La identidad de compilación es técnica y de solo lectura, no un campo CMS.
 - Originales del logo preservados. Derivados PNG de presentación generados por Astro, sin recorte/reconstrucción; selección y variante oscura en site.json. No subir derivados /_astro al CMS.
@@ -92,3 +92,11 @@ Codex principal, sin subagentes. Siguiente paso: recorrido comercial de precios/
 No se inventan planes, tarifas, impuestos aplicables, plazos, migraciones incluidas, SLA, capacitación ni condiciones de contratación. El flujo comercial real continúa siendo WhatsApp externo; no hay envío de solicitudes ni adjuntos automáticos desde la guía local. Párrafo de contacto editable con marcador {phone} único y validado; dato centralizado en contact.json.
 
 Pruebas de recorrido sin/con JavaScript, anclas por teclado, coincidencia del contacto y ausencia de datos de la guía en el enlace comercial. Mantener launchDraft/noindex y no publicar. Siguiente paso: preparación/revisión legal y editorial; agente Codex principal, sin subagentes.
+
+## 5 de noviembre de 2026 · Privacidad y términos de uso informativo
+
+Se prepara /legal/terminos/ como borrador de uso de la web, no como contrato SaaS. No se inventan tarifas, renovación, reembolsos, SLA, límites de responsabilidad ni jurisdicción. Ocho secciones editables en terms.json; encabezados/contacto en pages-legal-terminos. Términos/privacidad se enlazan entre sí y en el pie. Total: 42 páginas / 34 editores.
+
+Privacidad distingue código local y tratamiento del hosting/servicios externos; aclara posible restauración de campos por el navegador y el alcance del correo de privacidad, y añade administración externa Pages CMS/GitHub. Identidad del responsable y textos de contacto ahora editables con marcadores validados {responsible}, {ruc}, {address}; datos reales centralizados en contact.json. No se cambia la fecha original del borrador ni se presenta como adopción legal.
+
+Prueba de navegador local: navegación legal con/sin JS, tabla de contenidos por teclado, canales separados y guía sin peticiones externas, cookies ni almacenamiento persistente. No extrapolar al Worker público, configuración de Cloudflare ni servicios abiertos voluntariamente. Revisión/adopción legal y decisiones de conservación/proveedores siguen pendientes (LEGAL_REVIEW.md). Codex principal, sin subagentes; solo desarrollo, sin publicar.

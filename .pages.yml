@@ -994,6 +994,42 @@
       ]
     },
     {
+      "name": "terms",
+      "label": "Legal: términos de uso del sitio (borrador)",
+      "type": "file",
+      "path": "content/terms.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "sections",
+          "label": "Secciones",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "id",
+              "label": "Identificador",
+              "type": "string",
+              "required": true,
+              "description": "Cambiar este identificador puede romper rutas y enlaces existentes. Revisa referencias antes de guardar."
+            },
+            {
+              "name": "title",
+              "label": "Título",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "paragraphs",
+              "label": "Párrafos",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "pages-404",
       "label": "Página: 404",
       "type": "file",
@@ -2323,8 +2359,8 @@
             },
             {
               "name": "text_022",
-              "label": ". El uso de WhatsApp es voluntario; también puedes usar el correo de contac…",
-              "type": "string",
+              "label": ". El uso de WhatsApp es voluntario. Para consultas de privacidad también pu…",
+              "type": "text",
               "required": true
             },
             {
@@ -2427,6 +2463,66 @@
               "name": "seo_description",
               "label": "Descripción SEO",
               "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_038",
+              "label": "Sitio comercial · versión para revisión",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_039",
+              "label": "El responsable es {responsible}, RUC {ruc}, con domicilio en {address}.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_040",
+              "label": "Indica tu solicitud y un medio para responderte. No adjuntes documentos sen…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_041",
+              "label": "Términos de uso del sitio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_042",
+              "label": "También puedes escribir por WhatsApp:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_043",
+              "label": "10. Administración del contenido",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_044",
+              "label": "La sección /admin/ ofrece enlaces al servicio externo Pages CMS. Solo al ab…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_045",
+              "label": "La edición de contenido crea cambios en GitHub y puede registrar la identid…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_046",
+              "label": "Información legal relacionada",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_047",
+              "label": "(se abre en otra pestaña)",
+              "type": "string",
               "required": true
             }
           ]
@@ -4257,6 +4353,124 @@
               "name": "text_024",
               "label": "Resolver preguntas",
               "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-legal-terminos",
+      "label": "Página: legal-terminos",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-legal-terminos",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "seo_title",
+              "label": "Título SEO",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Términos de uso",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Sitio comercial · borrador para revisión",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Términos de uso del sitio.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Esta versión está pendiente de revisión y adopción antes del lanzamiento. D…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Responsable del sitio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "{responsible}, RUC {ruc}, con domicilio en {address}.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "En esta página",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "Contacto y privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Para consultas sobre tus datos y ejercicio de derechos:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "WhatsApp de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Consultar por una demostración",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Política de privacidad",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "(se abre en otra pestaña)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "La coordinación comercial se realiza mediante una conversación externa. Est…",
+              "type": "text",
               "required": true
             }
           ]

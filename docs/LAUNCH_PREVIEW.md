@@ -2,7 +2,7 @@
 
 Borrador preparado para el producto completo previsto. El propietario confirmó que el software está parcialmente desarrollado y que no se publicarán nuevas versiones hasta completar producto y web y autorizar el lanzamiento.
 
-41 páginas HTML y 32 editores CMS. Las 14 fichas de módulos contienen propuesta, resumen, beneficios, recorrido, ámbito y enlaces relacionados. Home, sectores, FAQ y precios adoptan el mismo enfoque comercial. Precios usa consulta de propuesta personalizada; no hay montos, planes ni condiciones contractuales inventadas.
+42 páginas HTML y 34 editores CMS. Las 14 fichas de módulos contienen propuesta, resumen, beneficios, recorrido, ámbito y enlaces relacionados. Home, sectores, FAQ y precios adoptan el mismo enfoque comercial. Precios usa consulta de propuesta personalizada; no hay montos, planes ni condiciones contractuales inventadas.
 
 Las imágenes siguientes son capturas de la **web**, no pantallas del software ni evidencia de su disponibilidad operativa. El aviso de vista previa es editable en Marca; mantenerlo activo durante preparación. Los estados/evidencias internos permanecen separados.
 
@@ -16,7 +16,7 @@ Las imágenes siguientes son capturas de la **web**, no pantallas del software n
 
 ## Revisar en local
 
-Compilar y usar npm run dev o npm run preview. Abrir /funcionalidades/ y las fichas, por ejemplo /funcionalidades/punto-de-venta/, /funcionalidades/inventarios/ y /funcionalidades/eventos-y-entradas/. El ZIP local generado contiene 41 páginas; no se ha desplegado.
+Compilar y usar npm run dev o npm run preview. Abrir /funcionalidades/ y las fichas, por ejemplo /funcionalidades/punto-de-venta/, /funcionalidades/inventarios/ y /funcionalidades/eventos-y-entradas/. El ZIP local generado contiene 42 páginas; no se ha desplegado.
 
 Contenido: Funcionalidades → módulo → Contenido comercial para lanzamiento. Etiquetas comunes: Página: feature-detail. Estado real: FEATURE_STATUS.md; resumen/pendientes en PROGRESS.md. No enviar esta rama al Worker durante preparación.
 
@@ -32,6 +32,12 @@ Revisar también /blog/ y /blog/elegir-que-ordenar-primero/. CMS: Blog: artícul
 
 ## Implementación y recorrido comercial
 
-Revisar /precios/, /implementacion/ y /solicitar-demo/. La nueva página describe acuerdos de planificación, no servicios/plazos garantizados. Los campos estructurados se editan en Implementación: recorrido y preparación; textos en Página: implementacion-index. 41 páginas / 32 editores; sigue sin desplegarse.
+Revisar /precios/, /implementacion/ y /solicitar-demo/. La nueva página describe acuerdos de planificación, no servicios/plazos garantizados. Los campos estructurados se editan en Implementación: recorrido y preparación; textos en Página: implementacion-index. 42 páginas / 34 editores; sigue sin desplegarse.
 
 ![Implementación en móvil, build local de borrador](qa/implementation-mobile.png)
+
+## Privacidad y términos de uso (borradores)
+
+Revisar /legal/privacidad/ y /legal/terminos/, enlazadas entre sí y en el pie. Secciones en Legal: términos de uso del sitio; copy en páginas legal-privacidad/legal-terminos. Los textos no son contrato SaaS ni adopción legal confirmada. Límites y decisiones pendientes: LEGAL_REVIEW.md.
+
+![Términos de uso del sitio en móvil, borrador local](qa/terms-mobile.png)
