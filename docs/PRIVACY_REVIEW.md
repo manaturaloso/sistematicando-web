@@ -27,4 +27,4 @@ La guía sigue siendo local; WhatsApp recibe información solo si el usuario dec
 
 ## Publicación
 
-Solo rama feat/feature-catalog. Sin deploy, DNS ni integración a feat/brand-foundation. La ruta aún no se ha publicado en el Worker por esta entrega.
+La ruta se incluyó en versiones anteriores del Worker de revisión; sigue como política para revisión, no adopción legal definitiva. La nueva web de lanzamiento permanece en feat/feature-catalog y no se publica hasta confirmación final. Sin nuevos cambios DNS ni envío de datos.

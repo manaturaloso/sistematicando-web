@@ -33,3 +33,12 @@ El usuario desplegó una versión previa en un Worker. La rama de catálogo no s
 
 - [x] Página /contacto/ con canales autorizados y editor CMS; sin formulario ni promesas de recepción automática.
 - [ ] Revisar manualmente contenido/canales de contacto antes de integrar y publicar.
+
+## Nueva condición de publicación
+
+- [x] Confirmación del propietario: producto parcial; preparar web objetivo completa.
+- [x] 14 páginas de módulos, copy de lanzamiento y vista previa CMS implementados.
+- [ ] Producto y web confirmados al 100% por el propietario.
+- [ ] Validación operativa/comercial/legal final y autorización explícita de lanzamiento.
+
+No publicar ni proponer desplegar las nuevas entregas mientras falten esas condiciones. Las aprobaciones anteriores corresponden a versiones de revisión ya enviadas.

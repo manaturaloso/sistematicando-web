@@ -12,4 +12,6 @@ Unidad de cobro; periodicidad; moneda/impuestos; módulos incluidos; límites; i
 
 ## Próximo cambio comercial
 
-Cuando exista una tabla aprobada, registrarla con su fecha/fuente y actualizar el contenido público. Sin aprobación se mantiene la página informativa. El canal de recepción y la privacidad siguen pendientes; la guía local no envía solicitudes.
+Cuando exista una tabla aprobada, registrarla con su fecha/fuente y actualizar el contenido público. Sin aprobación se mantiene la página informativa. WhatsApp comercial está autorizado; privacidad requiere revisión/adopción. La guía local no envía solicitudes.
+
+Borrador de lanzamiento: página redactada como consulta de propuesta personalizada, sin cifras. Es una presentación comercial objetivo revisable por el propietario, no una tabla de tarifas aprobadas. La composición de planes y condiciones sigue pendiente; no se publica ahora.

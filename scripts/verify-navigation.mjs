@@ -3,6 +3,8 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {previewServer} from './lib/preview-server.mjs';
 const navigation=JSON.parse(await fs.readFile('content/navigation.json','utf8'));
+const moduleRoutes=JSON.parse(await fs.readFile('content/features.json','utf8')).items.map(item=>`/funcionalidades/${item.id}/`);
+const resizedRoutes=['/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/','/contacto/',...moduleRoutes];
 const server=await previewServer();
 let browser;
 try{
@@ -24,7 +26,7 @@ try{
  assert(await page.locator('#main-nav a').first().evaluate(el=>el===document.activeElement));
  await page.keyboard.press('Escape');assert.equal(await toggle.getAttribute('aria-expanded'),'false');
  assert(await toggle.evaluate(el=>el===document.activeElement));
- for(const width of [390,1280])for(const route of ['/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/','/contacto/']){
+ for(const width of [390,1280])for(const route of resizedRoutes){
   await page.setViewportSize({width,height:1000});await page.goto(server.url+route);await page.evaluate(()=>document.documentElement.style.fontSize='200%');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Text resize overflow: ${route} @${width}`);
  }
@@ -38,5 +40,5 @@ try{
  await isolatedToggle.click();assert(await isolatedPage.locator('#main-nav').isVisible());
  await isolatedPage.keyboard.press('Escape');assert(!await isolatedPage.locator('#main-nav').isVisible());
  await isolated.close();
- console.log('PASS mobile navigation without JS, skip focus, keyboard menu/Escape 200% text resize on six routes at mobile/desktop and menu with external scripts blocked.');
+ console.log(`PASS mobile navigation without JS, skip focus, keyboard menu/Escape 200% text resize on ${resizedRoutes.length} routes at mobile/desktop and menu with external scripts blocked.`);
 }finally{await browser?.close();await server.close();}

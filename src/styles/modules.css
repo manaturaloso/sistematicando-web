@@ -1,0 +1,27 @@
+.module-hero h1 {max-width:22ch;}
+.module-promise {font-size:clamp(1.15rem,2.6vw,1.65rem);font-weight:650;max-width:44ch;}
+.module-links {display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:1.5rem;}
+.module-links>.text-link {min-height:44px;display:inline-flex;align-items:center;}
+.module-section {padding-bottom:4rem;scroll-margin-top:2rem;overflow-wrap:anywhere;}
+.module-section>h2 {max-width:24ch;}
+.module-benefits,.module-related {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-block:2rem;}
+.module-benefits>article {padding:1.5rem;border-top:2px solid var(--ink);min-width:0;}
+.module-benefits h3 {font-size:1.35rem;}
+.module-benefits p,.module-steps p,.module-scope p,.module-related p {font-size:.9rem;color:#505860;}
+.module-flow {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:3rem;align-items:start;}
+.module-steps {padding-left:1.5rem;}
+.module-steps li {padding:.5rem 0 1.25rem .75rem;}
+.module-steps li::marker {font-weight:700;}
+.module-steps h3 {font-size:1.15rem;}
+.module-scope {background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:2rem;min-width:0;}
+.module-scope>.icon {font-size:2rem;margin-bottom:1rem;}
+.module-scope h2 {font-size:1.5rem;}
+.module-scope .eyebrow {margin-top:2rem;}
+.module-scope ul {list-style:none;padding:0;margin:0;}
+.module-scope a {display:inline-flex;align-items:center;min-height:44px;}
+.module-related-card {display:block;padding:1.5rem;border:1px solid var(--line);border-radius:12px;background:white;text-decoration:none;min-width:0;}
+.module-related-card:hover {border-color:var(--ink);}
+.module-related-card>span {font-size:.8rem;font-weight:700;}
+.module-related-card h3 {font-size:1.3rem;}
+@media(max-width:899px) {.module-benefits,.module-related {grid-template-columns:1fr;}.module-flow {grid-template-columns:1fr;gap:1.5rem;}.module-section {padding-bottom:3rem;}}
+@media(max-width:599px) {.module-scope {padding:1.3rem;}.module-benefits>article {padding-inline:0;}}

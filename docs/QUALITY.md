@@ -2,19 +2,19 @@
 
 ## Alcance
 
-Build estático local, no Worker público. 20 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
+Build estático local, no Worker público. 34 páginas con originales del logo seleccionados mediante guardado real del propietario en Pages CMS. Sin despliegue de esta rama.
 
 ## Correcciones
 
 - Menú móvil sin JavaScript: ahora los enlaces permanecen visibles y el botón solo aparece cuando su comportamiento está inicializado.
 - Salto al contenido: el destino main acepta foco programático; probado con teclado.
-- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en seis rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
+- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 20 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
 - Enlace de marca: usa el nombre visible o alt del logo como nombre accesible, evitando un aria-label que omitía la leyenda visible.
 - Favicon: si aún no se ha cargado uno, referencia vacía explícita para evitar una petición automática fallida a /favicon.ico. No se inventó un isotipo.
 
 ## Accesibilidad automática
 
-`npm run audit:a11y`: 40 combinaciones (20 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **44 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
+`npm run audit:a11y`: 68 combinaciones (34 páginas × móvil/escritorio) y cuatro estados interactivos: menú/FAQ abiertos, FAQ a un cuarto de su animación, guía generada y búsqueda sin resultados. **72 comprobaciones, cero reglas con infracciones detectadas**, incluidas etiquetas WCAG 2 A/AA, 2.1 A/AA, 2.2 AA y best-practice disponibles en axe.
 
 Axe dejó color-contrast como incompleto en la home. No se cuentan esos resultados como aprobaciones automáticas. Evidencia en qa/contrast-review.json: flechas decorativas aria-hidden y etiquetas del mockup cuya transformación/fondo no pudo resolver. Revisión de estilos y captura desktop: tinta/superficie 11.59:1, tinta/blanco 13.15:1, tinta/líneas del gráfico 11.31:1 y texto claro/tinta 12.58:1. No se observó ocultación del texto en la captura revisada.
 
@@ -26,8 +26,8 @@ Una ejecución final por ruta en Chromium local. Valores de laboratorio, variabl
 
 | Ruta | Rendimiento | Accesibilidad automática | Buenas prácticas | SEO | LCP | TBT | CLS |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| / | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
-| /funcionalidades/ | 100 | 100 | 100 | 66 | 0.90 s | 0 ms | 0.0000 |
+| / | 100 | 100 | 100 | 66 | 0.91 s | 13.5 ms | 0.0000 |
+| /funcionalidades/ | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
 | /solicitar-demo/ | 100 | 100 | 100 | 66 | 0.91 s | 0 ms | 0.0000 |
 
 SEO se penaliza por bloqueo de indexación deliberado. Se conservan noindex y robots; no se retiran para aumentar una puntuación. No se ha medido INP de usuarios. CSS compartido y dependencias de carga aparecen como oportunidades informativas; se precargan las dos fuentes locales para evitar descubrimiento tardío y variación de la composición.
@@ -60,3 +60,5 @@ CI incluye ahora test:brand automáticamente dentro de test:ci; permite las vari
 /contacto/ añadido a pruebas de todas las rutas/axe; canales comerciales y privacidad comprobados sin enviar mensajes, JS/no-JS y cinco anchos. Tabla Lighthouse corresponde a la medición anterior de tres rutas; no se presenta como medición del nuevo contacto.
 
 Revisión asistida actual: capturas y teclado en los cuatro flujos; datos antes/después en qa/reflow-review.json. Se corrigió reflujo a 200% en móvil y se añadieron regresiones para foco de validación/generación/reset y salto desde búsqueda vacía. Dispositivos físicos y lectores de pantalla siguen pendientes. Lighthouse de la tabla repetido tras la corrección; no métricas de campo.
+
+Entrega de lanzamiento: 34 rutas/125 destinos, 14 fichas CMS y 72 comprobaciones axe aprobadas. Navegación/texto 200% incluye los 14 módulos. Worker local 45 rutas, cabeceras y JSON aprobados; capturas de módulo, catálogo, sector y precios revisadas. Lighthouse de la tabla repetido con la vista previa global activa. No se publica.

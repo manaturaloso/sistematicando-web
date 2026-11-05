@@ -4,7 +4,7 @@ Generado con `npm run docs:features` desde content/features.json a través de sr
 
 ## Web comercial
 
-Home, soluciones, catálogo, recursos/FAQ y /admin de acceso CMS implementados; CMS conectado a GitHub con guardado real verificado. Página de contacto y metadatos de versión implementados. Precios sin tarifas oficiales y guía local de demo descargable implementados; sin receptor propio; contacto voluntario externo por WhatsApp y política de privacidad en revisión. La guía no transmite datos. Los estados de los módulos SaaS no cambian por implementar estas páginas.
+Home, soluciones, catálogo, recursos/FAQ y /admin de acceso CMS implementados; CMS conectado a GitHub con guardado real verificado. Página de contacto y metadatos de versión implementados. Precios sin tarifas oficiales y guía local de demo descargable implementados; sin receptor propio; contacto voluntario externo por WhatsApp y política de privacidad en revisión. La guía no transmite datos. Las 14 páginas de módulos usan contenido de lanzamiento como objetivo completo, por indicación del propietario, mientras el producto sigue parcialmente desarrollado. launchDraft identifica el borrador y no autoriza publicación. Los estados de los módulos SaaS no cambian por implementar estas páginas.
 
 ## Matriz SaaS
 

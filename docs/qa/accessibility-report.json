@@ -17,7 +17,7 @@
     {
       "route": "/404.html",
       "width": 390,
-      "passes": 20,
+      "passes": 25,
       "incomplete": [],
       "violations": []
     },
@@ -39,6 +39,104 @@
       "route": "/funcionalidades/",
       "width": 390,
       "passes": 46,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "width": 390,
+      "passes": 39,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "width": 390,
+      "passes": 39,
       "incomplete": [],
       "violations": []
     },
@@ -162,7 +260,7 @@
     {
       "route": "/404.html",
       "width": 1440,
-      "passes": 20,
+      "passes": 25,
       "incomplete": [],
       "violations": []
     },
@@ -184,6 +282,104 @@
       "route": "/funcionalidades/",
       "width": 1440,
       "passes": 46,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "width": 1440,
+      "passes": 38,
+      "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "width": 1440,
+      "passes": 38,
       "incomplete": [],
       "violations": []
     },

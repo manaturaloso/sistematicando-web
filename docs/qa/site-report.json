@@ -27,6 +27,76 @@
       "title": "Funcionalidades: explora las áreas de gestión · Sistematicando"
     },
     {
+      "route": "/funcionalidades/caja/",
+      "status": 200,
+      "title": "Caja · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "status": 200,
+      "title": "Clientes · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "status": 200,
+      "title": "Compras y proveedores · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "status": 200,
+      "title": "Control de accesos · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "status": 200,
+      "title": "Eventos y entradas · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "status": 200,
+      "title": "Facturación electrónica · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "status": 200,
+      "title": "Inventarios · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "status": 200,
+      "title": "Mesas y comandas · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "status": 200,
+      "title": "Multisede · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "status": 200,
+      "title": "Personal y permisos · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "status": 200,
+      "title": "Punto de venta · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "status": 200,
+      "title": "Recetas y costos · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "status": 200,
+      "title": "Reportes · Sistematicando"
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "status": 200,
+      "title": "Reservas · Sistematicando"
+    },
+    {
       "route": "/legal/privacidad/",
       "status": 200,
       "title": "Política de privacidad · Sistematicando"
@@ -74,33 +144,33 @@
     {
       "route": "/soluciones/bares/",
       "status": 200,
-      "title": "Bares: enfoque de gestión · Sistematicando"
+      "title": "Software para bares · Sistematicando"
     },
     {
       "route": "/soluciones/cafeterias/",
       "status": 200,
-      "title": "Cafeterías: enfoque de gestión · Sistematicando"
+      "title": "Software para cafeterías · Sistematicando"
     },
     {
       "route": "/soluciones/eventos/",
       "status": 200,
-      "title": "Eventos: enfoque de gestión · Sistematicando"
+      "title": "Software para eventos · Sistematicando"
     },
     {
       "route": "/soluciones/hoteles/",
       "status": 200,
-      "title": "Hoteles y hospedajes: enfoque de gestión · Sistematicando"
+      "title": "Software para hoteles y hospedajes · Sistematicando"
     },
     {
       "route": "/soluciones/multisede/",
       "status": 200,
-      "title": "Múltiples locales: enfoque de gestión · Sistematicando"
+      "title": "Software para múltiples locales · Sistematicando"
     },
     {
       "route": "/soluciones/restaurantes/",
       "status": 200,
-      "title": "Restaurantes: enfoque de gestión · Sistematicando"
+      "title": "Software para restaurantes · Sistematicando"
     }
   ],
-  "destinations": 69
+  "destinations": 125
 }

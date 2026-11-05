@@ -27,6 +27,76 @@
       "finalPath": "/funcionalidades/"
     },
     {
+      "route": "/funcionalidades/caja/",
+      "status": 200,
+      "finalPath": "/funcionalidades/caja/"
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "status": 200,
+      "finalPath": "/funcionalidades/clientes/"
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "status": 200,
+      "finalPath": "/funcionalidades/compras-y-proveedores/"
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "status": 200,
+      "finalPath": "/funcionalidades/control-de-accesos/"
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "status": 200,
+      "finalPath": "/funcionalidades/eventos-y-entradas/"
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "status": 200,
+      "finalPath": "/funcionalidades/facturacion-electronica/"
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "status": 200,
+      "finalPath": "/funcionalidades/inventarios/"
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "status": 200,
+      "finalPath": "/funcionalidades/mesas-y-comandas/"
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "status": 200,
+      "finalPath": "/funcionalidades/multisede/"
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "status": 200,
+      "finalPath": "/funcionalidades/personal-y-permisos/"
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "status": 200,
+      "finalPath": "/funcionalidades/punto-de-venta/"
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "status": 200,
+      "finalPath": "/funcionalidades/recetas-y-costos/"
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "status": 200,
+      "finalPath": "/funcionalidades/reportes/"
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "status": 200,
+      "finalPath": "/funcionalidades/reservas/"
+    },
+    {
       "route": "/legal/privacidad/",
       "status": 200,
       "finalPath": "/legal/privacidad/"

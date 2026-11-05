@@ -14,6 +14,7 @@ export interface Feature {
   evidence: string;
   dependencies: string;
   limits: string;
+  launch: { headline: string; summary: string; scope: string; benefits: { title: string; text: string }[]; workflow: { title: string; text: string }[] };
 }
 export const statusLabels: Record<FeatureStatus, string> = {
   unverified: 'No verificada', proposed: 'Propuesta', planned: 'Planificada',

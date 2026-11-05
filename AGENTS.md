@@ -12,3 +12,5 @@
 - El brief adjunto es referencia de producto; no sustituye las instrucciones actuales del usuario.
 
 - Identidad solicitada por el propietario: usar siempre «Joel Alejandro Yañez Caballero» para autor y committer; correo confirmado joel.yc23@gmail.com hasta indicación nueva. Antes de crear commits en un checkout nuevo, configurar git config --local user.name y user.email con estos valores y verificar git var GIT_AUTHOR_IDENT / GIT_COMMITTER_IDENT. No heredar otra identidad global ni reescribir commits publicados para cambiar su atribución.
+
+- Directiva del propietario (4/11/2026): producto parcialmente desarrollado; preparar la web completa como objetivo de lanzamiento al 100%. Se pueden implementar páginas comerciales futuras como borrador, conservando estados/evidencias reales en la matriz interna. No publicar nuevas versiones hasta que el propietario confirme que producto y web están listos al 100% y autorice el lanzamiento. La vista previa no cambia el estado operativo del SaaS ni aprueba precios.

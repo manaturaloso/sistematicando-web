@@ -1,0 +1,41 @@
+---
+import type { GetStaticPaths } from 'astro';
+import type { Feature } from '../../data/features';
+import { features, featureGroups } from '../../data/features';
+import { solutions } from '../../data/solutions';
+import pageContent from '../../../content/pages.json';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
+import '../../styles/solutions.css';
+import '../../styles/modules.css';
+export const getStaticPaths = (() => features.map(feature => ({ params: { slug: feature.id }, props: { feature } }))) satisfies GetStaticPaths;
+interface Props { feature: Feature; }
+const { feature } = Astro.props;
+const copy = pageContent['pages-feature-detail'];
+const group = featureGroups.find(group => group.id === feature.group)!;
+const related = features.filter(item => item.id !== feature.id && item.group === feature.group).slice(0, 3);
+const sectors = solutions.filter(solution => feature.sectors.includes(solution.slug));
+---
+<Layout title={`${feature.name} · Sistematicando`} description={feature.launch.summary}>
+  <Header />
+  <main id="contenido" tabindex="-1">
+    <section class="wrap solution-hero module-hero">
+      <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><a href="/funcionalidades/">{copy.text_002}</a><span aria-hidden="true">/</span><span aria-current="page">{feature.name}</span></nav>
+      <p class="eyebrow">{group.name}</p><h1>{feature.name}</h1>
+      <p class="module-promise">{feature.launch.headline}</p><p class="solution-intro">{feature.launch.summary}</p>
+      <div class="module-links"><a class="text-link" href="#beneficios">{copy.text_017}</a><a class="text-link" href="#recorrido">{copy.text_018}</a></div>
+    </section>
+    <section class="wrap module-section" id="beneficios" aria-labelledby="benefits-title">
+      <p class="eyebrow">{feature.name}</p><h2 id="benefits-title">{copy.text_003}</h2>
+      <div class="module-benefits">{feature.launch.benefits.map((benefit,index)=><article><span class="eyebrow" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><h3>{benefit.title}</h3><p>{benefit.text}</p></article>)}</div>
+    </section>
+    <section class="wrap module-flow module-section" id="recorrido" aria-labelledby="workflow-title">
+      <div><p class="eyebrow">{copy.text_004}</p><h2 id="workflow-title">{copy.text_005}</h2><ol class="module-steps">{feature.launch.workflow.map(step=><li><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div>
+      <aside class="module-scope" aria-labelledby="scope-title"><Icon name={group.icon}/><h2 id="scope-title">{copy.text_006}</h2><p>{feature.launch.scope}</p><p class="eyebrow">{copy.text_007}</p><ul>{sectors.map(sector=><li><a href={`/soluciones/${sector.slug}/`} aria-label={`${copy.text_008} ${sector.name}`}>{sector.name}</a></li>)}</ul></aside>
+    </section>
+    {related.length>0&&<section class="wrap module-section" aria-labelledby="related-title"><p class="eyebrow">{copy.text_009}</p><h2 id="related-title">{copy.text_010}</h2><div class="module-related">{related.map(item=><a class="module-related-card" href={`/funcionalidades/${item.id}/`}><h3>{item.name}</h3><p>{item.launch.headline}</p><span>{copy.text_016} <Icon/></span></a>)}</div><a class="text-link" href="/funcionalidades/">{copy.text_011}</a></section>}
+    <section class="wrap solution-callout"><div><p class="eyebrow">{copy.text_012}</p><h2>{feature.question}</h2></div><div><p>{copy.text_013}</p><div class="module-links"><a class="button" href="/solicitar-demo/">{copy.text_014}<Icon/></a><a class="text-link" href="/contacto/">{copy.text_015}</a></div></div></section>
+  </main><Footer />
+</Layout>

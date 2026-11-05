@@ -11,15 +11,15 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 905.3572999999999,
+          "value": 906.5518999999999,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 905.3572999999999,
+          "value": 906.5518999999999,
           "unit": "millisecond"
         },
         "total-blocking-time": {
-          "value": 0,
+          "value": 13.5,
           "unit": "millisecond"
         },
         "cumulative-layout-shift": {
@@ -27,11 +27,17 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 905.3572999999999,
+          "value": 906.5518999999999,
           "unit": "millisecond"
         }
       },
       "findings": [
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
+          "displayValue": "80 ms"
+        },
         {
           "id": "is-crawlable",
           "title": "Page is blocked from indexing",
@@ -64,7 +70,7 @@
           "id": "render-blocking-insight",
           "title": "Render-blocking requests",
           "score": 0,
-          "displayValue": "Est savings of 70 ms"
+          "displayValue": "Est savings of 40 ms"
         }
       ],
       "warnings": [],
@@ -82,11 +88,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 904.9128000000001,
+          "value": 906.3610000000001,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 904.9128000000001,
+          "value": 906.3610000000001,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -98,7 +104,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 904.9128000000001,
+          "value": 906.3610000000001,
           "unit": "millisecond"
         }
       },
@@ -124,7 +130,7 @@
           "id": "document-latency-insight",
           "title": "Document request latency",
           "score": 0.5,
-          "displayValue": "Est savings of 19 KiB"
+          "displayValue": "Est savings of 25 KiB"
         },
         {
           "id": "image-delivery-insight",
@@ -159,11 +165,11 @@
       },
       "metrics": {
         "first-contentful-paint": {
-          "value": 905.0804,
+          "value": 905.4567999999999,
           "unit": "millisecond"
         },
         "largest-contentful-paint": {
-          "value": 905.0804,
+          "value": 905.4567999999999,
           "unit": "millisecond"
         },
         "total-blocking-time": {
@@ -175,7 +181,7 @@
           "unit": "unitless"
         },
         "speed-index": {
-          "value": 905.0804,
+          "value": 905.4567999999999,
           "unit": "millisecond"
         }
       },

@@ -46,7 +46,40 @@
       "dependencies": "Verificar flujo de ventas, dispositivos y métodos de pago.",
       "limits": "Sin confirmación de compatibilidad con equipos o pasarelas de pago.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Cada venta, un paso más simple.",
+        "summary": "Reúne productos, pedidos y cobros en un flujo de atención claro para que tu equipo venda con orden y mantenga el registro de cada operación.",
+        "benefits": [
+          {
+            "title": "Atiende con contexto",
+            "text": "Consulta el catálogo y arma el pedido desde el mismo punto de trabajo."
+          },
+          {
+            "title": "Mantén el detalle de la venta",
+            "text": "Relaciona productos, cantidades y condiciones del pedido antes de cerrar la operación."
+          },
+          {
+            "title": "Conecta atención y control",
+            "text": "Deja la venta registrada para seguir su efecto en caja y en la información del negocio."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Prepara tu catálogo",
+            "text": "Organiza productos, precios y opciones para la atención."
+          },
+          {
+            "title": "Registra el pedido",
+            "text": "Selecciona los productos y revisa el detalle con el cliente."
+          },
+          {
+            "title": "Cierra la operación",
+            "text": "Registra el cobro y continúa con el seguimiento de la venta."
+          }
+        ],
+        "scope": "Ventas de mostrador y atención de consumo. Los medios de pago, periféricos y documentos se definen en la configuración de la operación."
+      }
     },
     {
       "id": "caja",
@@ -62,7 +95,40 @@
       "dependencies": "Verificar movimientos, cierres y atribución por usuario.",
       "limits": "No se garantiza conciliación automática ni integración bancaria.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Cada movimiento tiene su lugar.",
+        "summary": "Organiza la apertura, los ingresos, las salidas y el cierre de caja para entender qué ocurrió durante cada turno.",
+        "benefits": [
+          {
+            "title": "Empieza con una base clara",
+            "text": "Registra el fondo de apertura y asigna la responsabilidad del turno."
+          },
+          {
+            "title": "Sigue los movimientos",
+            "text": "Distingue las ventas de otros ingresos y egresos de efectivo."
+          },
+          {
+            "title": "Revisa el cierre",
+            "text": "Contrasta lo registrado con el arqueo y conserva el detalle de las diferencias."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Abre el turno",
+            "text": "Define la caja, el responsable y el fondo inicial."
+          },
+          {
+            "title": "Registra la operación",
+            "text": "Reúne cobros y movimientos vinculados al turno."
+          },
+          {
+            "title": "Revisa y cierra",
+            "text": "Realiza el arqueo, revisa diferencias y guarda el cierre."
+          }
+        ],
+        "scope": "Control operativo de caja y turnos. No sustituye una contabilidad financiera ni una conciliación bancaria especializada."
+      }
     },
     {
       "id": "mesas-y-comandas",
@@ -77,7 +143,40 @@
       "dependencies": "Verificar estados de pedidos, equipos y flujo cocina/barra.",
       "limits": "No se confirma impresión, pantalla de cocina ni operación offline.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Del pedido a la atención, con orden.",
+        "summary": "Organiza las mesas y los pedidos de tu salón para coordinar la atención y mantener el contexto de cada servicio.",
+        "benefits": [
+          {
+            "title": "Ubica cada servicio",
+            "text": "Relaciona la atención con su mesa y estado operativo."
+          },
+          {
+            "title": "Ordena los pedidos",
+            "text": "Mantén productos, indicaciones y cambios asociados al servicio."
+          },
+          {
+            "title": "Coordina al equipo",
+            "text": "Comparte el recorrido del pedido entre atención y preparación."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Organiza el salón",
+            "text": "Configura las mesas y la distribución que usa tu equipo."
+          },
+          {
+            "title": "Toma la comanda",
+            "text": "Registra los productos e indicaciones de cada servicio."
+          },
+          {
+            "title": "Acompaña la atención",
+            "text": "Sigue el pedido y completa la cuenta al finalizar."
+          }
+        ],
+        "scope": "Atención de mesas y comandas. Las estaciones de preparación y dispositivos se configuran según el flujo del establecimiento."
+      }
     },
     {
       "id": "inventarios",
@@ -93,7 +192,40 @@
       "dependencies": "Verificar existencias por almacén, movimientos y alertas.",
       "limits": "No se garantiza descuento de insumos en tiempo real.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Conoce lo que tienes y cómo se mueve.",
+        "summary": "Centraliza existencias y movimientos para seguir tus productos e insumos por local y tomar decisiones de reposición con más contexto.",
+        "benefits": [
+          {
+            "title": "Consulta existencias",
+            "text": "Revisa el stock registrado por producto, insumo y establecimiento."
+          },
+          {
+            "title": "Entiende las variaciones",
+            "text": "Relaciona entradas, salidas y ajustes con su motivo."
+          },
+          {
+            "title": "Prepara la reposición",
+            "text": "Usa los movimientos y niveles de stock para organizar las compras."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Define tu inventario",
+            "text": "Organiza productos, insumos, unidades y saldos iniciales."
+          },
+          {
+            "title": "Registra movimientos",
+            "text": "Incorpora recepciones, consumos, transferencias y ajustes."
+          },
+          {
+            "title": "Revisa tus niveles",
+            "text": "Consulta existencias y contrasta el registro con el conteo físico."
+          }
+        ],
+        "scope": "Control de existencias y movimientos. La calidad de la información depende de los registros, unidades y conteos de cada negocio."
+      }
     },
     {
       "id": "recetas-y-costos",
@@ -109,7 +241,40 @@
       "dependencies": "Verificar recetas, rendimientos y relación con compras e inventario.",
       "limits": "Sin evidencia de cálculo automático de márgenes o rentabilidad.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Entiende qué hay detrás de cada producto.",
+        "summary": "Relaciona ingredientes, cantidades y rendimientos para revisar el costo de preparación y contar con una base más clara al definir tu oferta.",
+        "benefits": [
+          {
+            "title": "Estandariza preparaciones",
+            "text": "Documenta los insumos y cantidades de cada receta."
+          },
+          {
+            "title": "Revisa el costo de base",
+            "text": "Relaciona el costo de los ingredientes con el rendimiento de la preparación."
+          },
+          {
+            "title": "Evalúa tu oferta",
+            "text": "Compara costos y precios para revisar el margen teórico de tus productos."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Registra ingredientes",
+            "text": "Define insumos y unidades de medida consistentes."
+          },
+          {
+            "title": "Arma la receta",
+            "text": "Relaciona cantidades, porciones y rendimiento."
+          },
+          {
+            "title": "Revisa el resultado",
+            "text": "Consulta el costo calculado y ajusta la preparación o el precio según tu criterio."
+          }
+        ],
+        "scope": "Costeo teórico de recetas. No representa una promesa de rentabilidad ni reemplaza la revisión de mermas y costos indirectos."
+      }
     },
     {
       "id": "compras-y-proveedores",
@@ -124,7 +289,40 @@
       "dependencies": "Verificar proveedores, recepción y relación con existencias.",
       "limits": "No se confirma integración contable ni emisión de órdenes automáticas.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Compra con el contexto de tu operación.",
+        "summary": "Organiza proveedores, pedidos de compra y recepciones para seguir el abastecimiento y mantener sus datos vinculados a tus recursos.",
+        "benefits": [
+          {
+            "title": "Centraliza proveedores",
+            "text": "Mantén los datos y referencias de quienes abastecen al negocio."
+          },
+          {
+            "title": "Ordena tus compras",
+            "text": "Reúne productos, cantidades y condiciones del pedido."
+          },
+          {
+            "title": "Da seguimiento a la recepción",
+            "text": "Contrasta lo solicitado con lo recibido y conserva el registro."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Prepara la compra",
+            "text": "Selecciona al proveedor y los productos que necesitas."
+          },
+          {
+            "title": "Registra la recepción",
+            "text": "Revisa cantidades, costos y documentos de la entrega."
+          },
+          {
+            "title": "Actualiza el seguimiento",
+            "text": "Consulta el historial de compra y su relación con inventarios."
+          }
+        ],
+        "scope": "Gestión operativa de compras y abastecimiento. Las condiciones de pago y procesos contables se definen de forma complementaria."
+      }
     },
     {
       "id": "facturacion-electronica",
@@ -141,7 +339,40 @@
       "dependencies": "Validar integración, proveedor, alcance tributario y estados de comprobantes.",
       "limits": "No se afirma integración SUNAT operativa, certificación ni cumplimiento completo.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "La documentación también forma parte del flujo.",
+        "summary": "Relaciona los documentos de venta con las operaciones de tu negocio y organiza su seguimiento desde un mismo contexto de trabajo.",
+        "benefits": [
+          {
+            "title": "Conserva la relación con la venta",
+            "text": "Mantén datos del cliente y del consumo asociados al documento."
+          },
+          {
+            "title": "Revisa antes de emitir",
+            "text": "Verifica los datos requeridos y el detalle del comprobante."
+          },
+          {
+            "title": "Sigue tus documentos",
+            "text": "Consulta los registros y estados disponibles en el flujo configurado."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Configura la emisión",
+            "text": "Define los datos tributarios y el servicio de emisión que corresponda."
+          },
+          {
+            "title": "Prepara el comprobante",
+            "text": "Revisa destinatario, conceptos y datos de la operación."
+          },
+          {
+            "title": "Consulta el estado",
+            "text": "Da seguimiento al documento y atiende las observaciones del proceso."
+          }
+        ],
+        "scope": "El alcance de emisión, documentos y proveedor debe definirse con su configuración tributaria. Este contenido no acredita una homologación ni una integración específica con SUNAT."
+      }
     },
     {
       "id": "reservas",
@@ -156,7 +387,40 @@
       "dependencies": "Verificar calendario, disponibilidad, confirmaciones y alcance por sector.",
       "limits": "No se confirma PMS, reservas hoteleras ni conexión con OTAs.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Anticípate a la siguiente atención.",
+        "summary": "Organiza solicitudes, horarios y datos de reserva para preparar a tu equipo y dar seguimiento a las visitas previstas.",
+        "benefits": [
+          {
+            "title": "Reúne las reservas",
+            "text": "Mantén fechas, horarios y datos de atención en un registro común."
+          },
+          {
+            "title": "Prepara la operación",
+            "text": "Consulta la demanda prevista y coordina al equipo."
+          },
+          {
+            "title": "Sigue cada solicitud",
+            "text": "Actualiza cambios y estados de acuerdo con tus políticas de atención."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Define tu atención",
+            "text": "Configura horarios y las condiciones que usa tu establecimiento."
+          },
+          {
+            "title": "Registra la reserva",
+            "text": "Anota la fecha, el grupo y los datos necesarios."
+          },
+          {
+            "title": "Prepara la visita",
+            "text": "Revisa pendientes, cambios y confirmaciones antes del servicio."
+          }
+        ],
+        "scope": "Reservas de atención y consumo. La administración hotelera integral y sus necesidades particulares tienen un alcance independiente."
+      }
     },
     {
       "id": "clientes",
@@ -172,7 +436,40 @@
       "dependencies": "Confirmar campos, permisos y obligaciones de privacidad.",
       "limits": "No se garantiza CRM completo, campañas ni automatización de marketing.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Conoce mejor a quienes vuelven.",
+        "summary": "Organiza los datos y la relación de tus clientes con el negocio para atender con contexto y mantener información útil en un solo lugar.",
+        "benefits": [
+          {
+            "title": "Unifica los datos",
+            "text": "Consulta una ficha de cliente compartida por la operación."
+          },
+          {
+            "title": "Conserva el contexto",
+            "text": "Relaciona visitas y operaciones registradas con cada cliente."
+          },
+          {
+            "title": "Atiende de forma consistente",
+            "text": "Facilita que el equipo encuentre la información necesaria para continuar la atención."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Organiza la ficha",
+            "text": "Registra únicamente los datos necesarios para la relación comercial."
+          },
+          {
+            "title": "Vincula la atención",
+            "text": "Relaciona las operaciones y referencias del cliente."
+          },
+          {
+            "title": "Consulta el historial",
+            "text": "Revisa el contexto disponible antes de una nueva atención."
+          }
+        ],
+        "scope": "Gestión de información de clientes. Su uso y conservación deben ajustarse a la política de privacidad y las autorizaciones aplicables."
+      }
     },
     {
       "id": "reportes",
@@ -188,7 +485,40 @@
       "dependencies": "Verificar fuentes, indicadores, periodos y permisos.",
       "limits": "No se afirman indicadores o actualizaciones en tiempo real disponibles.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Convierte tus registros en una visión útil.",
+        "summary": "Revisa la información de ventas y operación por período y establecimiento para entender el comportamiento del negocio y orientar tus decisiones.",
+        "benefits": [
+          {
+            "title": "Encuentra una vista común",
+            "text": "Reúne información de las áreas registradas en la plataforma."
+          },
+          {
+            "title": "Compara períodos y locales",
+            "text": "Filtra el contexto para revisar cambios y diferencias."
+          },
+          {
+            "title": "Da seguimiento a tus prioridades",
+            "text": "Usa los reportes como apoyo para detectar qué necesita revisión."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Elige el contexto",
+            "text": "Selecciona el período, el local y el área que quieres revisar."
+          },
+          {
+            "title": "Explora la información",
+            "text": "Consulta indicadores y el detalle que los compone."
+          },
+          {
+            "title": "Define el siguiente paso",
+            "text": "Contrasta el resultado con tu operación y decide qué revisar."
+          }
+        ],
+        "scope": "Los reportes reflejan la información registrada y su configuración. No son predicciones ni garantías de resultados comerciales."
+      }
     },
     {
       "id": "personal-y-permisos",
@@ -204,7 +534,40 @@
       "dependencies": "Verificar permisos granulares, alcance por sede, PIN y auditoría.",
       "limits": "No se confirma seguridad operativa de dispositivos compartidos ni políticas de sesión.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Cada persona, con una responsabilidad clara.",
+        "summary": "Organiza a tu equipo y los accesos a la plataforma para que cada persona trabaje con las herramientas que corresponden a su función.",
+        "benefits": [
+          {
+            "title": "Ordena las responsabilidades",
+            "text": "Relaciona a los usuarios con los roles de tu operación."
+          },
+          {
+            "title": "Define los accesos",
+            "text": "Configura qué áreas y acciones corresponden a cada función."
+          },
+          {
+            "title": "Mantén el equipo al día",
+            "text": "Revisa los accesos cuando cambian las personas o sus responsabilidades."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Identifica las funciones",
+            "text": "Define los roles que necesita el negocio."
+          },
+          {
+            "title": "Asigna accesos",
+            "text": "Relaciona usuarios, locales y permisos de trabajo."
+          },
+          {
+            "title": "Revisa los cambios",
+            "text": "Actualiza los accesos al incorporar o retirar responsabilidades."
+          }
+        ],
+        "scope": "Gestión de usuarios y permisos de la plataforma. No incluye por sí sola una administración laboral, biométrica o de planillas."
+      }
     },
     {
       "id": "multisede",
@@ -219,7 +582,40 @@
       "dependencies": "Verificar separación de datos, consolidación y límites comerciales.",
       "limits": "Sin garantía de reportes consolidados o módulos incluidos por local.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Una visión común, con el contexto de cada local.",
+        "summary": "Organiza varios establecimientos dentro de la misma operación y consulta su información sin perder las particularidades de cada sede.",
+        "benefits": [
+          {
+            "title": "Ordena los establecimientos",
+            "text": "Identifica locales y su configuración operativa."
+          },
+          {
+            "title": "Conserva el contexto local",
+            "text": "Distingue existencias, ventas y responsabilidades por sede."
+          },
+          {
+            "title": "Revisa el conjunto",
+            "text": "Consulta la información consolidada y compara la operación entre locales."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Define tus sedes",
+            "text": "Configura los establecimientos y la organización del negocio."
+          },
+          {
+            "title": "Asigna la operación",
+            "text": "Relaciona usuarios y recursos con cada local."
+          },
+          {
+            "title": "Consulta y compara",
+            "text": "Revisa resultados por sede o desde una vista conjunta."
+          }
+        ],
+        "scope": "Organización de múltiples establecimientos. Los límites, permisos y recursos compartidos se definen en la configuración y propuesta comercial."
+      }
     },
     {
       "id": "eventos-y-entradas",
@@ -233,7 +629,40 @@
       "dependencies": "Verificar emisión, compradores, pagos y alcance de códigos QR.",
       "limits": "No se confirma venta online, pasarela ni emisión operativa de QR.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "De la convocatoria a la entrada, con orden.",
+        "summary": "Organiza eventos, tipos de entrada y compradores para acompañar la venta y preparar el control de acceso con la información de cada emisión.",
+        "benefits": [
+          {
+            "title": "Prepara la oferta",
+            "text": "Define los datos del evento y los tipos de entrada."
+          },
+          {
+            "title": "Organiza las emisiones",
+            "text": "Relaciona compradores y entradas con el evento correspondiente."
+          },
+          {
+            "title": "Coordina el ingreso",
+            "text": "Mantén los códigos y registros necesarios para la validación de acceso."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Crea el evento",
+            "text": "Configura fecha, capacidad y tipos de entrada."
+          },
+          {
+            "title": "Registra las entradas",
+            "text": "Organiza las emisiones y sus datos de comprador."
+          },
+          {
+            "title": "Prepara los accesos",
+            "text": "Entrega al equipo la información para controlar el ingreso."
+          }
+        ],
+        "scope": "Organización de eventos y entradas. Los canales de venta, pagos y condiciones de acceso se definen para cada operación."
+      }
     },
     {
       "id": "control-de-accesos",
@@ -247,7 +676,40 @@
       "dependencies": "Validar lectores, estados de entrada y condiciones de conectividad.",
       "limits": "No se afirma validación offline, antifraude ni compatibilidad con lectores.",
       "status": "unverified",
-      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS."
+      "evidence": "docs/PROJECT_BRIEF.md, sección 7. Sin evidencia operativa del SaaS.",
+      "launch": {
+        "headline": "Una entrada, una validación con contexto.",
+        "summary": "Relaciona cada acceso con el evento y la entrada correspondiente para ayudar al equipo a organizar el ingreso y seguir su estado.",
+        "benefits": [
+          {
+            "title": "Consulta la entrada",
+            "text": "Identifica el código y los datos relacionados con el evento."
+          },
+          {
+            "title": "Sigue la validación",
+            "text": "Revisa el estado que corresponde antes de registrar el ingreso."
+          },
+          {
+            "title": "Coordina al equipo",
+            "text": "Consulta el seguimiento del acceso dentro de la operación del evento."
+          }
+        ],
+        "workflow": [
+          {
+            "title": "Prepara el control",
+            "text": "Asigna el evento y los responsables del ingreso."
+          },
+          {
+            "title": "Valida la entrada",
+            "text": "Consulta su código y el estado correspondiente."
+          },
+          {
+            "title": "Registra el acceso",
+            "text": "Actualiza el seguimiento de acuerdo con las políticas del evento."
+          }
+        ],
+        "scope": "Validación operativa de entradas. Dispositivos, conectividad y políticas de reingreso se acuerdan según el evento; no se promete prevención absoluta de fraude."
+      }
     }
   ]
 }

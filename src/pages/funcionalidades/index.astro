@@ -1,11 +1,12 @@
 ---
 import pageContent from '../../../content/pages.json';
 const copy = pageContent['pages-funcionalidades-index'];
+const detailCopy = pageContent['pages-feature-detail'];
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Icon from '../../components/Icon.astro';
-import { features, featureGroups, statusLabels } from '../../data/features';
+import { features, featureGroups } from '../../data/features';
 import { solutions } from '../../data/solutions';
 import '../../styles/solutions.css';
 import '../../styles/features.css';
@@ -31,11 +32,12 @@ import '../../styles/features.css';
       <div class="search-empty" hidden><h3>{copy.text_014}</h3><p>{copy.text_015}</p></div>
       {featureGroups.map(group => <section class="feature-group" id={`area-${group.id}`} aria-labelledby={`${group.id}-title`}>
         <div class="feature-group-heading"><Icon name={group.icon} /><div><h2 id={`${group.id}-title`}>{group.name}</h2><p>{group.description}</p></div></div>
-        <div class="feature-grid">{features.filter(feature => feature.group === group.id).map(feature => <article class="feature-card" id={feature.id} data-search={`${feature.name} ${feature.description} ${group.name} ${feature.question}`}>
-          <span class="feature-status" data-status={feature.status}>{statusLabels[feature.status]}</span>
-          <h3>{feature.name}</h3><p>{feature.description}</p>
+        <div class="feature-grid">{features.filter(feature => feature.group === group.id).map(feature => <article class="feature-card" id={feature.id} data-search={`${feature.name} ${feature.launch.summary} ${feature.launch.headline} ${group.name} ${feature.question}`}>
+          <span class="feature-status" >{group.name}</span>
+          <h3><a href={`/funcionalidades/${feature.id}/`}>{feature.name}</a></h3><p>{feature.launch.summary}</p>
           <p class="feature-question">{feature.question}</p>
-          <details><summary>{copy.text_016} <span aria-hidden="true">＋</span></summary><p>{feature.limits}</p></details>
+          <details><summary>{copy.text_016} <span aria-hidden="true">＋</span></summary><p>{feature.launch.scope}</p></details>
+          <a class="text-link module-detail-link" href={`/funcionalidades/${feature.id}/`}>{detailCopy.text_016} <Icon /></a>
           <div class="feature-sectors"><span>{copy.text_017}</span>{feature.sectors.map(slug => <a href={`/soluciones/${slug}/`}>{solutions.find(solution => solution.slug === slug)?.name}</a>)}</div>
         </article>)}</div>
       </section>)}

@@ -20,6 +20,8 @@ for item in json.loads((root / 'content/solutions.json').read_text())['items']:
     expected.add(f"soluciones/{item['slug']}/index.html")
 for item in json.loads((root / 'content/guides.json').read_text())['items']:
     expected.add(f"recursos/guias/{item['slug']}/index.html")
+for item in json.loads((root / 'content/features.json').read_text())['items']:
+    expected.add(f"funcionalidades/{item['id']}/index.html")
 actual = {file.relative_to(build).as_posix() for file in html}
 if actual != expected:
     raise SystemExit(f'Unexpected page set: missing={expected-actual}, extra={actual-expected}')

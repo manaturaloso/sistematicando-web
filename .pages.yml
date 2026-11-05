@@ -105,6 +105,24 @@
           "label": "Icono de pestaña (favicon)",
           "type": "image",
           "description": "Sube el original a Medios y selecciónalo. Sin deformar ni recrear el logotipo."
+        },
+        {
+          "name": "launchDraft",
+          "label": "Vista previa de lanzamiento (producto pendiente de validar)",
+          "type": "boolean",
+          "description": "Mantener activo mientras el producto y el contenido se preparan para lanzamiento. Desactivarlo no autoriza un despliegue ni valida el SaaS."
+        },
+        {
+          "name": "launchDraftLabel",
+          "label": "Etiqueta de la vista previa",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "launchDraftNotice",
+          "label": "Aviso de la vista previa",
+          "type": "text",
+          "required": true
         }
       ]
     },
@@ -579,6 +597,71 @@
               "label": "Evidencia",
               "type": "text",
               "required": true
+            },
+            {
+              "name": "launch",
+              "label": "Contenido comercial para lanzamiento",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "headline",
+                  "label": "Propuesta principal del módulo",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "name": "summary",
+                  "label": "Resumen comercial",
+                  "type": "text",
+                  "required": true
+                },
+                {
+                  "name": "benefits",
+                  "label": "Beneficios",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Título",
+                      "type": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "text",
+                      "label": "Texto",
+                      "type": "text",
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "name": "workflow",
+                  "label": "Recorrido del módulo",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Título",
+                      "type": "string",
+                      "required": true
+                    },
+                    {
+                      "name": "text",
+                      "label": "Texto",
+                      "type": "text",
+                      "required": true
+                    }
+                  ]
+                },
+                {
+                  "name": "scope",
+                  "label": "Ámbito del módulo",
+                  "type": "text",
+                  "required": true
+                }
+              ]
             }
           ]
         }
@@ -821,13 +904,13 @@
             },
             {
               "name": "text_004",
-              "label": "Tu negocio tiene muchas piezas. Nuestra propuesta es ayudarte a verlas como…",
+              "label": "Conecta ventas, operación y gestión en un mismo ecosistema. Sistematicando …",
               "type": "text",
               "required": true
             },
             {
               "name": "text_005",
-              "label": "Conoce la propuesta",
+              "label": "Explora la plataforma",
               "type": "string",
               "required": true
             },
@@ -923,13 +1006,13 @@
             },
             {
               "name": "text_021",
-              "label": "Sistematicando nace de una idea sencilla: la gestión debería ayudarte a ent…",
+              "label": "Sistematicando reúne las herramientas de tu operación para que tu equipo tr…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_022",
-              "label": "El objetivo es reunir información y procesos para que puedas dedicar más at…",
+              "label": "Relaciona tus procesos y consulta la información que necesitas para atender…",
               "type": "text",
               "required": true
             },
@@ -941,7 +1024,7 @@
             },
             {
               "name": "text_024",
-              "label": "02 / La visión del producto",
+              "label": "02 / Tu ecosistema de gestión",
               "type": "string",
               "required": true
             },
@@ -959,7 +1042,7 @@
             },
             {
               "name": "text_027",
-              "label": "Una propuesta modular que parte de tu operación. Estas son las áreas que bu…",
+              "label": "Un ecosistema modular para acompañar tu operación: desde la atención y la v…",
               "type": "text",
               "required": true
             },
@@ -983,7 +1066,7 @@
             },
             {
               "name": "text_031",
-              "label": "Visión de producto",
+              "label": "Una plataforma, distintas áreas",
               "type": "string",
               "required": true
             },
@@ -1019,7 +1102,7 @@
             },
             {
               "name": "text_037",
-              "label": "Áreas de aplicación propuestas. El alcance para cada sector se confirma ant…",
+              "label": "Encuentra los módulos que encajan con el tipo de negocio y el recorrido de …",
               "type": "text",
               "required": true
             },
@@ -1043,7 +1126,7 @@
             },
             {
               "name": "text_041",
-              "label": "La visión es modular: definir una base adecuada para tu negocio y evaluar n…",
+              "label": "Empieza con una configuración adecuada para tu negocio e incorpora las herr…",
               "type": "text",
               "required": true
             },
@@ -1115,8 +1198,8 @@
             },
             {
               "name": "text_053",
-              "label": "Para una futura demostración útil, lo primero es entender qué quieres organ…",
-              "type": "text",
+              "label": "Una demostración útil empieza por entender qué quieres organizar mejor.",
+              "type": "string",
               "required": true
             },
             {
@@ -1221,13 +1304,13 @@
             },
             {
               "name": "text_005",
-              "label": "Necesidades que conviene revisar, sin asumir que todas requieren la misma h…",
+              "label": "Herramientas para organizar lo que importa en tu operación, con una configu…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_006",
-              "label": "02 / Definamos el alcance",
+              "label": "02 / Tu configuración de trabajo",
               "type": "string",
               "required": true
             },
@@ -1245,7 +1328,7 @@
             },
             {
               "name": "text_009",
-              "label": "Qué falta confirmar",
+              "label": "Ámbito de la solución",
               "type": "string",
               "required": true
             },
@@ -1263,7 +1346,7 @@
             },
             {
               "name": "text_012",
-              "label": "Una recomendación útil necesita conocer tu operación y verificar el alcance…",
+              "label": "Una configuración útil parte de tus flujos de atención, tus recursos y las …",
               "type": "text",
               "required": true
             },
@@ -1275,7 +1358,7 @@
             },
             {
               "name": "text_014",
-              "label": "Preparar una futura demo",
+              "label": "Preparar una demo",
               "type": "string",
               "required": true
             },
@@ -1294,6 +1377,12 @@
             {
               "name": "text_017",
               "label": "Ver todos los sectores",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Módulos para tu operación:",
               "type": "string",
               "required": true
             }
@@ -1345,13 +1434,13 @@
             },
             {
               "name": "text_006",
-              "label": "Cada equipo tiene su ritmo, sus prioridades y su forma de atender. Explora …",
+              "label": "Cada equipo tiene su ritmo, sus prioridades y su forma de atender. Encuentr…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_007",
-              "label": "Enfoques de solución en evaluación. Las capacidades del producto deben conf…",
+              "label": "Una configuración para tu negocio: módulos, equipos y condiciones definidos…",
               "type": "text",
               "required": true
             },
@@ -1363,7 +1452,7 @@
             },
             {
               "name": "text_009",
-              "label": "Sin promesas de más",
+              "label": "Herramientas con contexto",
               "type": "string",
               "required": true
             },
@@ -1381,13 +1470,13 @@
             },
             {
               "name": "text_012",
-              "label": "Elegir herramientas empieza por saber qué necesitas resolver y comprobar qu…",
+              "label": "Reúne las herramientas que tu equipo necesita y define una configuración co…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_013",
-              "label": "Preparar una futura demo",
+              "label": "Preparar una demo",
               "type": "string",
               "required": true
             },
@@ -1433,37 +1522,37 @@
             },
             {
               "name": "text_003",
-              "label": "De una necesidad a una visión conectada",
+              "label": "Un ecosistema para tu operación",
               "type": "string",
               "required": true
             },
             {
               "name": "text_004",
-              "label": "Las piezas que",
+              "label": "Herramientas que trabajan",
               "type": "string",
               "required": true
             },
             {
               "name": "text_005",
-              "label": "dan forma al orden.",
+              "label": "con tu negocio.",
               "type": "string",
               "required": true
             },
             {
               "name": "text_006",
-              "label": "Ventas, recursos, personas y decisiones. Explora las áreas que contempla Si…",
+              "label": "De la atención al cliente al control de tus recursos: explora los módulos d…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_007",
-              "label": "Una propuesta con el alcance por confirmar",
+              "label": "Una plataforma modular",
               "type": "string",
               "required": true
             },
             {
               "name": "text_008",
-              "label": "Este catálogo describe módulos conceptuales. «No verificada» significa que …",
+              "label": "La configuración y los módulos se definen según las necesidades de cada neg…",
               "type": "text",
               "required": true
             },
@@ -1481,7 +1570,7 @@
             },
             {
               "name": "text_011",
-              "label": "Empieza por un área o busca un módulo.",
+              "label": "Explora cada área y conoce el recorrido de sus módulos.",
               "type": "string",
               "required": true
             },
@@ -1511,7 +1600,7 @@
             },
             {
               "name": "text_016",
-              "label": "Qué falta confirmar",
+              "label": "Cómo encaja en tu operación",
               "type": "string",
               "required": true
             },
@@ -1751,25 +1840,25 @@
             },
             {
               "name": "text_006",
-              "label": "Una propuesta útil empieza por entender cómo trabajas. Antes de hablar de u…",
+              "label": "Define una configuración según tu tipo de negocio, tus locales y las herram…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_007",
-              "label": "Tarifas y planes pendientes de aprobación",
+              "label": "Una propuesta personalizada",
               "type": "string",
               "required": true
             },
             {
               "name": "text_008",
-              "label": "No hay precios oficiales publicados. Tampoco se han definido inclusiones, l…",
+              "label": "Consulta la configuración y las condiciones para tu operación. La propuesta…",
               "type": "text",
               "required": true
             },
             {
               "name": "text_009",
-              "label": "Preparar mi conversación",
+              "label": "Preparar mi consulta",
               "type": "string",
               "required": true
             },
@@ -1811,8 +1900,8 @@
             },
             {
               "name": "text_016",
-              "label": "Una futura propuesta debe permitirte saber qué contratas y con qué alcance.",
-              "type": "string",
+              "label": "Revisa qué incluye tu propuesta y cuáles son sus condiciones antes de dar e…",
+              "type": "text",
               "required": true
             },
             {
@@ -1847,13 +1936,13 @@
             },
             {
               "name": "text_022",
-              "label": "Sin letra pequeña",
+              "label": "Condiciones claras",
               "type": "string",
               "required": true
             },
             {
               "name": "text_023",
-              "label": "inventada.",
+              "label": "desde el inicio.",
               "type": "string",
               "required": true
             },
@@ -1871,7 +1960,7 @@
             },
             {
               "name": "text_026",
-              "label": "Prepara una guía de tu operación para una futura conversación comercial. Si…",
+              "label": "Reúne el contexto de tu operación y conversemos por WhatsApp sobre la confi…",
               "type": "text",
               "required": true
             },
@@ -3072,6 +3161,130 @@
             {
               "name": "text_025",
               "label": "Consultar preguntas frecuentes",
+              "type": "string",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pages-feature-detail",
+      "label": "Página: feature-detail",
+      "type": "file",
+      "path": "content/pages.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "pages-feature-detail",
+          "label": "Textos y metadatos",
+          "type": "object",
+          "fields": [
+            {
+              "name": "text_001",
+              "label": "Inicio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_002",
+              "label": "Funcionalidades",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_003",
+              "label": "Lo que aporta a tu operación",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_004",
+              "label": "Así encaja en tu día a día",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Un recorrido claro, de principio a fin.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Ámbito del módulo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_007",
+              "label": "Pensado para tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_008",
+              "label": "Explorar solución para",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_009",
+              "label": "También puede interesarte",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_010",
+              "label": "Conecta las piezas de tu operación.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_011",
+              "label": "Ver todos los módulos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_012",
+              "label": "Hablemos de tu negocio",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_013",
+              "label": "Reúne tus prioridades y prepara una conversación sobre la configuración que…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_014",
+              "label": "Preparar una demo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_015",
+              "label": "Ir a contacto",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_016",
+              "label": "Explorar módulo",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_017",
+              "label": "Ver beneficios",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_018",
+              "label": "Conocer el recorrido",
               "type": "string",
               "required": true
             }

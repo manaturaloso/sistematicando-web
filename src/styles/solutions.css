@@ -36,3 +36,7 @@
 @media(max-width:599px) {.solutions-grid,.needs-grid,.solution-callout,.solution-evaluation {grid-template-columns:1fr;}.solution-callout {padding:1.5rem;gap:1rem;}.solution-hero {padding-bottom:3rem;}.breadcrumbs {margin-bottom:2rem;}.solution-hero h1 {font-size:clamp(2.4rem,10vw,3.5rem);}.solution-evaluation {padding-block:3rem;gap:1rem;}.sector-priorities {padding-block:3rem;}.solution-card-icon {margin-bottom:1rem;}.solutions-section {padding-bottom:3rem;}}
 
 .solution-callout>div {min-width:0;overflow-wrap:anywhere;}
+
+.solution-evaluation>div {min-width:0;overflow-wrap:anywhere;}
+.sector-module-links {list-style:none;margin:1rem 0 0;padding:0;font-size:.85rem;}
+.sector-module-links a {display:inline-flex;align-items:center;min-height:44px;}

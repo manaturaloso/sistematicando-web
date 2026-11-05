@@ -49,10 +49,18 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Identidad pública anterior af35674 confirmada por JSON del propietario. Se ha autorizado una nueva entrega (c1b0baf más registro): comprobar su SHA final en Cloudflare y /version.json antes de dar el despliegue por finalizado. Revisar Actions del HEAD y recorrer home/contacto/demo/catálogo/privacidad/admin/404 en dispositivos/lector. La revisión asistida local ya corrigió reflujo móvil 200% y verificó teclado; no sustituye dispositivos físicos/lector. Si se detecta un fallo, obtener evidencia concreta y corregirlo antes de ampliar alcance.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y seguir Empresa/Ayuda/recursos/oferta. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
-Quedan evidencia SaaS, precios y privacidad. No crear afirmaciones para rellenar información ausente. Cualquier actualización pública exige autorización correspondiente. Las mejoras de pruebas/documentación posteriores a af35674 no necesitan desplegarse para documentar este estado.
+Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
+
+Comprobar Actions del nuevo HEAD. Pruebas locales actuales: 34 rutas/125 destinos, 72 comprobaciones axe y 14 fichas de contenido CMS. Detalles en PROGRESS.md; capturas en LAUNCH_PREVIEW.md.
 
 ## Mensaje para iniciar otra sesión
 
 > Continúa manaturaloso/sistematicando-web desde su estado remoto. Lee AGENTS.md y docs/HANDOFF.md, PROGRESS.md y DECISIONS.md; verifica cambios locales y ambas ramas. Usa mi identidad Git registrada. Confirma primero versión activa del Worker y CI; continúa los pendientes autorizados. No publiques ni cambies DNS sin mi autorización. Guarda cambios/pruebas/pendientes/agentes/siguiente paso en documentación y GitHub y confirma rama, commit y PR.
+
+## Directiva actual de producto y lanzamiento
+
+El propietario confirmó producto parcialmente desarrollado y pidió trabajar la web como la versión completa prevista al 100%. Ya se prepararon 14 páginas de módulos y copy comercial de home/sectores/FAQ/precios; 34 páginas y 25 editores CMS. Contenido futuro en features.items[].launch; estados/evidencias reales se mantienen aparte. launchDraft true identifica la vista previa. No volver a bloquear frontend preguntando si el producto ya está operativo.
+
+No hay autorización para publicar estas nuevas versiones: mantener todos los cambios en feat/feature-catalog hasta confirmación explícita de producto/web al 100% y autorización final. El Worker de revisión previo permanece en la rama con 557222e; no se elimina ni actualiza por esta directiva. Próximo trabajo: Empresa/Ayuda/recursos y oferta comercial sin precios inventados; pruebas/pendientes en PROGRESS.md.

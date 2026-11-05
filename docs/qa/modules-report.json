@@ -1,0 +1,103 @@
+{
+  "scope": "Launch-target web copy; not validation of operational SaaS capability",
+  "results": [
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "benefits": 3,
+      "workflowSteps": 3,
+      "internalStatus": "unverified",
+      "launchDraft": true
+    }
+  ]
+}

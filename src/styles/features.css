@@ -35,3 +35,6 @@
 @media(max-width:599px) {.feature-grid {grid-template-columns:1fr;}.catalog-header {align-items:start;flex-direction:column;gap:0;}.search-controls {flex-direction:column;}.search-controls input {font-size:.85rem;}.feature-card {padding:1.3rem;}.feature-group-heading h2 {font-size:1.7rem;}.feature-search {padding:1rem;}}
 
 .feature-group-heading>div {min-width:0;}
+.feature-card h3 a {text-decoration:none;}
+.feature-card h3 a:hover {text-decoration:underline;}
+.module-detail-link {font-size:.8rem;min-height:44px;display:inline-flex;align-items:center;}

@@ -9,8 +9,11 @@
   "coral": "#ed735f",
   "ink": "#2a3139",
   "defaultTitle": "Sistematicando · Todo tu negocio, bajo control.",
-  "defaultDescription": "Conoce la propuesta de Sistematicando para organizar la gestión de restaurantes, cafeterías, bares y negocios de hospitalidad.",
-  "footerNote": "Versión de desarrollo · Guía local y contacto voluntario",
+  "defaultDescription": "Sistematicando conecta ventas, operaciones y gestión para negocios de gastronomía, hospitalidad y eventos. Todo tu negocio, bajo control.",
+  "footerNote": "Sitio de lanzamiento en preparación",
   "darkFooter": false,
-  "favicon": "/media/logominiclear.png"
+  "favicon": "/media/logominiclear.png",
+  "launchDraft": true,
+  "launchDraftLabel": "Vista previa de lanzamiento",
+  "launchDraftNotice": "Contenido preparado para la versión completa de Sistematicando. Publicación pendiente de validación."
 }

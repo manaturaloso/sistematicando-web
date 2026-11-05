@@ -7,6 +7,8 @@ const navigation=read('navigation');
 for(const link of [...navigation.header,...navigation.footer]){ensure(link.label?.trim(),'Enlace sin texto');ensure(/^\/(?!\/)[a-zA-Z0-9/_#-]*$/.test(link.href),'Solo rutas internas válidas en navegación');}
 const site=read('site'),contact=read('contact'),solutions=read('solutions').items,features=read('features'),guides=read('guides').items,faqs=read('faqs').items;
 for(const name of ['name','tagline','logoAlt','defaultTitle','defaultDescription'])ensure(typeof site[name]==='string'&&site[name].trim(),`Marca: falta ${name}`);
+ensure(typeof site.launchDraft==='boolean','Vista previa de lanzamiento inválida');
+for(const key of ['launchDraftLabel','launchDraftNotice'])ensure(typeof site[key]==='string'&&site[key].trim(),`Vista previa: falta ${key}`);
 for(const color of ['coral','ink'])ensure(/^#[\da-f]{6}$/i.test(site[color]),`Color inválido: ${color}`);
 for(const key of ['logoLight','logoDark','favicon']){
  if(!site[key])continue;
@@ -30,6 +32,10 @@ const modules=unique(features.items,'id','módulos');
 const groups=unique(features.groups,'id','grupos');
 unique(guides,'slug','guías');unique(faqs,'id','FAQ');
 for(const item of features.items){
+ ensure(item.launch&&typeof item.launch==='object',`Contenido de lanzamiento ausente: ${item.id}`);
+ for(const key of ['headline','summary','scope'])ensure(typeof item.launch[key]==='string'&&item.launch[key].trim(),`Lanzamiento ${item.id}: falta ${key}`);
+ for(const key of ['benefits','workflow'])ensure(Array.isArray(item.launch[key])&&item.launch[key].length>0&&item.launch[key].every(entry=>typeof entry.title==='string'&&entry.title.trim()&&typeof entry.text==='string'&&entry.text.trim()),`Lanzamiento ${item.id}: ${key} vacío o inválido`);
+
  ensure(groups.has(item.group),`Grupo de módulo desconocido: ${item.group}`);
  ensure(['unverified','proposed','planned','in-development','partial','available'].includes(item.status),`Estado inválido: ${item.id}`);
  ensure(item.evidence?.trim(),`Evidencia vacía: ${item.id}`);

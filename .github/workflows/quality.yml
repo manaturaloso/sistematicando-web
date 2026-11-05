@@ -26,7 +26,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Remove evidence from older runs
-        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json
+        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json docs/qa/modules-report.json
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
@@ -51,5 +51,6 @@ jobs:
             docs/qa/site-report.json
             docs/qa/accessibility-report.json
             docs/qa/brand-report.json
+            docs/qa/modules-report.json
           if-no-files-found: warn
           retention-days: 7

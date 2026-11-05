@@ -5,56 +5,56 @@
       "category": "producto",
       "home": true,
       "question": "¿Qué es Sistematicando?",
-      "answer": "Es una propuesta de plataforma de gestión empresarial para conectar distintas áreas de negocios de gastronomía, hospitalidad y eventos. Esta web está en desarrollo y el alcance comercial de sus módulos todavía debe verificarse."
+      "answer": "Sistematicando es una plataforma modular de gestión empresarial para conectar ventas, recursos, clientes y equipos de negocios de gastronomía, hospitalidad y eventos."
     },
     {
       "id": "disponibilidad",
       "category": "producto",
       "home": true,
-      "question": "¿Todas las funciones están disponibles?",
-      "answer": "No se ha confirmado la disponibilidad de los módulos en esta versión del sitio. Las áreas y visuales presentados explican la propuesta de producto; no son una garantía de funciones contratables."
+      "question": "¿Cómo se organizan las funciones?",
+      "answer": "La plataforma se organiza en módulos. La configuración que definas para tu negocio establece las herramientas, los límites y los servicios que forman parte de la propuesta."
     },
     {
       "id": "varios-locales",
       "category": "producto",
       "home": true,
       "question": "¿Puedo usarlo si tengo más de un local?",
-      "answer": "La gestión de varias sedes forma parte de la propuesta. Antes de recomendar una solución, hace falta revisar la estructura del negocio y confirmar el alcance real del producto."
+      "answer": "La gestión multisede permite organizar varios establecimientos y consultar información por local o en conjunto. La configuración define los usuarios, recursos y accesos de cada operación."
     },
     {
       "id": "hoteles",
       "category": "producto",
-      "question": "¿Es un sistema hotelero completo?",
-      "answer": "No se ha verificado un PMS completo ni integraciones con OTAs o channel managers. El enfoque para hoteles sirve para entender necesidades, sin afirmar que sustituya un sistema hotelero especializado."
+      "question": "¿Qué alcance tiene para hoteles?",
+      "answer": "Sistematicando organiza la gestión comercial y operativa de servicios y establecimientos de un alojamiento. Habitaciones, PMS, OTAs y channel managers requieren un alcance especializado y no se incluyen por defecto."
     },
     {
       "id": "cuanto-cuesta",
       "category": "comercial",
       "home": true,
       "pricing": true,
-      "question": "¿Cuánto cuesta?",
-      "answer": "Aún no hay una tabla de precios aprobada para publicar. No presentamos tarifas ni condiciones contractuales provisionales como oficiales. La página de precios explica qué información conviene reunir para definir una propuesta."
+      "question": "¿Cómo obtengo una propuesta?",
+      "answer": "Conversemos sobre tu negocio, tus locales y los módulos que necesitas. La propuesta debe detallar su alcance, los servicios, los valores y los impuestos aplicables antes de contratar."
     },
     {
       "id": "modulos-plan",
       "category": "comercial",
       "pricing": true,
-      "question": "¿Todos los módulos estarán incluidos?",
-      "answer": "No hay una composición de planes aprobada. La disponibilidad y las inclusiones deben confirmarse expresamente, sin asumir que todo el catálogo forma parte de una oferta."
+      "question": "¿Todos los módulos se incluyen en mi configuración?",
+      "answer": "La configuración se define según la operación. Revisa en tu propuesta los módulos, límites y servicios incluidos, y cualquier componente adicional que necesite tu equipo."
     },
     {
       "id": "unidad-cobro",
       "category": "comercial",
       "pricing": true,
-      "question": "¿El costo será por usuario o por local?",
-      "answer": "La unidad de cobro sigue pendiente de definición. Antes de contratar deberá quedar clara, junto con los límites, servicios e impuestos aplicables."
+      "question": "¿Qué condiciones debo revisar?",
+      "answer": "La propuesta debe indicar la unidad de cobro, la periodicidad, los límites y los impuestos aplicables. También conviene revisar implementación, soporte y condiciones de continuidad."
     },
     {
       "id": "prueba-gratuita",
       "category": "comercial",
       "pricing": true,
-      "question": "¿Existe una prueba gratuita?",
-      "answer": "No se ha aprobado una prueba gratuita ni condiciones de contratación. No presentamos promociones, plazos ni beneficios provisionales como compromisos oficiales."
+      "question": "¿Puedo conocer el producto antes de contratar?",
+      "answer": "Puedes coordinar una demostración para revisar tus prioridades y el recorrido de los módulos. Si se acuerda un acceso de evaluación, sus condiciones deben quedar confirmadas en esa conversación."
     },
     {
       "id": "demostracion",
@@ -78,8 +78,8 @@
     {
       "id": "guias-producto",
       "category": "producto",
-      "question": "¿Las guías explican funciones del software?",
-      "answer": "Las guías son material editorial sobre organización de negocios. No sustituyen un manual del producto, no acreditan módulos disponibles ni prometen resultados. Puedes usarlas para preparar preguntas sobre tu operación."
+      "question": "¿Qué encontraré en las guías?",
+      "answer": "Son recursos editoriales para organizar procesos, preparar información y hacer mejores preguntas sobre tu operación. Complementan la exploración de los módulos; no sustituyen un manual de uso."
     }
   ],
   "groups": [

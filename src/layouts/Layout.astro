@@ -20,5 +20,5 @@ const { title = site.defaultTitle, description = site.defaultDescription } = Ast
     <link rel="preload" href="/fonts/Gluten-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <title>{title}</title>
   </head>
-  <body style={`--coral:${site.coral};--ink:${site.ink}`}><slot /></body>
+  <body style={`--coral:${site.coral};--ink:${site.ink}`}>{site.launchDraft && <aside class="launch-draft-notice" aria-label={site.launchDraftLabel}><div class="wrap"><strong>{site.launchDraftLabel}</strong><span>{site.launchDraftNotice}</span></div></aside>}<slot /></body>
 </html>

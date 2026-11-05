@@ -17,3 +17,7 @@ Contacto confirmado: WhatsApp externo desde demo y correo/WhatsApp de privacidad
 Contenido ahora editable en content/*.json mediante Pages CMS. FAQ común y guías originales con secciones/listas; textos por página en pages.json. Editar desde CMS conserva historial Git, pero necesita un nuevo build. ADMIN.md describe alcance y límites.
 
 /contacto/ diferencia conversación comercial por WhatsApp y consultas de privacidad por correo/WhatsApp. El correo confirmado es para privacidad; no se presenta como canal comercial autorizado. Domicilio del responsable no implica atención presencial. Todos los textos de la página son editables en Página: contacto; datos de contacto centralizados.
+
+## Copy objetivo de lanzamiento
+
+El propietario autoriza preparar la comunicación como producto completo, aunque el software esté parcialmente desarrollado. Home, seis sectores, FAQ, precios y 14 fichas de módulos adoptan ese tono en la rama de desarrollo. Vista previa global identifica el borrador; no se publica hasta validación final. La evidencia operativa se mantiene interna y no se falsea. Copy futuro no equivale a testimonio, certificación, integración validada ni precio aprobado.
