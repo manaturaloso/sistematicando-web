@@ -66,3 +66,5 @@ Artículos en `content/articles.json`, rutas generadas por slug y enlaces a mód
 - `/implementacion/`: cuatro etapas por acordar, preparación y responsabilidades. Se llega desde precios/demo; anclas paso-1 a paso-4, sin envío de datos.
 
 - `/legal/terminos/`: borrador de uso del sitio, índice de ocho secciones, identidad/contacto y enlace a privacidad. No contrato SaaS.
+
+Inventario técnico completo y generado: RELEASE_CHECKLIST.md (42 páginas actuales, enlaces, metadatos y axe). /404.html se verifica además como respuesta 404 real con recuperación a Inicio/Ayuda en Worker local. No es un sitemap público ni habilita indexación.

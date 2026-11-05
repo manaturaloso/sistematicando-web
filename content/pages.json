@@ -4,7 +4,10 @@
     "text_002": "Volvamos al inicio.",
     "text_003": "La página que buscas no está disponible en esta versión.",
     "text_004": "Ir al inicio",
-    "seo_title": "Página no encontrada · Sistematicando"
+    "seo_title": "Página no encontrada · Sistematicando",
+    "seo_description": "La página solicitada no está disponible. Vuelve al inicio o consulta el centro de ayuda de Sistematicando.",
+    "text_005": "Consultar ayuda",
+    "text_006": "Opciones para continuar"
   },
   "pages-index": {
     "text_001": "Menos dispersión. Más claridad.",

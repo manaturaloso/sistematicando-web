@@ -1,0 +1,20 @@
+{
+  "scope": "Negative evidence controls; temporary report edits restored",
+  "cases": [
+    {
+      "name": "stale-build",
+      "rejected": true,
+      "previousOutputPreserved": true
+    },
+    {
+      "name": "missing-route",
+      "rejected": true,
+      "previousOutputPreserved": true
+    },
+    {
+      "name": "accessibility-failure",
+      "rejected": true,
+      "previousOutputPreserved": true
+    }
+  ]
+}

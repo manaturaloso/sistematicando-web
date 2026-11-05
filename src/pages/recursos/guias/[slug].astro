@@ -12,7 +12,7 @@ import '../../../styles/resources.css';
 export function getStaticPaths() { return guides.map(guide => ({ params: { slug: guide.slug }, props: { guide } })); }
 const { guide } = Astro.props;
 ---
-<Layout title={`${guide.title} · Sistematicando`} description={guide.intro}>
+<Layout type="article" title={`${guide.title} · Sistematicando`} description={guide.intro}>
   <Header /><main id="contenido" tabindex="-1">
     <article class="wrap guide-article">
       <nav class="breadcrumbs" aria-label="Ruta de navegación"><a href="/">{copy.text_001}</a><span aria-hidden="true">/</span><a href="/recursos/">{copy.text_002}</a><span aria-hidden="true">/</span><span aria-current="page">{copy.text_003}</span></nav>

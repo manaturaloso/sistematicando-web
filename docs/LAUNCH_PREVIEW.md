@@ -41,3 +41,9 @@ Revisar /precios/, /implementacion/ y /solicitar-demo/. La nueva página describ
 Revisar /legal/privacidad/ y /legal/terminos/, enlazadas entre sí y en el pie. Secciones en Legal: términos de uso del sitio; copy en páginas legal-privacidad/legal-terminos. Los textos no son contrato SaaS ni adopción legal confirmada. Límites y decisiones pendientes: LEGAL_REVIEW.md.
 
 ![Términos de uso del sitio en móvil, borrador local](qa/terms-mobile.png)
+
+## Recuperación desde errores y cierre técnico
+
+La 404 usa descripción propia y enlaces Inicio/Ayuda. Se revisó en Worker local y con teclado, con/sin JS; no se desplegó. RELEASE_CHECKLIST.md enumera las 42 páginas y pendientes de lanzamiento.
+
+![Error 404 en móvil con recuperación a Inicio y Ayuda](qa/error-mobile.png)

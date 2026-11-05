@@ -5,7 +5,7 @@ import {previewServer} from './lib/preview-server.mjs';
 const navigation=JSON.parse(await fs.readFile('content/navigation.json','utf8'));
 const moduleRoutes=JSON.parse(await fs.readFile('content/features.json','utf8')).items.map(item=>`/funcionalidades/${item.id}/`);
 const articleRoutes=JSON.parse(await fs.readFile('content/articles.json','utf8')).items.map(item=>`/blog/${item.slug}/`);
-const resizedRoutes=['/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/','/contacto/',...moduleRoutes,'/legal/privacidad/','/legal/terminos/','/precios/','/implementacion/','/nosotros/','/ayuda/','/blog/',...articleRoutes];
+const resizedRoutes=['/404.html','/','/funcionalidades/','/solicitar-demo/','/admin/','/recursos/','/contacto/',...moduleRoutes,'/legal/privacidad/','/legal/terminos/','/precios/','/implementacion/','/nosotros/','/ayuda/','/blog/',...articleRoutes];
 const server=await previewServer();
 let browser;
 try{

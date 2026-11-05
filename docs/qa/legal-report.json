@@ -39,27 +39,5 @@
       "externalRequests": 0,
       "cookies": 0
     }
-  ],
-  "finalLayoutAccessibility": [
-    {
-      "route": "/legal/privacidad/",
-      "width": 390,
-      "violations": []
-    },
-    {
-      "route": "/legal/terminos/",
-      "width": 390,
-      "violations": []
-    },
-    {
-      "route": "/legal/privacidad/",
-      "width": 1440,
-      "violations": []
-    },
-    {
-      "route": "/legal/terminos/",
-      "width": 1440,
-      "violations": []
-    }
   ]
 }

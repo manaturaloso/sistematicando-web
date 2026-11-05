@@ -276,6 +276,7 @@
     "build provenance JSON and no-store/noindex headers",
     "robots/noindex",
     "POST 405",
-    "four mobile browser routes and menu"
+    "four mobile browser routes and menu",
+    "custom 404 keyboard recovery to help with/without JavaScript"
   ]
 }

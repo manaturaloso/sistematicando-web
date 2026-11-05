@@ -8,7 +8,7 @@ Build estático local, no Worker público. 42 páginas con originales del logo s
 
 - Menú móvil sin JavaScript: ahora los enlaces permanecen visibles y el botón solo aparece cuando su comportamiento está inicializado.
 - Salto al contenido: el destino main acepta foco programático; probado con teclado.
-- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 30 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
+- Texto al 200%: navegación puede envolver líneas y el adorno del hero permanece dentro de sus límites; sin overflow en 31 rutas a 390 y 1280 px con texto 200%, tras corregir el caso móvil.
 - Enlace de marca: usa el nombre visible o alt del logo como nombre accesible, evitando un aria-label que omitía la leyenda visible.
 - Favicon: si aún no se ha cargado uno, referencia vacía explícita para evitar una petición automática fallida a /favicon.ico. No se inventó un isotipo.
 
@@ -86,3 +86,9 @@ Check 56 archivos sin errores/advertencias/hints; build 42 páginas y 34 editore
 verify-legal prueba identidad confirmada, vínculos legales, TOC por teclado, contactos diferenciados, navegación y guía local sin peticiones externas, cookies ni persistencia, con/sin JS. No cubre configuración de Cloudflare, servicios externos abiertos voluntariamente ni adopción legal. Tras revisar la captura se quitó la numeración visual duplicada del índice conservando la lista semántica; se repitieron navegación/reflujo y pruebas legales sobre el build final. No se omiten reglas de accesibilidad ni se retira noindex.
 
 Comprobación final del ajuste del índice: cuatro análisis axe focales (privacidad/términos a 390/1440) sin infracciones; evidencia adicional en qa/legal-report.json. Para axe usar browser.newContext() explícito: la comprobación puntual inicial con browser.newPage() fue rechazada por la API antes del análisis y se corrigió. Check final: 56 archivos, cero errores/advertencias/hints.
+
+## 5 de noviembre de 2026 · Cierre técnico por página
+
+Check final 58 archivos sin errores/advertencias/hints; build 42 páginas / 34 editores. Suite: 42 rutas/162 destinos, metadata única/coherente por ruta, seis OG article, reflujo 200% en 31 rutas a 390/1280 y axe 88 comprobaciones sin infracciones detectadas; marca/editorial/módulos/recursos/legal/versión aprobados. Checklist generado con coincidencia de build y cobertura exacta; siete pendientes de lanzamiento conservados. Negativos: versión obsoleta, ruta ausente e infracción simulada rechazados, informes originales restaurados y salida válida intacta.
+
+Worker local: 53 verificaciones y regreso desde URL inexistente (HTTP 404) hacia Ayuda por teclado con/sin JS. Captura móvil revisada; servidor detenido. ZIP local de 42 páginas verificado. Sin nueva ejecución Lighthouse ni publicación. La evidencia guardada registra una instantánea con cambios locales; no se reasigna al commit posterior. CI vuelve a generar evidencias del build que ejecute. Consultar RELEASE_CHECKLIST.md y qa/release-report.json.

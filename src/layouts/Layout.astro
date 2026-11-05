@@ -1,8 +1,8 @@
 ---
 import '../styles/home.css';
 import site from '../../content/site.json';
-interface Props { title?: string; description?: string; }
-const { title = site.defaultTitle, description = site.defaultDescription } = Astro.props;
+interface Props { title?: string; description?: string; type?: 'website' | 'article'; }
+const { title = site.defaultTitle, description = site.defaultDescription, type = 'website' } = Astro.props;
 ---
 <!doctype html>
 <html lang="es-PE">
@@ -13,7 +13,7 @@ const { title = site.defaultTitle, description = site.defaultDescription } = Ast
     <meta name="robots" content="noindex, nofollow" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:locale" content="es_PE" />
     <link rel="icon" href={site.favicon || 'data:,'} />
     <link rel="preload" href="/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin />

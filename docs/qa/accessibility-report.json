@@ -1,4 +1,10 @@
 {
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "47ce92a474be0067087204ad06bc050782459a50",
+    "commitDate": "2026-11-05T15:07:30Z",
+    "sourceModified": true
+  },
   "tool": "axe-core via @axe-core/playwright",
   "environment": "Local static build; Chromium; not a full WCAG audit",
   "results": [
@@ -17,7 +23,7 @@
     {
       "route": "/404.html",
       "width": 390,
-      "passes": 25,
+      "passes": 26,
       "incomplete": [],
       "violations": []
     },
@@ -192,7 +198,7 @@
     {
       "route": "/legal/terminos/",
       "width": 390,
-      "passes": 39,
+      "passes": 43,
       "incomplete": [],
       "violations": []
     },
@@ -316,7 +322,7 @@
     {
       "route": "/404.html",
       "width": 1440,
-      "passes": 25,
+      "passes": 26,
       "incomplete": [],
       "violations": []
     },
@@ -491,7 +497,7 @@
     {
       "route": "/legal/terminos/",
       "width": 1440,
-      "passes": 38,
+      "passes": 42,
       "incomplete": [],
       "violations": []
     },

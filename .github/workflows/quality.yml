@@ -54,5 +54,8 @@ jobs:
             docs/qa/modules-report.json
             docs/qa/resources-report.json
             docs/qa/legal-report.json
+            docs/qa/release-report.json
+            docs/qa/release-guards-report.json
+            docs/RELEASE_CHECKLIST.md
           if-no-files-found: warn
           retention-days: 7

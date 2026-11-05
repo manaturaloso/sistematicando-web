@@ -110,3 +110,7 @@ El párrafo de WhatsApp es ahora components-WhatsAppContact.text_007. Debe conte
 Legal: términos de uso del sitio (`terms`) permite editar secciones con id, título y párrafos; Página: legal-terminos contiene cabecera/contacto/SEO. Página: legal-privacidad contiene copy de privacidad y administración externa. Los ids generan anclas: usar minúsculas y guiones, no duplicar ni usar ids reservados (contenido, responsable, contacto-legal, contacto-title, o terminados en -title).
 
 Textos de responsable: privacidad text_039 y términos text_007 requieren exactamente un {responsible}, un {ruc} y un {address}, sin otros marcadores. Valores desde Contactos y responsable; nunca pegar HTML. Cambiar contenidos no acredita revisión/adopción legal. Política aún borrador; contrato SaaS y condiciones comerciales siguen pendientes.
+
+## Metadatos y página no encontrada
+
+Página: 404 incluye descripción SEO propia, etiqueta del grupo de enlaces y enlace de Ayuda. Los metadatos generales se editan por página; guías/artículos toman título/introducción del editor estructurado y se identifican técnicamente como OG article. No introducir títulos/descripciones vacíos o duplicados: test:site los detecta tras compilar. El checklist técnico es generado, no un documento editorial del CMS ni permiso de publicar.

@@ -5,6 +5,7 @@ import AxeBuilder from '@axe-core/playwright';
 import {previewServer,builtRoutes} from './lib/preview-server.mjs';
 const server=await previewServer();
 let browser;
+const buildVersion=JSON.parse(await fs.readFile('dist/version.json','utf8'));
 const results=[];
 function logViolations(analysis) {
  for(const violation of analysis.violations){
@@ -52,7 +53,7 @@ try{
  }
  await interactive.close();
  await fs.mkdir('docs/qa',{recursive:true});
- await fs.writeFile('docs/qa/accessibility-report.json',JSON.stringify({tool:'axe-core via @axe-core/playwright',environment:'Local static build; Chromium; not a full WCAG audit',results},null,2)+'\n');
+ await fs.writeFile('docs/qa/accessibility-report.json',JSON.stringify({buildVersion,tool:'axe-core via @axe-core/playwright',environment:'Local static build; Chromium; not a full WCAG audit',results},null,2)+'\n');
  const violations=results.reduce((total,item)=>total+item.violations.length,0);
  console.log(`SUMMARY ${results.length} page/viewport checks, ${violations} rule violations.`);
  if(violations)process.exitCode=1;

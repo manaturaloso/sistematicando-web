@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "scope": "Validated local build snapshot; automated checks are not approval to launch",
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "47ce92a474be0067087204ad06bc050782459a50",
+    "commitDate": "2026-11-05T15:07:30Z",
+    "sourceModified": true
+  },
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "title": "Sistematicando · Todo tu negocio, bajo control.",
+      "description": "Sistematicando conecta ventas, operaciones y gestión para negocios de gastronomía, hospitalidad y eventos. Todo tu negocio, bajo control.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/404.html",
+      "status": 200,
+      "title": "Página no encontrada · Sistematicando",
+      "description": "La página solicitada no está disponible. Vuelve al inicio o consulta el centro de ayuda de Sistematicando.",
+      "type": "website",
+      "internalLinks": 2,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/admin/",
+      "status": 200,
+      "title": "Administración · Sistematicando",
+      "description": "Acceso administrativo al CMS conectado a GitHub. Requiere autorización de acceso al repositorio.",
+      "type": "website",
+      "internalLinks": 2,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/ayuda/",
+      "status": 200,
+      "title": "Centro de ayuda · Sistematicando",
+      "description": "Encuentra respuestas, guías y canales para explorar Sistematicando, preparar una demostración y consultar sobre tu operación.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "title": "Blog de gestión y operación · Sistematicando",
+      "description": "Ideas prácticas para ordenar procesos, coordinar equipos y preparar el crecimiento de tu negocio. Artículos editoriales de Sistematicando.",
+      "type": "website",
+      "internalLinks": 29,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/blog/conectar-pedido-cierre-operacion/",
+      "status": 200,
+      "title": "Del pedido al cierre: mira tu operación como un recorrido · Sistematicando",
+      "description": "Una venta atraviesa varias áreas. Seguir su recorrido ayuda a reconocer dónde se pierde información y qué necesita el equipo para continuar.",
+      "type": "article",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/blog/elegir-que-ordenar-primero/",
+      "status": 200,
+      "title": "Cómo elegir qué ordenar primero en tu negocio · Sistematicando",
+      "description": "Cuando varios procesos necesitan atención, una prioridad clara ayuda más que una lista interminable de cambios. Empieza por observar qué interrumpe el trabajo.",
+      "type": "article",
+      "internalLinks": 30,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/blog/estandarizar-al-crecer-en-sedes/",
+      "status": 200,
+      "title": "De un local a varias sedes: qué conviene estandarizar · Sistematicando",
+      "description": "Crecer exige compartir criterios sin borrar el contexto de cada establecimiento. Distingue qué debe ser común y qué necesita una decisión local.",
+      "type": "article",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/contacto/",
+      "status": 200,
+      "title": "Contacto · Sistematicando",
+      "description": "Consulta por Sistematicando a través de WhatsApp o encuentra los canales de atención de privacidad.",
+      "type": "website",
+      "internalLinks": 25,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/",
+      "status": 200,
+      "title": "Funcionalidades: explora las áreas de gestión · Sistematicando",
+      "description": "Conoce los módulos de Sistematicando para ventas, caja, inventarios, clientes, reportes y eventos. Herramientas conectadas para tu operación.",
+      "type": "website",
+      "internalLinks": 91,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "status": 200,
+      "title": "Caja · Sistematicando",
+      "description": "Organiza la apertura, los ingresos, las salidas y el cierre de caja para entender qué ocurrió durante cada turno.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "status": 200,
+      "title": "Clientes · Sistematicando",
+      "description": "Organiza los datos y la relación de tus clientes con el negocio para atender con contexto y mantener información útil en un solo lugar.",
+      "type": "website",
+      "internalLinks": 31,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "status": 200,
+      "title": "Compras y proveedores · Sistematicando",
+      "description": "Organiza proveedores, pedidos de compra y recepciones para seguir el abastecimiento y mantener sus datos vinculados a tus recursos.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "status": 200,
+      "title": "Control de accesos · Sistematicando",
+      "description": "Relaciona cada acceso con el evento y la entrada correspondiente para ayudar al equipo a organizar el ingreso y seguir su estado.",
+      "type": "website",
+      "internalLinks": 29,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "status": 200,
+      "title": "Eventos y entradas · Sistematicando",
+      "description": "Organiza eventos, tipos de entrada y compradores para acompañar la venta y preparar el control de acceso con la información de cada emisión.",
+      "type": "website",
+      "internalLinks": 29,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "status": 200,
+      "title": "Facturación electrónica · Sistematicando",
+      "description": "Relaciona los documentos de venta con las operaciones de tu negocio y organiza su seguimiento desde un mismo contexto de trabajo.",
+      "type": "website",
+      "internalLinks": 34,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "status": 200,
+      "title": "Inventarios · Sistematicando",
+      "description": "Centraliza existencias y movimientos para seguir tus productos e insumos por local y tomar decisiones de reposición con más contexto.",
+      "type": "website",
+      "internalLinks": 33,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "status": 200,
+      "title": "Mesas y comandas · Sistematicando",
+      "description": "Organiza las mesas y los pedidos de tu salón para coordinar la atención y mantener el contexto de cada servicio.",
+      "type": "website",
+      "internalLinks": 31,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "status": 200,
+      "title": "Multisede · Sistematicando",
+      "description": "Organiza varios establecimientos dentro de la misma operación y consulta su información sin perder las particularidades de cada sede.",
+      "type": "website",
+      "internalLinks": 31,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "status": 200,
+      "title": "Personal y permisos · Sistematicando",
+      "description": "Organiza a tu equipo y los accesos a la plataforma para que cada persona trabaje con las herramientas que corresponden a su función.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "status": 200,
+      "title": "Punto de venta · Sistematicando",
+      "description": "Reúne productos, pedidos y cobros en un flujo de atención claro para que tu equipo venda con orden y mantenga el registro de cada operación.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "status": 200,
+      "title": "Recetas y costos · Sistematicando",
+      "description": "Relaciona ingredientes, cantidades y rendimientos para revisar el costo de preparación y contar con una base más clara al definir tu oferta.",
+      "type": "website",
+      "internalLinks": 33,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "status": 200,
+      "title": "Reportes · Sistematicando",
+      "description": "Revisa la información de ventas y operación por período y establecimiento para entender el comportamiento del negocio y orientar tus decisiones.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "status": 200,
+      "title": "Reservas · Sistematicando",
+      "description": "Organiza solicitudes, horarios y datos de reserva para preparar a tu equipo y dar seguimiento a las visitas previstas.",
+      "type": "website",
+      "internalLinks": 30,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/implementacion/",
+      "status": 200,
+      "title": "Implementación y puesta en marcha · Sistematicando",
+      "description": "Conoce qué conviene acordar al implementar Sistematicando: alcance, preparación de datos, equipo, validación y acompañamiento.",
+      "type": "website",
+      "internalLinks": 24,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/legal/privacidad/",
+      "status": 200,
+      "title": "Política de privacidad · Sistematicando",
+      "description": "Información sobre el sitio comercial, la guía local y el contacto voluntario por WhatsApp. Identidad del responsable y canales de privacidad.",
+      "type": "website",
+      "internalLinks": 22,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/legal/terminos/",
+      "status": 200,
+      "title": "Términos de uso del sitio · Sistematicando",
+      "description": "Borrador de términos de uso de la web comercial de Sistematicando. Alcance del contenido, guía local, enlaces externos y contacto.",
+      "type": "website",
+      "internalLinks": 30,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/nosotros/",
+      "status": 200,
+      "title": "Nosotros · Sistematicando",
+      "description": "Conoce la idea detrás de Sistematicando: conectar las piezas de la operación para que los negocios trabajen con más claridad.",
+      "type": "website",
+      "internalLinks": 29,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/precios/",
+      "status": 200,
+      "title": "Precios y alcance de la propuesta · Sistematicando",
+      "description": "Consulta una propuesta de Sistematicando según tu operación, locales, módulos y servicios. Conoce los factores que definen su alcance.",
+      "type": "website",
+      "internalLinks": 28,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/preguntas-frecuentes/",
+      "status": 200,
+      "title": "Preguntas frecuentes · Sistematicando",
+      "description": "Respuestas sobre el alcance de Sistematicando, módulos, precios pendientes, demos y privacidad. Sin promesas de disponibilidad no verificadas.",
+      "type": "website",
+      "internalLinks": 25,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/recursos/",
+      "status": 200,
+      "title": "Recursos para organizar tu negocio · Sistematicando",
+      "description": "Guías prácticas para revisar caja, ordenar insumos y preparar la evaluación de un software de gestión. Contenido editorial, sin promesas de resultados.",
+      "type": "website",
+      "internalLinks": 30,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/recursos/guias/evaluar-software-para-tu-negocio/",
+      "status": 200,
+      "title": "Qué preguntar antes de elegir un software de gestión · Sistematicando",
+      "description": "Una demostración sirve más cuando puedes contrastar un caso de tu negocio con el alcance real de la herramienta.",
+      "type": "article",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/recursos/guias/ordenar-inventario-inicial/",
+      "status": 200,
+      "title": "Por dónde empezar a ordenar tus insumos · Sistematicando",
+      "description": "Antes de hablar de alertas o automatizaciones, conviene acordar qué estás contando, dónde está y en qué unidad lo registras.",
+      "type": "article",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/recursos/guias/preparar-cierre-de-caja/",
+      "status": 200,
+      "title": "Cómo preparar una revisión de caja por turno · Sistematicando",
+      "description": "Una revisión útil empieza antes de contar el efectivo: define el periodo, reúne los registros y deja espacio para explicar las diferencias.",
+      "type": "article",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/solicitar-demo/",
+      "status": 200,
+      "title": "Prepara tu futura demo · Sistematicando",
+      "description": "Organiza las prioridades de tu negocio y descarga una guía local. Contacta voluntariamente por WhatsApp para consultar por una demostración.",
+      "type": "website",
+      "internalLinks": 25,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/",
+      "status": 200,
+      "title": "Soluciones por tipo de negocio · Sistematicando",
+      "description": "Soluciones de Sistematicando para restaurantes, bares, cafeterías, hoteles, eventos y negocios con varios locales.",
+      "type": "website",
+      "internalLinks": 28,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/bares/",
+      "status": 200,
+      "title": "Software para bares · Sistematicando",
+      "description": "Organiza pedidos, consumos y turnos para que salón, barra y caja trabajen con información compartida.",
+      "type": "website",
+      "internalLinks": 35,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/cafeterias/",
+      "status": 200,
+      "title": "Software para cafeterías · Sistematicando",
+      "description": "Conecta la atención del mostrador con las recetas y los insumos que acompañan cada taza.",
+      "type": "website",
+      "internalLinks": 36,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/eventos/",
+      "status": 200,
+      "title": "Software para eventos · Sistematicando",
+      "description": "Conecta la organización del evento, las entradas y la atención en puerta para seguir el recorrido de cada emisión.",
+      "type": "website",
+      "internalLinks": 30,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/hoteles/",
+      "status": 200,
+      "title": "Software para hoteles y hospedajes · Sistematicando",
+      "description": "Organiza ventas, consumos y recursos de los servicios de tu alojamiento, con una configuración acorde a sus distintas áreas.",
+      "type": "website",
+      "internalLinks": 32,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/multisede/",
+      "status": 200,
+      "title": "Software para múltiples locales · Sistematicando",
+      "description": "Organiza varios establecimientos desde una visión común y conserva el contexto de ventas, recursos y responsabilidades de cada local.",
+      "type": "website",
+      "internalLinks": 31,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/soluciones/restaurantes/",
+      "status": 200,
+      "title": "Software para restaurantes · Sistematicando",
+      "description": "Conecta salón, cocina y administración para acompañar el servicio desde el primer pedido hasta el cierre del día.",
+      "type": "website",
+      "internalLinks": 39,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": []
+        },
+        {
+          "width": 1440,
+          "incomplete": []
+        }
+      ]
+    }
+  ],
+  "interactiveChecks": 4,
+  "destinations": 162,
+  "launchDraft": true,
+  "robotsBlocked": true,
+  "readyToPublish": false,
+  "gates": [
+    {
+      "id": "product",
+      "status": "pending",
+      "detail": "Confirmar disponibilidad y evidencia real del SaaS; 14 módulos sin estado available en la matriz interna."
+    },
+    {
+      "id": "commercial",
+      "status": "pending",
+      "detail": "Aprobar tarifas, alcance, servicios y condiciones de contratación."
+    },
+    {
+      "id": "legal",
+      "status": "pending",
+      "detail": "Revisar/adoptar privacidad y términos; contrato SaaS y operación de datos pendientes. Ver LEGAL_REVIEW.md."
+    },
+    {
+      "id": "manual",
+      "status": "pending",
+      "detail": "Revisión humana del contenido y recorridos con dispositivos físicos/lector de pantalla; resolver incomplete de axe."
+    },
+    {
+      "id": "remote-ci",
+      "status": "unverified",
+      "detail": "Comprobar Actions del SHA que se vaya a revisar; resultados locales no acreditan CI remoto."
+    },
+    {
+      "id": "domain",
+      "status": "pending",
+      "detail": "Confirmar dominio y preparar canonicals/sitemap/indexación solo con autorización."
+    },
+    {
+      "id": "launch",
+      "status": "blocked",
+      "detail": "No publicar hasta confirmación de producto/web completos y autorización final del propietario."
+    }
+  ]
+}

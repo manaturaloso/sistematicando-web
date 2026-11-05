@@ -23,6 +23,10 @@ ASTRO_TELEMETRY_DISABLED=1 npm run dev -- --port 4321
 
 Resultado local registrado: 42 rutas/162 destinos internos; marca a seis anchos DPR1/2; contactos/editorial/descarga; identificación Git; axe 88 comprobaciones sin infracciones detectadas. Incomplete y límites en [QUALITY.md](docs/QUALITY.md); no certificación WCAG ni métricas de producción.
 
+## Checklist de cierre
+
+[RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) reúne todas las páginas y los pendientes de lanzamiento. Se genera al terminar test:ci, o con `npm run audit:release` usando informes del mismo build. No es permiso de publicación ni validación del SaaS. La CI conserva el checklist y el JSON como artefactos.
+
 ## Editar contenido
 
 /admin abre Pages CMS externo con autenticación GitHub: 34 editores, medios y guardados reales verificados. Fuente editable content/*.json; src/data son adaptadores. [ADMIN.md](docs/ADMIN.md) describe textos por página, logos, contactos y guía/buscador. Estructura y lógica requieren desarrollo; no es constructor visual arbitrario.

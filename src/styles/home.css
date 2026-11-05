@@ -1118,3 +1118,7 @@ h1 em {max-width:100%;}
 .footer-top nav {flex-wrap:wrap;max-width:65%;justify-content:flex-end;min-width:0;}
 .footer-top nav a {display:inline-flex;align-items:center;min-height:44px;overflow-wrap:anywhere;}
 @media(max-width:899px) {.footer-top nav {max-width:none;justify-content:start;}}
+
+.error-page {overflow-wrap:anywhere;}
+.error-links {display:flex;gap:1rem 2rem;flex-wrap:wrap;align-items:center;margin-top:2rem;}
+.error-links>a {min-height:44px;max-width:100%;}

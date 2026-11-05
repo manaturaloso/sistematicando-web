@@ -49,7 +49,7 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar cierre de lanzamiento por página/recorrido y decisiones de LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar revisión visual sistemática móvil/escritorio y estados interactivos; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
@@ -74,3 +74,9 @@ No hay autorización para publicar estas nuevas versiones: mantener todos los ca
 /legal/terminos/ está preparada como borrador informativo, no contrato SaaS; ocho secciones en terms.json, copy en pages-legal-terminos. Privacidad ajustada al código e incluye administración externa. Identidad y mensajes con marcadores validados, contactos centrales intactos. La fecha original de la política identifica el borrador inicial, no aprobación legal. 42 páginas / 34 editores. Nueva prueba verify-legal y qa/legal-report.json, también en CI.
 
 Siguiente acción exacta: consolidar checklist de lanzamiento por página/recorrido y revisar metadatos, navegación y errores; no crear otro contrato con condiciones inventadas ni repetir la revisión básica ya implementada. LEGAL_REVIEW.md lista adopción y decisiones operativas pendientes. No publicar; rama Worker 557222e intacta. Codex principal, sin subagentes.
+
+## Checklist técnico actual
+
+El cierre automatizado ya está implementado: `npm run test:ci` termina generando RELEASE_CHECKLIST.md y qa/release-report.json. `npm run audit:release` solo funciona con sitio/axe del mismo dist/version.json y cobertura completa. No ejecutar build/Worker mientras corre la suite; no volver a generar el checklist con evidencia antigua tras cambiar HEAD. El checklist conserva la identidad de la instantánea validada, sin fingir que es el SHA final posterior al commit.
+
+Metadatos únicos/coherentes por ruta; seis guías/artículos con OG article. 404 con descripción propia y salidas Inicio/Ayuda, probada sin/con JS en Worker. 42 páginas / 34 editores. Los siete pendientes externos/manuales siguen abiertos. Próximo trabajo exacto: revisión visual de las páginas restantes a móvil/escritorio y estados buscador/guía/menú, registrar hallazgos por ruta; no rehacer el inventario ni pedir otra vez estado global del producto parcial.

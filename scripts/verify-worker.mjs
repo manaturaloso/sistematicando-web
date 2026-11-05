@@ -44,7 +44,17 @@ try{
  }
  await page.goto(base+'/');await page.locator('.menu-toggle').click();assert(await page.locator('#main-nav').isVisible());await page.keyboard.press('Escape');assert(!await page.locator('#main-nav').isVisible());
  assert.equal(failures.length,0,JSON.stringify(failures));
+ for(const javaScriptEnabled of [true,false]){
+  const errorContext=await browser.newContext({javaScriptEnabled,viewport:{width:390,height:1000}}),errorPage=await errorContext.newPage();
+  assert.equal((await errorPage.goto(base+'/pagina-que-no-existe/')).status(),404);
+  assert.equal(await errorPage.locator('main h1').count(),1);
+  assert(await errorPage.locator('.error-links a[href="/"]').isVisible());
+  await errorPage.locator('.error-links a[href="/ayuda/"]').focus();await errorPage.keyboard.press('Enter');await errorPage.waitForURL('**/ayuda/');
+  assert.equal(new URL(errorPage.url()).pathname,'/ayuda/');
+  await errorContext.close();
+ }
+
 }finally{await browser.close();}
 await fs.mkdir('docs/qa',{recursive:true});
-await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font and selected brand asset integrity','build provenance JSON and no-store/noindex headers','robots/noindex','POST 405','four mobile browser routes and menu']},null,2)+'\n');
+await fs.writeFile('docs/qa/worker-report.json',JSON.stringify({environment:'Wrangler 4.157.0 --local; no Cloudflare deployment or remote validation',pages:results,checks:['all built pages','custom missing/private-path 404s','307 trailing slash/index normalization','query preservation','font and selected brand asset integrity','build provenance JSON and no-store/noindex headers','robots/noindex','POST 405','four mobile browser routes and menu','custom 404 keyboard recovery to help with/without JavaScript']},null,2)+'\n');
 console.log(`PASS Worker local: ${results.length} route checks, fonts/brand assets, query, POST 405 and mobile browser.`);

@@ -134,3 +134,11 @@ verify-editorial recorre precios → última etapa de implementación (ancla por
 verify-legal.mjs forma parte de test:ci; qa/legal-report.json se limpia antes de la suite y se incluye como artefacto. Verifica identidad/canales, enlaces entre documentos, índice de términos por teclado y ausencia de formularios de aceptación, con/sin JS. Navega las dos páginas y genera la guía local, sin abrir servicios externos: exige peticiones GET al origen local, cero cookies y localStorage/sessionStorage vacíos. No prueba configuración pública/terceros ni constituye revisión legal.
 
 Reflujo incluye privacidad/términos: 30 rutas a dos anchos. El validador bloqueó inicialmente un id «contenido» reservado para main; se cambió a informacion-comercial antes de compilar. No se debilitaron reglas. Ejecutar Worker solo después de terminar test:ci para no recompilar dist durante axe.
+
+## Cierre técnico por ruta
+
+verify-site exige metadata única/coherente (title, description, OG title/description/type/locale, lang, viewport), noindex y ausencia de canonical/og:url mientras no haya dominio autorizado; registra enlaces por ruta y buildVersion. Axe registra también buildVersion. audit-release es el último paso de test:ci, produce qa/release-report.json y RELEASE_CHECKLIST.md y falla ante identidad/cobertura obsoleta o infracciones. La CI elimina salidas previas y las conserva como artefactos de QA.
+
+Comando independiente: `npm run audit:release`, solo tras generar informes del build vigente. Cambiar HEAD requiere recompilar; un informe guardado corresponde a su instantánea, que puede indicar sourceModified true. No debe reasignarse al commit final por editar el JSON. CI volverá a medir el SHA que ejecute. El informe mantiene siete puertas externas/manuales abiertas y readyToPublish false; no es un flujo de deploy. Estados HTTP 404 y recuperación por teclado sin/con JS se prueban con test:worker aparte, después de la suite. Reflujo incluye /404.html: 31 rutas a dos anchos.
+
+verify-release-evidence.mjs ejecuta tres casos negativos tras generar el checklist: build distinto, cobertura incompleta y fallo axe simulado. Exige rechazo y que la salida válida no se sobrescriba; restaura los informes originales en finally. Evidencia en qa/release-guards-report.json, incluida como artefacto. No modifica contenido ni permisos de publicación.

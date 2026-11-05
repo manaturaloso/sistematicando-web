@@ -100,3 +100,13 @@ Se prepara /legal/terminos/ como borrador de uso de la web, no como contrato Saa
 Privacidad distingue código local y tratamiento del hosting/servicios externos; aclara posible restauración de campos por el navegador y el alcance del correo de privacidad, y añade administración externa Pages CMS/GitHub. Identidad del responsable y textos de contacto ahora editables con marcadores validados {responsible}, {ruc}, {address}; datos reales centralizados en contact.json. No se cambia la fecha original del borrador ni se presenta como adopción legal.
 
 Prueba de navegador local: navegación legal con/sin JS, tabla de contenidos por teclado, canales separados y guía sin peticiones externas, cookies ni almacenamiento persistente. No extrapolar al Worker público, configuración de Cloudflare ni servicios abiertos voluntariamente. Revisión/adopción legal y decisiones de conservación/proveedores siguen pendientes (LEGAL_REVIEW.md). Codex principal, sin subagentes; solo desarrollo, sin publicar.
+
+## 5 de noviembre de 2026 · Cierre técnico y evidencia por página
+
+Layout admite tipo Open Graph website/article: tres guías y tres artículos usan article, sin inventar autores o fechas. La 404 tiene descripción específica y salidas a Inicio/Ayuda con navegación de teclado sin JS. Textos en el editor 404 existente; 42 páginas / 34 editores, sin nuevos tipos CMS.
+
+verify-site exige títulos/descripciones únicos, Open Graph coherente, idioma/viewport, noindex y ausencia de canonicals/og:url durante preparación. Reporta enlaces por ruta e identidad del build. Axe también registra esa identidad. audit:release exige cobertura exacta y coincidencia de ambas evidencias con dist/version.json antes de generar RELEASE_CHECKLIST.md y qa/release-report.json; CI los limpia y publica solo como artefactos de QA, nunca despliegue.
+
+La instantánea puede corresponder a un checkout con cambios locales, indicado explícitamente. Un commit posterior cambia la identidad: no reasignar los informes a otro SHA. El build final se recompila y verifica; CI regenera evidencia para su SHA. No se convierte «cero infracciones» en certificación ni porcentaje de preparación. Se mantienen pendientes producto, comercial, legal, revisión manual, CI remoto, dominio y autorización final.
+
+Agente Codex principal, sin subagentes. Solo feat/feature-catalog, rama Worker 557222e intacta. Siguiente paso: revisión visual sistemática y estados interactivos; conservar noindex y no publicar.

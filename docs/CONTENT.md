@@ -33,3 +33,7 @@ La nueva página /implementacion/ explica evaluación, alcance, preparación y v
 ## Privacidad y términos informativos
 
 Términos de uso del sitio en terms.json; ocho secciones sin cláusulas de contratación inventadas. Copy en pages-legal-terminos. Privacidad añade administración externa, matiza restauración del navegador y distingue correo de privacidad de contacto comercial. Los textos de responsable se editan con marcadores únicos y datos centralizados. No afirmar cookies/analítica ausentes en toda la infraestructura: la evidencia local cubre código del build, no configuración del hosting ni terceros abiertos por el usuario. LEGAL_REVIEW.md registra decisiones pendientes y alcance de revisión.
+
+## Metadatos y cierre técnico
+
+Cada ruta requiere título y descripción propios y coherentes con Open Graph. La 404 dispone de descripción específica y recuperación a Inicio/Ayuda. Tres guías y tres artículos son de tipo OG article, sin autores/fechas inventados. RELEASE_CHECKLIST.md consolida la evidencia por página; pendientes legales/comerciales continúan separados de los checks técnicos. Canonicals, og:url y sitemap públicos siguen pendientes de dominio/autorización.

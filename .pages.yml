@@ -1070,6 +1070,24 @@
               "label": "Título SEO",
               "type": "string",
               "required": true
+            },
+            {
+              "name": "seo_description",
+              "label": "Descripción SEO",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_005",
+              "label": "Consultar ayuda",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_006",
+              "label": "Opciones para continuar",
+              "type": "string",
+              "required": true
             }
           ]
         }
