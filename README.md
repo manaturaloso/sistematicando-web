@@ -27,6 +27,10 @@ Resultado local registrado: 42 rutas/162 destinos internos; marca a seis anchos 
 
 [RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) reúne todas las páginas y los pendientes de lanzamiento. Se genera al terminar test:ci, o con `npm run audit:release` usando informes del mismo build. No es permiso de publicación ni validación del SaaS. La CI conserva el checklist y el JSON como artefactos.
 
+## Revisión visual
+
+`CHROMIUM_PATH=/usr/bin/chromium npm run review:visual -- /tmp/sistematicando-visual` genera una galería local de todas las rutas y estados interactivos. Alcance, hallazgos y límites en [VISUAL_REVIEW.md](docs/VISUAL_REVIEW.md). No publica ni modifica contenido del CMS.
+
 ## Editar contenido
 
 /admin abre Pages CMS externo con autenticación GitHub: 34 editores, medios y guardados reales verificados. Fuente editable content/*.json; src/data son adaptadores. [ADMIN.md](docs/ADMIN.md) describe textos por página, logos, contactos y guía/buscador. Estructura y lógica requieren desarrollo; no es constructor visual arbitrario.

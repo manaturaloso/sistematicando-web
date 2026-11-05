@@ -47,3 +47,9 @@ Revisar /legal/privacidad/ y /legal/terminos/, enlazadas entre sí y en el pie. 
 La 404 usa descripción propia y enlaces Inicio/Ayuda. Se revisó en Worker local y con teclado, con/sin JS; no se desplegó. RELEASE_CHECKLIST.md enumera las 42 páginas y pendientes de lanzamiento.
 
 ![Error 404 en móvil con recuperación a Inicio y Ayuda](qa/error-mobile.png)
+
+## Revisión visual local y pie adaptable
+
+Galería reproducible de las 42 rutas a 390/1440 y once estados: `npm run review:visual -- /tmp/sistematicando-visual`. Primera pantalla, cuerpo completo y pie disponibles fuera del checkout. Resultados y límites en VISUAL_REVIEW.md. La siguiente imagen es captura del sitio, no pantalla ni evidencia de disponibilidad del SaaS.
+
+![Pie adaptable en móvil](qa/footer-mobile-reviewed.png)

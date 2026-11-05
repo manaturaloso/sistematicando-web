@@ -5,7 +5,7 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: 47ce92a en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: b6d1d22 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
@@ -34,7 +34,7 @@ Resultados finales de la entrega de lanzamiento:
 | --- | --- |
 | Check/build/content | Sin errores; 42 páginas HTML más JSON de versión, 34 editores. |
 | Sitio | 42 rutas y 162 destinos internos. |
-| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 31 rutas a 390/1280 px y scripts externos bloqueados. |
+| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 31 rutas a 390/1280 px, home/pie en cinco anchos a 100/200% y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
 | Editorial/contacto | Canales JS/no-JS sin mensajes reales; copia CMS, descarga TXT e invalidación. |
 | Versión | Git limpio/modificado/ausente; JSON/admin coincidentes; Worker no-store/noindex. |
@@ -44,7 +44,7 @@ Resultados finales de la entrega de lanzamiento:
 
 Informes en `docs/qa`. Lighthouse histórico de tres rutas llegó a rendimiento/accesibilidad/buenas prácticas 100 y CLS 0; SEO 66 por noindex. No son métricas de producción ni una auditoría de todas las páginas.
 
-Esta entrega: metadatos revisados por página, tipos article para seis recursos editoriales, 404 con descripción propia y recuperación a Ayuda, y checklist generado con evidencia del mismo build. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 34 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse conserva evidencia histórica y no se repitió en esta entrega. No se publica.
+Esta entrega: revisión visual local de 42 páginas a móvil/escritorio y once estados; pie móvil adaptable, separación de CTA y correcciones de reflujo a 320/900 px con texto al 200%. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 34 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse conserva evidencia histórica y no se repitió en esta entrega. No se publica.
 
 ## Fases y pendientes
 
@@ -55,7 +55,7 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 ## Siguiente paso exacto
 
 1. Revisar Actions del SHA final y RELEASE_CHECKLIST.md, que enumera las 42 páginas, comprobaciones automáticas y siete pendientes externos/manuales.
-2. Completar la revisión visual sistemática de móvil/escritorio y estados interactivos del buscador, guía y menú; registrar hallazgos por ruta contra RELEASE_CHECKLIST.md. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
+2. Medir rendimiento actual de cinco rutas representativas (home, catálogo, demo, módulo y artículo) y optimizar solo ante evidencia. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
 3. Mantener launchDraft/noindex; no publicar, integrar ni pedir despliegue ahora. El propietario confirmará cuando producto y web estén al 100% y autorizará lanzamiento. Rama Worker sigue 557222e.
 4. Antes del lanzamiento: confirmar evidencias operativas, precios/condiciones, legal/privacidad, dominio/indexación y pruebas con dispositivos/lector. Fuente actual de implementación/evidencias internas en FEATURE_STATUS.md.
 5. Continuidad HANDOFF.md y AGENTS.md. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se creó PR, existentes sin verificar por API.
@@ -111,3 +111,13 @@ Pruebas reales: check final 58 archivos sin errores/advertencias/hints; build 42
 La matriz identifica la instantánea de trabajo validada (base 47ce92a, sourceModified true), no se cambia su SHA para hacerla pasar por el commit final. Tras commit se recompila y verifica versión; CI regenerará informes para su build. Esta distinción evita confundir snapshot, commit y despliegue. Estado remoto inicial 47ce92a en desarrollo y Worker 557222e confirmado; comprobar push/ref al entregar. Sin PR creada; pendientes existentes/verde remoto sin verificar por API.
 
 Codex principal, sin subagentes; identidad Joel Alejandro Yañez Caballero. Próximo paso exacto: revisión visual sistemática móvil/escritorio y estados del buscador/guía/menú, registrando hallazgos contra RELEASE_CHECKLIST.md. Mantener noindex/borrador y rama Worker intacta; no publicar.
+
+## 5 de noviembre de 2026 · Revisión visual local
+
+Se capturaron 42 rutas × 390/1440 (84 combinaciones), primeras pantallas/páginas completas/pies y once estados de menú/buscador/guía; hojas de primeras pantallas revisadas, cuerpos representativos y estados revisados. Registro humano y límites en VISUAL_REVIEW.md; geometría y referencias temporales en qa/visual-report.json. La galería completa se reproduce con review:visual y permanece bajo /tmp; no se guarda toda en Git ni se sirve en el Worker.
+
+Corregido: pie móvil adaptable (857 → 573 px de alto a 390/100%, doce enlaces ≥44 px), separación de acciones de implementación, desbordamiento FAQ 320/200% (346 px antes) y adorno home 900/200% (908 px antes). Sin recortar contenido ni alterar logos. La nueva prueba de cinco anchos × 100/200% detectó estos dos fallos y pasó tras corregirlos. Capturas de componentes con altura suficiente evitan el sticky header sobre campos al tomar imágenes; no se cambia el comportamiento del producto para capturar.
+
+Pruebas finales: check 59 archivos sin errores/advertencias/hints, build 42 páginas / 34 editores; suite completa aprobada (42 rutas/162 destinos, reflujo 31 rutas más cinco anchos de home/pie, marca/editorial/módulos/recursos/legal/versión, axe 88 sin infracciones, checklist y tres casos negativos de evidencia). Worker local 53 comprobaciones aprobado y detenido; ZIP de 42 páginas validado. Lighthouse anterior sin repetir. No se afirma prueba con dispositivos físicos, lector ni todos los motores, ni aprobación exhaustiva de cada texto.
+
+Base remota b6d1d22 y Worker 557222e comprobados antes de editar; consultar git log -1 y verificar push/ref al entregar. Informes corresponden a la instantánea de trabajo; no se reasignan al SHA posterior al commit. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. Sin PR creada; pendientes existentes y CI remoto sin verificar por API. Sin nueva publicación ni DNS. Siguiente paso exacto: medir rendimiento de home, catálogo, demo, módulo y artículo, optimizar solo con evidencia y conservar bloqueo de lanzamiento.

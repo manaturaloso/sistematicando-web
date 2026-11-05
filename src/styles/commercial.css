@@ -70,3 +70,5 @@
 .privacy-page .commercial-links>a {display:inline-flex;align-items:center;min-height:44px;}
 
 .legal-toc ol {list-style:none;padding-left:0;}
+
+.solution-hero>.commercial-links {margin-top:1.5rem;}

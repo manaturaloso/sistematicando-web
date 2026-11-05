@@ -110,3 +110,13 @@ verify-site exige títulos/descripciones únicos, Open Graph coherente, idioma/v
 La instantánea puede corresponder a un checkout con cambios locales, indicado explícitamente. Un commit posterior cambia la identidad: no reasignar los informes a otro SHA. El build final se recompila y verifica; CI regenera evidencia para su SHA. No se convierte «cero infracciones» en certificación ni porcentaje de preparación. Se mantienen pendientes producto, comercial, legal, revisión manual, CI remoto, dominio y autorización final.
 
 Agente Codex principal, sin subagentes. Solo feat/feature-catalog, rama Worker 557222e intacta. Siguiente paso: revisión visual sistemática y estados interactivos; conservar noindex y no publicar.
+
+## 5 de noviembre de 2026 · Revisión visual y reflujo ampliado
+
+Pie a ≤899 px usa grid adaptable con mínimo relativo al tamaño del texto: dos columnas cuando caben y una cuando el espacio o la ampliación lo requieren. Doce enlaces conservados, altura táctil mínima 44 px y sin cambios en contenido/logo. A 390 px/100% el pie pasa de 857 a 573 px. La CTA de implementación se separa del aviso introductorio.
+
+Nuevas comprobaciones a 320/390/768/900/1440 y texto 100/200% detectaron dos defectos preexistentes: FAQ de home a 320/200% (scrollWidth 346) y adorno visual-orbit a 900/200% (908). FAQ permite mínimos de grid a cero y corte de palabras; el adorno deja de rotar a ≤1100 px. Sin ocultar desbordamiento, reducir texto o alterar logos.
+
+review:visual captura 42 páginas × 390/1440, página completa, primera pantalla, pie y once estados de menú/buscador/guía. Salida bajo /tmp, sin publicar ni añadir toda la galería al repositorio. Scroll al inicio y animaciones estabilizados; capturas de componentes con altura suficiente para que el sticky header no tape campos. El script comprueba geometría, no asigna aprobación humana ni aprobación de lanzamiento. Revisión y límites en VISUAL_REVIEW.md.
+
+La evidencia del repositorio sigue identificando la instantánea de build, no un commit posterior ni el Worker. Codex principal, sin subagentes. Próximo paso: rendimiento de cinco rutas representativas y optimizaciones justificadas; dispositivos físicos/lector, producto/comercial/legal y autorización final permanecen pendientes.

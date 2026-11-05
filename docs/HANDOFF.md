@@ -49,7 +49,7 @@ Fuentes: contenido en content/*.json; esquema CMS con `npm run cms:config` solo 
 
 ## Próxima acción concreta
 
-Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar revisión visual sistemática móvil/escritorio y estados interactivos; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
+Continuar la web objetivo completa, con producto parcial ya confirmado. Revisar copy de las 14 fichas de módulos y continuar rendimiento de cinco rutas representativas y optimizaciones justificadas; revisión visual local registrada en VISUAL_REVIEW.md; usar RELEASE_CHECKLIST.md y LEGAL_REVIEW.md; el recorrido precios/implementación/demo y Empresa/Ayuda/Blog están terminados en desarrollo. No bloquear frontend esperando verificación del SaaS ni pedir de nuevo el estado global. Las evidencias reales siguen en FEATURE_STATUS.md.
 
 Mantener launchDraft/noindex y no publicar nuevas versiones hasta confirmación explícita de producto/web completos y autorización final. Rama Worker sigue en 557222e; el último JSON público aportado por el propietario correspondía a af35674. No modificar el Worker durante esta preparación.
 
@@ -80,3 +80,11 @@ Siguiente acción exacta: consolidar checklist de lanzamiento por página/recorr
 El cierre automatizado ya está implementado: `npm run test:ci` termina generando RELEASE_CHECKLIST.md y qa/release-report.json. `npm run audit:release` solo funciona con sitio/axe del mismo dist/version.json y cobertura completa. No ejecutar build/Worker mientras corre la suite; no volver a generar el checklist con evidencia antigua tras cambiar HEAD. El checklist conserva la identidad de la instantánea validada, sin fingir que es el SHA final posterior al commit.
 
 Metadatos únicos/coherentes por ruta; seis guías/artículos con OG article. 404 con descripción propia y salidas Inicio/Ayuda, probada sin/con JS en Worker. 42 páginas / 34 editores. Los siete pendientes externos/manuales siguen abiertos. Próximo trabajo exacto: revisión visual de las páginas restantes a móvil/escritorio y estados buscador/guía/menú, registrar hallazgos por ruta; no rehacer el inventario ni pedir otra vez estado global del producto parcial.
+
+## Revisión visual local completada
+
+VISUAL_REVIEW.md y qa/visual-report.json registran el alcance: 84 capturas por ruta/ancho, once estados, revisión de primeras pantallas y cuerpos representativos; no lectura exhaustiva/aprobación de cada texto ni pruebas en dispositivos físicos. Pie responsive compacto, separación CTA de implementación y reflujo corregido para FAQ 320/200% y adorno home 900/200%. Navegación añade cinco anchos × dos tamaños de texto para geometría del pie/home.
+
+Reproducir: CHROMIUM_PATH=/usr/bin/chromium npm run review:visual -- /tmp/sistematicando-visual. Galería index.html y report.json fuera del checkout. Solo estados: añadir --states-only al final (usar otra carpeta para no reemplazar el informe completo). No ejecutar build/Worker a la vez que captura o test:ci. Se mantienen 42 páginas / 34 editores; sin deploy.
+
+Siguiente paso exacto: extender/ejecutar medición de rendimiento para home, catálogo, demo, una ficha de módulo y un artículo; conservar noindex y no prometer resultados de producción. No repetir el inventario o la revisión visual básica ya registrada.

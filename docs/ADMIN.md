@@ -114,3 +114,5 @@ Textos de responsable: privacidad text_039 y términos text_007 requieren exacta
 ## Metadatos y página no encontrada
 
 Página: 404 incluye descripción SEO propia, etiqueta del grupo de enlaces y enlace de Ayuda. Los metadatos generales se editan por página; guías/artículos toman título/introducción del editor estructurado y se identifican técnicamente como OG article. No introducir títulos/descripciones vacíos o duplicados: test:site los detecta tras compilar. El checklist técnico es generado, no un documento editorial del CMS ni permiso de publicar.
+
+El pie conserva los mismos enlaces CMS y los organiza en columnas según ancho/tamaño de texto; no hace falta recrear el menú. La revisión visual local no altera logos ni marca disponibilidad operativa de módulos.

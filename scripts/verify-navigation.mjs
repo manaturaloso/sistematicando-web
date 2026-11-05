@@ -31,6 +31,13 @@ try{
   await page.setViewportSize({width,height:1000});await page.goto(server.url+route);await page.evaluate(()=>document.documentElement.style.fontSize='200%');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Text resize overflow: ${route} @${width}`);
  }
+ for(const width of [320,390,768,900,1440])for(const size of ['100%','200%']){
+  await page.setViewportSize({width,height:1000});await page.goto(server.url+'/');await page.evaluate(size=>document.documentElement.style.fontSize=size,size);
+  const footer=await page.locator('.footer-top nav a').evaluateAll(els=>els.map(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height}}));
+  assert(footer.every(rect=>rect.height>=44),`Footer targets: ${width} ${size}`);
+  assert(!footer.some((a,i)=>footer.slice(i+1).some(b=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y)),`Footer overlap: ${width} ${size}`);
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Home and footer reflow: ${width} ${size}`);
+ }
  // A slow or failed application bundle must not change the header's mobile state.
  const isolated=await browser.newContext({viewport:{width:390,height:1000}});
  await isolated.route('**/*',route=>route.request().resourceType()==='script'?route.abort():route.continue());
