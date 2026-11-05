@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-05",
+  "timezone": "America/Lima",
+  "repository": "manaturaloso/sistematicando-web",
+  "queriedCommit": "d52bcccfe7c00c13c8844e12d1391f375b341660",
+  "operation": "gh run list (read-only)",
+  "outcome": "unverified",
+  "error": "Forbidden",
+  "conclusion": null,
+  "runs": null,
+  "firefoxWebkitResult": "unverified",
+  "actionsUrl": "https://github.com/manaturaloso/sistematicando-web/actions",
+  "scope": "Failed query is not evidence of no runs, no PRs, success or failure. Local Chromium results remain separate."
+}

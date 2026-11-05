@@ -2,6 +2,10 @@
 
 Usa el repositorio GitHub manaturaloso/sistematicando-web. Fecha de esta guía: 5 de noviembre de 2026; las referencias remotas deben comprobarse otra vez al retomar.
 
+## Prioridad actual
+
+El paquete de revisión ya está preparado: empezar por REVIEW_PACKAGE.md y LAUNCH_DECISIONS.md. Los siguientes pasos incluidos en registros de entregas anteriores pueden estar superados; el resumen activo está en PROGRESS.md. No recrear páginas o pruebas completadas por no disponer del chat.
+
 ## Inicio seguro
 
 1. Abrir el checkout existente. Leer AGENTS.md, [PROGRESS.md](PROGRESS.md) y [DECISIONS.md](DECISIONS.md). Consultar los archivos *_HISTORY solo si hace falta contexto anterior.
@@ -100,3 +104,9 @@ Siguiente paso exacto: probar menú/buscador/guía con movimiento reducido y pre
 COMPATIBILITY.md y qa/compatibility-report.json: Chromium 155 cinco escenarios aprobados (390/1440 con movimiento normal/reducido + no-JS). Firefox/WebKit no instalados/no ejecutados en este entorno; la política no incluye sus descargas, no se cambia para sortearla. Nunca convertir unavailable en aprobación. Prueba local estricta rechazó motores obligatorios ausentes (guard JSON); CI instala/exige los tres, resultado remoto pendiente de observar.
 
 `CHROMIUM_PATH=/usr/bin/chromium npm run test:compatibility`; para requerir todos usar COMPAT_REQUIRED_ENGINES=chromium,firefox,webkit con binarios/dependencias realmente disponibles. Incluido en test:ci. No frontend/CMS nuevo; 42 páginas / 34 editores. Siguiente paso exacto: paquete final de revisión de recorridos y decisiones comerciales/legales; incorporar evidencia real de Actions cuando sea accesible, sin bloquear el trabajo independiente ni pedir publicación. No repetir movimiento reducido básico ya cubierto.
+
+## Paquete de revisión listo
+
+REVIEW_PACKAGE.md describe 42 páginas/34 editores terminados como borrador y un recorrido concreto; LAUNCH_DECISIONS.md conserva datos confirmados y asuntos abiertos. `python scripts/package-review.py /tmp/sistematicando-review.zip` genera web anidada e informes separados con manifiesto de hashes/versiones. Para otra cuenta: clonar rama, leer documentos, build y regenerar; el ZIP temporal no tiene que viajar con el historial del chat. No desplegar el ZIP externo ni interpretar su generación como aprobación.
+
+CI d52bccc consultada: Forbidden (qa/remote-ci-status.json); no hay conclusión observada ni verificación nueva de PR existentes. Chromium local pasó; Firefox/WebKit siguen pendientes de resultado real. Siguiente paso exacto: revisar recorridos y registrar observaciones/decisiones de oferta/alcance en LAUNCH_DECISIONS.md; incorporar la ejecución real de Actions cuando sea accesible. No pedir de nuevo datos ya confirmados ni solicitar publicar para seguir revisando.

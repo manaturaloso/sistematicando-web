@@ -120,3 +120,9 @@ Pie móvil compacto conserva enlaces/áreas táctiles. Pruebas nuevas detectaron
 Check/build: 60 archivos limpios, 42 páginas / 34 editores. test:ci completo aprobado localmente: 42 rutas/162 destinos, navegación/reflujo, marca/editorial/módulos/recursos/legal/versión, nueva matriz y axe 88 comprobaciones sin infracciones, checklist y pruebas de evidencia. Chromium 155.0.8059.79: cinco escenarios aprobados (390/1440 × movimiento normal/reducido + móvil no-JS). Tabla/casos en COMPATIBILITY.md; JSON asociado al build.
 
 Firefox/WebKit no instalados ni ejecutados; no se simula un resultado. Modo estricto local rechazó su ausencia con exit 1 esperado, tras pasar Chromium. CI se configura para instalar/exigir los tres; esto no acredita su ejecución remota. Limpieza temprana ampliada para evitar informes heredados en fallos de setup. No se cambió frontend/CMS/dependencias; sin repetición Lighthouse/Worker ni publicación. Pendientes lectores/dispositivos y resultado real de los motores adicionales.
+
+## 5 de noviembre de 2026 · Paquete de revisión
+
+Sin cambios frontend/dependencias. Build/content de 42 páginas, compilación Python y enlaces de los documentos nuevos aprobados. package-review valida ZIP interno/anidado, CRC, hashes y nombres únicos; la versión del sitio coincide con dist/version.json y su ZIP excluye docs/review/src/.git. Los documentos internos quedan fuera del sitio; el manifiesto no reasigna informes históricos al SHA empaquetado. Se regenera tras el commit/build final.
+
+CI d52bccc: consulta read-only Forbidden; no hay conclusión observada, resultado real de Firefox/WebKit pendiente. No se repiten suites previas por un empaquetador aislado; sus resultados siguen ligados a sus instantáneas. REVIEW_PACKAGE.md y LAUNCH_DECISIONS.md ordenan revisión y pendientes. No hay nueva publicación.

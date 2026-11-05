@@ -53,3 +53,7 @@ La 404 usa descripción propia y enlaces Inicio/Ayuda. Se revisó en Worker loca
 Galería reproducible de las 42 rutas a 390/1440 y once estados: `npm run review:visual -- /tmp/sistematicando-visual`. Primera pantalla, cuerpo completo y pie disponibles fuera del checkout. Resultados y límites en VISUAL_REVIEW.md. La siguiente imagen es captura del sitio, no pantalla ni evidencia de disponibilidad del SaaS.
 
 ![Pie adaptable en móvil](qa/footer-mobile-reviewed.png)
+
+## Paquete de revisión para el propietario
+
+REVIEW_PACKAGE.md reúne el recorrido y LAUNCH_DECISIONS.md los asuntos abiertos. Generar `python scripts/package-review.py /tmp/sistematicando-review.zip` tras build: web en site-preview.zip, documentos internos fuera de esa web y manifiesto de hashes/identidades. LEEME.md explica preview local sin publicar. La rama Worker sigue sin actualizarse; no usarla como evidencia de estas 42 páginas.

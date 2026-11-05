@@ -8,6 +8,10 @@ Leer [AGENTS.md](AGENTS.md), [HANDOFF.md](docs/HANDOFF.md), [PROGRESS.md](docs/P
 
 Rama de desarrollo/CMS: feat/feature-catalog. Rama seguida por Cloudflare: feat/brand-foundation, último envío anterior 557222e. Última identidad pública aportada por el propietario: af35674; no se ha confirmado el envío posterior desde el entorno. **La web de lanzamiento de 42 páginas no se publica ahora.** Preparación y capturas en [LAUNCH_PREVIEW.md](docs/LAUNCH_PREVIEW.md).
 
+## Revisión del propietario
+
+Empezar por [REVIEW_PACKAGE.md](docs/REVIEW_PACKAGE.md) y registrar observaciones en [LAUNCH_DECISIONS.md](docs/LAUNCH_DECISIONS.md). El paquete interno se genera con `python scripts/package-review.py /tmp/sistematicando-review.zip`; incluye la web y documentos separados, con manifiesto de integridad. Se puede regenerar desde otra cuenta; no publica.
+
 ## Desarrollo y pruebas
 
 Node 24.22.1, fijado en .nvmrc; dependencias desde lockfile:

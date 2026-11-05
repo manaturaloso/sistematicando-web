@@ -5,7 +5,7 @@ Estado consolidado: 5 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: dc85c36 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: d52bccc en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
@@ -28,7 +28,7 @@ Astro 7.4.5, TypeScript 6.0.3, Node 24.22.1 y Wrangler 4.157.0 fijados. Sitio es
 
 ## Pruebas y evidencia
 
-Suite local integrada de esta entrega, con compatibilidad Chromium/movimiento reducido añadida. Firefox/WebKit no ejecutados localmente; CI estricta preparada, pendiente de observar:
+Última suite local integrada (entrega de compatibilidad anterior; no repetida para el empaquetador interno). Firefox/WebKit no ejecutados localmente; CI estricta preparada, pendiente de observar:
 
 | Comprobación | Resultado observado |
 | --- | --- |
@@ -45,7 +45,7 @@ Suite local integrada de esta entrega, con compatibilidad Chromium/movimiento re
 
 Informes en `docs/qa`. Medición actual de cinco rutas en PERFORMANCE.md: cuatro con rendimiento 100; módulo 86 inicial y 100/100 en dos repeticiones sin cambios frontend. Accesibilidad/buenas prácticas 100 y SEO 66 por noindex. No son métricas de producción ni auditoría de todas las páginas.
 
-Esta entrega: prueba de compatibilidad de tres motores, cinco escenarios por motor y movimiento reducido; Chromium aprobado, Firefox/WebKit pendientes por binarios ausentes. CI instala/exige los tres y rechaza ausencias; sin cambios del frontend. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 34 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse actual actualizado a cinco rutas y dos repeticiones focales; ver PERFORMANCE.md. No se publica.
+Esta entrega: paquete interno reproducible de revisión, web e informes separados, manifiesto de integridad, recorrido para el propietario y decisiones pendientes. Consulta de CI d52bccc respondió Forbidden; no se infiere conclusión. No cambia frontend. Se conservan Nosotros, Ayuda y Blog con tres artículos. Se conservan las 14 páginas de módulos y el copy de lanzamiento en home/sectores/FAQ/precios. Vista previa global (launchDraft true), 34 editores y matriz real intacta. Check/build, sitio/navegación/marca/editorial/módulos/versión, nuevos recorridos editoriales, auditoría axe aislada, Worker local y paquete verificados. Lighthouse actual actualizado a cinco rutas y dos repeticiones focales; ver PERFORMANCE.md. No se publica.
 
 ## Fases y pendientes
 
@@ -55,8 +55,8 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 
 ## Siguiente paso exacto
 
-1. Revisar Actions del SHA final y RELEASE_CHECKLIST.md, que enumera las 42 páginas, comprobaciones automáticas y siete pendientes externos/manuales.
-2. Preparar el paquete final de revisión con recorridos terminados y decisiones comerciales/legales pendientes. Verificar Actions y su artefacto del SHA final para Firefox/WebKit cuando exista acceso; no darlos por aprobados por la configuración de CI. COMPATIBILITY.md registra lo ejecutado y lo pendiente. La medición de cinco rutas y repetición de la anomalía ya están documentadas en PERFORMANCE.md. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
+1. Abrir REVIEW_PACKAGE.md y seguir el recorrido sobre el preview local/ZIP de desarrollo; no usar el Worker anterior como si mostrara esta entrega. RELEASE_CHECKLIST.md conserva las 42 rutas y pendientes.
+2. Registrar observaciones y decisiones concretas en LAUNCH_DECISIONS.md, empezando por presentación comercial/alcance; el paquete ya está preparado. Incorporar Actions y compatibility-report reales del SHA revisado cuando exista acceso, sin inferir resultados por la configuración. COMPATIBILITY.md registra lo ejecutado y lo pendiente. La medición de cinco rutas y repetición de la anomalía ya están documentadas en PERFORMANCE.md. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. No inventar tarifas, certificaciones ni condiciones.
 3. Mantener launchDraft/noindex; no publicar, integrar ni pedir despliegue ahora. El propietario confirmará cuando producto y web estén al 100% y autorizará lanzamiento. Rama Worker sigue 557222e.
 4. Antes del lanzamiento: confirmar evidencias operativas, precios/condiciones, legal/privacidad, dominio/indexación y pruebas con dispositivos/lector. Fuente actual de implementación/evidencias internas en FEATURE_STATUS.md.
 5. Continuidad HANDOFF.md y AGENTS.md. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se creó PR, existentes sin verificar por API.
@@ -142,3 +142,15 @@ CI instala/exige los tres motores y conserva compatibility-report.json; se ampl�
 Check 60 archivos sin errores/advertencias/hints; build 42 páginas / 34 editores; suite local completa aprobada (42 rutas/162 destinos, navegación/reflujo, marca/editorial/módulos/recursos/legal/versión, compatibilidad Chromium y axe 88 sin infracciones, checklist y controles negativos). Sin cambios frontend/CMS/dependencias; no se repiten Lighthouse ni Worker (anteriores identificados, no pruebas nuevas). Dispositivos físicos, lector y motores ausentes siguen pendientes.
 
 Base remota dc85c36 y rama Worker 557222e verificadas al iniciar. Consultar git log -1 y comprobar push/ref al entregar. Autor Joel Alejandro Yañez Caballero; Codex principal sin subagentes. Sin PR creada; pendientes existentes y CI remoto sin verificar por API. Sin publicación/DNS ni retiro de noindex. Próximo paso exacto: paquete final de revisión de recorridos y decisiones comerciales/legales; incorporar evidencia real de CI cuando sea accesible, manteniendo trabajo independiente y congelación de lanzamiento.
+
+## 5 de noviembre de 2026 · Paquete final para revisión
+
+REVIEW_PACKAGE.md reúne alcance implementado (42 páginas / 34 editores), recorrido y preview; LAUNCH_DECISIONS.md distingue datos ya confirmados de siete decisiones pendientes, sin pedirlos otra vez ni inventar aprobaciones. Pregunta opcional enviada sobre mantener propuesta personalizada o incorporar planes oficiales; no se asume respuesta por silencio y no autoriza publicación.
+
+package-review.py genera un ZIP interno con site-preview.zip y review/ separados. Incluye LEEME, manifiesto de hashes, identidad real del sitio e identidad propia de cada evidencia. CRC, hashes, nombres únicos, versión y ausencia de documentos internos en el ZIP del sitio comprobados; la web anidada conserva noindex/robots. Archivo temporal regenerable desde Git, sin incluir credenciales/entorno ni desplegar.
+
+Pruebas de esta entrega: build estático de 42 páginas y validador de contenido; compilación Python; enlaces locales de los documentos nuevos; generación y comprobaciones del paquete (61 archivos de revisión en la primera generación, cifra descubierta, no lista fija). No se repiten navegador/axe/Lighthouse/Worker por cambiar solo docs/empaquetador; la evidencia previa conserva su identidad y sus límites.
+
+CI d52bccc consultada en modo lectura por gh run list: Forbidden; ejecución/conclusión/Firefox/WebKit desconocidos, no inferir ausencia ni verde. Registro en qa/remote-ci-status.json. No hay PR nueva; existentes sin verificar por API. Base remota d52bccc y rama Worker 557222e confirmadas; consultar git log -1 para SHA final y verificar push/ref al entregar.
+
+Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se publica ni se cambia DNS/indexación. Próximo paso exacto: revisar recorridos y registrar decisiones/observaciones de oferta/alcance en LAUNCH_DECISIONS.md, incorporar la ejecución real de CI cuando sea accesible y resolver pendientes manuales/legales antes de una autorización de lanzamiento concreta.
