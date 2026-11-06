@@ -5,14 +5,14 @@ Estado consolidado: 6 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: ce6ad9f en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: a932ccf en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
 ## Entrega actual: inspector remoto preparado y probado con API simulada
 
-Transporte/preview del inspector conectados al backend preparado. Revisión explícita, borradores recuperables, versión coherente y bundle alojado separado implementados. No desplegado: faltan App/URL/secretos y prueba real autorizada. Leer HOSTED_INSPECTOR.md y cierre de esta entrega. Editor local/Pages CMS y web normal conservados; 43 páginas / 34 editores, sin publicación.
+Transporte/preview del inspector conectados al backend preparado. Revisión explícita, borradores recuperables, versión coherente y bundle alojado separado implementados. App creada/instalada y permisos corregidos según el propietario; Client ID/origen previsto registrados. Sin despliegue; faltan secretos/configuración Cloudflare y prueba real autorizada. Leer HOSTED_INSPECTOR.md y cierre de esta entrega. Editor local/Pages CMS y web normal conservados; 43 páginas / 34 editores, sin publicación.
 
 ## Propuesta de precios implementada
 
@@ -66,7 +66,7 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 ## Siguiente paso exacto
 
 1. Leer HOSTED_INSPECTOR.md: transporte, backend, borradores y bundle aislado ya implementados. No rehacerlos ni confundir los fixtures con un servicio desplegado.
-2. Completar origen HTTPS y registro/instalación de GitHub App para el repositorio; configurar secretos fuera del chat según HOSTED_VISUAL_AUTH.md. Mantener VISUAL_WRITES_ENABLED=false.
+2. App/Client ID/origen previsto registrados y permisos corregidos según el propietario. Generar Client secret en GitHub y configurar secretos fuera del chat según HOSTED_VISUAL_AUTH.md; confirmar configuración real en Cloudflare. Mantener VISUAL_WRITES_ENABLED=false.
 3. Revisar y autorizar por separado una prueba alojada protegida. Comprobar OAuth, permisos revocados, CSRF, conflictos y reconstrucción del preview desde el SHA nuevo antes de habilitar guardados. No ejecutar despliegue por un «sigamos».
 4. Incorporar resultados reales de CI del SHA revisado cuando haya acceso; pendientes Firefox/WebKit, dispositivos/lector y decisiones comerciales/legales. No pedir de nuevo diseño de planes ni verificar globalmente el producto parcial para continuar frontend.
 5. Mantener launchDraft/noindex y rama Worker 557222e; producción requiere confirmación de preparación al 100% y autorización explícita. Registrar decisiones concretas en LAUNCH_DECISIONS.md.
@@ -254,3 +254,13 @@ Build protegido aislado con npm run editor:build → .editor-dist y ASSETS del s
 Siguen vacíos origen/client ID, sin secretos ni despliegue, flag de escritura false. Siguiente paso exacto: configurar GitHub App/URL/secretos fuera del chat y revisar/autorización de prueba alojada por separado; probar permisos reales y rebuild del preview desde el commit nuevo antes de habilitar guardado. 43 páginas/34 editores, precios y evidencia SaaS intactos. Sin publicación/DNS/cambio de rama Worker. Agente Codex principal, sin subagentes; sin PR nueva, existentes/CI remoto sin verificar.
 
 Cierre verificado: check 80 archivos sin errores/avisos/hints; build público 43 páginas; test:ci 43 rutas/178 destinos, reflujo 200% en 32 rutas y 90 comprobaciones axe sin infracciones detectadas. Transporte unitario y ocho escenarios de navegador alojado aprobados, incluidas recuperación y logout; tres suites de ocho grupos de servidor aprobadas. Editor local real repetido sobre código final, fuentes restauradas exactamente y daemon detenido. Dry-run del servicio con ASSETS aprobado; sin desplegar. Firefox/WebKit no ejecutados localmente; CI remoto no confirmado. Informes identifican sus builds de base ce6ad9f con fuentes modificadas y no se reasignan al commit posterior.
+
+## 6/11/2026 · Registro de GitHub App confirmado por el propietario
+
+El propietario proporcionó el Client ID público de Sistematicando Editor y confirmó la corrección de permisos/instalación después de la captura inicial sin acceso. Esa confirmación es del propietario, no una consulta verificada de GitHub. Se registran GITHUB_CLIENT_ID y EDITOR_ORIGIN previstos en wrangler.editor-auth.jsonc, única fuente de esos valores públicos. No se crean ni solicitan secretos por chat.
+
+VISUAL_WRITES_ENABLED sigue false; workers_dev y preview_urls siguen false. No se desplegó ni comprobó que la URL exista. Falta generar/configurar Client secret y SESSION_KEY en Cloudflare, confirmar acceso solo al repositorio y autorizar/probar el servicio protegido. Siguiente paso exacto: GitHub App → General → Client secrets → Generate a new client secret; guardar el valor privadamente para Cloudflare, sin enviarlo por chat. No generar clave privada: esta integración usa el flujo OAuth de usuario con Client secret.
+
+Solo Codex principal, sin subagentes. Sin cambio funcional de UI ni fuente comercial; 43 páginas/34 editores. No se repiten navegación/axe/Lighthouse por registrar configuración pública. Sin PR nueva, existentes y CI remoto sin verificar. La prueba de login real sigue pendiente.
+
+Verificación de configuración de App: JSON válido, prueba con variables públicas reales y secretos ausentes devuelve 503 sin peticiones externas; ocho grupos sintéticos de autenticación pasan; Wrangler dry-run con ASSETS y configuración pública aprobado sin despliegue. Evidencia anterior de UI no se repite ni se reasigna.

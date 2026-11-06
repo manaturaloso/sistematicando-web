@@ -6,8 +6,8 @@
   "workers_dev": false,
   "preview_urls": false,
   "vars": {
-    "EDITOR_ORIGIN": "",
-    "GITHUB_CLIENT_ID": "",
+    "EDITOR_ORIGIN": "https://sistematicando-editor-auth.manaturaloso.workers.dev",
+    "GITHUB_CLIENT_ID": "Iv23lidlQvx6STQkUuhf",
     "VISUAL_WRITES_ENABLED": "false"
   },
   "assets": {

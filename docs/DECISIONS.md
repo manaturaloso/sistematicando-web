@@ -2,7 +2,7 @@
 
 ## Actualización vigente del CMS visual · 6/11/2026
 
-Inspector preparado con transporte local/alojado, revisión explícita, borradores recuperables y coherencia SHA del preview. El bundle alojado se genera aislado con editor:build; no hay despliegue ni App/URL/secretos configurados y el flag de escritura permanece false. HOSTED_INSPECTOR.md es el contrato actual. Conservar Pages CMS y no añadir guardado automático ni forzar ramas. Siguiente paso: configuración segura y prueba real autorizada por separado.
+Inspector preparado con transporte local/alojado, revisión explícita, borradores recuperables y coherencia SHA del preview. El bundle alojado se genera aislado con editor:build; App y permisos confirmados por el propietario; Client ID/origen previsto en la configuración; sin despliegue ni secretos configurados y el flag de escritura permanece false. HOSTED_INSPECTOR.md es el contrato actual. Conservar Pages CMS y no añadir guardado automático ni forzar ramas. Siguiente paso: configuración segura y prueba real autorizada por separado.
 
 ## Actualización vigente: planes propuestos (5/11/2026)
 
@@ -224,3 +224,11 @@ Implementado src/lib/remote-editor.ts e integración del inspector: sesión/snap
 Build protegido aislado con npm run editor:build → .editor-dist y ASSETS del servicio separado; no sobrescribe dist. Modo estático normal/local conservados. Callback OAuth vuelve al editor. Ocho escenarios de navegador con API simulada aprobados, prueba de transporte aprobada; no hay login/guardado real en servicio alojado. HOSTED_INSPECTOR.md registra uso, contrato, límites y recuperación. CI incorpora bundle aislado, prueba y dry-run.
 
 Siguen vacíos origen/client ID, sin secretos ni despliegue, flag de escritura false. Siguiente paso exacto: configurar GitHub App/URL/secretos fuera del chat y revisar/autorización de prueba alojada por separado; probar permisos reales y rebuild del preview desde el commit nuevo antes de habilitar guardado. 43 páginas/34 editores, precios y evidencia SaaS intactos. Sin publicación/DNS/cambio de rama Worker. Agente Codex principal, sin subagentes; sin PR nueva, existentes/CI remoto sin verificar.
+
+## 6/11/2026 · Registro de GitHub App confirmado por el propietario
+
+El propietario proporcionó el Client ID público de Sistematicando Editor y confirmó la corrección de permisos/instalación después de la captura inicial sin acceso. Esa confirmación es del propietario, no una consulta verificada de GitHub. Se registran GITHUB_CLIENT_ID y EDITOR_ORIGIN previstos en wrangler.editor-auth.jsonc, única fuente de esos valores públicos. No se crean ni solicitan secretos por chat.
+
+VISUAL_WRITES_ENABLED sigue false; workers_dev y preview_urls siguen false. No se desplegó ni comprobó que la URL exista. Falta generar/configurar Client secret y SESSION_KEY en Cloudflare, confirmar acceso solo al repositorio y autorizar/probar el servicio protegido. Siguiente paso exacto: GitHub App → General → Client secrets → Generate a new client secret; guardar el valor privadamente para Cloudflare, sin enviarlo por chat. No generar clave privada: esta integración usa el flujo OAuth de usuario con Client secret.
+
+Solo Codex principal, sin subagentes. Sin cambio funcional de UI ni fuente comercial; 43 páginas/34 editores. No se repiten navegación/axe/Lighthouse por registrar configuración pública. Sin PR nueva, existentes y CI remoto sin verificar. La prueba de login real sigue pendiente.
