@@ -83,3 +83,5 @@ Editor visual funcional en desarrollo: `npm run dev` y http://127.0.0.1:4321/adm
 Base de autenticación alojada preparada, sin desplegar ni habilitar escritura: [docs/HOSTED_VISUAL_AUTH.md](docs/HOSTED_VISUAL_AUTH.md). GitHub App/origen/secretos y conexión real al editor pendientes.
 
 Backend de guardado GitHub preparado con validación compartida y conflictos, desactivado y aún sin transporte UI alojado: [docs/REMOTE_EDITOR_SAVES.md](docs/REMOTE_EDITOR_SAVES.md).
+
+Inspector remoto preparado con revisión de cambios y borradores recuperables: [docs/HOSTED_INSPECTOR.md](docs/HOSTED_INSPECTOR.md). `npm run editor:build` genera .editor-dist separado; no despliega ni habilita guardado. Configuración/prueba real de GitHub App aún pendientes.

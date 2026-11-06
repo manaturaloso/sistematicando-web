@@ -9,5 +9,16 @@
     "EDITOR_ORIGIN": "",
     "GITHUB_CLIENT_ID": "",
     "VISUAL_WRITES_ENABLED": "false"
+  },
+  "assets": {
+    "directory": "./.editor-dist",
+    "binding": "ASSETS",
+    "html_handling": "force-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": [
+      "/auth/*",
+      "/editor-api/*",
+      "/__visual_editor/*"
+    ]
   }
 }

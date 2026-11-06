@@ -5,14 +5,14 @@ Estado consolidado: 6 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: 38919d1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: ce6ad9f en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
-## Entrega actual: backend de guardado remoto (desactivado)
+## Entrega actual: inspector remoto preparado y probado con API simulada
 
-Autenticación y backend GitHub preparados y probados con respuestas sintéticas; no desplegados. Guardado valida snapshot completo, campos y conflictos antes de un commit no forzado en desarrollo. El flag de escritura sigue false. Falta conectar transporte/vista previa alojada y configurar/probar App/origen/secretos. Leer REMOTE_EDITOR_SAVES.md. Editor local/Pages CMS intactos, 43 páginas / 34 editores, sin publicación.
+Transporte/preview del inspector conectados al backend preparado. Revisión explícita, borradores recuperables, versión coherente y bundle alojado separado implementados. No desplegado: faltan App/URL/secretos y prueba real autorizada. Leer HOSTED_INSPECTOR.md y cierre de esta entrega. Editor local/Pages CMS y web normal conservados; 43 páginas / 34 editores, sin publicación.
 
 ## Propuesta de precios implementada
 
@@ -42,7 +42,7 @@ Suite local de la revisión editorial/recorridos actual. Firefox/WebKit no ejecu
 
 | Comprobación | Resultado observado |
 | --- | --- |
-| Check/build/content | Sin errores; 42 páginas HTML más JSON de versión, 34 editores. |
+| Check/build/content | Sin errores; 43 páginas HTML más JSON de versión, 34 editores. |
 | Sitio | 42 rutas y 166 destinos internos. |
 | Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 32 rutas a 390/1280 px, home/pie en cinco anchos a 100/200% y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
@@ -65,11 +65,11 @@ Pendientes reales: CI de los SHA actuales; revisión manual con dispositivos/lec
 
 ## Siguiente paso exacto
 
-1. Abrir REVIEW_PACKAGE.md y seguir el recorrido sobre el preview local/ZIP de desarrollo; no usar el Worker anterior como si mostrara esta entrega. RELEASE_CHECKLIST.md conserva las 42 rutas y pendientes.
-2. Registrar observaciones y decisiones concretas en LAUNCH_DECISIONS.md, empezando por presentación comercial/alcance; el paquete actualizado ya incorpora las correcciones independientes de EDITORIAL_REVIEW.md. Incorporar Actions y compatibility-report reales del SHA revisado cuando exista acceso, sin inferir resultados por la configuración. COMPATIBILITY.md registra lo ejecutado y lo pendiente. La medición de cinco rutas y repetición de la anomalía ya están documentadas en PERFORMANCE.md. La revisión visual local está registrada en VISUAL_REVIEW.md; no confundirla con dispositivos físicos o lector de pantalla. El cierre automatizado de metadatos/enlaces/errores ya está implementado. Usar LEGAL_REVIEW.md para decisiones legales pendientes; no rehacer los términos ya preparados ni confundirlos con un contrato SaaS aprobado. El recorrido comercial, Empresa, Ayuda y Blog ya están implementados. Preparar la web objetivo completa; no bloquear frontend pidiendo otra vez verificar el producto parcial ya confirmado. Los precios propuestos autorizados están en PRICING_STRATEGY.md; validar viabilidad y condiciones finales, sin inventar certificaciones.
-3. Mantener launchDraft/noindex; no publicar, integrar ni pedir despliegue ahora. El propietario confirmará cuando producto y web estén al 100% y autorizará lanzamiento. Rama Worker sigue 557222e.
-4. Antes del lanzamiento: confirmar evidencias operativas, precios/condiciones, legal/privacidad, dominio/indexación y pruebas con dispositivos/lector. Fuente actual de implementación/evidencias internas en FEATURE_STATUS.md.
-5. Continuidad HANDOFF.md y AGENTS.md. Autor Joel Alejandro Yañez Caballero; Codex principal, sin subagentes. No se creó PR, existentes sin verificar por API.
+1. Leer HOSTED_INSPECTOR.md: transporte, backend, borradores y bundle aislado ya implementados. No rehacerlos ni confundir los fixtures con un servicio desplegado.
+2. Completar origen HTTPS y registro/instalación de GitHub App para el repositorio; configurar secretos fuera del chat según HOSTED_VISUAL_AUTH.md. Mantener VISUAL_WRITES_ENABLED=false.
+3. Revisar y autorizar por separado una prueba alojada protegida. Comprobar OAuth, permisos revocados, CSRF, conflictos y reconstrucción del preview desde el SHA nuevo antes de habilitar guardados. No ejecutar despliegue por un «sigamos».
+4. Incorporar resultados reales de CI del SHA revisado cuando haya acceso; pendientes Firefox/WebKit, dispositivos/lector y decisiones comerciales/legales. No pedir de nuevo diseño de planes ni verificar globalmente el producto parcial para continuar frontend.
+5. Mantener launchDraft/noindex y rama Worker 557222e; producción requiere confirmación de preparación al 100% y autorización explícita. Registrar decisiones concretas en LAUNCH_DECISIONS.md.
 
 Agente usado: Codex principal, sin subagentes. Identidad obligatoria: Joel Alejandro Yañez Caballero, joel.yc23@gmail.com. No reescribir commits publicados ni desplegar/cambiar DNS sin autorización. Las autorizaciones previas son entregas concretas.
 
@@ -244,3 +244,13 @@ Validación centralizada sin dependencias Node en src/lib/content-validation.mjs
 No desplegado ni conectado aún a la UI alojada. 43 páginas/34 editores, sin cambios de contenido/identidad/precios. Siguiente paso exacto: adaptar transporte del inspector y su vista previa al snapshot remoto; completar URL/GitHub App/secretos fuera del chat y probar autenticación/guardado reales en entorno protegido autorizado. Mantener flag cerrado hasta integración y revisión. No publicar, DNS o rama Worker. Agente principal sin subagentes; sin PR nueva; CI remoto/PR existentes no verificados.
 
 Cierre: check 75 archivos, cero errores/avisos/hints; content:check 14 módulos/3 guías/34 editores; tres suites de ocho grupos aprobadas (24 grupos de comprobaciones). Wrangler dry-run del servicio separado aprobado, 32.03 KiB sin subir/desplegar, flag false. Sin cambios frontend, no se repiten navegación/axe/Lighthouse; evidencia estática anterior conserva su identidad. Recompilar y verificar versión después del commit; paquete regenerable.
+
+## 6/11/2026 · Inspector conectado al contrato remoto
+
+Implementado src/lib/remote-editor.ts e integración del inspector: sesión/snapshot con cookies same-origin, borradores en memoria, revisión anterior/nuevo, envío explícito con CSRF/baseHead/oldValue, conservación ante 409/401/403, descarga y recuperación de borrador validada, logout y bloqueo tras commit hasta reconstruir preview. Metadatos del iframe exigen mismo SHA limpio; no se mezclan builds. Portada/logos tienen punteros explícitos; otros campos ambiguos se bloquean en remoto. Selector de las 41 páginas de contenido.
+
+Build protegido aislado con npm run editor:build → .editor-dist y ASSETS del servicio separado; no sobrescribe dist. Modo estático normal/local conservados. Callback OAuth vuelve al editor. Ocho escenarios de navegador con API simulada aprobados, prueba de transporte aprobada; no hay login/guardado real en servicio alojado. HOSTED_INSPECTOR.md registra uso, contrato, límites y recuperación. CI incorpora bundle aislado, prueba y dry-run.
+
+Siguen vacíos origen/client ID, sin secretos ni despliegue, flag de escritura false. Siguiente paso exacto: configurar GitHub App/URL/secretos fuera del chat y revisar/autorización de prueba alojada por separado; probar permisos reales y rebuild del preview desde el commit nuevo antes de habilitar guardado. 43 páginas/34 editores, precios y evidencia SaaS intactos. Sin publicación/DNS/cambio de rama Worker. Agente Codex principal, sin subagentes; sin PR nueva, existentes/CI remoto sin verificar.
+
+Cierre verificado: check 80 archivos sin errores/avisos/hints; build público 43 páginas; test:ci 43 rutas/178 destinos, reflujo 200% en 32 rutas y 90 comprobaciones axe sin infracciones detectadas. Transporte unitario y ocho escenarios de navegador alojado aprobados, incluidas recuperación y logout; tres suites de ocho grupos de servidor aprobadas. Editor local real repetido sobre código final, fuentes restauradas exactamente y daemon detenido. Dry-run del servicio con ASSETS aprobado; sin desplegar. Firefox/WebKit no ejecutados localmente; CI remoto no confirmado. Informes identifican sus builds de base ce6ad9f con fuentes modificadas y no se reasignan al commit posterior.

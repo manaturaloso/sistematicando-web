@@ -1,0 +1,59 @@
+{
+  "scope": "Hosted-mode isolated build, synthetic auth/GitHub API, clean-preview metadata fixture; no real login, deployment or repository writes",
+  "buildVersion": {
+    "schemaVersion": 1,
+    "commit": "ce6ad9f06927ae00c1f6ff5b22bf88d49877a769",
+    "commitDate": "2026-11-06T17:56:26Z",
+    "sourceModified": true
+  },
+  "results": [
+    {
+      "scenario": "success",
+      "commits": 1,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "conflict",
+      "commits": 1,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "expired",
+      "commits": 1,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "read-only",
+      "commits": 0,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "stale-preview",
+      "commits": 0,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "dirty-preview",
+      "commits": 0,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "not-signed-in",
+      "commits": 0,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    },
+    {
+      "scenario": "logout",
+      "commits": 0,
+      "sourcesChanged": false,
+      "externalServicesContacted": false
+    }
+  ]
+}

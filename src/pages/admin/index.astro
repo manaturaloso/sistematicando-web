@@ -9,6 +9,7 @@ import pageContent from '../../../content/pages.json';
 import site from '../../../content/site.json';
 import {features} from '../../data/features';
 import '../../styles/admin.css';
+const hosted=import.meta.env.PUBLIC_VISUAL_EDITOR_MODE==='hosted';
 const branch='feat/feature-catalog';
 const base=`https://app.pagescms.org/manaturaloso/sistematicando-web/${encodeURIComponent(branch)}`;
 const edit=(id:string)=>`${base}/file/${id}`;
@@ -35,7 +36,7 @@ const home=pageContent['pages-index'];
         <aside class="admin-workspace" aria-label="Inventario del sitio"><span class="admin-workspace-symbol" aria-hidden="true"><Icon name="grid"/></span><p>Tu web, organizada.</p><dl><div><dt>Editores conectados</dt><dd>{adminEditors.length}</dd></div><div><dt>Módulos del catálogo</dt><dd>{features.length}</dd></div><div><dt>Planes propuestos</dt><dd>{pricing.plans.length}</dd></div></dl><p class="admin-workspace-note">Inventario de esta compilación. No indica actividad en tiempo real.</p></aside>
       </section>
       <aside class="admin-branch-note" aria-label="Rama de edición y guardado"><Icon name="circle"/><div><strong>Trabajas en una rama de desarrollo</strong><p><code>{branch}</code> · Editar abre Pages CMS, un servicio externo con acceso GitHub. Guardar conserva cambios en esa rama; no publica esta versión. Las vistas de este panel corresponden al último build, sin actualización en vivo.</p></div></aside>
-      <section class="admin-branch-note" aria-label="Acceso al editor visual"><div><strong>Edición sobre la página real</strong><p>Selecciona textos y logos, previsualiza cambios y guarda desde el servidor local de desarrollo. El guardado no está habilitado en esta copia estática.</p><a href="/admin/editor/">Abrir editor visual</a></div></section>
+      <section class="admin-branch-note" aria-label="Acceso al editor visual"><div><strong>Edición sobre la página real</strong><p>{hosted?'Selecciona textos y logos sobre una vista del mismo commit. Inicia sesión y revisa los cambios antes de enviarlos a GitHub; el servicio debe tener el guardado habilitado.':'Selecciona textos y logos, previsualiza cambios y guarda desde el servidor local de desarrollo. El guardado no está habilitado en esta copia estática.'}</p><a href="/admin/editor/">Abrir editor visual</a></div></section>
       <section id="destacados" aria-labelledby="quick-title" class="admin-section">
         <div class="admin-section-heading"><div><p class="admin-caption">A MANO, LO MÁS IMPORTANTE</p><h2 id="quick-title">Empieza por aquí.</h2></div><a href="#directorio">Todos los editores <Icon/></a></div>
         <div class="admin-quick-grid">

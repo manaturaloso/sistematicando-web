@@ -26,7 +26,8 @@
     "test:brand": "node scripts/verify-brand.mjs",
     "audit:release": "node scripts/audit-release.mjs",
     "review:visual": "node scripts/review-visual.mjs",
-    "test:compatibility": "node scripts/verify-compatibility.mjs"
+    "test:compatibility": "node scripts/verify-compatibility.mjs",
+    "editor:build": "node scripts/build-hosted-editor.mjs"
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",

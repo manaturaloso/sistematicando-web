@@ -49,7 +49,7 @@ export function createAuthHandler({fetcher=fetch,now=()=>Math.floor(Date.now()/1
     const ttl=grant.expires_in===undefined?3600:Math.min(grant.expires_in,3600);if(!Number.isSafeInteger(ttl)||ttl<60)throw new Error('denied');
     const user=await identity(grant.access_token,fetcher);
     const session=await seal({kind:'session',token:grant.access_token,csrf:nonce(),login:user.login,exp:time+ttl},env);
-    const result=redirect(env.EDITOR_ORIGIN+'/auth/session',cookie(SESSION,session,ttl));result.headers.append('Set-Cookie',clear);return result;
+    const result=redirect(env.EDITOR_ORIGIN+'/admin/editor/',cookie(SESSION,session,ttl));result.headers.append('Set-Cookie',clear);return result;
    }catch{return response(403,{error:'No se pudo autorizar esta cuenta para editar el repositorio.'},{'Set-Cookie':clear});}
   }
   if(route==='/auth/session'&&request.method==='GET'){

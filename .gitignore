@@ -9,3 +9,5 @@ __pycache__/
 .wrangler/
 .dev.vars
 .dev.vars.*
+
+.editor-dist/

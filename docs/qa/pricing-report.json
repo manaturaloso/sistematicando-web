@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "b15d9e1f6cbf725e49127a7d734ad30f553cfce1",
-    "commitDate": "2026-11-06T14:49:42Z",
+    "commit": "ce6ad9f06927ae00c1f6ff5b22bf88d49877a769",
+    "commitDate": "2026-11-06T17:56:26Z",
     "sourceModified": true
   },
   "scope": "Proposed commercial configuration and UI arithmetic, not operational SaaS validation or financial/tax approval",

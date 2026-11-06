@@ -1,8 +1,8 @@
 import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-export async function previewServer() {
-  const root=path.resolve('dist');
+export async function previewServer(directory='dist') {
+  const root=path.resolve(directory);
   const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.ttf':'font/ttf','.svg':'image/svg+xml','.png':'image/png','.json':'application/json','.txt':'text/plain'};
   const server=http.createServer(async(req,res)=>{
     try {

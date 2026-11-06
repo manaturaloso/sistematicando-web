@@ -1,5 +1,9 @@
 # Decisiones vigentes
 
+## Actualización vigente del CMS visual · 6/11/2026
+
+Inspector preparado con transporte local/alojado, revisión explícita, borradores recuperables y coherencia SHA del preview. El bundle alojado se genera aislado con editor:build; no hay despliegue ni App/URL/secretos configurados y el flag de escritura permanece false. HOSTED_INSPECTOR.md es el contrato actual. Conservar Pages CMS y no añadir guardado automático ni forzar ramas. Siguiente paso: configuración segura y prueba real autorizada por separado.
+
 ## Actualización vigente: planes propuestos (5/11/2026)
 
 El propietario delegó elegir precios y funciones. Implementada la propuesta Esencial S/99, Gestión S/199 y Multisede S/399 al mes por cuenta, con puesta en marcha S/199, S/399 y S/699 respectivamente. [PRICING_STRATEGY.md](PRICING_STRATEGY.md) contiene módulos, límites, extras, criterios y condiciones pendientes. Sustituye referencias anteriores a no diseñar tarifas o esperar elección entre planes y propuesta personalizada. Sigue siendo borrador sin publicación y sin validar disponibilidad del SaaS. 42 páginas y 34 editores conservados. Fuente única content/pricing.json; editor de planes en /admin. CI añade verify-pricing.mjs y pricing-report.json, incluidos en artefactos.
@@ -212,3 +216,11 @@ Implementado workers/repository-editor.mjs e integrado con autenticación: snaps
 Validación centralizada sin dependencias Node en src/lib/content-validation.mjs; scripts/validate-content.mjs mantiene adaptador filesystem y comprobación real de medios. Backend local/compilación/remoto comparten reglas. Ocho grupos nuevos de pruebas de repositorio aprobados con respuestas GitHub sintéticas; también pasan ocho grupos de autenticación y ocho de editor local aislado. No se llama ni escribe al GitHub real desde estas pruebas. REMOTE_EDITOR_SAVES.md documenta contrato, conflictos y recuperación.
 
 No desplegado ni conectado aún a la UI alojada. 43 páginas/34 editores, sin cambios de contenido/identidad/precios. Siguiente paso exacto: adaptar transporte del inspector y su vista previa al snapshot remoto; completar URL/GitHub App/secretos fuera del chat y probar autenticación/guardado reales en entorno protegido autorizado. Mantener flag cerrado hasta integración y revisión. No publicar, DNS o rama Worker. Agente principal sin subagentes; sin PR nueva; CI remoto/PR existentes no verificados.
+
+## 6/11/2026 · Inspector conectado al contrato remoto
+
+Implementado src/lib/remote-editor.ts e integración del inspector: sesión/snapshot con cookies same-origin, borradores en memoria, revisión anterior/nuevo, envío explícito con CSRF/baseHead/oldValue, conservación ante 409/401/403, descarga y recuperación de borrador validada, logout y bloqueo tras commit hasta reconstruir preview. Metadatos del iframe exigen mismo SHA limpio; no se mezclan builds. Portada/logos tienen punteros explícitos; otros campos ambiguos se bloquean en remoto. Selector de las 41 páginas de contenido.
+
+Build protegido aislado con npm run editor:build → .editor-dist y ASSETS del servicio separado; no sobrescribe dist. Modo estático normal/local conservados. Callback OAuth vuelve al editor. Ocho escenarios de navegador con API simulada aprobados, prueba de transporte aprobada; no hay login/guardado real en servicio alojado. HOSTED_INSPECTOR.md registra uso, contrato, límites y recuperación. CI incorpora bundle aislado, prueba y dry-run.
+
+Siguen vacíos origen/client ID, sin secretos ni despliegue, flag de escritura false. Siguiente paso exacto: configurar GitHub App/URL/secretos fuera del chat y revisar/autorización de prueba alojada por separado; probar permisos reales y rebuild del preview desde el commit nuevo antes de habilitar guardado. 43 páginas/34 editores, precios y evidencia SaaS intactos. Sin publicación/DNS/cambio de rama Worker. Agente Codex principal, sin subagentes; sin PR nueva, existentes/CI remoto sin verificar.

@@ -1,11 +1,14 @@
 ---
 import '../styles/home.css';
+import VisualPreviewBridge from '../components/VisualPreviewBridge.astro';
+import {buildVersion} from '../lib/build-version';
+const visualPreview=import.meta.env.DEV||import.meta.env.PUBLIC_VISUAL_EDITOR_MODE==='hosted';
 import site from '../../content/site.json';
 interface Props { title?: string; description?: string; type?: 'website' | 'article'; draftNoticeLabel?: string; }
 const { title = site.defaultTitle, description = site.defaultDescription, type = 'website', draftNoticeLabel = site.launchDraftLabel } = Astro.props;
 ---
 <!doctype html>
-<html lang="es-PE">
+<html lang="es-PE" data-preview-commit={buildVersion.commit??''} data-preview-modified={String(buildVersion.sourceModified)} data-visual-preview={visualPreview?'enabled':'disabled'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +22,7 @@ const { title = site.defaultTitle, description = site.defaultDescription, type =
     <link rel="preload" href="/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/fonts/Gluten-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <title>{title}</title>
-    {import.meta.env.DEV && <script is:inline type="module" src="/src/scripts/visual-preview.ts"></script>}
+    {visualPreview && <VisualPreviewBridge />}
   </head>
   <body style={`--coral:${site.coral};--ink:${site.ink}`}>{site.launchDraft && <aside class="launch-draft-notice" aria-label={draftNoticeLabel}><div class="wrap"><strong>{site.launchDraftLabel}</strong><span>{site.launchDraftNotice}</span></div></aside>}<slot /></body>
 </html>
