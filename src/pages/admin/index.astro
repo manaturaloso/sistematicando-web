@@ -1,51 +1,70 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Brand from '../../components/Brand.astro';
 import { buildVersion } from '../../lib/build-version';
 import Icon from '../../components/Icon.astro';
-import '../../styles/solutions.css';
+import {adminEditors,adminGroups} from '../../data/admin';
+import {pricing,money} from '../../data/pricing';
+import pageContent from '../../../content/pages.json';
+import site from '../../../content/site.json';
+import {features} from '../../data/features';
 import '../../styles/admin.css';
 const branch='feat/feature-catalog';
 const base=`https://app.pagescms.org/manaturaloso/sistematicando-web/${encodeURIComponent(branch)}`;
-const sections=[
-  ['site','Marca y logos','Subir y seleccionar originales, texto alternativo, colores y SEO global.'],
-  ['navigation','Menús y navegación','Textos, orden y destinos de enlaces internos.'],
-  ['contact','Contacto y privacidad','Responsable, domicilio, correo y WhatsApp.'],
-  ['pages-index','Textos de la home','Titulares, párrafos y llamadas a la acción.'],
-  ['solutions','Soluciones','Sectores, enfoques, prioridades y preguntas.'],
-  ['pages-contacto-index','Página de contacto','Textos de contacto comercial y atención de privacidad.'],
-  ['pages-funcionalidades-index','Textos del catálogo','Buscador, mensajes de resultados y textos de la página.'],
-  ['pages-solicitar-demo-index','Guía de demo','Documento descargable, preguntas y avisos locales.'],
-  ['pages-feature-detail','Textos de páginas de módulos','Encabezados, navegación y llamadas a la acción de los módulos.'],
-  ['features','Funcionalidades','Módulos, grupos, evidencia y estado de disponibilidad.'],
-  ['faqs','Preguntas frecuentes','Respuestas compartidas por home, precios y FAQ.'],
-  ['articles','Blog','Artículos, secciones, listas y recursos relacionados.'],
-  ['pages-nosotros-index','Página de empresa','Propuesta de marca, principios y recorrido de contacto.'],
-  ['pages-ayuda-index','Centro de ayuda','Recorridos y preguntas compartidas para orientar al visitante.'],
-  ['guides','Recursos y guías','Contenido, secciones, listas y enlaces relacionados.'],
-  ['terms','Términos de uso (borrador)','Secciones del sitio informativo; no contrato SaaS aprobado.'],
-  ['pages-legal-privacidad','Página de privacidad','Texto de revisión, responsable y canales centralizados.'],
-  ['pages-legal-terminos','Página de términos','Encabezados, navegación y contacto legal.'],
-  ['implementation','Implementación','Etapas, preparación y responsabilidades por acordar.'],
-  ['pages-implementacion-index','Página de implementación','Textos, metadatos y llamadas a la acción del recorrido.'],
-  ['pricing','Planes, precios y complementos','Mensualidades, puesta en marcha, límites y módulos de la propuesta comercial.'],
-  ['pages-precios-index','Precios y comercial','Textos y metadatos; los factores tienen su editor propio.'],
-];
+const edit=(id:string)=>`${base}/file/${id}`;
+const home=pageContent['pages-index'];
 ---
-<Layout title="Administración · Sistematicando" description="Acceso administrativo al CMS conectado a GitHub. Requiere autorización de acceso al repositorio.">
-  <main id="contenido" tabindex="-1" class="wrap admin-page">
-    <a class="text-link" href="/">Volver a la web</a>
-    <p class="eyebrow">Sistematicando / Administración</p><h1>Tu contenido,<br /><em>bajo control.</em></h1>
-    <p class="solution-intro">Edita el sitio con Pages CMS y conserva cada cambio en GitHub. El editor se abre en un servicio externo y requiere acceso autorizado al repositorio.</p>
-    <aside class="scope-note"><strong>Rama de edición: {branch}</strong><p>Guardar crea cambios en GitHub. No actualiza automáticamente la versión pública: la web se reconstruye desde la rama configurada en Cloudflare. Revisa e integra solo cuando quieras publicar.</p></aside>
-    <a class="button" href={base} target="_blank" rel="noopener noreferrer">Abrir el CMS con GitHub</a>
-    <section class="admin-steps admin-version" aria-labelledby="version-title">
-      <h2 id="version-title">Versión de este sitio</h2>
-      {buildVersion.commit ? <><p>Commit incluido como base de esta compilación: <a href={`https://github.com/manaturaloso/sistematicando-web/commit/${buildVersion.commit}`} target="_blank" rel="noopener noreferrer"><code>{buildVersion.commit.slice(0, 7)}</code></a>.</p>{buildVersion.commitDate && <p>Fecha del commit: <time datetime={buildVersion.commitDate}>{buildVersion.commitDate}</time>.</p>}{buildVersion.sourceModified && <p>Esta compilación incluye cambios locales de código o contenido sin commit. El identificador corresponde a su base.</p>}</> : <p>No se pudo identificar el commit al compilar esta copia.</p>}
-      <p>Compara este identificador con el commit del Build en Cloudflare. El ID de versión de Cloudflare es distinto. Este dato identifica los archivos servidos; no confirma por sí solo el estado del último despliegue.</p>
-      <a class="text-link" href="/version.json">Ver identificador en JSON</a>
-    </section>
-    <section class="admin-steps" aria-labelledby="setup-title"><h2 id="setup-title">Primera conexión</h2><ol><li>Inicia sesión en Pages CMS con tu cuenta autorizada de GitHub.</li><li>Instala o autoriza su GitHub App únicamente para <strong>manaturaloso/sistematicando-web</strong>.</li><li>Selecciona <strong>{branch}</strong>. Si no aparece, verifica permisos y que la rama esté guardada.</li><li>Para el logo: abre <strong>Logos e imágenes</strong>, sube el original y selecciónalo en <strong>Marca, logos y SEO global</strong>.</li></ol><p>Esta pantalla no contiene contraseñas ni permite cambios anónimos. La autenticación y las escrituras se realizan en el CMS; el acceso depende de los permisos de tu cuenta en GitHub y Pages CMS.</p></section>
-    <section aria-labelledby="sections-title"><h2 id="sections-title">¿Qué quieres editar?</h2><div class="admin-grid">{sections.map(([name,title,text])=><a class="admin-card" href={`${base}/file/${name}`} target="_blank" rel="noopener noreferrer"><h3>{title}</h3><p>{text}</p><span>Abrir editor <Icon /></span></a>)}</div></section>
-    <section class="admin-steps"><h2>Otros textos y medios</h2><p>El CMS incluye editores por página y componente, además de los datos estructurados. Usa sus menús para cambiar textos de demo, privacidad, recursos, cabecera, pie y mockup. Los cambios de código, nuevas integraciones o diseños requieren desarrollo.</p><a class="text-link" href={`${base}/media/images`} target="_blank" rel="noopener noreferrer">Abrir biblioteca de logos e imágenes</a></section>
-  </main>
+<Layout title="Administración · Sistematicando" description="Panel visual de administración del contenido conectado a GitHub mediante Pages CMS.">
+  <a class="admin-skip" href="#contenido">Saltar al contenido</a>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" aria-label="Herramientas de administración">
+      <Brand />
+      <p class="admin-caption">ESTUDIO DE CONTENIDO</p>
+      <nav aria-label="Navegación de administración">
+        <a href="#resumen"><Icon name="grid"/>Resumen</a>
+        <a href="#destacados"><Icon name="sparkle"/>Edición rápida</a>
+        {adminGroups.map(group=><a href={`#${group.id}`}><Icon name={group.icon}/>{group.title}</a>)}
+        <a href="#version-title"><Icon name="circle"/>Versión y acceso</a>
+      </nav>
+      <div class="admin-sidebar-bottom"><span class="admin-pill">Borrador de desarrollo</span><a href="/">Volver a la web <Icon/></a></div>
+    </aside>
+    <main id="contenido" tabindex="-1" class="admin-page">
+      <header class="admin-topbar"><p>Tu espacio de trabajo <span>/ Sistematicando</span></p><a href="/" class="admin-secondary">Ver la web <Icon/></a></header>
+      <section id="resumen" class="admin-welcome" aria-labelledby="welcome-title">
+        <div><p class="admin-caption">TODO EN SU LUGAR</p><h1 id="welcome-title">Dale forma<br/>a tu contenido.</h1><p>Elige qué quieres cambiar, revisa cómo se ve y abre su editor. Tus cambios se guardan en GitHub con Pages CMS.</p><a class="admin-primary" href={base} target="_blank" rel="noopener noreferrer">Abrir el CMS con GitHub <Icon/></a></div>
+        <aside class="admin-workspace" aria-label="Inventario del sitio"><span class="admin-workspace-symbol" aria-hidden="true"><Icon name="grid"/></span><p>Tu web, organizada.</p><dl><div><dt>Editores conectados</dt><dd>{adminEditors.length}</dd></div><div><dt>Módulos del catálogo</dt><dd>{features.length}</dd></div><div><dt>Planes propuestos</dt><dd>{pricing.plans.length}</dd></div></dl><p class="admin-workspace-note">Inventario de esta compilación. No indica actividad en tiempo real.</p></aside>
+      </section>
+      <aside class="admin-branch-note" aria-label="Rama de edición y guardado"><Icon name="circle"/><div><strong>Trabajas en una rama de desarrollo</strong><p><code>{branch}</code> · Editar abre Pages CMS, un servicio externo con acceso GitHub. Guardar conserva cambios en esa rama; no publica esta versión. Las vistas de este panel corresponden al último build, sin actualización en vivo.</p></div></aside>
+      <section id="destacados" aria-labelledby="quick-title" class="admin-section">
+        <div class="admin-section-heading"><div><p class="admin-caption">A MANO, LO MÁS IMPORTANTE</p><h2 id="quick-title">Empieza por aquí.</h2></div><a href="#directorio">Todos los editores <Icon/></a></div>
+        <div class="admin-quick-grid">
+          <article class="admin-visual-card"><div class="admin-card-preview admin-brand-preview"><img src={site.logoLight} alt={site.logoAlt} width={site.logoWidth} height={site.logoHeight}/><div class="admin-swatches"><span style={`--swatch:${site.coral}`}>{site.coral}</span><span style={`--swatch:${site.ink}`}>{site.ink}</span></div></div><div class="admin-card-body"><p class="admin-caption">IDENTIDAD</p><h3>Tu marca, reconocible.</h3><p>Logo original, colores y presentación global.</p><div class="admin-card-actions"><a href={edit('site')} target="_blank" rel="noopener noreferrer">Editar marca <Icon/></a><a href={`${base}/media/images`} target="_blank" rel="noopener noreferrer">Biblioteca de imágenes</a></div></div></article>
+          <article class="admin-visual-card"><div class="admin-card-preview admin-home-preview"><span>PORTADA · CONTENIDO ACTUAL</span><strong>{home.text_002}<br/><em>{home.text_003}</em></strong><p>{home.text_001}</p></div><div class="admin-card-body"><p class="admin-caption">PRIMERA IMPRESIÓN</p><h3>La entrada a tu negocio.</h3><p>Titulares, mensajes y llamadas a la acción.</p><div class="admin-card-actions"><a href={edit('pages-index')} target="_blank" rel="noopener noreferrer">Editar portada <Icon/></a><a href="/">Ver página</a></div></div></article>
+          <article class="admin-visual-card"><div class="admin-card-preview admin-pricing-preview"><span>OFERTA · PROPUESTA ACTUAL</span>{pricing.plans.map(plan=><div><span>{plan.name}</span><strong>{money(plan.monthlyPrice)}<small>/mes</small></strong></div>)}</div><div class="admin-card-body"><p class="admin-caption">OFERTA COMERCIAL</p><h3>Planes con claridad.</h3><p>Precios, cupos, módulos y complementos.</p><div class="admin-card-actions"><a href={edit('pricing')} target="_blank" rel="noopener noreferrer">Editar planes <Icon/></a><a href="/precios/">Ver página</a></div></div></article>
+        </div>
+      </section>
+      <section id="directorio" aria-labelledby="directory-title" class="admin-section">
+        <div class="admin-section-heading"><div><p class="admin-caption">CADA COSA EN SU SITIO</p><h2 id="directory-title">Tu biblioteca de editores.</h2></div><p>Editar abre Pages CMS en otra pestaña.<br/>Ver página abre esta copia del sitio.</p></div>
+        <form class="admin-search" role="search" hidden><label for="editor-search">Buscar un editor</label><div><input id="editor-search" type="search" placeholder="Prueba con portada, precios o privacidad" autocomplete="off"/><button type="reset">Limpiar</button></div><p id="editor-count" role="status" aria-live="polite" aria-atomic="true">{adminEditors.length} editores</p></form>
+        <p class="admin-search-empty" hidden>No encontramos ese editor. Prueba otra palabra o limpia la búsqueda.</p>
+        {adminGroups.map(group=><section id={group.id} class="admin-editor-group" aria-labelledby={`${group.id}-title`}><div class="admin-group-title"><Icon name={group.icon}/><div><h3 id={`${group.id}-title`}>{group.title}</h3><p>{group.description}</p></div></div><div class="admin-editor-grid">{adminEditors.filter(editor=>editor.group===group.id).map(editor=><article class="admin-editor-card" data-editor={editor.name} data-search={`${editor.title} ${editor.label} ${group.title}`}><div class="admin-editor-symbol" aria-hidden="true"><Icon name={group.icon}/></div><h4>{editor.title}</h4><div class="admin-card-actions"><a href={edit(editor.name)} target="_blank" rel="noopener noreferrer">Editar <span class="admin-sr-only">{editor.title}</span><Icon/></a><a href={editor.route}>Ver página <span class="admin-sr-only">de {editor.title}</span></a></div></article>)}</div></section>)}
+      </section>
+      <section class="admin-bottom-grid admin-section" aria-label="Información de acceso y versión">
+        <article class="admin-info-card"><h2>Acceso a la edición</h2><p>Inicia sesión en Pages CMS con tu cuenta GitHub autorizada para <strong>manaturaloso/sistematicando-web</strong> y selecciona <strong>{branch}</strong>.</p><p>Este panel muestra contenido público de la web. Las escrituras, los permisos y la autenticación pertenecen a Pages CMS; aquí no se solicita ninguna contraseña.</p><a href={base} target="_blank" rel="noopener noreferrer">Ir a Pages CMS <Icon/></a></article>
+        <article class="admin-info-card admin-version"><h2 id="version-title">Versión de este sitio</h2>{buildVersion.commit?<><p>Base de compilación: <a href={`https://github.com/manaturaloso/sistematicando-web/commit/${buildVersion.commit}`} target="_blank" rel="noopener noreferrer"><code>{buildVersion.commit.slice(0,7)}</code></a>.</p>{buildVersion.commitDate&&<p>Fecha del commit: <time datetime={buildVersion.commitDate}>{buildVersion.commitDate}</time>.</p>}{buildVersion.sourceModified&&<p>Incluye cambios locales sin commit; el identificador corresponde a su base.</p>}</>:<p>No se pudo identificar el commit al compilar esta copia.</p>}<p>Identifica este build; no confirma el último despliegue. El ID de versión de Cloudflare es distinto.</p><a href="/version.json">Ver identificador en JSON <Icon/></a></article>
+      </section>
+      <footer class="admin-footer"><span>Sistematicando · Administración de contenido</span><span>Los cambios de diseño e integraciones requieren desarrollo.</span></footer>
+    </main>
+  </div>
 </Layout>
+<script>
+ const form=document.querySelector<HTMLFormElement>('.admin-search');
+ const input=document.querySelector<HTMLInputElement>('#editor-search');
+ const cards=[...document.querySelectorAll<HTMLElement>('[data-editor]')];
+ const count=document.querySelector<HTMLElement>('#editor-count');
+ const empty=document.querySelector<HTMLElement>('.admin-search-empty');
+ const groups=[...document.querySelectorAll<HTMLElement>('.admin-editor-group')];
+ const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es').trim();
+ function filter(){const words=normalize(input?.value??'').split(/\s+/).filter(Boolean);let visible=0;cards.forEach(card=>{card.hidden=!words.every(word=>normalize(card.dataset.search??'').includes(word));if(!card.hidden)visible++;});groups.forEach(group=>{group.hidden=![...group.querySelectorAll<HTMLElement>('[data-editor]')].some(card=>!card.hidden);});if(count)count.textContent=`${visible} ${visible===1?'editor':'editores'}`;if(empty)empty.hidden=visible!==0;}
+ if(form&&input){form.hidden=false;form.addEventListener('submit',event=>event.preventDefault());input.addEventListener('input',filter);form.addEventListener('reset',()=>{input.value='';filter();input.focus();});document.querySelectorAll<HTMLAnchorElement>('.admin-sidebar nav a').forEach(link=>link.addEventListener('click',()=>{input.value='';filter();}));}
+</script>

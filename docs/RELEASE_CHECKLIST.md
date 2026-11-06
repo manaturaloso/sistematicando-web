@@ -2,15 +2,15 @@
 
 Generado con npm run audit:release tras test:ci. Fuente: qa/release-report.json. Este informe describe un build local, no el Worker público ni una aprobación del producto.
 
-Base Git del build verificado: aa806cbfe304962419a9e31aeb9eb4016252c57f; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
+Base Git del build verificado: bbfa1a9d4e9e721987b673def8da89e6a53a2551; cambios locales de fuente: true. Un commit posterior cambia la identidad del build: recompilar; la evidencia guardada sigue identificando esta instantánea, no se reasigna a otro SHA. La CI vuelve a generar evidencias para su propio build.
 
-42 páginas, 166 destinos internos y 88 comprobaciones axe sin infracciones detectadas. Metadata incluye título/descripción únicos, Open Graph coherente, idioma, viewport y noindex; enlaces/fragmentos e imágenes verificados. Los incomplete de axe permanecen en el JSON y requieren revisión humana. Las cifras no expresan porcentaje de preparación comercial ni certificación WCAG.
+42 páginas, 176 destinos internos y 88 comprobaciones axe sin infracciones detectadas. Metadata incluye título/descripción únicos, Open Graph coherente, idioma, viewport y noindex; enlaces/fragmentos e imágenes verificados. Los incomplete de axe permanecen en el JSON y requieren revisión humana. Las cifras no expresan porcentaje de preparación comercial ni certificación WCAG.
 
 | Ruta | Título | Tipo OG | Metadatos | Enlaces internos | Axe 390 / 1440 |
 | --- | --- | --- | --- | --- | --- |
 | / | Sistematicando · Todo tu negocio, bajo control. | website | Sí | 32 | 0 / 0 |
 | /404.html | Página no encontrada · Sistematicando | website | Sí | 2 | 0 / 0 |
-| /admin/ | Administración · Sistematicando | website | Sí | 2 | 0 / 0 |
+| /admin/ | Administración · Sistematicando | website | Sí | 49 | 0 / 0 |
 | /ayuda/ | Centro de ayuda · Sistematicando | website | Sí | 32 | 0 / 0 |
 | /blog/ | Blog de gestión y operación · Sistematicando | website | Sí | 29 | 0 / 0 |
 | /blog/conectar-pedido-cierre-operacion/ | Del pedido al cierre: mira tu operación como un recorrido · Sistematicando | article | Sí | 32 | 0 / 0 |

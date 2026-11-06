@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "aa806cbfe304962419a9e31aeb9eb4016252c57f",
-    "commitDate": "2026-11-05T20:00:19Z",
+    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
+    "commitDate": "2026-11-06T13:51:12Z",
     "sourceModified": true
   },
   "tool": "axe-core via @axe-core/playwright",
@@ -30,7 +30,7 @@
     {
       "route": "/admin/",
       "width": 390,
-      "passes": 30,
+      "passes": 45,
       "incomplete": [],
       "violations": []
     },
@@ -334,7 +334,7 @@
     {
       "route": "/admin/",
       "width": 1440,
-      "passes": 30,
+      "passes": 45,
       "incomplete": [],
       "violations": []
     },

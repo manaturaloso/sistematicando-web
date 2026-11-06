@@ -75,3 +75,5 @@ Propuesta autorizada: Esencial S/99, Gestión S/199 y Multisede S/399 mensuales,
 Revisión interna de costos y margen: [docs/commercial/README.md](docs/commercial/README.md). Herramienta sin publicación ni supuestos financieros por defecto.
 
 Las 14 fichas de funcionalidades muestran los planes que las incluyen y los complementos relacionados, con enlaces directos a precios; contenido calculado desde la misma fuente del CMS y disponible sin JavaScript.
+
+Panel visual /admin: directorio buscable de los 34 editores, tarjetas del contenido actual y accesos Editar/Ver página. Edición externa en Pages CMS conservada. Diseño y límites: [docs/ADMIN_DESIGN.md](docs/ADMIN_DESIGN.md).

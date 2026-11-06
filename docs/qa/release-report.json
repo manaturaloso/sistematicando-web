@@ -3,8 +3,8 @@
   "scope": "Validated local build snapshot; automated checks are not approval to launch",
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "aa806cbfe304962419a9e31aeb9eb4016252c57f",
-    "commitDate": "2026-11-05T20:00:19Z",
+    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
+    "commitDate": "2026-11-06T13:51:12Z",
     "sourceModified": true
   },
   "pages": [
@@ -60,9 +60,9 @@
       "route": "/admin/",
       "status": 200,
       "title": "Administración · Sistematicando",
-      "description": "Acceso administrativo al CMS conectado a GitHub. Requiere autorización de acceso al repositorio.",
+      "description": "Panel visual de administración del contenido conectado a GitHub mediante Pages CMS.",
       "type": "website",
-      "internalLinks": 2,
+      "internalLinks": 49,
       "metadata": true,
       "viewportChecks": [
         {
@@ -823,7 +823,7 @@
     }
   ],
   "interactiveChecks": 4,
-  "destinations": 166,
+  "destinations": 176,
   "launchDraft": true,
   "robotsBlocked": true,
   "readyToPublish": false,
