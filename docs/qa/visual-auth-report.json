@@ -1,0 +1,13 @@
+{
+  "scope": "Synthetic OAuth responses and isolated cryptographic/session tests; no real GitHub login, secrets or deployment",
+  "checks": [
+    "missing configuration is closed without outbound calls",
+    "canonical origin and cross-origin rejection",
+    "encrypted state cookie, mismatch and expiry prevent token exchange",
+    "owner and repository verified, encrypted bounded session, no browser bearer token or CORS",
+    "permission revalidation, unrelated account and fork rejected",
+    "tamper, expiry and rotated key reject sessions",
+    "logout requires CSRF and same origin and clears browser cookie",
+    "upstream failures closed; local save API never exposed"
+  ]
+}

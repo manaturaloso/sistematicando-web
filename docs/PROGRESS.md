@@ -5,14 +5,14 @@ Estado consolidado: 6 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: b15d9e1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: 9d2f2f1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
-## Entrega actual: editor visual funcional local
+## Entrega actual: base de autenticación alojada (sin desplegar)
 
-Propietario confirmó edición sobre la vista previa. /admin/editor permite seleccionar textos/logos, cambiar el DOM en vivo, guardar campos validados en el proyecto y revisar commit/push a GitHub. API solo de desarrollo local; uso alojado con autenticación aún pendiente. Leer VISUAL_EDITOR.md y cierre de esta entrega. 43 páginas HTML / 34 editores; sin publicación.
+Base GitHub App/cookies/permisos implementada y probada con respuestas sintéticas; servidor separado y desactivado sin configuración. Leer HOSTED_VISUAL_AUTH.md. No es todavía un CMS visual alojado conectado: faltan App/origen/secretos, prueba real autorizada y guardado remoto. El editor visual local continúa operativo. 43 páginas HTML / 34 editores, sin publicación.
 
 ## Propuesta de precios implementada
 
@@ -224,3 +224,13 @@ Pruebas funcionales aprobadas: ocho grupos en proyecto/remoto Git bare temporale
 Siguiente paso exacto: revisar el editor local y configurar una integración alojada con autenticación y permisos GitHub antes de usar escritura desde una URL pública. Los secretos se configuran fuera del chat. No publicar para probar. Agentes: Codex principal, sin subagentes; precios, estados reales y congelación de producción intactos. Sin PR nueva; existentes sin verificar.
 
 Informes de esta entrega conservan base b15d9e1 con fuente modificada; no se reasignan al nuevo SHA. Recompilar/verificar versión tras commit y regenerar paquete. Rama de desarrollo feat/feature-catalog; Worker permanece 557222e. Sin PR nueva, existentes sin verificar por API.
+
+## 6/11/2026 · Base de autenticación para edición alojada
+
+Implementados workers/visual-auth.mjs y wrangler.editor-auth.jsonc separados del Worker público: flujo GitHub App, estado OAuth cifrado, sesión AES-GCM HttpOnly/Secure con duración máxima de una hora, comprobación de usuario manaturaloso y permiso push en el repositorio exacto, CSRF/logout y rechazo por defecto. Sin secretos/configuración devuelve 503. No hay endpoints de escritura ni integración todavía con el inspector alojado; contentWritesEnabled false. HOSTED_VISUAL_AUTH.md registra configuración y alcance.
+
+Ocho grupos sintéticos de autenticación/criptografía/permisos aprobados. No hay login GitHub real, App registrada, credenciales configuradas o despliegue. CI incorpora prueba e informe visual-auth-report.json. Web estática, 43 páginas/34 editores, editor local y Pages CMS conservados. No se repite navegación/axe/Lighthouse por código servidor separado sin cambios frontend; la evidencia anterior conserva su identidad.
+
+Siguiente paso exacto: elegir origen HTTPS, registrar/instalar GitHub App solo para sistematicando-web y configurar variables/secretos fuera del chat; revisar y autorizar despliegue de prueba por separado, probar login real y después conectar identidad con guardado remoto validado. El bloqueo visual-cms sigue abierto. Solo Codex principal, sin subagentes; sin publicación, DNS, PR nueva ni cambio en rama Worker. PR existentes y CI remoto sin verificar.
+
+Cierre técnico: check 72 archivos, cero errores/avisos/hints; ocho grupos sintéticos aprobados; Wrangler 4.157.0 dry-run de la configuración separada aprobado (8.58 KiB sin subir/desplegar, origen/client ID vacíos, sin secretos). Solo cambian servidor/QA/documentos y seguimiento de procedencia; UI estática intacta. Recompilar/verificar versión tras commit; conservar identidades previas de QA sin reasignarlas a este SHA.

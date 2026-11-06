@@ -26,7 +26,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Remove evidence from older runs
-        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json docs/qa/modules-report.json docs/qa/resources-report.json docs/qa/legal-report.json docs/qa/release-report.json docs/qa/release-guards-report.json docs/qa/compatibility-report.json docs/RELEASE_CHECKLIST.md docs/qa/pricing-report.json docs/qa/admin-report.json docs/qa/visual-editor-report.json docs/qa/visual-editor-security-report.json
+        run: rm -f docs/qa/site-report.json docs/qa/accessibility-report.json docs/qa/brand-report.json docs/qa/modules-report.json docs/qa/resources-report.json docs/qa/legal-report.json docs/qa/release-report.json docs/qa/release-guards-report.json docs/qa/compatibility-report.json docs/RELEASE_CHECKLIST.md docs/qa/pricing-report.json docs/qa/admin-report.json docs/qa/visual-editor-report.json docs/qa/visual-editor-security-report.json docs/qa/visual-auth-report.json
       - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
@@ -37,6 +37,8 @@ jobs:
         run: python3 scripts/test-pricing-economics.py
       - name: Check visual editor security in isolated fixtures
         run: node scripts/test-visual-editor.mjs
+      - name: Check hosted visual authentication with synthetic responses
+        run: node scripts/test-visual-auth.mjs
       - name: Check types and content
         run: npm run check
       - name: Build and dry-run Worker (never deploy)
@@ -70,6 +72,7 @@ jobs:
             docs/qa/admin-report.json
             docs/qa/visual-editor-report.json
             docs/qa/visual-editor-security-report.json
+            docs/qa/visual-auth-report.json
             docs/qa/release-report.json
             docs/qa/release-guards-report.json
             docs/RELEASE_CHECKLIST.md

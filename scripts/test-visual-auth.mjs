@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {createAuthHandler} from '../workers/visual-auth.mjs';
+const env={EDITOR_ORIGIN:'https://editor.example.test',GITHUB_CLIENT_ID:'test-app',GITHUB_CLIENT_SECRET:'test-secret-only',SESSION_KEY:'ab'.repeat(32)};
+let time=1000,login='manaturaloso',write=true,repoName='manaturaloso/sistematicando-web',outage=false;
+const calls=[],checks=[];const bearer='fixture-bearer-never-in-browser';
+const fetcher=async(url,options)=>{
+ calls.push({url,options});assert.equal(options.redirect,'error');
+ if(outage)throw new Error('upstream unavailable '+bearer);
+ if(url==='https://github.com/login/oauth/access_token'){assert.equal(JSON.parse(options.body).client_secret,env.GITHUB_CLIENT_SECRET);return Response.json({access_token:bearer,expires_in:28800});}
+ assert.equal(options.headers.Authorization,'Bearer '+bearer);
+ if(url==='https://api.github.com/user')return Response.json({login});
+ assert.equal(url,'https://api.github.com/repos/manaturaloso/sistematicando-web');return Response.json({full_name:repoName,permissions:{push:write}});
+};
+const handler=createAuthHandler({fetcher,now:()=>time});
+const req=(path,init={})=>new Request(env.EDITOR_ORIGIN+path,init);
+const stateCookie=response=>response.headers.getSetCookie()[0].split(';')[0];
+async function start(){const response=await handler(req('/auth/login'),env);assert.equal(response.status,302);const target=new URL(response.headers.get('Location'));assert.equal(target.origin,'https://github.com');assert.equal(target.searchParams.get('redirect_uri'),env.EDITOR_ORIGIN+'/auth/callback');assert(!target.searchParams.has('scope'));return {state:target.searchParams.get('state'),cookie:stateCookie(response)};}
+async function callback(started,state=started.state){return handler(req('/auth/callback?code=test-code&state='+state,{headers:{Cookie:started.cookie}}),env);}
+async function signIn(){const started=await start(),response=await callback(started);assert.equal(response.status,302);const session=response.headers.getSetCookie().find(value=>value.startsWith('__Host-sistematicando_session='));return session.split(';')[0];}
+assert.equal((await handler(req('/auth/login'),{})).status,503);assert.equal(calls.length,0);checks.push('missing configuration is closed without outbound calls');
+assert.equal((await handler(new Request('https://other.test/auth/login'),env)).status,403);assert.equal((await handler(req('/auth/session',{headers:{Origin:'https://evil.test'}}),env)).status,403);checks.push('canonical origin and cross-origin rejection');
+const started=await start();const cookieHeaders=(await handler(req('/auth/login'),env)).headers.get('Set-Cookie');for(const part of ['HttpOnly','Secure','SameSite=Lax','Path=/','Max-Age=300'])assert(cookieHeaders.includes(part));const before=calls.length;assert.equal((await callback(started,'wrong')).status,403);assert.equal(calls.length,before);time+=301;assert.equal((await callback(started)).status,403);time=1000;checks.push('encrypted state cookie, mismatch and expiry prevent token exchange');
+const cookie=await signIn();assert(!cookie.includes(bearer));const session=await handler(req('/auth/session',{headers:{Cookie:cookie}}),env);assert.equal(session.status,200);const data=await session.json();assert.equal(data.login,'manaturaloso');assert.equal(data.repository,'manaturaloso/sistematicando-web');assert.equal(data.branch,'feat/feature-catalog');assert.equal(data.contentWritesEnabled,false);assert.equal(data.expiresAt,4600);assert(!JSON.stringify(data).includes(bearer));assert.equal(session.headers.get('Cache-Control'),'no-store');assert.equal(session.headers.get('Access-Control-Allow-Origin'),null);checks.push('owner and repository verified, encrypted bounded session, no browser bearer token or CORS');
+write=false;assert.equal((await handler(req('/auth/session',{headers:{Cookie:cookie}}),env)).status,403);write=true;login='someone-else';assert.equal((await callback(await start())).status,403);login='manaturaloso';repoName='someone-else/fork';assert.equal((await callback(await start())).status,403);repoName='manaturaloso/sistematicando-web';checks.push('permission revalidation, unrelated account and fork rejected');
+const tampered=cookie.slice(0,-5)+'xxxxx';assert.equal((await handler(req('/auth/session',{headers:{Cookie:tampered}}),env)).status,401);time=4601;assert.equal((await handler(req('/auth/session',{headers:{Cookie:cookie}}),env)).status,401);time=1000;assert.equal((await handler(req('/auth/session',{headers:{Cookie:cookie}}),{...env,SESSION_KEY:'cd'.repeat(32)})).status,401);checks.push('tamper, expiry and rotated key reject sessions');
+assert.equal((await handler(req('/auth/logout',{method:'POST',headers:{Cookie:cookie,Origin:env.EDITOR_ORIGIN}}),env)).status,403);const logout=await handler(req('/auth/logout',{method:'POST',headers:{Cookie:cookie,Origin:env.EDITOR_ORIGIN,'X-CSRF-Token':data.csrf}}),env);assert.equal(logout.status,200);assert(logout.headers.get('Set-Cookie').includes('Max-Age=0'));checks.push('logout requires CSRF and same origin and clears browser cookie');
+outage=true;const failed=await handler(req('/auth/session',{headers:{Cookie:cookie}}),env);assert.equal(failed.status,403);assert(!(await failed.text()).includes(bearer));outage=false;assert.equal((await handler(req('/__visual_editor/save',{method:'POST',headers:{Cookie:cookie}}),env)).status,404);checks.push('upstream failures closed; local save API never exposed');
+await fs.writeFile('docs/qa/visual-auth-report.json',JSON.stringify({scope:'Synthetic OAuth responses and isolated cryptographic/session tests; no real GitHub login, secrets or deployment',checks},null,2)+'\n');console.log('PASS hosted visual authentication foundation:',checks.length,'groups; no live login or writes.');
