@@ -3998,6 +3998,60 @@
               "label": "Conocer el recorrido",
               "type": "string",
               "required": true
+            },
+            {
+              "name": "text_019",
+              "label": "Planes y complementos",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_020",
+              "label": "Encuentra este módulo en tu plan.",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_021",
+              "label": "Incluido en estos planes",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_022",
+              "label": "Complementos relacionados",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_023",
+              "label": "Consultar una configuración",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_024",
+              "label": "Este módulo no está incluido en un plan base de la propuesta. Revisa los co…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_025",
+              "label": "Aplicable a:",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "text_026",
+              "label": "Distribución propuesta para el lanzamiento. Consulta los cupos, la puesta e…",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "text_027",
+              "label": "Comparar todos los planes",
+              "type": "string",
+              "required": true
             }
           ]
         }

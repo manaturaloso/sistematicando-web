@@ -107,3 +107,5 @@
 .pricing-service-scope>article {min-width:0;}
 .pricing-service-scope h3 {font-size:1.35rem;}
 @media(max-width:999px) {.pricing-grid {grid-template-columns:1fr;}.plan-badge {min-height:0;}.pricing-service-scope {grid-template-columns:1fr;}}
+
+.pricing-card[id],.pricing-addons article[id],#comparar-planes {scroll-margin-top:8rem;}

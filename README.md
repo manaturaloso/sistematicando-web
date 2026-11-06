@@ -73,3 +73,5 @@ Esta entrega solo se guarda en feat/feature-catalog. No enviar a feat/brand-foun
 Propuesta autorizada: Esencial S/99, Gestión S/199 y Multisede S/399 mensuales, con puesta en marcha y complementos separados. Alcance, CMS y revisión pendiente: [docs/PRICING_STRATEGY.md](docs/PRICING_STRATEGY.md). Implementado como borrador, sin desplegar.
 
 Revisión interna de costos y margen: [docs/commercial/README.md](docs/commercial/README.md). Herramienta sin publicación ni supuestos financieros por defecto.
+
+Las 14 fichas de funcionalidades muestran los planes que las incluyen y los complementos relacionados, con enlaces directos a precios; contenido calculado desde la misma fuente del CMS y disponible sin JavaScript.

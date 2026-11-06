@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "67658017417e3b06814ec5221409bd7b9e98057b",
-    "commitDate": "2026-11-05T19:39:31Z",
+    "commit": "aa806cbfe304962419a9e31aeb9eb4016252c57f",
+    "commitDate": "2026-11-05T20:00:19Z",
     "sourceModified": true
   },
   "scope": "Local build: all generated routes and internal link/anchor targets; no external services contacted.",
@@ -103,7 +103,7 @@
       "title": "Caja · Sistematicando",
       "description": "Organiza la apertura, los ingresos, las salidas y el cierre de caja para entender qué ocurrió durante cada turno.",
       "type": "website",
-      "internalLinks": 32,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -112,7 +112,7 @@
       "title": "Clientes · Sistematicando",
       "description": "Organiza los datos y la relación de tus clientes con el negocio para atender con contexto y mantener información útil en un solo lugar.",
       "type": "website",
-      "internalLinks": 31,
+      "internalLinks": 36,
       "metadata": true
     },
     {
@@ -121,7 +121,7 @@
       "title": "Compras y proveedores · Sistematicando",
       "description": "Organiza proveedores, pedidos de compra y recepciones para seguir el abastecimiento y mantener sus datos vinculados a tus recursos.",
       "type": "website",
-      "internalLinks": 32,
+      "internalLinks": 36,
       "metadata": true
     },
     {
@@ -130,7 +130,7 @@
       "title": "Control de accesos · Sistematicando",
       "description": "Relaciona cada acceso con el evento y la entrada correspondiente para ayudar al equipo a organizar el ingreso y seguir su estado.",
       "type": "website",
-      "internalLinks": 29,
+      "internalLinks": 32,
       "metadata": true
     },
     {
@@ -139,7 +139,7 @@
       "title": "Eventos y entradas · Sistematicando",
       "description": "Organiza eventos, tipos de entrada y compradores para acompañar la venta y preparar el control de acceso con la información de cada emisión.",
       "type": "website",
-      "internalLinks": 29,
+      "internalLinks": 32,
       "metadata": true
     },
     {
@@ -148,7 +148,7 @@
       "title": "Facturación electrónica · Sistematicando",
       "description": "Relaciona los documentos de venta con las operaciones de tu negocio y organiza su seguimiento desde un mismo contexto de trabajo.",
       "type": "website",
-      "internalLinks": 34,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -157,7 +157,7 @@
       "title": "Inventarios · Sistematicando",
       "description": "Centraliza existencias y movimientos para seguir tus productos e insumos por local y tomar decisiones de reposición con más contexto.",
       "type": "website",
-      "internalLinks": 33,
+      "internalLinks": 38,
       "metadata": true
     },
     {
@@ -166,7 +166,7 @@
       "title": "Mesas y comandas · Sistematicando",
       "description": "Organiza las mesas y los pedidos de tu salón para coordinar la atención y mantener el contexto de cada servicio.",
       "type": "website",
-      "internalLinks": 31,
+      "internalLinks": 36,
       "metadata": true
     },
     {
@@ -175,7 +175,7 @@
       "title": "Multisede · Sistematicando",
       "description": "Organiza varios establecimientos dentro de la misma operación y consulta su información sin perder las particularidades de cada sede.",
       "type": "website",
-      "internalLinks": 31,
+      "internalLinks": 35,
       "metadata": true
     },
     {
@@ -184,7 +184,7 @@
       "title": "Personal y permisos · Sistematicando",
       "description": "Organiza a tu equipo y los accesos a la plataforma para que cada persona trabaje con las herramientas que corresponden a su función.",
       "type": "website",
-      "internalLinks": 32,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -193,7 +193,7 @@
       "title": "Punto de venta · Sistematicando",
       "description": "Reúne productos, pedidos y cobros en un flujo de atención claro para que tu equipo venda con orden y mantenga el registro de cada operación.",
       "type": "website",
-      "internalLinks": 32,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -202,7 +202,7 @@
       "title": "Recetas y costos · Sistematicando",
       "description": "Relaciona ingredientes, cantidades y rendimientos para revisar el costo de preparación y contar con una base más clara al definir tu oferta.",
       "type": "website",
-      "internalLinks": 33,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -211,7 +211,7 @@
       "title": "Reportes · Sistematicando",
       "description": "Revisa la información de ventas y operación por período y establecimiento para entender el comportamiento del negocio y orientar tus decisiones.",
       "type": "website",
-      "internalLinks": 32,
+      "internalLinks": 37,
       "metadata": true
     },
     {
@@ -220,7 +220,7 @@
       "title": "Reservas · Sistematicando",
       "description": "Organiza solicitudes, horarios y datos de reserva para preparar a tu equipo y dar seguimiento a las visitas previstas.",
       "type": "website",
-      "internalLinks": 30,
+      "internalLinks": 34,
       "metadata": true
     },
     {
@@ -386,5 +386,5 @@
       "metadata": true
     }
   ],
-  "destinations": 162
+  "destinations": 166
 }

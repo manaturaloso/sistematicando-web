@@ -25,3 +25,12 @@
 .module-related-card h3 {font-size:1.3rem;}
 @media(max-width:899px) {.module-benefits,.module-related {grid-template-columns:1fr;}.module-flow {grid-template-columns:1fr;gap:1.5rem;}.module-section {padding-bottom:3rem;}}
 @media(max-width:599px) {.module-scope {padding:1.3rem;}.module-benefits>article {padding-inline:0;}}
+
+.module-pricing-note {max-width:65ch;color:#505860;}
+.module-pricing-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:1.5rem;margin-block:2rem;}
+.module-pricing-grid article {min-width:0;background:white;border:1px solid var(--line);border-radius:10px;padding:1.5rem;overflow-wrap:anywhere;}
+.module-plan-list,.module-addon-list {list-style:none;padding:0;margin:0;}
+.module-pricing-grid li+li {border-top:1px solid var(--line);margin-top:.75rem;padding-top:.75rem;}
+.module-pricing-grid a {min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.module-pricing-grid a .icon {flex-shrink:0;}
+.module-pricing-grid li p {font-size:.85rem;margin-block:.4rem;}

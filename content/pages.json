@@ -461,7 +461,16 @@
     "text_015": "Ir a contacto",
     "text_016": "Explorar módulo",
     "text_017": "Ver beneficios",
-    "text_018": "Conocer el recorrido"
+    "text_018": "Conocer el recorrido",
+    "text_019": "Planes y complementos",
+    "text_020": "Encuentra este módulo en tu plan.",
+    "text_021": "Incluido en estos planes",
+    "text_022": "Complementos relacionados",
+    "text_023": "Consultar una configuración",
+    "text_024": "Este módulo no está incluido en un plan base de la propuesta. Revisa los complementos o consulta el alcance para tu operación.",
+    "text_025": "Aplicable a:",
+    "text_026": "Distribución propuesta para el lanzamiento. Consulta los cupos, la puesta en marcha y las condiciones en precios; esta vista previa no acredita disponibilidad operativa.",
+    "text_027": "Comparar todos los planes"
   },
   "pages-nosotros-index": {
     "seo_title": "Nosotros · Sistematicando",

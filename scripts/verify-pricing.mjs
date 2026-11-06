@@ -46,6 +46,30 @@ try{
   results.push({javaScriptEnabled,plans:pricing.plans.length,comparisonRows:features.items.length,totalsAndLimits:true,whatsappLinksInspectedWithoutSending:true,noCheckout:true});
   await context.close();
  }
- await fs.writeFile('docs/qa/pricing-report.json',JSON.stringify({buildVersion,scope:'Proposed commercial configuration and UI arithmetic, not operational SaaS validation or financial/tax approval',results},null,2)+'\n');
- console.log('PASS plans, first-month totals, module matrix, addon prices, WhatsApp links (not sent), no-JS and keyboard table scrolling.');
+ const moduleJourneys=[];
+ for(const javaScriptEnabled of [true,false]){
+  const context=await browser.newContext({javaScriptEnabled,viewport:{width:390,height:1000}}),page=await context.newPage();
+  for(const feature of features.items){
+   const route=`/funcionalidades/${feature.id}/`;
+   const included=pricing.plans.filter(plan=>plan.moduleIds.includes(feature.id));
+   const addons=pricing.addons.filter(addon=>addon.moduleIds.includes(feature.id));
+   await page.goto(server.url+route);
+   assert.deepEqual(await page.locator('[data-included-plan]').allTextContents(),included.map(plan=>plan.name));
+   assert.deepEqual(await page.locator('[data-related-addon]').allTextContents(),addons.map(addon=>addon.name));
+   if(!included.length)assert((await page.locator('.module-pricing').innerText()).includes(pages['pages-feature-detail'].text_024));
+   for(const addon of addons)assert((await text(page.locator(`[data-related-addon="${addon.id}"]`).locator('..'))).includes(money(addon.monthlyPrice)));
+   const journeys=[...included.slice(0,1).map(plan=>({selector:`[data-included-plan="${plan.id}"]`,target:`plan-${plan.id}`})),...addons.slice(0,1).map(addon=>({selector:`[data-related-addon="${addon.id}"]`,target:`complemento-${addon.id}`}))];
+   for(const journey of journeys){
+    await page.goto(server.url+route);
+    const link=page.locator(journey.selector);await link.focus();
+    await Promise.all([page.waitForURL(`**/precios/#${journey.target}`),page.keyboard.press('Enter')]);
+    assert(await page.locator(`#${journey.target}`).isVisible());
+    await page.waitForFunction(id=>document.getElementById(id).getBoundingClientRect().top>=0,journey.target);
+   }
+   moduleJourneys.push({route,javaScriptEnabled,includedPlans:included.map(plan=>plan.id),relatedAddons:addons.map(addon=>addon.id),keyboardJourneys:journeys.length});
+  }
+  await context.close();
+ }
+ await fs.writeFile('docs/qa/pricing-report.json',JSON.stringify({buildVersion,scope:'Proposed commercial configuration and UI arithmetic, not operational SaaS validation or financial/tax approval',results,moduleJourneys},null,2)+'\n');
+ console.log('PASS plans, first-month totals, module matrix, addon prices, WhatsApp links (not sent), no-JS and keyboard table scrolling; 14 module-to-plan/addon journeys with and without JavaScript.');
 }finally{await browser?.close();await server.close();}

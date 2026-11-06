@@ -130,3 +130,7 @@ Página: recursos-guias-slug incluye text_014 (Guía práctica), text_015 (nombr
 ### Edición de planes
 
 En «Planes, precios y complementos (propuesta)» editar cuotas, puesta en marcha, cupos, módulos, resúmenes y exclusiones. Mantener moneda PEN y draft activo. Importes positivos con hasta dos decimales y cupos enteros positivos. Ordenar planes de menor a mayor alcance: cada uno incluye módulos del anterior. Solo un destacado. Usar IDs de módulos/planes existentes; sede adicional permanece específica de Multisede. El primer mes se calcula automáticamente. La validación del build rechaza referencias e importes inválidos.
+
+## Planes visibles en fichas de módulos (6/11/2026)
+
+La sección de cada ficha se calcula desde «Planes, precios y complementos (propuesta)»: moduleIds determina inclusión y relación, planIds la aplicabilidad de extras. Cambiar la fuente actualiza precios y fichas juntas en el próximo build. Etiquetas comunes, explicación sin plan base y aviso en Página: feature-detail. No editar nombres/precios duplicados en páginas ni cambiar estados SaaS para modificar esta presentación. 34 editores, sin servicio nuevo.

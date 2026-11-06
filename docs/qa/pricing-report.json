@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "67658017417e3b06814ec5221409bd7b9e98057b",
-    "commitDate": "2026-11-05T19:39:31Z",
+    "commit": "aa806cbfe304962419a9e31aeb9eb4016252c57f",
+    "commitDate": "2026-11-05T20:00:19Z",
     "sourceModified": true
   },
   "scope": "Proposed commercial configuration and UI arithmetic, not operational SaaS validation or financial/tax approval",
@@ -22,6 +22,298 @@
       "totalsAndLimits": true,
       "whatsappLinksInspectedWithoutSending": true,
       "noCheckout": true
+    }
+  ],
+  "moduleJourneys": [
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "javaScriptEnabled": true,
+      "includedPlans": [],
+      "relatedAddons": [
+        "facturacion"
+      ],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "javaScriptEnabled": true,
+      "includedPlans": [
+        "multisede"
+      ],
+      "relatedAddons": [
+        "sede-adicional"
+      ],
+      "keyboardJourneys": 2
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "javaScriptEnabled": true,
+      "includedPlans": [],
+      "relatedAddons": [
+        "eventos"
+      ],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "javaScriptEnabled": true,
+      "includedPlans": [],
+      "relatedAddons": [
+        "eventos"
+      ],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/punto-de-venta/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/caja/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/mesas-y-comandas/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/inventarios/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/recetas-y-costos/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/compras-y-proveedores/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/facturacion-electronica/",
+      "javaScriptEnabled": false,
+      "includedPlans": [],
+      "relatedAddons": [
+        "facturacion"
+      ],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/reservas/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/clientes/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/reportes/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/personal-y-permisos/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "esencial",
+        "gestion",
+        "multisede"
+      ],
+      "relatedAddons": [],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/multisede/",
+      "javaScriptEnabled": false,
+      "includedPlans": [
+        "multisede"
+      ],
+      "relatedAddons": [
+        "sede-adicional"
+      ],
+      "keyboardJourneys": 2
+    },
+    {
+      "route": "/funcionalidades/eventos-y-entradas/",
+      "javaScriptEnabled": false,
+      "includedPlans": [],
+      "relatedAddons": [
+        "eventos"
+      ],
+      "keyboardJourneys": 1
+    },
+    {
+      "route": "/funcionalidades/control-de-accesos/",
+      "javaScriptEnabled": false,
+      "includedPlans": [],
+      "relatedAddons": [
+        "eventos"
+      ],
+      "keyboardJourneys": 1
     }
   ]
 }
