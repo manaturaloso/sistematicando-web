@@ -18,3 +18,5 @@
 - Directiva del propietario (5/11/2026): encarga al agente proponer precios, planes y funciones según su criterio. Autoriza diseñar e implementar la propuesta comercial como borrador, sin presentar validación de costes/operación/tributación ni publicar. Conservar evidencia real del SaaS y señalar condiciones legales/operativas pendientes.
 
 - Directiva del propietario (6/11/2026): autoriza edición visual sobre la vista previa (clic en textos/imágenes). La implementación local se documenta en docs/VISUAL_EDITOR.md; no confundirla con autenticación/guardado público alojado. No exponer la API local ni habilitar escritura anónima en el Worker.
+
+- Autorización explícita (6/11/2026): desplegar únicamente sistematicando-editor-auth como editor de prueba con VISUAL_WRITES_ENABLED=false, sin tocar producción ni su rama. No pedir de nuevo esta autorización; no ampliarla a guardados reales o web pública. Estado/acceso y guía en docs/EDITOR_TEST_DEPLOYMENT.md.

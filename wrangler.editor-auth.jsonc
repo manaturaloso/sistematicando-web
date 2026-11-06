@@ -3,7 +3,7 @@
   "name": "sistematicando-editor-auth",
   "main": "workers/visual-auth.mjs",
   "compatibility_date": "2026-01-01",
-  "workers_dev": false,
+  "workers_dev": true,
   "preview_urls": false,
   "vars": {
     "EDITOR_ORIGIN": "https://sistematicando-editor-auth.manaturaloso.workers.dev",

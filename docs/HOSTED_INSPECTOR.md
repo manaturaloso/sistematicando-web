@@ -8,7 +8,7 @@ Implementado el transporte del inspector para sesión GitHub y guardado remoto v
 - `npm run build`: web estática normal en dist, editor sin API de escritura.
 - `npm run editor:build`: subproceso con PUBLIC_VISUAL_EDITOR_MODE=hosted y salida **.editor-dist**. No sobrescribe dist ni cambia el entorno del proceso que lo llama.
 
-wrangler.editor-auth.jsonc sirve .editor-dist mediante ASSETS y envía /auth/*, /editor-api/* y /__visual_editor/* al Worker. La última ruta nunca expone la API local. No cambia wrangler.jsonc ni el Worker público. workers_dev/preview_urls siguen false; origen/client ID vacíos y VISUAL_WRITES_ENABLED=false. Crear este bundle no despliega ni habilita el servicio.
+wrangler.editor-auth.jsonc sirve .editor-dist mediante ASSETS y envía /auth/*, /editor-api/* y /__visual_editor/* al Worker. La última ruta nunca expone la API local. No cambia wrangler.jsonc ni el Worker público. workers_dev=true para la prueba autorizada, preview_urls=false; Client ID/origen previsto registrados y VISUAL_WRITES_ENABLED=false. La URL no se da por desplegada. Crear este bundle no despliega ni habilita el servicio.
 
 ```sh
 npm run editor:build
@@ -59,3 +59,13 @@ El propietario proporcionó el Client ID público de Sistematicando Editor y con
 VISUAL_WRITES_ENABLED sigue false; workers_dev y preview_urls siguen false. No se desplegó ni comprobó que la URL exista. Falta generar/configurar Client secret y SESSION_KEY en Cloudflare, confirmar acceso solo al repositorio y autorizar/probar el servicio protegido. Siguiente paso exacto: GitHub App → General → Client secrets → Generate a new client secret; guardar el valor privadamente para Cloudflare, sin enviarlo por chat. No generar clave privada: esta integración usa el flujo OAuth de usuario con Client secret.
 
 Solo Codex principal, sin subagentes. Sin cambio funcional de UI ni fuente comercial; 43 páginas/34 editores. No se repiten navegación/axe/Lighthouse por registrar configuración pública. Sin PR nueva, existentes y CI remoto sin verificar. La prueba de login real sigue pendiente.
+
+## 6/11/2026 · Despliegue de prueba autorizado; acceso Cloudflare pendiente
+
+El propietario autorizó explícitamente desplegar solo sistematicando-editor-auth con escritura desactivada y web pública intacta. Confirmó que generó/guardó privadamente Client secret y SESSION_KEY; valores no recibidos ni configurados aquí. No volver a pedir esta autorización para el mismo servicio y alcance.
+
+workers_dev=true únicamente en configuración separada del editor, preview_urls=false, VISUAL_WRITES_ENABLED=false; wrangler.jsonc y rama pública sin cambios. EDITOR_TEST_DEPLOYMENT.md contiene campos de creación GitHub/Cloudflare, secretos runtime y prueba de login sin guardados.
+
+Bloqueo observado: wrangler whoami informa no autenticado; runtime sin credenciales Cloudflare y red enforced sin su API. No se ejecutó despliegue real ni login con cuenta temporal ni se eludió política. No es falta de autorización del usuario ni rechazo de auto-review. Siguiente paso exacto: desde su panel crear Worker nuevo con rama feat/feature-catalog, build npm run editor:build y deploy npx wrangler deploy --config wrangler.editor-auth.jsonc; configurar ambos secretos en Settings → Variables and Secrets del nuevo Worker, mantener flag false y aportar URL/Build/SHA/resultados de login no secretos.
+
+Agente principal sin subagentes. No se habilita escritura ni se publica la web de producción. Sin PR nueva; existentes y CI remoto sin verificar.

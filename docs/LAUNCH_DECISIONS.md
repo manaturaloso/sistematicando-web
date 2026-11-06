@@ -56,3 +56,13 @@ Implementados workers/visual-auth.mjs y wrangler.editor-auth.jsonc separados del
 Ocho grupos sintéticos de autenticación/criptografía/permisos aprobados. No hay login GitHub real, App registrada, credenciales configuradas o despliegue. CI incorpora prueba e informe visual-auth-report.json. Web estática, 43 páginas/34 editores, editor local y Pages CMS conservados. No se repite navegación/axe/Lighthouse por código servidor separado sin cambios frontend; la evidencia anterior conserva su identidad.
 
 Siguiente paso exacto: elegir origen HTTPS, registrar/instalar GitHub App solo para sistematicando-web y configurar variables/secretos fuera del chat; revisar y autorizar despliegue de prueba por separado, probar login real y después conectar identidad con guardado remoto validado. El bloqueo visual-cms sigue abierto. Solo Codex principal, sin subagentes; sin publicación, DNS, PR nueva ni cambio en rama Worker. PR existentes y CI remoto sin verificar.
+
+## 6/11/2026 · Despliegue de prueba autorizado; acceso Cloudflare pendiente
+
+El propietario autorizó explícitamente desplegar solo sistematicando-editor-auth con escritura desactivada y web pública intacta. Confirmó que generó/guardó privadamente Client secret y SESSION_KEY; valores no recibidos ni configurados aquí. No volver a pedir esta autorización para el mismo servicio y alcance.
+
+workers_dev=true únicamente en configuración separada del editor, preview_urls=false, VISUAL_WRITES_ENABLED=false; wrangler.jsonc y rama pública sin cambios. EDITOR_TEST_DEPLOYMENT.md contiene campos de creación GitHub/Cloudflare, secretos runtime y prueba de login sin guardados.
+
+Bloqueo observado: wrangler whoami informa no autenticado; runtime sin credenciales Cloudflare y red enforced sin su API. No se ejecutó despliegue real ni login con cuenta temporal ni se eludió política. No es falta de autorización del usuario ni rechazo de auto-review. Siguiente paso exacto: desde su panel crear Worker nuevo con rama feat/feature-catalog, build npm run editor:build y deploy npx wrangler deploy --config wrangler.editor-auth.jsonc; configurar ambos secretos en Settings → Variables and Secrets del nuevo Worker, mantener flag false y aportar URL/Build/SHA/resultados de login no secretos.
+
+Agente principal sin subagentes. No se habilita escritura ni se publica la web de producción. Sin PR nueva; existentes y CI remoto sin verificar.
