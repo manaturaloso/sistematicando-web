@@ -1,0 +1,13 @@
+{
+  "scope": "Synthetic GitHub API and real content fixtures; no external calls or remote repository writes",
+  "checks": [
+    "read snapshot pinned to exact head, complete regular files and shared validation",
+    "validated content blob, preserved tree, explicit owner commit and non-forced development ref",
+    "stale head and stale field cause conflicts without writes",
+    "traversal, prototype, operational state, URLs and invalid templates rejected before Git writes",
+    "concurrent ref update rejected without force; orphan objects never reported as a saved branch",
+    "symlink source rejected",
+    "authenticated callback/session/CSRF to commit end-to-end with synthetic GitHub, default writes off",
+    "permissions revoked before save prevent all further writes"
+  ]
+}

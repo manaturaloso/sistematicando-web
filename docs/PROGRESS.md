@@ -5,14 +5,14 @@ Estado consolidado: 6 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: 9d2f2f1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: 38919d1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
-## Entrega actual: base de autenticación alojada (sin desplegar)
+## Entrega actual: backend de guardado remoto (desactivado)
 
-Base GitHub App/cookies/permisos implementada y probada con respuestas sintéticas; servidor separado y desactivado sin configuración. Leer HOSTED_VISUAL_AUTH.md. No es todavía un CMS visual alojado conectado: faltan App/origen/secretos, prueba real autorizada y guardado remoto. El editor visual local continúa operativo. 43 páginas HTML / 34 editores, sin publicación.
+Autenticación y backend GitHub preparados y probados con respuestas sintéticas; no desplegados. Guardado valida snapshot completo, campos y conflictos antes de un commit no forzado en desarrollo. El flag de escritura sigue false. Falta conectar transporte/vista previa alojada y configurar/probar App/origen/secretos. Leer REMOTE_EDITOR_SAVES.md. Editor local/Pages CMS intactos, 43 páginas / 34 editores, sin publicación.
 
 ## Propuesta de precios implementada
 
@@ -234,3 +234,13 @@ Ocho grupos sintéticos de autenticación/criptografía/permisos aprobados. No h
 Siguiente paso exacto: elegir origen HTTPS, registrar/instalar GitHub App solo para sistematicando-web y configurar variables/secretos fuera del chat; revisar y autorizar despliegue de prueba por separado, probar login real y después conectar identidad con guardado remoto validado. El bloqueo visual-cms sigue abierto. Solo Codex principal, sin subagentes; sin publicación, DNS, PR nueva ni cambio en rama Worker. PR existentes y CI remoto sin verificar.
 
 Cierre técnico: check 72 archivos, cero errores/avisos/hints; ocho grupos sintéticos aprobados; Wrangler 4.157.0 dry-run de la configuración separada aprobado (8.58 KiB sin subir/desplegar, origen/client ID vacíos, sin secretos). Solo cambian servidor/QA/documentos y seguimiento de procedencia; UI estática intacta. Recompilar/verificar versión tras commit; conservar identidades previas de QA sin reasignarlas a este SHA.
+
+## 6/11/2026 · Backend de guardado remoto validado
+
+Implementado workers/repository-editor.mjs e integrado con autenticación: snapshot de GitHub fijado a HEAD, validación de los 13 JSON y medios regulares, conflictos HEAD/oldValue y commit/actualización no forzada solo en feat/feature-catalog. Autor/committer Joel Alejandro Yañez Caballero. API protegida por sesión, permiso revalidado, Origin/CSRF, límites y flag VISUAL_WRITES_ENABLED="false" por defecto. No existe escritura anónima ni selector de repositorio/rama.
+
+Validación centralizada sin dependencias Node en src/lib/content-validation.mjs; scripts/validate-content.mjs mantiene adaptador filesystem y comprobación real de medios. Backend local/compilación/remoto comparten reglas. Ocho grupos nuevos de pruebas de repositorio aprobados con respuestas GitHub sintéticas; también pasan ocho grupos de autenticación y ocho de editor local aislado. No se llama ni escribe al GitHub real desde estas pruebas. REMOTE_EDITOR_SAVES.md documenta contrato, conflictos y recuperación.
+
+No desplegado ni conectado aún a la UI alojada. 43 páginas/34 editores, sin cambios de contenido/identidad/precios. Siguiente paso exacto: adaptar transporte del inspector y su vista previa al snapshot remoto; completar URL/GitHub App/secretos fuera del chat y probar autenticación/guardado reales en entorno protegido autorizado. Mantener flag cerrado hasta integración y revisión. No publicar, DNS o rama Worker. Agente principal sin subagentes; sin PR nueva; CI remoto/PR existentes no verificados.
+
+Cierre: check 75 archivos, cero errores/avisos/hints; content:check 14 módulos/3 guías/34 editores; tres suites de ocho grupos aprobadas (24 grupos de comprobaciones). Wrangler dry-run del servicio separado aprobado, 32.03 KiB sin subir/desplegar, flag false. Sin cambios frontend, no se repiten navegación/axe/Lighthouse; evidencia estática anterior conserva su identidad. Recompilar y verificar versión después del commit; paquete regenerable.

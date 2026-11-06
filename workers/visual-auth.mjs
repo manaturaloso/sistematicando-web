@@ -1,4 +1,5 @@
-// Authentication foundation only: deliberately no content-write or proxy endpoint.
+import {createRepositoryEditor,EditorError} from './repository-editor.mjs';
+// Authenticated repository editor. Remote writes remain disabled by default.
 export const REPOSITORY='manaturaloso/sistematicando-web';
 export const EDITOR_BRANCH='feat/feature-catalog';
 const LOGIN='manaturaloso';
@@ -26,6 +27,7 @@ async function identity(token,fetcher){
  const repository=await fetcher(`https://api.github.com/repos/${REPOSITORY}`,{headers,redirect:'error'});if(!repository.ok)throw new Error('denied');const repo=await repository.json();if(repo.full_name!==REPOSITORY||repo.permissions?.push!==true)throw new Error('denied');return {login:profile.login};
 }
 export function createAuthHandler({fetcher=fetch,now=()=>Math.floor(Date.now()/1000)}={}){
+ const repositoryEditor=createRepositoryEditor({fetcher});
  return async function handle(request,env){
   if(!configured(env))return response(503,{error:'Autenticación sin configurar. No hay acceso ni escritura habilitados.'});
   const url=new URL(request.url);
@@ -53,7 +55,7 @@ export function createAuthHandler({fetcher=fetch,now=()=>Math.floor(Date.now()/1
   if(route==='/auth/session'&&request.method==='GET'){
    const session=await open(jar[SESSION],env,time);
    if(!session||session.kind!=='session'||session.login!==LOGIN)return response(401,{error:'Inicia sesión con GitHub.'},{'Set-Cookie':cookie(SESSION,'',0)});
-   try{const user=await identity(session.token,fetcher);return response(200,{authenticated:true,login:user.login,repository:REPOSITORY,branch:EDITOR_BRANCH,csrf:session.csrf,expiresAt:session.exp,contentWritesEnabled:false});}
+   try{const user=await identity(session.token,fetcher);return response(200,{authenticated:true,login:user.login,repository:REPOSITORY,branch:EDITOR_BRANCH,csrf:session.csrf,expiresAt:session.exp,contentWritesEnabled:env.VISUAL_WRITES_ENABLED==='true'});}
    catch{return response(403,{error:'Permiso de escritura no confirmado.'},{'Set-Cookie':cookie(SESSION,'',0)});}
   }
   if(route==='/auth/logout'&&request.method==='POST'){
@@ -61,7 +63,26 @@ export function createAuthHandler({fetcher=fetch,now=()=>Math.floor(Date.now()/1
    if(origin!==env.EDITOR_ORIGIN||!session||session.kind!=='session'||request.headers.get('X-CSRF-Token')!==session.csrf)return response(403,{error:'Solicitud no autorizada.'});
    return response(200,{signedOut:true},{'Set-Cookie':cookie(SESSION,'',0)});
   }
-  // Session does not grant arbitrary GitHub access. Writes will require their own validated integration.
+  if(route==='/editor-api/state'||route==='/editor-api/commit'){
+   const session=await open(jar[SESSION],env,time);
+   if(!session||session.kind!=='session'||session.login!==LOGIN)return response(401,{error:'Inicia sesión con GitHub.'});
+   if(route==='/editor-api/commit'){
+    if(env.VISUAL_WRITES_ENABLED!=='true')return response(503,{error:'Guardado alojado desactivado hasta configuración y pruebas autorizadas.'});
+    if(request.method!=='POST')return response(405,{error:'Método no permitido.'});
+    if(origin!==env.EDITOR_ORIGIN||request.headers.get('X-CSRF-Token')!==session.csrf||request.headers.get('Content-Type')!=='application/json')return response(403,{error:'Solicitud no autorizada.'});
+   }else if(request.method!=='GET')return response(405,{error:'Método no permitido.'});
+   try{
+    await identity(session.token,fetcher);
+    if(route==='/editor-api/state')return response(200,{...await repositoryEditor.read(session.token),contentWritesEnabled:env.VISUAL_WRITES_ENABLED==='true'});
+    const reader=request.body?.getReader();let chunks=[],size=0;
+    if(!reader)return response(400,{error:'Solicitud vacía.'});
+    while(true){const part=await reader.read();if(part.done)break;size+=part.value.length;if(size>65536){await reader.cancel();return response(413,{error:'Solicitud demasiado grande.'});}chunks.push(part.value);}
+    const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
+    let body;try{body=JSON.parse(decoder.decode(bytes));}catch{return response(400,{error:'JSON inválido.'});}
+    return response(200,await repositoryEditor.commit(session.token,body));
+   }catch(error){return response(error instanceof EditorError?error.status:403,{error:error instanceof EditorError?error.message:'No se pudo verificar el permiso para esta operación.'});}
+  }
+  // Unknown routes never proxy GitHub or expose the local filesystem API.
   return response(route.startsWith('/auth/')?405:404,{error:'Operación no habilitada.'});
  };
 }

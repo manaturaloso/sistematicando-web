@@ -81,3 +81,5 @@ Panel visual /admin: directorio buscable de los 34 editores, tarjetas del conten
 Editor visual funcional en desarrollo: `npm run dev` y http://127.0.0.1:4321/admin/editor/. Selección, vista previa, guardado validado y commit/push revisado. Uso alojado autenticado pendiente; API ausente en producción estática. Guía: [docs/VISUAL_EDITOR.md](docs/VISUAL_EDITOR.md).
 
 Base de autenticación alojada preparada, sin desplegar ni habilitar escritura: [docs/HOSTED_VISUAL_AUTH.md](docs/HOSTED_VISUAL_AUTH.md). GitHub App/origen/secretos y conexión real al editor pendientes.
+
+Backend de guardado GitHub preparado con validación compartida y conflictos, desactivado y aún sin transporte UI alojado: [docs/REMOTE_EDITOR_SAVES.md](docs/REMOTE_EDITOR_SAVES.md).

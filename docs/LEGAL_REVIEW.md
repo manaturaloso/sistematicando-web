@@ -26,3 +26,5 @@ No se añadieron cláusulas de renovación automática, permanencia, prueba grat
 Prueba local verify-legal: rutas legales y generación de guía sin solicitudes externas, cookies ni almacenamiento persistente; con/sin JavaScript, datos reales, contactos y anclas. No cubre el Worker desplegado ni la conducta de terceros. Informe qa/legal-report.json; adopción legal sigue pendiente. Codex principal, sin subagentes.
 
 Siguiente paso exacto: revisar el paquete y registrar decisiones de adopción/operación legal en LAUNCH_DECISIONS.md; el checklist técnico ya está implementado. Mantener noindex, borrador y rama Worker intacta hasta autorización final del propietario.
+
+6/11/2026 · Servicio de edición alojada aún no desplegado: prevé GitHub App y cookies HttpOnly de estado OAuth (5 minutos) y sesión cifrada (máximo una hora). Registrar proveedor, finalidad y operación de sesiones antes de habilitarlo. No afirmar que estas cookies existen ya en la web estática actual. HOSTED_VISUAL_AUTH.md y REMOTE_EDITOR_SAVES.md describen el diseño pendiente de configuración real.

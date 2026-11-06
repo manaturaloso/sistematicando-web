@@ -11,6 +11,7 @@ const git=(...args)=>execFileSync('git',args,{cwd:project,encoding:'utf8',stdio:
 let server;const checks=[];
 try{
  await fs.mkdir(project);for(const name of ['content','public/media'])await fs.cp(name,path.join(project,name),{recursive:true});
+ await fs.mkdir(path.join(project,'src/lib'),{recursive:true});await fs.copyFile('src/lib/content-validation.mjs',path.join(project,'src/lib/content-validation.mjs'));
  await fs.copyFile('.pages.yml',path.join(project,'.pages.yml'));await fs.mkdir(path.join(project,'scripts'));await fs.copyFile('scripts/validate-content.mjs',path.join(project,'scripts/validate-content.mjs'));
  git('init','-b','feat/feature-catalog');git('add','.');git('-c','user.name=Joel Alejandro Yañez Caballero','-c','user.email=joel.yc23@gmail.com','commit','-m','test fixture');git('init','--bare',remote);git('remote','add','origin',remote);
  const middleware=await createVisualEditor(project);server=http.createServer((req,res)=>middleware(req,res,()=>{res.writeHead(404);res.end();}));await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
