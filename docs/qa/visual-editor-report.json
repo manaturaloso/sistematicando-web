@@ -1,0 +1,11 @@
+{
+  "scope": "Local Astro development server, real iframe and files, original source restored; no GitHub push",
+  "textSelection": true,
+  "livePreview": true,
+  "cancel": true,
+  "validatedSave": true,
+  "gitReviewDialog": true,
+  "imagePreview": true,
+  "mobilePreview": true,
+  "sourceRestored": true
+}

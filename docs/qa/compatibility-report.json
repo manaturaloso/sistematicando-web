@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
-    "commitDate": "2026-11-06T13:51:12Z",
+    "commit": "b15d9e1f6cbf725e49127a7d734ad30f553cfce1",
+    "commitDate": "2026-11-06T14:49:42Z",
     "sourceModified": true
   },
   "scope": "Local automation of three flows; desktop engines and resized viewports, not physical devices, Safari/Chrome/Firefox release certification or screen-reader review",

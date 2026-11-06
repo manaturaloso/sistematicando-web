@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
-    "commitDate": "2026-11-06T13:51:12Z",
+    "commit": "b15d9e1f6cbf725e49127a7d734ad30f553cfce1",
+    "commitDate": "2026-11-06T14:49:42Z",
     "sourceModified": true
   },
   "tool": "axe-core via @axe-core/playwright",
@@ -32,6 +32,18 @@
       "width": 390,
       "passes": 45,
       "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/editor/",
+      "width": 390,
+      "passes": 49,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 3
+        }
+      ],
       "violations": []
     },
     {
@@ -336,6 +348,18 @@
       "width": 1440,
       "passes": 45,
       "incomplete": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/editor/",
+      "width": 1440,
+      "passes": 49,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
       "violations": []
     },
     {

@@ -16,3 +16,5 @@
 - Directiva del propietario (4/11/2026): producto parcialmente desarrollado; preparar la web completa como objetivo de lanzamiento al 100%. Se pueden implementar páginas comerciales futuras como borrador, conservando estados/evidencias reales en la matriz interna. No publicar nuevas versiones hasta que el propietario confirme que producto y web están listos al 100% y autorice el lanzamiento. La vista previa no cambia el estado operativo del SaaS ni aprueba precios.
 
 - Directiva del propietario (5/11/2026): encarga al agente proponer precios, planes y funciones según su criterio. Autoriza diseñar e implementar la propuesta comercial como borrador, sin presentar validación de costes/operación/tributación ni publicar. Conservar evidencia real del SaaS y señalar condiciones legales/operativas pendientes.
+
+- Directiva del propietario (6/11/2026): autoriza edición visual sobre la vista previa (clic en textos/imágenes). La implementación local se documenta en docs/VISUAL_EDITOR.md; no confundirla con autenticación/guardado público alojado. No exponer la API local ni habilitar escritura anónima en el Worker.

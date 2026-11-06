@@ -38,6 +38,12 @@ try{
   results.push({javaScriptEnabled,editors:config.content.length,correctCmsBranch:true,externalServicesContacted:false});
   await context.close();
  }
+ const staticPage=await browser.newPage();const editorRequests=[];staticPage.on('request',request=>{if(request.url().includes('/__visual_editor/'))editorRequests.push(request.url());});
+ await staticPage.goto(server.url+'/admin/editor/');
+ assert.equal(await staticPage.locator('.visual-editor').getAttribute('data-local'),'false');
+ assert(await staticPage.locator('#ve-github').isDisabled());
+ assert.equal(await staticPage.locator('script[src*="visual-preview"]').count(),0);
+ assert.deepEqual(editorRequests,[],'Static production editor must not call a local write API');await staticPage.close();
  await fs.writeFile('docs/qa/admin-report.json',JSON.stringify({buildVersion,scope:'Local dashboard, editor inventory and external links inspected; no authenticated CMS editing or saving performed',results},null,2)+'\n');
  console.log('PASS visual admin: complete CMS inventory, correct branch links, current previews, search/empty/reset/keyboard, five widths and no-JS; no external services contacted.');
 }finally{await browser?.close();await server.close();}

@@ -1,8 +1,8 @@
 {
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
-    "commitDate": "2026-11-06T13:51:12Z",
+    "commit": "b15d9e1f6cbf725e49127a7d734ad30f553cfce1",
+    "commitDate": "2026-11-06T14:49:42Z",
     "sourceModified": true
   },
   "scope": "Local build: all generated routes and internal link/anchor targets; no external services contacted.",
@@ -31,7 +31,16 @@
       "title": "Administración · Sistematicando",
       "description": "Panel visual de administración del contenido conectado a GitHub mediante Pages CMS.",
       "type": "website",
-      "internalLinks": 49,
+      "internalLinks": 50,
+      "metadata": true
+    },
+    {
+      "route": "/admin/editor/",
+      "status": 200,
+      "title": "Editor visual · Sistematicando",
+      "description": "Edición visual del contenido en el entorno de desarrollo de Sistematicando, con guardado validado y revisión en GitHub.",
+      "type": "website",
+      "internalLinks": 2,
       "metadata": true
     },
     {
@@ -386,5 +395,5 @@
       "metadata": true
     }
   ],
-  "destinations": 176
+  "destinations": 178
 }

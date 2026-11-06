@@ -21,6 +21,7 @@ assert(brand.launchDraft===true,'Preparation must remain a launch draft');
 assert((await fs.readFile('dist/robots.txt','utf8')).includes('Disallow: /'),'Crawler block must remain');
 assert(!(await fs.readdir('dist')).some(file=>/^sitemap.*\.xml$/i.test(file)),'Public sitemap must not be introduced without launch approval');
 const gates=[
+ {id:'visual-cms',status:'pending',detail:'Editor visual local implementado; integrar y probar autenticación/autorización GitHub en alojamiento seguro antes de habilitar edición pública. No exponer la API local.'},
  {id:'product',status:'pending',detail:`Confirmar disponibilidad y evidencia real del SaaS; ${features.items.filter(item=>item.status!=='available').length} módulos sin estado available en la matriz interna.`},
  {id:'commercial',status:'pending',detail:'Propuesta de planes implementada por encargo; validar viabilidad económica/tributaria, alcance operativo y condiciones finales de contratación.'},
  {id:'legal',status:'pending',detail:'Revisar/adoptar privacidad y términos; contrato SaaS y operación de datos pendientes. Ver LEGAL_REVIEW.md.'},

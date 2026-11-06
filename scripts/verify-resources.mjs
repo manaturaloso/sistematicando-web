@@ -31,7 +31,7 @@ try{
    assert.equal(await page.locator('h1').innerText(),article.title);
    assert(await page.locator(`main a[href="/funcionalidades/${article.moduleId}/"]`).isVisible());
    for(const slug of article.guideSlugs)assert(await page.locator(`main a[href="/recursos/guias/${slug}/"]`).first().isVisible());
-   const toc=page.locator('.guide-toc a').last();await toc.focus();await page.keyboard.press('Enter');
+   const toc=page.locator('.guide-toc a').last();await toc.focus();await Promise.all([page.waitForURL(url=>url.hash===`#lectura-${article.sections.length}`),page.keyboard.press('Enter')]);
    assert.equal(new URL(page.url()).hash,`#lectura-${article.sections.length}`);
    assert(await page.locator(`#lectura-${article.sections.length}`).isVisible());
    assert.equal(await page.locator('meta[name=robots]').getAttribute('content'),'noindex, nofollow');

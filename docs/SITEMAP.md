@@ -74,3 +74,5 @@ Artículos en `content/articles.json`, rutas generadas por slug y enlaces a mód
 - `/legal/terminos/`: borrador de uso del sitio, índice de ocho secciones, identidad/contacto y enlace a privacidad. No contrato SaaS.
 
 Inventario técnico completo y generado: RELEASE_CHECKLIST.md (42 páginas actuales, enlaces, metadatos y axe). /404.html se verifica además como respuesta 404 real con recuperación a Inicio/Ayuda en Worker local. No es un sitemap público ni habilita indexación.
+
+6/11/2026: nueva /admin/editor/, interfaz de edición visual funcional solo con servidor local; estática de lectura sin API en build. Total actual 43 páginas HTML. VISUAL_EDITOR.md registra alcance y autenticación alojada pendiente.

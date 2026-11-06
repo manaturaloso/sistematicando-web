@@ -1,0 +1,13 @@
+{
+  "scope": "Isolated temporary project and bare Git remote; no live source edits or GitHub pushes",
+  "checks": [
+    "origin, host, CSRF and path rejection preserve source",
+    "validated save and stale file rejection",
+    "invalid content rolls back without losing saved changes",
+    "existing-library image selection and remote image rejection",
+    "explicit commit and push to isolated bare development remote only",
+    "production branch commit rejected",
+    "failed push retains local commit and retries without duplicating it",
+    "preexisting uncommitted content cannot be swept into visual Git commit"
+  ]
+}

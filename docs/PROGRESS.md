@@ -5,14 +5,14 @@ Estado consolidado: 6 de noviembre de 2026 (America/Lima). Este archivo sustituy
 ## Git y estado externo
 
 - Repositorio manaturaloso/sistematicando-web. Desarrollo/CMS feat/feature-catalog; rama seguida por Worker feat/brand-foundation.
-- Base Git de esta entrega: bbfa1a9 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
+- Base Git de esta entrega: b15d9e1 en desarrollo. Rama Worker preservada en 557222e, última integración anterior autorizada. Ahora el propietario confirma producto parcial y pide web de lanzamiento completa, sin nuevas publicaciones hasta preparación al 100% y autorización final.
 - Nuevos cambios de esta entrega solo en desarrollo. Consultar git log -1 para SHA final. Fetch sin novedades concurrentes; push/ref se verifican al entregar.
 - Worker de revisión existente: https://sistematicando-web.manaturaloso.workers.dev. Última identidad pública aportada por usuario: af35674; el envío posterior 557222e no se ha confirmado desde el entorno. Esta entrega no actualiza el Worker.
 - API GitHub y hostname estuvieron bloqueados por Forbidden/CONNECT 403. Verde remoto de 296dc05 confirmado por el propietario; no inferir verde para los nuevos SHA. No se crearon PR; existentes sin verificar.
 
-## Entrega actual: panel administrativo visual
+## Entrega actual: editor visual funcional local
 
-/admin rediseñado con identidad de marca, tarjetas de contenido, navegación por tareas y búsqueda de los 34 editores. Edición y guardado permanecen en Pages CMS externo. Ver ADMIN_DESIGN.md y registro final: no es un editor embebido ni una migración de CMS. Sin publicación.
+Propietario confirmó edición sobre la vista previa. /admin/editor permite seleccionar textos/logos, cambiar el DOM en vivo, guardar campos validados en el proyecto y revisar commit/push a GitHub. API solo de desarrollo local; uso alojado con autenticación aún pendiente. Leer VISUAL_EDITOR.md y cierre de esta entrega. 43 páginas HTML / 34 editores; sin publicación.
 
 ## Propuesta de precios implementada
 
@@ -24,7 +24,7 @@ Siguiente paso exacto vigente: contrastar costes/margen, capacidad de puesta en 
 
 Astro 7.4.5, TypeScript 6.0.3, Node 24.22.1 y Wrangler 4.157.0 fijados. Sitio estático; no hay integración SaaS ni receptor propio de solicitudes.
 
-42 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, planes y precios propuestos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación, más términos de uso en borrador. Inventario en [SITEMAP.md](SITEMAP.md).
+43 páginas HTML en desarrollo: 14 páginas individuales de módulos más home, 404, contacto, admin, catálogo, planes y precios propuestos, guía de demo, privacidad en revisión, índice de soluciones y seis sectores, recursos y tres guías, FAQ, Nosotros, Ayuda, índice de Blog con tres artículos e Implementación, más términos de uso en borrador. Inventario en [SITEMAP.md](SITEMAP.md).
 
 - Catálogo de 14 módulos, cinco áreas y páginas individuales con beneficios/recorrido/ámbito de lanzamiento, todo editable. Búsqueda, recuentos y estado vacío; sin JS se conserva el catálogo. La matriz interna conserva evidencia/estados reales, sin convertir el copy objetivo en validación del SaaS.
 - Guía local: tres selecciones, validación, resumen, descarga TXT, reset e invalidación al cambiar opciones. Generar/descargar no envía datos ni reserva una demo.
@@ -44,12 +44,12 @@ Suite local de la revisión editorial/recorridos actual. Firefox/WebKit no ejecu
 | --- | --- |
 | Check/build/content | Sin errores; 42 páginas HTML más JSON de versión, 34 editores. |
 | Sitio | 42 rutas y 166 destinos internos. |
-| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 31 rutas a 390/1280 px, home/pie en cinco anchos a 100/200% y scripts externos bloqueados. |
+| Navegación | Sin JS, teclado/Escape, salto al contenido, texto 200% en 32 rutas a 390/1280 px, home/pie en cinco anchos a 100/200% y scripts externos bloqueados. |
 | Marca | Seis anchos a DPR1/2, originales por hash, variantes y transferencia responsive. |
 | Editorial/contacto | Canales JS/no-JS sin mensajes reales; copia CMS, descarga TXT e invalidación. |
 | Compatibilidad | Chromium: cinco escenarios (390/1440 × movimiento normal/reducido y fallback sin JS). Firefox/WebKit unavailable; no se dan por aprobados. |
 | Versión | Git limpio/modificado/ausente; JSON/admin coincidentes; Worker no-store/noindex. |
-| Axe | 88 comprobaciones, cero infracciones detectadas. Incomplete conservados; no certificación WCAG. |
+| Axe | 90 comprobaciones, cero infracciones detectadas. Incomplete conservados; no certificación WCAG. |
 | Worker local (entrega visual anterior, no repetido aquí) | 53 comprobaciones de rutas más JSON/cabeceras, assets, query, POST 405 y navegador. |
 | Etiquetas personalizadas (entrega anterior) | Menú, buscador, campos, botones y opciones editados temporalmente; pruebas aprobadas; fuentes y build restaurados. |
 
@@ -207,8 +207,20 @@ Rediseñado /admin con logo original, navegación por tareas, resumen de inventa
 
 Se conserva Pages CMS: editor de campos, medios, autenticación y guardado externos, rama feat/feature-catalog. No se ha cambiado el tema del editor externo ni implementado edición embebida/WYSIWYG. Muestras del último build, sin estado de guardado ficticio o actualización en vivo. Sin tokens, backend ni nuevos servicios. 42 páginas / 34 editores; precios y evidencia SaaS intactos.
 
-Check final: 64 archivos sin errores/avisos/hints; build de 42 páginas. verify-admin aprobado con/sin JS, cinco anchos, enlaces de rama, búsqueda/reset/teclado y sin peticiones externas. Capturas 390/1440 revisadas. CI incorpora admin-report.json y la prueba; cierre aprobado: 42 rutas y 176 destinos internos; navegación/200%, marca, editorial, módulos, recursos, versión, legales, precios, panel y compatibilidad Chromium aprobados. Axe inicial detectó nombres no únicos de zonas laterales; corregidas sus etiquetas y repetidas las 88 comprobaciones completas: cero infracciones detectadas. Inventario y guardas de lanzamiento aprobados. Firefox/WebKit siguen no disponibles localmente y CI remota no confirmada. No se repitieron Lighthouse ni runtime Worker. No se guardaron cambios en el servicio externo ni se enviaron mensajes.
+Check final: 64 archivos sin errores/avisos/hints; build de 42 páginas. verify-admin aprobado con/sin JS, cinco anchos, enlaces de rama, búsqueda/reset/teclado y sin peticiones externas. Capturas 390/1440 revisadas. CI incorpora admin-report.json y la prueba; cierre aprobado: 43 rutas y 178 destinos internos; navegación/200%, marca, editorial, módulos, recursos, versión, legales, precios, panel y compatibilidad Chromium aprobados. Axe inicial detectó nombres no únicos de zonas laterales; corregidas sus etiquetas y repetidas las 88 comprobaciones completas: cero infracciones detectadas. Inventario y guardas de lanzamiento aprobados. Firefox/WebKit siguen no disponibles localmente y CI remota no confirmada. No se repitieron Lighthouse ni runtime Worker. No se guardaron cambios en el servicio externo ni se enviaron mensajes.
 
 Agente: Codex principal sin subagentes; skill digital-design-excellence aplicada. No se publica. Próximo paso exacto: revisar el nuevo /admin y concretar si también se quiere reemplazar el editor externo; no confundir este panel con un reemplazo ya realizado. Continúan costos reales, validación operativa/legal, dispositivos/lectores, CI remoto y autorización de lanzamiento pendientes.
 
 Identidad de informes: build de base bbfa1a9 con fuente modificada; los informes no se reasignan al commit posterior. Tras commit se recompila y verifica versión, y se regenera el ZIP de revisión. Rama de trabajo feat/feature-catalog; Worker feat/brand-foundation conservada en 557222e. Sin PR nueva; existentes sin verificar.
+
+## 6/11/2026 · Edición visual funcional en desarrollo
+
+Autorización expresa del propietario: seleccionar textos/imágenes en una vista previa y ver cambios inmediatamente. Implementado /admin/editor/ con iframe de páginas reales, selección vinculada a JSON, inspector, borrador inmediato, descarte, selección de logos existentes, guardado validado/hash/rollback y revisión explícita de commit/push a feat/feature-catalog. VISUAL_EDITOR.md contiene uso, arquitectura y límites. 43 páginas HTML, 34 editores CMS conservados; sin migrar contenido ni alterar evidencia SaaS.
+
+La API existe solo en el servidor Astro de desarrollo y exige acceso local, Origin y CSRF; no se añade escritura al build estático ni al Worker. Commit bloquea rama distinta, archivos con cambios previos, conflictos e índice ajeno; no hay autocommit al escribir. Pages CMS mantiene edición estructurada y subida de medios. El editor visual alojado con OAuth público sigue pendiente; no presentarlo como servicio ya conectado.
+
+Pruebas funcionales aprobadas: ocho grupos en proyecto/remoto Git bare temporales; UI real de selección/texto/imagen/descarte/guardado/recuperación/diálogo Git/vista móvil, con content/pages.json restaurado exactamente y sin commits/push de prueba al repositorio real. Check 70 archivos sin errores/avisos/hints; build 43 páginas. Cierre estático aprobado: 43 rutas/178 destinos internos, navegación y texto 200% en 32 rutas, marca/editorial/módulos/recursos/versión/legales/precios/admin y Chromium cinco escenarios. Axe inicial detectó zonas de nombres repetidos entre editor e iframe; etiquetas diferenciadas y auditoría completa repetida: 90 comprobaciones, cero infracciones detectadas. Inventario y guardas de lanzamiento aprobados, ocho bloqueos reales conservados (incluye CMS visual alojado). Ajuste posterior solo del inspector activo comprobado con UI real a 320/390/1440; fuente restaurada. Firefox/WebKit no ejecutados localmente. Seis pruebas del calculador económico también aprobadas. No se repitieron Lighthouse ni runtime Worker. CI incorpora ambos recorridos y artefactos; resultado remoto no confirmado.
+
+Siguiente paso exacto: revisar el editor local y configurar una integración alojada con autenticación y permisos GitHub antes de usar escritura desde una URL pública. Los secretos se configuran fuera del chat. No publicar para probar. Agentes: Codex principal, sin subagentes; precios, estados reales y congelación de producción intactos. Sin PR nueva; existentes sin verificar.
+
+Informes de esta entrega conservan base b15d9e1 con fuente modificada; no se reasignan al nuevo SHA. Recompilar/verificar versión tras commit y regenerar paquete. Rama de desarrollo feat/feature-catalog; Worker permanece 557222e. Sin PR nueva, existentes sin verificar por API.

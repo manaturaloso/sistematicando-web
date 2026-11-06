@@ -3,8 +3,8 @@
   "scope": "Validated local build snapshot; automated checks are not approval to launch",
   "buildVersion": {
     "schemaVersion": 1,
-    "commit": "bbfa1a9d4e9e721987b673def8da89e6a53a2551",
-    "commitDate": "2026-11-06T13:51:12Z",
+    "commit": "b15d9e1f6cbf725e49127a7d734ad30f553cfce1",
+    "commitDate": "2026-11-06T14:49:42Z",
     "sourceModified": true
   },
   "pages": [
@@ -62,7 +62,7 @@
       "title": "Administración · Sistematicando",
       "description": "Panel visual de administración del contenido conectado a GitHub mediante Pages CMS.",
       "type": "website",
-      "internalLinks": 49,
+      "internalLinks": 50,
       "metadata": true,
       "viewportChecks": [
         {
@@ -72,6 +72,35 @@
         {
           "width": 1440,
           "incomplete": []
+        }
+      ]
+    },
+    {
+      "route": "/admin/editor/",
+      "status": 200,
+      "title": "Editor visual · Sistematicando",
+      "description": "Edición visual del contenido en el entorno de desarrollo de Sistematicando, con guardado validado y revisión en GitHub.",
+      "type": "website",
+      "internalLinks": 2,
+      "metadata": true,
+      "viewportChecks": [
+        {
+          "width": 390,
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 4
+            }
+          ]
         }
       ]
     },
@@ -823,11 +852,16 @@
     }
   ],
   "interactiveChecks": 4,
-  "destinations": 176,
+  "destinations": 178,
   "launchDraft": true,
   "robotsBlocked": true,
   "readyToPublish": false,
   "gates": [
+    {
+      "id": "visual-cms",
+      "status": "pending",
+      "detail": "Editor visual local implementado; integrar y probar autenticación/autorización GitHub en alojamiento seguro antes de habilitar edición pública. No exponer la API local."
+    },
     {
       "id": "product",
       "status": "pending",

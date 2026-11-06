@@ -1,8 +1,8 @@
 ---
 import '../styles/home.css';
 import site from '../../content/site.json';
-interface Props { title?: string; description?: string; type?: 'website' | 'article'; }
-const { title = site.defaultTitle, description = site.defaultDescription, type = 'website' } = Astro.props;
+interface Props { title?: string; description?: string; type?: 'website' | 'article'; draftNoticeLabel?: string; }
+const { title = site.defaultTitle, description = site.defaultDescription, type = 'website', draftNoticeLabel = site.launchDraftLabel } = Astro.props;
 ---
 <!doctype html>
 <html lang="es-PE">
@@ -19,6 +19,7 @@ const { title = site.defaultTitle, description = site.defaultDescription, type =
     <link rel="preload" href="/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/fonts/Gluten-Variable.ttf" as="font" type="font/ttf" crossorigin />
     <title>{title}</title>
+    {import.meta.env.DEV && <script is:inline type="module" src="/src/scripts/visual-preview.ts"></script>}
   </head>
-  <body style={`--coral:${site.coral};--ink:${site.ink}`}>{site.launchDraft && <aside class="launch-draft-notice" aria-label={site.launchDraftLabel}><div class="wrap"><strong>{site.launchDraftLabel}</strong><span>{site.launchDraftNotice}</span></div></aside>}<slot /></body>
+  <body style={`--coral:${site.coral};--ink:${site.ink}`}>{site.launchDraft && <aside class="launch-draft-notice" aria-label={draftNoticeLabel}><div class="wrap"><strong>{site.launchDraftLabel}</strong><span>{site.launchDraftNotice}</span></div></aside>}<slot /></body>
 </html>

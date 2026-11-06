@@ -17,6 +17,7 @@ Registro para el propietario; no contiene aprobaciones implícitas. Editar decis
 
 | ID | Decisión pendiente | Punto de partida preparado | Para cerrar | Estado |
 | --- | --- | --- | --- | --- |
+| cms-visual | Edición visual alojada con permisos | Editor local real implementado; Pages CMS conservado | Elegir/configurar servidor autenticado y probar login, permisos, conflictos y guardado GitHub; no publicar API local | Pendiente; nueva necesidad confirmada el 6/11 |
 | producto | Alcance disponible para lanzamiento | 14 fichas comerciales; estados reales separados | Evidencia por módulo/integración y revisión del propietario; actualizar fuente/matriz sin falsear estados | Pendiente |
 | oferta | Oferta y condiciones de contratación | Tres planes y tres complementos propuestos por encargo; ver PRICING_STRATEGY.md | Validar margen/costes, tratamiento tributario, capacidad de puesta en marcha y condiciones finales; diseño de planes ya delegado e implementado | Pendiente de revisión |
 | legal | Adopción de privacidad/términos y operación de datos | Borradores de la web, contacto real, LEGAL_REVIEW.md | Revisión/adopción, conservación/proveedores/solicitudes y acuerdo SaaS separado cuando corresponda | Pendiente |

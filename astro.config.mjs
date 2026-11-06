@@ -1,2 +1,3 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({ output: 'static', devToolbar: { enabled: false } });
+import visualEditor from './integrations/visual-editor.mjs';
+export default defineConfig({ integrations: [visualEditor()], output: 'static', devToolbar: { enabled: false } });
